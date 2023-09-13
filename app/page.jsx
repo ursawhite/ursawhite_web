@@ -1,13 +1,12 @@
-"use client";
 import "/app/styles/section.css";
 import SmoothScroll from "./components/smoothscroll/page";
-import Banner from "./components/home/banner";
-import Ourclients from "./components/home/ourclients";
-import Services from "./components/home/services";
-import Portofolio from "./components/home/portofolio/portofolio";
-import Porto1 from "./components/home/portofolio/porto1";
-import Porto2 from "./components/home/portofolio/porto2";
-import Porto3 from "./components/home/portofolio/porto3";
+// import Banner from "./components/home/banner";
+// import Ourclients from "./components/home/ourclients";
+// import Services from "./components/home/services";
+// import Portofolio from "./components/home/portofolio/portofolio";
+// import Porto1 from "./components/home/portofolio/porto1";
+// import Porto2 from "./components/home/portofolio/porto2";
+// import Porto3 from "./components/home/portofolio/porto3";
 import Para from "./components/home/parallaxlayer";
 
 function Section() {
