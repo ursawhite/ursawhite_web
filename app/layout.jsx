@@ -1,5 +1,3 @@
-"use client";
-
 import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
 import "./globals.css";
