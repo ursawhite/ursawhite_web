@@ -1,0 +1,56 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.smooth {
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* overscroll-behavior-y: contain; */
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  width: 100%;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: gray;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+section:nth-child(2) {
+  /* background-image: url(https://i.postimg.cc/y8dxwCwc/balloons-388973-960-720.jpg); */
+}
+
+section:nth-child(3) {
+  /* background-image: url(https://i.postimg.cc/bYWmGqRN/2.jpg); */
+}
+
+section:nth-child(4) {
+  /* background-image: url(https://i.postimg.cc/VLPjQvRM/4.jpg); */
+}
+
+@keyframes new {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.95);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
