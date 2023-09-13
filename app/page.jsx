@@ -1,5 +1,5 @@
 import "/app/styles/section.css";
-import SmoothScroll from "./components/smoothscroll/page";
+// import SmoothScroll from "./components/smoothscroll/page";
 // import Banner from "./components/home/banner";
 // import Ourclients from "./components/home/ourclients";
 // import Services from "./components/home/services";
@@ -11,9 +11,9 @@ import Para from "./components/home/parallaxlayer";
 
 function Section() {
   return (
-    <SmoothScroll>
+    <>
       <Para />
-    </SmoothScroll>
+    </>
     // <div className="overflow-hidden">
     //   <div
     //     className="smooth"

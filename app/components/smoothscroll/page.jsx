@@ -2,7 +2,8 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
-export default function SmoothScroll({ props }) {
+export default function SmoothScroll({ children }) {
+  console.log(children);
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -16,5 +17,5 @@ export default function SmoothScroll({ props }) {
     requestAnimationFrame(raf);
   }, []);
 
-  return props.children;
+  return children;
 }
