@@ -106,30 +106,6 @@ function Navbar() {
                     Services
                   </Link>
                 </li>
-                <li className="nav-item mx-2 fw-bold ">
-                  <Link
-                    className={`nav-link fs-6 ${
-                      activeLink === "/pricing" ? "active border-bottom" : ""
-                    }`}
-                    id="link"
-                    href="/pricing"
-                    onClick={() => setActiveLink("/pricing")}
-                  >
-                    Pricing
-                  </Link>
-                </li>
-                <li className="nav-item fw-bold mx-2">
-                  <Link
-                    className={`nav-link fs-6 ${
-                      activeLink === "/faq" ? "active border-bottom" : ""
-                    }`}
-                    id="link"
-                    href="/faq"
-                    onClick={() => setActiveLink("/faq")}
-                  >
-                    Faq
-                  </Link>
-                </li>
               </ul>
               <div className="d-flex justify-content-center flex-column">
                 <button

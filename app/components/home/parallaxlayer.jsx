@@ -6,11 +6,11 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import React, { useRef, useEffect, useState } from "react";
 import Banner from "../home/banner";
 import Ourclients from "../home/ourclients";
-import Porto1 from "./portofolio/porto1";
+// import Porto1 from "./portofolio/porto1";
 import Porto1Para from "./portofolio/porto1para";
-import Porto2 from "./portofolio/porto2";
+// import Porto2 from "./portofolio/porto2";
 import Porto2Para from "./portofolio/porto2para";
-import Porto3 from "./portofolio/porto3";
+// import Porto3 from "./portofolio/porto3";
 import Porto3Para from "./portofolio/porto3para";
 import Image from "next/image";
 
@@ -23,6 +23,7 @@ export default function MultiLayerParallax() {
     const options = { passive: false };
 
     const scroll = (event) => {
+      console.log(event);
       const deltaY = event.deltaY;
       if (event.deltaY == 0) return;
       event.preventDefault();

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import "../styles/ourworks.css";
 
 function OurWork() {
   const works = [
@@ -24,7 +25,7 @@ function OurWork() {
   return (
     <>
       <div className="container">
-        <div className="row d-flex flex-column justify-content-center align-items-center">
+        {/* <div className="row d-flex flex-column justify-content-center align-items-center">
           <div className="col">
             <h3 className="fw-bold text-center text-white mt-5">
               We’re a team of strategists, designers, developers, storytellers,
@@ -50,7 +51,7 @@ function OurWork() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

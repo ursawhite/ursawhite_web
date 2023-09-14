@@ -1,7 +1,8 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
-import "./globals.css";
-import Navbar from "./components/header/navbar";
+import "../app/styles/globals.css";
+import Navbar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
 
       <body>
         <Navbar />
-        {children}
+        <main>{children}</main>
 
         <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></Script>
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></Script>

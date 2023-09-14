@@ -1,0 +1,19 @@
+.text_title_right {
+  background: linear-gradient(
+    90deg,
+    rgba(182, 117, 214, 1) 0%,
+    rgba(79, 66, 152, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: calc();
+}
+
+.lower-left {
+  background-image: url(/images/work.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 37vh;
+  width: 100%;
+}
