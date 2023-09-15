@@ -8,3 +8,14 @@
 .text-right {
   margin-top: 2rem;
 }
+.text-title,
+#text-right-title {
+  background: linear-gradient(
+    90deg,
+    rgb(230, 212, 239) 0%,
+    rgb(92, 4, 133) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: calc();
+}

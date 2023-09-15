@@ -5,7 +5,7 @@ function Footer() {
   return (
     <>
       <div className="container">
-        <div className="row ">
+        <div className="row d-flex justify-content-center align-items-center">
           <div className="col ">
             <div className="col border border-secondary p-5">
               <h1 className="text-white">Let’s ideate, validate & ship fast</h1>

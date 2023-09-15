@@ -23,11 +23,11 @@ export default function MultiLayerParallax() {
     const options = { passive: false };
 
     const scroll = (event) => {
-      console.log(event);
+      // console.log(event);
       const deltaY = event.deltaY;
       if (event.deltaY == 0) return;
       event.preventDefault();
-      console.log(deltaY);
+      // console.log(deltaY);
       if (deltaY > 0 && referenceNode < maksPage - 1) {
         ref.current.scrollTo(referenceNode + 1);
         setReferenceNode(referenceNode + 1);
@@ -51,6 +51,9 @@ export default function MultiLayerParallax() {
 
   return (
     <section>
+      <p className="text-white position-absolute" style={{ marginTop: "50%" }}>
+        test
+      </p>
       <Parallax
         ref={ref}
         pages={maksPage}
@@ -65,6 +68,7 @@ export default function MultiLayerParallax() {
           offset={0}
           speed={0}
           tabIndex="0"
+          factor={1}
           style={{
             display: "flex",
             alignItems: "center",

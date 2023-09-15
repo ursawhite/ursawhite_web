@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import "../styles/ourworks.css";
+// import Marquee from "../components/test_marquee/marquee";
+import Navbar from "../components/navbar/navbar";
 
 function OurWork() {
   const works = [
@@ -24,6 +26,8 @@ function OurWork() {
   ];
   return (
     <>
+      <Navbar />
+      {/* <Marquee /> */}
       <div className="container">
         {/* <div className="row d-flex flex-column justify-content-center align-items-center">
           <div className="col">

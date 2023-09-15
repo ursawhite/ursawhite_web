@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        <Navbar />
         <main>{children}</main>
 
         <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></Script>

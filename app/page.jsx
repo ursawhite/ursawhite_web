@@ -7,11 +7,13 @@ import "/app/styles/section.css";
 // import Porto1 from "./components/home/portofolio/porto1";
 // import Porto2 from "./components/home/portofolio/porto2";
 // import Porto3 from "./components/home/portofolio/porto3";
+import Navbar from "./components/navbar/navbar";
 import Para from "./components/home/parallaxlayer";
 
 function Section() {
   return (
     <>
+      <Navbar />
       <Para />
     </>
     // <div className="overflow-hidden">

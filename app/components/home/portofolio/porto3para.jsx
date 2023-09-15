@@ -50,15 +50,13 @@ function Porto3Para() {
   ];
   return (
     <>
-      <div className="container">
-        <div className="row align-items-left m-5">
+      <div
+        className="container"
+        style={{ marginLeft: "10%", marginRight: "10%" }}
+      >
+        <div className="row align-items-left">
           {portfolio.map((item, index) => (
-            <div
-              className={`item row d-flex justify-content-left m-5 ${
-                index % 2 === 0 ? "" : "flex-row-reverse"
-              }`}
-              key={index}
-            >
+            <div className="row d-flex justify-content-left" key={index}>
               <motion.div
                 className="col-lg-6 order-lg-1"
                 variants={fadeInLeft}
@@ -66,21 +64,19 @@ function Porto3Para() {
                 whileInView="animate"
               >
                 <div className="d-flex flex-row ">
-                  <p className="title fw-bold text-warning ms-5 me-5">
-                    {item.name}
-                  </p>
+                  <p className="title fw-bold text-warning ">{item.name}</p>
                   <p className="title fw-bold text-white ">{item.type}</p>
                 </div>
-                <h1 className="title text-white ms-5 mb-3">{item.subject}</h1>
-                <h5 className="subtitle text-white m-5">{item.desc}</h5>
-                <ul className="list text-white  m-5">
+                <h1 className="title text-white mb-3">{item.subject}</h1>
+                <h5 className="subtitle text-white mt-5">{item.desc}</h5>
+                <ul className="list text-white ">
                   {item.tech.map((techItem, index) => (
                     <li key={index}>
                       <i className="item">{techItem}</i>
                     </li>
                   ))}
                 </ul>
-                <div className="btn ms-5 bg-none">
+                <div className="btn bg-none">
                   <p className="text-warning">Check Now</p>
                 </div>
               </motion.div>

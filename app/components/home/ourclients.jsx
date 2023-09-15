@@ -72,7 +72,7 @@ function Ourclients() {
           </h1>
           <p
             className="text-left text-white"
-            style={{ marginLeft: "30vh", marginRight: "30vh" }}
+            style={{ marginLeft: "10%", marginRight: "10%" }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
@@ -83,7 +83,7 @@ function Ourclients() {
 
         <div
           className="row d-flex justify-content-center align-items-center"
-          style={{ marginLeft: "30vh", marginRight: "30vh" }}
+          style={{ marginLeft: "10%", marginRight: "10%" }}
         >
           {company.map((item, index) => (
             <motion.div

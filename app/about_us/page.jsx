@@ -3,18 +3,21 @@ import React, { useRef } from "react";
 import "../styles/about_us.css";
 import Image from "next/image";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import Test_SVG from "../components/test_svg/test_svg";
+import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
 
 function About_us() {
   const ref = useRef(null);
   return (
-    <section>
+    <>
+      <Navbar />
       <Parallax ref={ref} pages={5} style={{ backgroundColor: "black" }}>
         <ParallaxLayer
           offset={0}
           speed={0}
           style={{
-            backgroundColor: "rgba(30,30,32,0.8)",
+            backgroundColor: "rgba(30,30,32,0.9)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -22,43 +25,53 @@ function About_us() {
         >
           <div className="container">
             <div className="row">
-              <h1 className="text-center text-white fw-bold m-5 p-5">
+              <h1 className="text-title text-center text-white fw-bold m-5">
                 About Us
               </h1>
-              <div className="col-lg-6">
-                <p className="text-left text-white fw-bolder">
+              <div className="col-lg-6 border border-5 border-end-0 border-bottom-0">
+                <p
+                  className="text-left fw-bolder ms-5"
+                  style={{ color: "rgba(169,80,210,255)" }}
+                >
                   YOUR DIGITAL DESIGN PARTNER
                 </p>
-                <h1 className="text-left text-white fw-bold">
+                <h1 className="text-left text-white fw-bold ms-5">
                   We are a digital design agency
                 </h1>
               </div>
-              <div className="col-lg-6">
-                <h5 className="text-right text-white">
+              <div className="col-lg-6 border border-5 border-start-0 border-top-0 ">
+                <h3 className="text-right fw-bold me-5" id="text-right-title">
                   Something big is happening in the world.
-                </h5>
-                <h5 className="text-right text-white">
+                </h3>
+                <h6 className="text-right text-white me-5">
                   Companies digitally transforming their services, startups
                   disrupting traditional business models, and innovation brought
                   about by digital products - all are changing the way we live.
-                </h5>
-                <h5 className="text-right text-white">
+                </h6>
+                <h6 className="text-right text-white me-5">
                   {`Why spend all your resources building something, and only
               realizing after 6 months of launching – nobody actually wants it?`}
-                </h5>
-                <h5 className="text-right text-white">
+                </h6>
+                <h6 className="text-right text-white mb-5 me-5">
                   {` That's why we're here. To help you ideate, validate, and test
               ideas in the most time and cost-effective manner.`}
-                </h5>
+                </h6>
               </div>
             </div>
           </div>
         </ParallaxLayer>
         <ParallaxLayer
+          offset={0}
+          speed={0}
+          style={{ marginTop: "20%", zIndex: -1 }}
+        >
+          <Test_SVG item="About Us" />
+        </ParallaxLayer>
+        <ParallaxLayer
           offset={1}
           speed={0}
           style={{
-            backgroundColor: "rgba(30,30,32,0.8)",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         ></ParallaxLayer>
         <ParallaxLayer offset={1} speed={0.5}>
@@ -93,7 +106,7 @@ function About_us() {
           offset={2}
           speed={0}
           style={{
-            backgroundColor: "rgba(30,30,32,0.8)",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <div className="container">
@@ -129,12 +142,15 @@ function About_us() {
           offset={3}
           speed={0}
           style={{
-            backgroundColor: "rgba(30,30,32,0.8)",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <div className="container">
             <div className="row ">
-              <p className="text-center text-white fw-bold">
+              <p
+                className="text-center fw-bold"
+                style={{ color: "rgba(169,80,210,255)" }}
+              >
                 THE LEADERSHIP CREW
               </p>
               <h1 className="text-center text-white fw-bold">
@@ -191,13 +207,13 @@ function About_us() {
           offset={4}
           speed={0}
           style={{
-            backgroundColor: "rgba(30,30,32,0.8)",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Footer />
         </ParallaxLayer>
       </Parallax>
-    </section>
+    </>
   );
 }
 
