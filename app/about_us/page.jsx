@@ -12,31 +12,37 @@ function About_us() {
   return (
     <>
       <Navbar />
-      <Parallax ref={ref} pages={5} style={{ backgroundColor: "black" }}>
+      <Parallax ref={ref} pages={5} style={{ background: "black" }}>
         <ParallaxLayer
           offset={0}
           speed={0}
           style={{
-            backgroundColor: "rgba(30,30,32,0.9)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <div className="container">
-            <div className="row">
+            <div
+              className="row"
+              style={{ marginLeft: "10%", marginRight: "10%" }}
+            >
               <h1 className="text-title text-center text-white fw-bold m-5">
                 About Us
               </h1>
-              <div className="col-lg-6 border border-5 border-end-0 border-bottom-0">
+              <div
+                className="col-lg-6 border border-5 border-end-0 border-bottom-0"
+                style={{ height: "60vh" }}
+              >
                 <p
-                  className="text-left fw-bolder ms-5"
+                  className="text-left fw-bolder ms-5 mt-5"
                   style={{ color: "rgba(169,80,210,255)" }}
                 >
                   YOUR DIGITAL DESIGN PARTNER
                 </p>
-                <h1 className="text-left text-white fw-bold ms-5">
-                  We are a digital design agency
+                <h1 className="text-left display-4 text-white fw-bold ms-5">
+                  We Help Startups And Companies Succeed
                 </h1>
               </div>
               <div className="col-lg-6 border border-5 border-start-0 border-top-0 ">
@@ -106,6 +112,9 @@ function About_us() {
           offset={2}
           speed={0}
           style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
             backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
@@ -142,6 +151,9 @@ function About_us() {
           offset={3}
           speed={0}
           style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
             backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
@@ -208,6 +220,9 @@ function About_us() {
           speed={0}
           style={{
             backgroundColor: "rgba(30,30,32,0.9)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <Footer />

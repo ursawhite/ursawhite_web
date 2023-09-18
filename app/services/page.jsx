@@ -7,7 +7,21 @@ import Image from "next/image";
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
 import Test_SVG from "../components/test_svg/test_svg";
-
+import Marquee_Logo from "../test_marquee/marquee_logo";
+import { motion } from "framer-motion";
+const ffBottom = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: () => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5,
+    },
+  }),
+};
 function Services() {
   const ref = useRef(null);
   const services = [
@@ -17,6 +31,7 @@ function Services() {
       description: ` We provide front-end development services to help you build
       your website. We also provide front-end development services
       to help you build your web application.`,
+      img: "/images/frontend.png",
     },
     {
       id: 2,
@@ -24,6 +39,7 @@ function Services() {
       description: ` We provide back-end development services to help you build
       your website. We also provide back-end development services
       to help you build your web application.`,
+      img: "/images/backend.png",
     },
     {
       id: 3,
@@ -31,6 +47,7 @@ function Services() {
       description: ` We provide CMS implementation services to help you build
       your website. We also provide CMS implementation services
       to help you build your web application.`,
+      img: "/images/cms.png",
     },
     {
       id: 4,
@@ -38,6 +55,7 @@ function Services() {
       description: ` We provide DevOps & Maintenance services to help you build
       your website. We also provide DevOps & Maintenance services
       to help you build your web application.`,
+      img: "/images/devops.png",
     },
   ];
   const tech = [
@@ -70,8 +88,8 @@ function Services() {
       <Parallax
         ref={ref}
         className="parallax"
-        pages={4}
-        style={{ backgroundColor: "black" }}
+        pages={5}
+        style={{ background: "black" }}
       >
         <ParallaxLayer
           offset={0}
@@ -84,17 +102,17 @@ function Services() {
             backgroundColor: "rgba(30,30,32,0.9 )",
           }}
         >
-          <div
-            className="container"
-            style={{ marginLeft: "10%", marginRight: "10%" }}
-          >
-            <div className="row">
+          <div className="container">
+            <div
+              className="row"
+              style={{ marginLeft: "10%", marginRight: "10%" }}
+            >
               <h1 className="text-title text-center text-white fw-bold m-5">
                 Our Services
               </h1>
               <div
                 className="col-lg-6 border border-5 border-end-0 border-bottom-0"
-                style={{ height: "50vh" }}
+                style={{ height: "60vh" }}
               >
                 <p
                   className="text-left fw-bolder ms-5 mt-5"
@@ -102,7 +120,7 @@ function Services() {
                 >
                   YOUR DIGITAL DESIGN PARTNER
                 </p>
-                <h1 className="text-left text-white fw-bold ms-5">
+                <h1 className="text-left display-4 text-white fw-bold ms-5">
                   We are a digital design agency
                 </h1>
               </div>
@@ -133,32 +151,55 @@ function Services() {
         <ParallaxLayer
           offset={1}
           speed={0}
+          factor={10}
           style={{
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
             backgroundColor: "rgba(30,30,32,0.9)",
+            height: "150%",
+            width: "100%",
           }}
         >
           <div className="container">
             <div
               className="row"
-              style={{ marginLeft: "10%", marginRight: "10%" }}
+              style={{
+                marginLeft: "10%",
+                marginRight: "10%",
+              }}
             >
               {services.map((item) => (
+                <motion.div
+                  className="col-lg-12 border rounded mt-5"
+                  key={item.id}
+                  variants={ffBottom}
+                  initial="initial"
+                  whileInView="animate"
+                >
+                  <div className="inside m-3 d-flex align-items-center ">
+                    <Image
+                      src={item.img}
+                      width={300}
+                      height={200}
+                      alt="services"
+                    />
+                    <div className="text m-5 ">
+                      <h3 className="text-white mb-3">{item.title}</h3>
+                      <p className="text-white">{item.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+
+              {/* {services.map((item) => (
                 <>
                   <div className="col-lg-6" key={item.id}>
                     <div className="p-5 m-2 border border-3">
-                      <h3 className="card-title text-white fw-bold ">
-                        {item.title}
-                      </h3>
-                      <p className="card-body text-white mt-5">
-                        {item.description}
-                      </p>
+                      <h3 className=" text-white fw-bold ">{item.title}</h3>
+                      <p className="text-white mt-5">{item.description}</p>
                     </div>
                   </div>
                 </>
-              ))}
+              ))} */}
             </div>
           </div>
         </ParallaxLayer>
@@ -168,35 +209,52 @@ function Services() {
           speed={0}
           style={{
             display: "flex",
+            alignItems: "end",
             justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
+            marginTop: "10%",
+            // backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <div className="container">
-            <p
-              className="text-center fw-bold"
-              style={{ color: "rgba(169,80,210,255)" }}
-            >
-              Technologies Used
-            </p>
-            <h1 className="text-white text-center fw-bold">
-              Technologies We Work With
-            </h1>
-            <div
-              className="row d-flex justify-content-center"
-              style={{ marginLeft: "10%", marginRight: "10%" }}
-            >
-              {tech.map((item, index) => (
-                <div
-                  className="col-lg-auto mt-5 ms-1 border"
-                  key={`item${index + 1}`}
-                >
-                  <div className="d-flex flex-column p-2 gap-5 justify-content-center align-items-center">
-                    <h6 className="fw-bold text-white">{item}</h6>
+            <div className="technologies mt-5">
+              <p
+                className="text-center fw-bold"
+                style={{ color: "rgba(169,80,210,255)" }}
+              >
+                Technologies Used
+              </p>
+              <h1 className="text-white text-center fw-bold">
+                Technologies We Work With
+              </h1>
+
+              <p
+                className="text-white text-center"
+                style={{ marginLeft: "10%", marginRight: "10%" }}
+              >
+                As a premiere software development company, Innover helps to
+                deliver scalable, complex, and future-ready solutions by
+                utilising its unique frameworks & accelerators, broad range of
+                programming languages, libraries and tools. Through Innover
+                labs, we research, collaborate and co-innovate with our
+                customers and technology partners to deliver path-breaking
+                solutions with speed and precision.
+              </p>
+              <Marquee_Logo />
+              {/* <div
+                className="row d-flex justify-content-center"
+                style={{ marginLeft: "10%", marginRight: "10%" }}
+              >
+                {tech.map((item, index) => (
+                  <div
+                    className="col-lg-auto mt-5 ms-1 border"
+                    key={`item${index + 1}`}
+                  >
+                    <div className="d-flex flex-column p-2 justify-content-center align-items-center">
+                      <h6 className="fw-bold text-white">{item}</h6>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div> */}
             </div>
           </div>
         </ParallaxLayer>
@@ -438,29 +496,39 @@ function Services() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
+            // backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
-          {/* <Footer /> */}
           <div className="container">
             <div
               className="row "
               style={{ marginLeft: "10%", marginRight: "10%" }}
             >
-              <div className="col">
-                <div
-                  className="box border border-2 bg-transparent d-flex flex-column justify-content-center align-items-center"
-                  style={{ width: "100%", height: "50vh", borderRadius: "0" }}
-                >
-                  <h1 className="text-white text-center fw-bold">{`Can't find what you're looking for?`}</h1>
-                  <p className="text-white text-center">
+              <div className="col border border-2 bg-transparent ">
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                  <h1 className="text-title text-white text-center fw-bold mt-5">{`Can't find what you're looking for?`}</h1>
+                  <p className="text-white text-center ">
                     Our team will be happy to help you
                   </p>
-                  <button className="btn btn-primary">Contact Us</button>
+                  <button className="btn btn-secondary mt-3 mb-5">
+                    Contact Us
+                  </button>
                 </div>
               </div>
             </div>
           </div>
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={4}
+          speed={0}
+          style={{
+            // backgroundColor: "rgba(30,30,32,0.9)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Footer />
         </ParallaxLayer>
       </Parallax>
     </>

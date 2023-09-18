@@ -6,7 +6,13 @@ function Test_svg({ item }) {
   return (
     <div className="patterns" style={{ marginTop: "-25%" }}>
       <svg width="100%" height="800px">
-        <text x="50%" y="50%" textAnchor="middle" fontSize="100px">
+        <text
+          x="50%"
+          y="50%"
+          textAnchor="middle"
+          fontSize="100px"
+          color="white"
+        >
           {text}
         </text>
       </svg>

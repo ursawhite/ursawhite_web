@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
-import "../app/styles/globals.css";
+// import "../app/styles/globals.css";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 

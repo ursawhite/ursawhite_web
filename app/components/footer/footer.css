@@ -14,6 +14,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 37vh;
+  height: calc(31vh - 10px);
   width: 100%;
 }

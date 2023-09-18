@@ -13,11 +13,12 @@ import Porto2Para from "./portofolio/porto2para";
 // import Porto3 from "./portofolio/porto3";
 import Porto3Para from "./portofolio/porto3para";
 import Image from "next/image";
+import Footer from "../footer/footer";
 
 export default function MultiLayerParallax() {
   const ref = useRef(null);
   const [referenceNode, setReferenceNode] = useState(0);
-  const maksPage = 5;
+  const maksPage = 7;
 
   useEffect(() => {
     const options = { passive: false };
@@ -50,18 +51,16 @@ export default function MultiLayerParallax() {
   }, [referenceNode]);
 
   return (
-    <section>
-      <p className="text-white position-absolute" style={{ marginTop: "50%" }}>
-        test
-      </p>
+    <>
       <Parallax
         ref={ref}
         pages={maksPage}
         style={{
           overflowY: "hidden",
-          background: "rgb(65,7,96)",
-          background:
-            "radial-gradient(circle, rgba(65,7,96,1) 0%, rgba(5,12,55,1) 100%)",
+          // background: "rgb(65,7,96)",
+          // background:
+          //   "radial-gradient(circle, rgba(65,7,96,1) 0%, rgba(5,12,55,1) 100%)",
+          backgroundColor: "black",
         }}
       >
         <ParallaxLayer
@@ -73,10 +72,24 @@ export default function MultiLayerParallax() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.5)",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Banner />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={0}
+          speed={0.3}
+          style={{ marginLeft: "90%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/1.png"
+            width={350}
+            height={350}
+            alt="logo"
+            style={{ objectFit: "contain" }}
+            priority
+          />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -86,7 +99,7 @@ export default function MultiLayerParallax() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.5)",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Ourclients />
@@ -100,10 +113,24 @@ export default function MultiLayerParallax() {
             alignItems: "center",
             justifyContent: "center",
             zIndex: "1",
-            backgroundColor: "rgba(30,30,32,0.5)",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Porto1Para />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={1}
+          speed={0.3}
+          style={{ marginLeft: "-5%", marginTop: "-10%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/2.png"
+            width={250}
+            height={250}
+            alt="logo"
+            style={{ objectFit: "contain" }}
+            priority
+          />
         </ParallaxLayer>
         <ParallaxLayer
           offset={3}
@@ -112,7 +139,7 @@ export default function MultiLayerParallax() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.5)",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Porto2Para />
@@ -125,7 +152,7 @@ export default function MultiLayerParallax() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.5)",
+            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Porto3Para />
@@ -154,46 +181,62 @@ export default function MultiLayerParallax() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2}
-          speed={1}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          offset={1}
+          speed={0.3}
+          style={{ marginLeft: "90%", marginTop: "30%", zIndex: -1 }}
         >
-          <div
-            className="box rounded-circle"
-            style={{
-              width: "35vh",
-              height: "35vh",
-              marginLeft: "40%",
-              marginTop: "5%",
-              background:
-                "radial-gradient(circle, rgba(65,7,96,1) 0%, rgba(5,12,55,1) 100%)",
-            }}
+          <Image
+            src="/images/obj/3.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            priority
           />
         </ParallaxLayer>
+
         <ParallaxLayer
           offset={2}
-          speed={1.5}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          speed={0.3}
+          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
         >
-          <div
-            className="box rounded-circle"
-            style={{
-              width: "20vh",
-              height: "20vh",
-              zIndex: "2",
-              marginLeft: "60%",
-              marginTop: "-15%",
-              background:
-                "radial-gradient(circle, rgba(65,7,96,1) 0%, rgba(5,12,55,1) 100%)",
-            }}
+          <Image
+            src="/images/obj/4.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={3}
+          speed={0.3}
+          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/5.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={4}
+          speed={0.3}
+          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/6.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            priority
           />
         </ParallaxLayer>
 
@@ -218,74 +261,6 @@ export default function MultiLayerParallax() {
             style={{ objectFit: "contain" }}
           />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={3}
-          speed={1}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            className="box "
-            style={{
-              width: "40vh",
-              height: "40vh",
-              borderRadius: "10%",
-              marginLeft: "45%",
-              marginTop: "-8%",
-              background:
-                "radial-gradient(circle, rgba(65,7,96,1) 0%, rgba(5,12,55,1) 100%)",
-            }}
-          />
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={3}
-          speed={1.5}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            className="box"
-            style={{
-              width: "20vh",
-              height: "20vh",
-              zIndex: "2",
-              borderRadius: "10%",
-              marginLeft: "65%",
-              marginTop: "-30%",
-              background:
-                "radial-gradient(circle, rgba(65,7,96,1) 0%, rgba(5,12,55,1) 100%)",
-            }}
-          />
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={3}
-          speed={1.5}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            className="box"
-            style={{
-              width: "20vh",
-              height: "20vh",
-              zIndex: "-2",
-              borderRadius: "10%",
-              marginLeft: "65%",
-              marginTop: "10%",
-              background:
-                "radial-gradient(circle, rgba(65,7,96,1) 0%, rgba(5,12,55,1) 100%)",
-            }}
-          />
-        </ParallaxLayer>
 
         <ParallaxLayer
           offset={4}
@@ -308,7 +283,65 @@ export default function MultiLayerParallax() {
             style={{ objectFit: "contain" }}
           />
         </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={5}
+          speed={0.0}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        >
+          <div className="container">
+            <div
+              className="row"
+              style={{ marginLeft: "10%", marginRight: "10%" }}
+            >
+              <div className="col-lg-6 ">
+                <p className="text-white ms-5"> FOR STARTUPS AND CORPORATION</p>
+                <h1 className="text-white display-3 fw-bold ms-5">
+                  Design Sprint Your Product Idea
+                </h1>
+                <p className="text-white ms-5">
+                  {` Your Minimum Viable Product (Design) in 6 weeks. You can take
+                  it to investors to drum up capital, take to another
+                  development agency or decide to do in-house, think of the
+                  outcome as a complete house design from an architect,
+                  plumbing, electrical, and everything else design and planning.
+                  No construction included yet, that's for another package!`}
+                </p>
+                <button className="btn btn-secondary ms-5">{`Let's Explore`}</button>
+              </div>
+              <div className="col-lg-6">
+                <p className="text-white ms-5"> FOR STARTUPS AND CORPORATION</p>
+                <h1 className="text-white display-3 fw-bold ms-5">
+                  Development Sprint
+                </h1>
+                <p className="text-white ms-5">
+                  You can go fast or slow, you can let us develop your own
+                  designs or develop our own design from our “Design Sprint
+                  Package”
+                </p>
+                <button className="btn btn-secondary ms-5">Contact Us</button>
+              </div>
+            </div>
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={6}
+          speed={0}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        >
+          <Footer />
+        </ParallaxLayer>
       </Parallax>
-    </section>
+    </>
   );
 }

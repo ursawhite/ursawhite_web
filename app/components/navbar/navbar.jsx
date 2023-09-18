@@ -8,7 +8,7 @@ function Navbar() {
   const [activeLink, setActiveLink] = useState("/");
 
   return (
-    <div className="container">
+    <div className="row">
       <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container ">
           <Link className="navbar-brand" href="/">

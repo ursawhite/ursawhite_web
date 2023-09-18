@@ -1,13 +1,19 @@
-.row {
-  margin-left: 10%;
-  margin-right: 10%;
+body {
+  margin: 0;
+  padding-bottom: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: black;
+  width: max-content;
 }
+
 .text-left {
   margin-top: 2rem;
 }
 .text-right {
   margin-top: 2rem;
 }
+
 .text-title,
 #text-right-title {
   background: linear-gradient(

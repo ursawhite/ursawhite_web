@@ -57,6 +57,7 @@ function Porto3Para() {
         <div className="row align-items-left">
           {portfolio.map((item, index) => (
             <div className="row d-flex justify-content-left" key={index}>
+              <div className="col-lg-2"></div>
               <motion.div
                 className="col-lg-6 order-lg-1"
                 variants={fadeInLeft}
@@ -64,7 +65,7 @@ function Porto3Para() {
                 whileInView="animate"
               >
                 <div className="d-flex flex-row ">
-                  <p className="title fw-bold text-warning ">{item.name}</p>
+                  <p className="title fw-bold text-warning me-4">{item.name}</p>
                   <p className="title fw-bold text-white ">{item.type}</p>
                 </div>
                 <h1 className="title text-white mb-3">{item.subject}</h1>
