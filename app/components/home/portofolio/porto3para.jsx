@@ -37,7 +37,7 @@ function Porto3Para() {
       type: "Mobile App",
       subject:
         "HKGO is a location-based app (Google Maps) with flutter for a big insurance company in Hong Kong.",
-      image: "/project3.png",
+      // image: "/images/project3.png",
       desc: "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
       tech: [
         "payment API integration",

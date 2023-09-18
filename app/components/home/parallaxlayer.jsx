@@ -170,12 +170,12 @@ export default function MultiLayerParallax() {
           }}
         >
           <Image
-            className="logo-logo align-content-center m-5"
-            src="/project1.png"
+            className="logo m-5"
+            src="/images/project1.png"
             width={500}
             height={400}
             alt="logo"
-            // sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
+            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
             style={{ objectFit: "contain" }}
           />
         </ParallaxLayer>
@@ -252,12 +252,12 @@ export default function MultiLayerParallax() {
           }}
         >
           <Image
-            className="logo-logo align-content-center m-5"
-            src="/project2.png"
+            className="logo m-5"
+            src="/images/project2.png"
             width={500}
             height={400}
             alt="logo"
-            // sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
+            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
             style={{ objectFit: "contain" }}
           />
         </ParallaxLayer>
@@ -274,12 +274,12 @@ export default function MultiLayerParallax() {
           }}
         >
           <Image
-            className="logo-logo align-content-center m-5"
-            src="/project3.png"
+            className="logo m-5"
+            src="/images/project3.png"
             width={500}
             height={400}
             alt="logo"
-            // sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
+            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
             style={{ objectFit: "contain" }}
           />
         </ParallaxLayer>

@@ -36,7 +36,7 @@ function Porto1para() {
       name: "NodCredit",
       type: "Mobile App",
       subject: "P2P lending app, now live on Google Playstore.",
-      image: "/project1.png",
+      // image: "/images/project1.png",
       desc: "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
       tech: [
         "payment API integration",

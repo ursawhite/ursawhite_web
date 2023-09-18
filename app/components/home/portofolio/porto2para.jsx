@@ -36,7 +36,7 @@ function Porto2Para() {
       name: "Feco Playbook",
       type: "Mobile App",
       subject: "P2P lending app, now live on Google Playstore.",
-      image: "/project2.png",
+      // image: "/images/project2.png",
       desc: "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
       tech: [
         "Flutter",
