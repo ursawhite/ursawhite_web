@@ -175,7 +175,7 @@ export default function MultiLayerParallax() {
             width={500}
             height={400}
             alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
+            // sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
             style={{ objectFit: "contain" }}
           />
         </ParallaxLayer>
@@ -257,7 +257,7 @@ export default function MultiLayerParallax() {
             width={500}
             height={400}
             alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
+            // sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
             style={{ objectFit: "contain" }}
           />
         </ParallaxLayer>
@@ -279,7 +279,7 @@ export default function MultiLayerParallax() {
             width={500}
             height={400}
             alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
+            // sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
             style={{ objectFit: "contain" }}
           />
         </ParallaxLayer>
