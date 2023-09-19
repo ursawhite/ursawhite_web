@@ -1,24 +1,35 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "../../styles/navbar.css";
+import "../../styles/navbar.scss";
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState("/");
+  const [width, setWidth] = useState(0);
+
+  const updateWidth = () => {
+    const newWidth = window.innerWidth;
+    setWidth(newWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    updateWidth();
+  }, []);
 
   return (
-    <div className="row">
+    <div className="">
       <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container ">
-          <Link className="navbar-brand" href="/">
+          <Link className="" href="/">
             <Image
-              className="logo-logo m-1"
+              className=""
               src="/logo.png"
-              height={40}
-              width={200}
-              alt="logo"
+              width={width < 1024 ? "150" : "300"}
+              height={width < 1024 ? "25" : "50"}
+              // layout="responsive"
               priority
+              alt="logo"
             />
           </Link>
           <button
@@ -73,11 +84,11 @@ function Navbar() {
                 <li className="nav-item mx-2 fw-bold ">
                   <Link
                     className={`nav-link fs-6 ${
-                      activeLink === "/ourwork" ? "active border-bottom" : ""
+                      activeLink === "/ourworks" ? "active border-bottom" : ""
                     }`}
                     id="link"
-                    href="/ourwork"
-                    onClick={() => setActiveLink("/ourwork")}
+                    href="/ourworks"
+                    onClick={() => setActiveLink("/ourworks")}
                   >
                     Our Work
                   </Link>

@@ -1,7 +1,5 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import "../../styles/ourclients.css";
 import { motion } from "framer-motion";
 
 const fadeInAnimationVariants = {
@@ -18,7 +16,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-function Ourclients() {
+function OurClient() {
   const company = [
     {
       name: "Company 1",
@@ -62,59 +60,56 @@ function Ourclients() {
     },
   ];
   return (
-    <div className="container-fluid">
-      <div className="container">
-        <div className="d-flex flex-column justify-content-center align-items-center ">
+    <div className="container">
+      <div className="row d-flex justify-content-left align-items-center ">
+        <div className="col" style={{ marginLeft: "10%", marginRight: "10%" }}>
           <p className="text-white">A DIGITAL PRODUCT AGENCY LIKE NO OTHER</p>
-          <h1 className="title text-white text-center mb-3 fw-bold mb-4">
+          <h1 className="title text-white mb-3 fw-bold ">
             Skip the long meetings and email <br /> threads. We focus on getting
             things done.
           </h1>
-          <p
-            className="text-center text-white"
-            style={{ marginLeft: "10%", marginRight: "10%" }}
-          >
+          <p className="text-white">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.{" "}
           </p>
         </div>
+      </div>
 
-        <div
-          className="row d-flex justify-content-center align-items-center"
-          style={{ marginLeft: "10%", marginRight: "10%" }}
-        >
-          {/* {company.map((item, index) => (
-            <motion.div
-              className="col-lg-3 mt-3 mb-4"
-              key={index}
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              custom={index}
-            >
-              <div className="card">
-                <Image
-                  src={item.logo}
-                  className="card-img-top p-1"
-                  alt={item.name}
-                  fill
-                  sizes="{max-width: 100px} 25vw, 100px"
-                  style={{ objectFit: "contain" }}
-                  priority
-                />
-                <div className="card-body"></div>
-              </div>
-            </motion.div>
-          ))} */}
-        </div>
+      <div
+        className="row d-flex "
+        style={{ marginLeft: "10%", marginRight: "10%" }}
+      >
+        {company.map((item, index) => (
+          <motion.div
+            className="col mt-3 mb-4"
+            key={index}
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={index}
+          >
+            <div className="card">
+              <Image
+                src={item.logo}
+                className="card-img-top p-1"
+                alt={item.name}
+                fill
+                sizes="{max-width: 100px} 25vw, 100px"
+                style={{ objectFit: "contain" }}
+                priority
+              />
+              <div className="card-body"></div>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
 }
 
-export default Ourclients;
+export default OurClient;

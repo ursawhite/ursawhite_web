@@ -1,50 +1,55 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import "../styles/ourworks.css";
-// import Marquee from "../components/test_marquee/marquee";
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Test_SVG from "../components/test_svg/test_svg";
+import Link from "next/link";
 
-function OurWork() {
+function Our_Works() {
   const ourWorks = [
     {
       id: 1,
       title: "Nod Credit",
       src: "/images/project1.png",
       alt: "NodCredit",
+      linkTo: "/ourworks/nod_credit",
     },
     {
       id: 2,
       title: "Feco Play",
       src: "/images/project2.png",
       alt: "FecoPlay",
+      linkTo: "/ourworks/feco_play",
     },
     {
       id: 3,
       title: "HKGO",
       src: "/images/project3.png",
       alt: "HKGO",
+      linkTo: "/ourworks/hkgo",
     },
     {
       id: 4,
       title: "JPCC",
       src: "/images/project4.png",
       alt: "JPCC",
+      linkTo: "/ourworks/jpcc",
     },
     {
       id: 5,
       title: "Naked Press",
       src: "/images/project5.png",
       alt: "NakedPress",
+      linkTo: "/ourworks/naked_press",
     },
     {
       id: 6,
       title: "BNI Direct",
       src: "/images/project6.png",
       alt: "BNIDirect",
+      linkTo: "/ourworks/bni_direct",
     },
   ];
   return (
@@ -127,13 +132,15 @@ function OurWork() {
                   className="col-lg-6 d-flex flex-column justify-content-center align-items-center"
                   key={index}
                 >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={500}
-                    height={500}
-                  />
-                  <h1 className="text-white">{item.title}</h1>
+                  <Link href={item.linkTo} className="text-decoration-none">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={500}
+                      height={500}
+                    />
+                    <h1 className="text-white text-center">{item.title}</h1>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -157,13 +164,15 @@ function OurWork() {
                   className="col-lg-6 d-flex flex-column justify-content-center align-items-center"
                   key={index}
                 >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={500}
-                    height={500}
-                  />
-                  <h1 className="text-white">{item.title}</h1>
+                  <Link href={item.linkTo} className="text-decoration-none">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={500}
+                      height={500}
+                    />
+                    <h1 className="text-white text-center">{item.title}</h1>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -186,13 +195,15 @@ function OurWork() {
                   className="col-lg-6 d-flex flex-column justify-content-center align-items-center"
                   key={index}
                 >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={500}
-                    height={500}
-                  />
-                  <h1 className="text-white">{item.title}</h1>
+                  <Link href={item.linkTo} className="text-decoration-none">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={500}
+                      height={500}
+                    />
+                    <h1 className="text-white text-center">{item.title}</h1>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -215,4 +226,4 @@ function OurWork() {
   );
 }
 
-export default OurWork;
+export default Our_Works;

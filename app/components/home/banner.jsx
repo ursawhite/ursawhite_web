@@ -6,35 +6,14 @@ function Banner() {
   return (
     <div className="container-overlay">
       <div className="container">
-        <div className="row align-items-center">
-          {/* <div className="col-lg-6 order-lg-2 "> */}
-          {/* <div className="featureimagewrapper">
-            <Image
-              className="logo-logo m-1"
-              src="/head-logo-blur.png"
-              width={700}
-              height={500}
-              sizes="{max-width: 768px} 100vw, 700px"
-              alt="logo"
-              style={{
-                objectFit: "contain",
-                objectPosition: "top",
-                position: "absolute",
-              }}
-              priority
-            />
-          </div> */}
-          {/* </div> */}
-          <div
-            className="col text-center text-white d-flex flex-column justify-content-center align-items-center "
-            style={{ width: "100%", height: "100vh" }}
-          >
+        <div className="row">
+          <div className="col text-center text-white d-flex flex-column justify-content-center align-items-center ">
             <h1 className="display-1 fw-bold">URSAWHITE</h1>
             <div className="div d-flex">
               <h1 className="display-1 fw-bold">Apps Is&nbsp;</h1>
               <TypeAnimation
                 className="display-1 fw-bold"
-                sequence={["Fast", 500, "Easy", 500]}
+                sequence={["Fast", 1000, "Easy", 1000]}
                 repeat={Infinity}
               />
             </div>
