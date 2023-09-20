@@ -54,8 +54,6 @@ function Our_Works() {
   ];
   return (
     <>
-      <Navbar />
-
       <Parallax pages={5} offset={0} style={{ backgroundColor: "black" }}>
         <ParallaxLayer
           offset={0}
@@ -138,8 +136,13 @@ function Our_Works() {
                       alt={item.alt}
                       width={500}
                       height={500}
+                      style={{
+                        objectFit: "contain",
+                      }}
                     />
-                    <h1 className="text-white text-center">{item.title}</h1>
+                    <h1 className="text-white text-center mt-5">
+                      {item.title}
+                    </h1>
                   </Link>
                 </div>
               ))}
@@ -170,8 +173,11 @@ function Our_Works() {
                       alt={item.alt}
                       width={500}
                       height={500}
+                      style={{ objectFit: "contain" }}
                     />
-                    <h1 className="text-white text-center">{item.title}</h1>
+                    <h1 className="text-white text-center mt-5">
+                      {item.title}
+                    </h1>
                   </Link>
                 </div>
               ))}
@@ -201,8 +207,11 @@ function Our_Works() {
                       alt={item.alt}
                       width={500}
                       height={500}
+                      style={{ objectFit: "contain" }}
                     />
-                    <h1 className="text-white text-center">{item.title}</h1>
+                    <h1 className="text-white text-center mt-5">
+                      {item.title}
+                    </h1>
                   </Link>
                 </div>
               ))}

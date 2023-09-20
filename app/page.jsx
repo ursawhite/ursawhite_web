@@ -18,7 +18,11 @@ function Section() {
   }, []);
 
   return (
-    <div className="">
+    <div
+      style={{
+        backgroundColor: "rgba(30,30,32,0.9)",
+      }}
+    >
       <Navbar />
       {isDesktop && isClient && <Para />}
       {isTablet && isClient && <Para />}

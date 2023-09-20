@@ -6,7 +6,7 @@ function BannerMobile() {
   return (
     <div className="container">
       <div
-        className="row d-flex justify-content-left align-items-center "
+        className="row d-flex align-items-center "
         style={{
           width: "100%",
           height: "100vh",
