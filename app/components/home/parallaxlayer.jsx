@@ -274,7 +274,7 @@ export default function MultiLayerParallax(props) {
         >
           <Image
             className="logo m-5"
-            src="/images/project1.png"
+            src="/images/our-works/project1.png"
             width={500}
             height={400}
             alt="logo"
@@ -316,7 +316,7 @@ export default function MultiLayerParallax(props) {
         >
           <Image
             className="logo m-5"
-            src="/images/img-back/nod_credit.png"
+            src="/images/img-back/Nod_credit.png"
             width={500}
             height={500}
             alt="Image by upklyak"
@@ -358,7 +358,7 @@ export default function MultiLayerParallax(props) {
         >
           <Image
             className="logo m-5"
-            src="/images/project2.png"
+            src="/images/our-works/project2.png"
             width={500}
             height={400}
             alt="logo"
@@ -422,7 +422,7 @@ export default function MultiLayerParallax(props) {
         >
           <Image
             className="logo m-5"
-            src="/images/project3.png"
+            src="/images/our-works/project3.png"
             width={500}
             height={400}
             alt="logo"
