@@ -2,72 +2,26 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-function Portofolio_Mobile() {
-  const portfolio = [
-    {
-      name: "NodCredit",
-      type: "Mobile App",
-      subject: "P2P lending app, now live on Google Playstore.",
-      image: "/mockup1.png",
-      desc: "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
-      tech: [
-        "payment API integration",
-        "User dashboard",
-        "settings",
-        " referral link",
-        "beautiful animation",
-      ],
-    },
-    {
-      name: "Feco Playbook",
-      type: "Mobile App",
-      subject: "P2P lending app, now live on Google Playstore.",
-      image: "/mockup2.png",
-      desc: "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
-      tech: [
-        "Flutter",
-        "Google Maps API",
-        "Directions API",
-        " Firebase cloud messaging (FCM)",
-        "Firebase Database",
-        "Google Analytics",
-        "QR/Bar code scanning",
-      ],
-    },
-    {
-      name: "HKGO",
-      type: "Mobile App",
-      subject:
-        "HKGO is a location-based app (Google Maps) with flutter for a big insurance company in Hong Kong.",
-      image: "/mockup3.png",
-      desc: "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
-      tech: [
-        "payment API integration",
-        "User dashboard",
-        "Settings",
-        "Referral link",
-        "Beautiful animation",
-      ],
-    },
-  ];
-
+function Portofolio_Mobile({ items }) {
   return (
     <div className="container">
-      <div className="row " style={{ marginLeft: "10%", marginRight: "10%" }}>
-        <h1 className="text-white mt-5 mb-5">Our Works</h1>
+      <div className="row ">
+        <h1 className="text-white text-center mt-5 mb-5">Our Works</h1>
 
-        {portfolio.map((item, index) => (
+        {items.slice(0, 3).map((item, index) => (
           <div className="row" key={index}>
             <div className="col-lg-6 order-lg-2 d-flex justify-content-center align-items-center mt-5 mb-5">
-              <div>
-                <Image
-                  src={item.image}
-                  width={300}
-                  height={300}
-                  layout="responsive"
-                  alt="logo"
-                />
-              </div>
+              <Image
+                src={item.image}
+                width={300}
+                height={300}
+                alt="logo"
+                style={{
+                  objectFit: "contain",
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
             </div>
             <div className="col-lg-6 order-lg-1">
               <h1 className="title fw-bold text-white">{item.name}</h1>

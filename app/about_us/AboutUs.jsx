@@ -21,17 +21,11 @@ function AboutUs() {
           }}
         >
           <div className="container">
-            <div
-              className="row"
-              style={{ marginLeft: "10%", marginRight: "10%" }}
-            >
+            <div className="row">
               <h1 className="text-title text-center text-white fw-bold m-5">
                 About Us
               </h1>
-              <div
-                className="col-lg-6 border border-5 border-end-0 border-bottom-0"
-                style={{ height: "60vh" }}
-              >
+              <div className="col-lg-6 col-md-6 border border-5 border-end-0 border-bottom-0">
                 <p
                   className="text-left fw-bolder ms-5 mt-5"
                   style={{ color: "rgba(169,80,210,255)" }}
@@ -42,20 +36,28 @@ function AboutUs() {
                   We Help Startups And Companies Succeed
                 </h1>
               </div>
-              <div className="col-lg-6 border border-5 border-start-0 border-top-0 ">
-                <h3 className="text-right fw-bold me-5" id="text-right-title">
+              <div className="col-lg-6 col-md-6 border border-5 border-start-0 border-top-0 ">
+                <h2
+                  className="text-right fw-bold me-5 mt-5 ms-5"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
                   Something big is happening in the world.
-                </h3>
-                <h6 className="text-right text-white me-5">
+                </h2>
+                <h6 className="text-right text-white ms-5 me-5">
                   Companies digitally transforming their services, startups
                   disrupting traditional business models, and innovation brought
                   about by digital products - all are changing the way we live.
                 </h6>
-                <h6 className="text-right text-white me-5">
+                <h6 className="text-right text-white me-5 ms-5">
                   {`Why spend all your resources building something, and only
             realizing after 6 months of launching – nobody actually wants it?`}
                 </h6>
-                <h6 className="text-right text-white mb-5 me-5">
+                <h6 className="text-right text-white mb-5 me-5 ms-5">
                   {` That's why we're here. To help you ideate, validate, and test
             ideas in the most time and cost-effective manner.`}
                 </h6>
@@ -118,13 +120,13 @@ function AboutUs() {
                 {`We're a team of strategists, designers, developers, storytellers,
           workshoppers and Mario Kart racers.`}
               </h3>
-              <div className="col-lg-4 mt-5 text-center">
+              <div className="col-lg-4 col-md-6 mt-5 text-lg-center">
                 <h5 className="text-white">WORKSHOPS</h5>
                 <p className="text-white"> Design Sprints </p>
                 <p className="text-white"> Lightning Decision Jams</p>
                 <p className="text-white"> Brand Sprints </p>
               </div>
-              <div className="col-lg-4 mt-5 text-center">
+              <div className="col-lg-4 col-md-6 mt-5 text-lg-center">
                 <h5 className="text-white">PRODUCT DESIGN</h5>
                 <p className="text-white"> User Experience </p>
                 <p className="text-white"> User Interface </p>
@@ -132,7 +134,7 @@ function AboutUs() {
                 <p className="text-white"> Motion Graphics </p>
                 <p className="text-white"> Branding </p>
               </div>
-              <div className="col-lg-4 mt-5 text-center">
+              <div className="col-lg-4 col-md-6 mt-5 text-lg-center">
                 <h5 className="text-white">DEVELOPMENT</h5>
                 <p className="text-white"> Frontend Development</p>
                 <p className="text-white"> Backend Development </p>
@@ -162,7 +164,7 @@ function AboutUs() {
               <h1 className="text-center text-white fw-bold">
                 Meet The Shipmates
               </h1>
-              <div className="col-lg-3 mt-5 text-center">
+              <div className="col-lg-3 col-md-6 mt-5 text-center">
                 <Image
                   src="/images/ava1.jpg"
                   alt="ava1"
@@ -173,7 +175,7 @@ function AboutUs() {
                 <p className="text-white mt-3 mb-0">CEO</p>
                 <p className="text-white">User1</p>
               </div>
-              <div className="col-lg-3 mt-5 text-center">
+              <div className="col-lg-3 col-md-6 mt-5 text-center">
                 <Image
                   src="/images/ava2.jpg"
                   alt="ava2"
@@ -184,7 +186,7 @@ function AboutUs() {
                 <p className="text-white mt-3 mb-0">COO</p>
                 <p className="text-white">User2</p>
               </div>
-              <div className="col-lg-3 mt-5 text-center">
+              <div className="col-lg-3 col-md-6  mt-5 text-center">
                 <Image
                   src="/images/ava3.jpg"
                   alt="ava3"
@@ -195,7 +197,7 @@ function AboutUs() {
                 <p className="text-white mt-3 mb-0">CTO</p>
                 <p className="text-white">User3</p>
               </div>
-              <div className="col-lg-3 mt-5 text-center">
+              <div className="col-lg-3 col-md-6 mt-5 text-center">
                 <Image
                   src="/images/ava4.jpg"
                   alt="ava4"

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import Navbar from "../components/navbar/navbar";
-import OurWorks from "./Our_Works";
+import OurWorks from "./our_works";
 import OurWorksMobile from "../components/mobile_view/ourworks/OurWorksMobile";
+import jsonData from "../../public/data.json";
 
 function OurWork() {
   const [isClient, setIsClient] = useState(false);
@@ -20,11 +20,10 @@ function OurWork() {
         backgroundColor: "rgba(32,28,28)",
       }}
     >
-      <Navbar />
-      {isDesktop && isClient && <OurWorks />}
-      {isTablet && isClient && <OurWorks />}
-      {isMobile && isClient && <OurWorksMobile />}
-      {isNotMobile && isClient && <OurWorks />}
+      {isDesktop && isClient && <OurWorks items={jsonData} />}
+      {isTablet && isClient && <OurWorks items={jsonData} />}
+      {isMobile && isClient && <OurWorksMobile items={jsonData} />}
+      {isNotMobile && isClient && <OurWorks items={jsonData} />}
     </div>
   );
 }

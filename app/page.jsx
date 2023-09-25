@@ -1,10 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-
-import Navbar from "./components/navbar/navbar";
 import Para from "./components/home/parallaxlayer";
 import HomeMobile from "./components/mobile_view/home/home";
+import jsonData from "../public/data.json";
 
 function Section() {
   const [isClient, setIsClient] = useState(false);
@@ -20,14 +19,14 @@ function Section() {
   return (
     <div
       style={{
-        backgroundColor: "rgba(30,30,32,0.9)",
+        backgroundColor: "rgba(27,27,29,255)",
+        overflowY: "auto",
       }}
     >
-      <Navbar />
-      {isDesktop && isClient && <Para />}
-      {isTablet && isClient && <Para />}
-      {isMobile && isClient && <HomeMobile />}
-      {isNotMobile && isClient && <Para />}
+      {isDesktop && isClient && <Para items={jsonData} />}
+      {isTablet && isClient && <Para items={jsonData} />}
+      {isMobile && isClient && <HomeMobile items={jsonData} />}
+      {isNotMobile && isClient && <Para items={jsonData} />}
     </div>
   );
 }

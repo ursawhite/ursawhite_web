@@ -4,10 +4,9 @@ import "../styles/services.css";
 import Link from "next/link";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Image from "next/image";
-import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
 import Test_SVG from "../components/test_svg/test_svg";
-import Marquee_Logo from "../test_marquee/marquee_logo";
+import Marquee_Logo from "../components/test_marquee/marquee_logo";
 import { motion } from "framer-motion";
 const ffBottom = {
   initial: {
@@ -84,7 +83,6 @@ function Services() {
 
   return (
     <>
-      <Navbar />
       <Parallax
         ref={ref}
         className="parallax"

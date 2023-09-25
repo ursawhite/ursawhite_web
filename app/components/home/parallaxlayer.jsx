@@ -6,30 +6,19 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import React, { useRef, useEffect, useState } from "react";
 import Banner from "../home/banner";
 import Ourclients from "../home/ourclients";
-// import Porto1 from "./portofolio/porto1";
-import Porto1Para from "./portofolio/porto1para";
-// import Porto2 from "./portofolio/porto2";
-import Porto2Para from "./portofolio/porto2para";
-// import Porto3 from "./portofolio/porto3";
-import Porto3Para from "./portofolio/porto3para";
+import PortoPage from "../home/portofolio/porto_page";
 import Image from "next/image";
 import Footer from "../footer/footer";
+import Section6 from "./section6";
 
-export default function MultiLayerParallax() {
+export default function MultiLayerParallax(props) {
   const ref = useRef(null);
   const [referenceNode, setReferenceNode] = useState(0);
-  const [activeSection, setActiveSection] = useState("section0");
-  const maksPage = 7;
+  const [activeSection, setActiveSection] = useState(0);
+  const maksPage = 14;
   const scrollDelay = 500;
-  const sectionList = [
-    "section0",
-    "section1",
-    "section2",
-    "section3",
-    "section4",
-    "section5",
-    "section6",
-  ];
+  const sectionList = [0, 1, 2, 3, 4, 5, 6];
+  const data = props.items;
 
   const handleClickScroll = (item) => {
     const element = document.getElementById(item);
@@ -42,31 +31,48 @@ export default function MultiLayerParallax() {
   useEffect(() => {
     const options = { passive: false };
     let isScrolling = false;
+
     const scroll = (event) => {
       const deltaY = event.deltaY;
-      if (event.deltaY === 0) return;
+      if (deltaY === 0) return;
+
       event.preventDefault();
 
       if (!isScrolling) {
         isScrolling = true;
 
         setTimeout(() => {
-          if (deltaY > 0 && referenceNode < maksPage - 1) {
-            ref.current.scrollTo(referenceNode + 1);
-            setReferenceNode(referenceNode + 1);
-            setActiveSection("section" + (referenceNode + 1));
-          } else if (deltaY > 0 && referenceNode === maksPage - 1) {
-            ref.current.scrollTo(maksPage - 1);
-            setReferenceNode(maksPage - 1);
-            setActiveSection("section" + (maksPage - 1));
-          } else if (deltaY < 0 && referenceNode > 0) {
-            ref.current.scrollTo(referenceNode - 1);
-            setReferenceNode(referenceNode - 1);
-            setActiveSection("section" + (referenceNode - 1));
-          } else if (deltaY < 0 && referenceNode === 0) {
-            ref.current.scrollTo(0);
-            setReferenceNode(0);
-            setActiveSection("section0");
+          if (deltaY > 0) {
+            // Scrolling down
+            if (referenceNode < maksPage - 2) {
+              ref.current.scrollTo(referenceNode + 2);
+              setReferenceNode(referenceNode + 2);
+              setActiveSection(activeSection + 1);
+              isScrolling = false;
+            } else if (
+              referenceNode === maksPage - 2 &&
+              activeSection < sectionList.length - 1
+            ) {
+              // When you are on the second to last page, and scrolling down
+              ref.current.scrollTo(maksPage);
+              setReferenceNode(maksPage);
+              setActiveSection(activeSection + 1);
+              isScrolling = false;
+            }
+          } else {
+            // Scrolling up
+            if (referenceNode > 0) {
+              ref.current.scrollTo(referenceNode - 2);
+              setReferenceNode(referenceNode - 2);
+              setActiveSection(activeSection - 1);
+              isScrolling = false;
+            } else if (referenceNode === 0 && activeSection > 0) {
+              // When you are on the first page, and scrolling up
+              ref.current.scrollTo(0);
+              setReferenceNode(0);
+              setActiveSection(activeSection - 1);
+              isScrolling = false;
+            }
           }
 
           isScrolling = false;
@@ -75,29 +81,30 @@ export default function MultiLayerParallax() {
     };
 
     document.addEventListener("wheel", scroll, options);
+
     return () => {
       document.removeEventListener("wheel", scroll, options);
     };
-  }, [referenceNode]);
+  }, [referenceNode, activeSection, sectionList, maksPage, scrollDelay]);
 
   return (
     <>
-      {/* <div className="text-white text-center position-absolute top-50 end-0 translate-middle-y z-3">
+      <div className="progress_bar text-white position-absolute top-50 end-0 translate-middle-y z-3">
         {sectionList.map((item, index) => (
-          <div key={index + 1} className="mb-3">
+          <div key={index + 1} className="">
             <button
-              className={`btn shadow-0 text-white border-0 ${
-                activeSection === item ? "fw-bold" : ""
+              className={`btn shadow-0  border-0 p-3 ${
+                activeSection === item
+                  ? "fw-bold text-danger d-flex align-items-center justify-content-center "
+                  : "text-white"
               }`}
               onClick={() => handleClickScroll(item)}
             >
-              <ul>
-                <li>{item}</li>
-              </ul>
+              <span>{item}</span>
             </button>
           </div>
         ))}
-      </div> */}
+      </div>
       <Parallax
         ref={ref}
         pages={maksPage}
@@ -122,6 +129,330 @@ export default function MultiLayerParallax() {
           <Banner />
         </ParallaxLayer>
         <ParallaxLayer
+          offset={1}
+          speed={0}
+          style={{
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        ></ParallaxLayer>
+        <ParallaxLayer
+          offset={3}
+          speed={0}
+          style={{
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        ></ParallaxLayer>
+        <ParallaxLayer
+          offset={5}
+          speed={0}
+          style={{
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        ></ParallaxLayer>
+        <ParallaxLayer
+          offset={7}
+          speed={0}
+          style={{
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        ></ParallaxLayer>
+        <ParallaxLayer
+          offset={9}
+          speed={0}
+          style={{
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        ></ParallaxLayer>
+        <ParallaxLayer
+          offset={11}
+          speed={0}
+          style={{
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        ></ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2}
+          speed={0}
+          factor={1}
+          id="section2"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        >
+          <Ourclients />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={4}
+          speed={0}
+          factor={1}
+          id="section3"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "1",
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        >
+          <PortoPage items={data[0]} f_color={"rgba(6,104,227,255)"} />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={6}
+          speed={0}
+          factor={1}
+          id="section4"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        >
+          <PortoPage items={data[1]} f_color={"rgba(86,133,65,255)"} />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={8}
+          speed={0}
+          factor={1}
+          id="section5"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        >
+          <PortoPage items={data[2]} f_color={"rgba(34,97,170,255)"} />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={10}
+          factor={1}
+          id="section6"
+          speed={0}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        >
+          <Section6 />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={12}
+          factor={1}
+          id="section7"
+          speed={0}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(30,30,32,0.9)",
+          }}
+        >
+          <Footer />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={4}
+          speed={0.3}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "2",
+            marginLeft: "30%",
+            marginTop: "6%",
+          }}
+        >
+          <Image
+            className="logo m-5"
+            src="/images/project1.png"
+            width={500}
+            height={400}
+            alt="logo"
+            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
+            style={{ objectFit: "contain" }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={4}
+          speed={0.8}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "1",
+            marginLeft: "20%",
+          }}
+        >
+          <Image
+            className="logo m-5"
+            src="/images/img-back/nod.png"
+            width={400}
+            height={400}
+            alt="logo"
+            style={{ objectFit: "contain" }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={4}
+          speed={1}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "7",
+            marginLeft: "15%",
+            marginTop: "8%",
+          }}
+        >
+          <Image
+            className="logo m-5"
+            src="/images/img-back/nod_credit.png"
+            width={500}
+            height={500}
+            alt="Image by upklyak"
+            style={{ objectFit: "contain" }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={6}
+          speed={0.8}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "1",
+            marginLeft: "20%",
+          }}
+        >
+          <Image
+            className="logo m-5"
+            src="/images/img-back/feco.png"
+            width={400}
+            height={400}
+            alt="logo"
+            style={{ objectFit: "contain" }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={6}
+          speed={0.3}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "2",
+            marginLeft: "30%",
+            marginTop: "6%",
+          }}
+        >
+          <Image
+            className="logo m-5"
+            src="/images/project2.png"
+            width={500}
+            height={400}
+            alt="logo"
+            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
+            style={{ objectFit: "contain" }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={6}
+          speed={1}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "7",
+            marginLeft: "15%",
+            marginTop: "8%",
+          }}
+        >
+          <Image
+            className="logo m-5"
+            src="/images/img-back/feco_playbook.png"
+            width={400}
+            height={400}
+            alt="Image by upklyak"
+            style={{ objectFit: "contain" }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={8}
+          speed={0.8}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "1",
+            marginLeft: "20%",
+          }}
+        >
+          <Image
+            className="logo m-5"
+            src="/images/img-back/hkgo.png"
+            width={400}
+            height={400}
+            alt="logo"
+            style={{ objectFit: "contain" }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={8}
+          speed={0.3}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "2",
+            marginLeft: "30%",
+            marginTop: "6%",
+          }}
+        >
+          <Image
+            className="logo m-5"
+            src="/images/project3.png"
+            width={500}
+            height={400}
+            alt="logo"
+            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
+            style={{ objectFit: "contain" }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={8}
+          speed={1}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "7",
+            marginLeft: "15%",
+            marginTop: "8%",
+          }}
+        >
+          <Image
+            className="logo m-5"
+            src="/images/img-back/hkgo_back.png"
+            width={400}
+            height={400}
+            alt="Image by upklyak"
+            style={{ objectFit: "contain" }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
           offset={0}
           speed={0.3}
           style={{ marginLeft: "90%", zIndex: -1 }}
@@ -138,36 +469,6 @@ export default function MultiLayerParallax() {
 
         <ParallaxLayer
           offset={1}
-          speed={0}
-          factor={1}
-          id="section2"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        >
-          <Ourclients />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={0}
-          factor={1}
-          id="section3"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: "1",
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        >
-          <Porto1Para />
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={1}
           speed={0.3}
           style={{ marginLeft: "-5%", marginTop: "-10%", zIndex: -1 }}
         >
@@ -178,56 +479,6 @@ export default function MultiLayerParallax() {
             alt="logo"
             style={{ objectFit: "contain" }}
             priority
-          />
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={3}
-          speed={0}
-          factor={1}
-          id="section4"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        >
-          <Porto2Para />
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={4}
-          speed={0}
-          factor={1}
-          id="section5"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        >
-          <Porto3Para />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={0.3}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: "2",
-            marginLeft: "25%",
-          }}
-        >
-          <Image
-            className="logo m-5"
-            src="/images/project1.png"
-            width={500}
-            height={400}
-            alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
-            style={{ objectFit: "contain" }}
           />
         </ParallaxLayer>
 
@@ -292,109 +543,89 @@ export default function MultiLayerParallax() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3}
-          speed={0.3}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: "2",
-            marginLeft: "25%",
-          }}
-        >
-          <Image
-            className="logo m-5"
-            src="/images/project2.png"
-            width={500}
-            height={400}
-            alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
-            style={{ objectFit: "contain" }}
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={4}
-          speed={0.3}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: "2",
-            marginLeft: "25%",
-          }}
-        >
-          <Image
-            className="logo m-5"
-            src="/images/project3.png"
-            width={500}
-            height={400}
-            alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
-            style={{ objectFit: "contain" }}
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer
           offset={5}
-          factor={1}
-          id="section6"
-          speed={0}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
+          speed={0.3}
+          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
         >
-          <div className="container">
-            <div
-              className="row"
-              style={{ marginLeft: "10%", marginRight: "10%" }}
-            >
-              <div className="col-lg-6 ">
-                <p className="text-white ms-5"> FOR STARTUPS AND CORPORATION</p>
-                <h1 className="text-white display-3 fw-bold ms-5">
-                  Design Sprint Your Product Idea
-                </h1>
-                <p className="text-white ms-5">
-                  {` Your Minimum Viable Product (Design) in 6 weeks. You can take
-                  it to investors to drum up capital, take to another
-                  development agency or decide to do in-house, think of the
-                  outcome as a complete house design from an architect,
-                  plumbing, electrical, and everything else design and planning.
-                  No construction included yet, that's for another package!`}
-                </p>
-                <button className="btn btn-secondary ms-5">{`Let's Explore`}</button>
-              </div>
-              <div className="col-lg-6">
-                <p className="text-white ms-5"> FOR STARTUPS AND CORPORATION</p>
-                <h1 className="text-white display-3 fw-bold ms-5">
-                  Development Sprint
-                </h1>
-                <p className="text-white ms-5">
-                  You can go fast or slow, you can let us develop your own
-                  designs or develop our own design from our “Design Sprint
-                  Package”
-                </p>
-                <button className="btn btn-secondary ms-5">Contact Us</button>
-              </div>
-            </div>
-          </div>
+          <Image
+            src="/images/obj/7.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            priority
+          />
         </ParallaxLayer>
+
         <ParallaxLayer
           offset={6}
-          factor={1}
-          id="section7"
-          speed={0}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
+          speed={0.3}
+          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
         >
-          <Footer />
+          <Image
+            src="/images/obj/8.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={7}
+          speed={0.3}
+          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/9.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={8}
+          speed={0.3}
+          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/10.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={9}
+          speed={0.3}
+          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/11.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={10}
+          speed={0.3}
+          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/12.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            priority
+          />
         </ParallaxLayer>
       </Parallax>
     </>

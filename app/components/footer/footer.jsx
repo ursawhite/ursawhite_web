@@ -4,15 +4,15 @@ import "./footer.css";
 function Footer() {
   return (
     <>
-      <div
-        className="container d-flex justify-content-center align-items-center"
-        style={{ marginLeft: "15%", marginRight: "15%" }}
-      >
-        <div className="row">
-          <div className="col-lg-6 border border-secondary p-5">
-            <h1 className="text-white display-3 fw-bold">
+      <div className="container ">
+        <div
+          className="row gx-1"
+          style={{ marginTop: "20%", marginBottom: "20%" }}
+        >
+          <div className="col-lg-6 col-md-6 border  p-lg-5 p-md-3">
+            <div className="text-white display-3 fw-bold">
               Let’s ideate, validate & ship fast
-            </h1>
+            </div>
             <h4 className="text-secondary">{` Ready to start your next project? Let's Start our journey together`}</h4>
             <div className="button_contact ">
               <button
@@ -26,7 +26,7 @@ function Footer() {
               </button>
             </div>
           </div>
-          <div className="col-lg-6 border border-secondary p-5">
+          <div className="col-lg-6 col-md-6 border p-lg-5 p-md-3">
             <h1 className="text_title_right fw-bold">
               We’re a fun team of strategists, designers and developers
             </h1>
@@ -44,7 +44,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="row fixed-bottom ms-5 me-5">
+      {/* <div className="row fixed-bottom ms-5 me-5">
         <div className="col-6 d-flex justify-content-start ">
           <p className="text-white mt-5" style={{ marginLeft: "15%" }}>
             © 2023 Ursawhite. All rights reserved.
@@ -55,7 +55,7 @@ function Footer() {
             Terms of Service | Privacy Policy
           </p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

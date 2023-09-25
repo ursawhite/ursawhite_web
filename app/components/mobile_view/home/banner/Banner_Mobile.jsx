@@ -12,12 +12,12 @@ function BannerMobile() {
           height: "100vh",
         }}
       >
-        <div className="col" style={{ marginLeft: "10%", marginRight: "10%" }}>
+        <div className="col">
           <h1 className="display-1 fw-bold text-white">URSAWHITE</h1>
           <div className="d-flex">
-            <h1 className="display-1 fw-bold text-white">Apps Is&nbsp;</h1>
+            <h1 className="display-2 fw-bold text-white">Apps Is&nbsp;</h1>
             <TypeAnimation
-              className="display-1 fw-bold text-white"
+              className="display-2 fw-bold text-white"
               sequence={["Fast", 1000, "Easy", 1000]}
               repeat={Infinity}
             />

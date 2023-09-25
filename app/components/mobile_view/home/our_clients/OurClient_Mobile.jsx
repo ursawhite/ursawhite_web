@@ -62,7 +62,7 @@ function OurClient() {
   return (
     <div className="container">
       <div className="row d-flex justify-content-left align-items-center ">
-        <div className="col" style={{ marginLeft: "10%", marginRight: "10%" }}>
+        <div className="col">
           <p className="text-white">A DIGITAL PRODUCT AGENCY LIKE NO OTHER</p>
           <h1 className="title text-white mb-3 fw-bold ">
             Skip the long meetings and email <br /> threads. We focus on getting
@@ -77,10 +77,7 @@ function OurClient() {
         </div>
       </div>
 
-      <div
-        className="row d-flex "
-        style={{ marginLeft: "10%", marginRight: "10%" }}
-      >
+      <div className="row d-flex ">
         {company.map((item, index) => (
           <motion.div
             className="col mt-3 mb-4"

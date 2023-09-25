@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/navbar/navbar";
 import { useMediaQuery } from "react-responsive";
 import AboutUs from "./AboutUs";
 import AboutUs_Mobile from "../components/mobile_view/about_us/AboutUs_Mobile";
@@ -18,10 +17,9 @@ function About_us() {
   return (
     <div
       style={{
-        backgroundColor: "rgba(30,30,32,0.9)",
+        backgroundColor: "rgba(27,27,29,255)",
       }}
     >
-      <Navbar />
       {isDesktop && isClient && <AboutUs />}
       {isTablet && isClient && <AboutUs />}
       {isMobile && isClient && <AboutUs_Mobile />}

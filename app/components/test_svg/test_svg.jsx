@@ -4,7 +4,7 @@ import "./test_svg.css";
 function Test_svg({ item }) {
   const text = item;
   return (
-    <div className="patterns" style={{ marginTop: "-25%" }}>
+    <div className="patterns" style={{ marginTop: "-25%", zIndex: -10 }}>
       <svg width="100%" height="800px">
         <text
           x="50%"

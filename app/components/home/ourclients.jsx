@@ -70,10 +70,7 @@ function Ourclients() {
             Skip the long meetings and email <br /> threads. We focus on getting
             things done.
           </h1>
-          <p
-            className="text-center text-white"
-            style={{ marginLeft: "10%", marginRight: "10%" }}
-          >
+          <p className="text-center text-white">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -81,13 +78,10 @@ function Ourclients() {
           </p>
         </div>
 
-        <div
-          className="row d-flex justify-content-center align-items-center"
-          style={{ marginLeft: "10%", marginRight: "10%" }}
-        >
-          {/* {company.map((item, index) => (
+        <div className="row d-flex justify-content-center align-items-center">
+          {company.map((item, index) => (
             <motion.div
-              className="col-lg-3 mt-3 mb-4"
+              className="col-lg-3 col-md-3 col-auto mt-3 mb-4"
               key={index}
               variants={fadeInAnimationVariants}
               initial="initial"
@@ -110,7 +104,7 @@ function Ourclients() {
                 <div className="card-body"></div>
               </div>
             </motion.div>
-          ))} */}
+          ))}
         </div>
       </div>
     </div>

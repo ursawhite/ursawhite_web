@@ -1,11 +1,12 @@
 import React from "react";
-import Navbar from "../../navbar/navbar";
+import Navbar from "../../header/navbar";
 import BannerMobile from "./banner/Banner_Mobile";
 import OurclientsMobile from "./our_clients/OurClient_Mobile";
 import PortofolioMobile from "./portofolio/Portofolio_Mobile";
 import FooterMobile from "../footer/Footer_Mobile";
 
-function Home() {
+function Home(props) {
+  const data = props.items;
   return (
     <div
       style={{
@@ -15,7 +16,7 @@ function Home() {
       <Navbar />
       <BannerMobile />
       <OurclientsMobile />
-      <PortofolioMobile />
+      <PortofolioMobile items={data} />
       <FooterMobile />
       <div className="row " style={{ width: "100%", height: "100vh" }}>
         <div className="col-12 d-flex flex-column justify-content-center align-items-center">

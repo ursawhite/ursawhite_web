@@ -64,6 +64,7 @@ function Porto1() {
                 variants={fadeInRight}
                 initial="initial"
                 whileInView="animate"
+                viewport={{ once: true }}
               >
                 <div>
                   <Image

@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
 // import "../app/styles/globals.css";
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/header/navbar";
 import Footer from "./components/footer/footer";
 
 export const metadata = {
@@ -20,6 +20,9 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
+        <header>
+          <Navbar />
+        </header>
         <main>{children}</main>
 
         <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></Script>

@@ -4,10 +4,7 @@ import Image from "next/image";
 function Footer_Mobile() {
   return (
     <div className="container">
-      <div
-        className="row mt-5"
-        style={{ marginLeft: "10%", marginRight: "10%" }}
-      >
+      <div className="row mt-5">
         <div className="col-lg-6">
           <h1 className="text-white">
             We’re a fun team of strategists, designers and developers
