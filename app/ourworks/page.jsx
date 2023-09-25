@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import OurWorks from "../ourworks/our_works";
+import Our_Work from "./our_works/our_works";
 import OurWorksMobile from "../components/mobile_view/ourworks/OurWorksMobile";
 import jsonData from "../../public/data.json";
 
-function OurWork() {
+function OurWorks() {
   const [isClient, setIsClient] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 992 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
@@ -20,12 +20,12 @@ function OurWork() {
         backgroundColor: "rgba(32,28,28)",
       }}
     >
-      {isDesktop && isClient && <OurWorks items={jsonData} />}
-      {isTablet && isClient && <OurWorks items={jsonData} />}
+      {isDesktop && isClient && <Our_Work items={jsonData} />}
+      {isTablet && isClient && <Our_Work items={jsonData} />}
       {isMobile && isClient && <OurWorksMobile items={jsonData} />}
-      {isNotMobile && isClient && <OurWorks items={jsonData} />}
+      {isNotMobile && isClient && <Our_Work items={jsonData} />}
     </div>
   );
 }
 
-export default OurWork;
+export default OurWorks;

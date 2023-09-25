@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import "../styles/ourworks.css";
-import Footer from "../components/footer/footer";
+import "../../styles/ourworks.css";
+import Footer from "../../components/footer/footer";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import Test_SVG from "../components/test_svg/test_svg";
+import Test_SVG from "../../components/test_svg/test_svg";
 import Link from "next/link";
 
 function Our_Works(props) {
