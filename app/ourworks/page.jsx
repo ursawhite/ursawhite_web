@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import OurWorks from "./our_works";
+import OurWorks from "../ourworks/our_works";
 import OurWorksMobile from "../components/mobile_view/ourworks/OurWorksMobile";
 import jsonData from "../../public/data.json";
 
