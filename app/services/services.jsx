@@ -89,6 +89,96 @@ function Services() {
       >
         <ParallaxLayer
           offset={0}
+          speed={0.3}
+          style={{ marginLeft: "90%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/1.png"
+            width={350}
+            height={350}
+            alt="logo"
+            style={{ objectFit: "contain" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={1}
+          speed={0.3}
+          style={{ marginLeft: "-5%", marginTop: "-10%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/2.png"
+            width={250}
+            height={250}
+            alt="logo"
+            style={{ objectFit: "contain" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={1}
+          speed={0.3}
+          style={{ marginLeft: "90%", marginTop: "30%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/3.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2}
+          speed={0.3}
+          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/4.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={3}
+          speed={0.3}
+          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/5.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={4}
+          speed={0.3}
+          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/6.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={0}
           speed={0}
           tabIndex="0"
           style={{
@@ -146,7 +236,7 @@ function Services() {
         <ParallaxLayer
           offset={0}
           speed={0}
-          style={{ marginTop: "20%", zIndex: -1 }}
+          style={{ marginTop: "20%", zIndex: -2 }}
         >
           <Test_SVG item="Services" />
         </ParallaxLayer>

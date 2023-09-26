@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import "../../styles/ourclients.css";
 import { motion } from "framer-motion";
 
 const fadeInAnimationVariants = {
@@ -95,7 +94,7 @@ function Ourclients() {
         <div className="row d-flex justify-content-center align-items-center">
           {company.map((item, index) => (
             <motion.div
-              className="col-lg-3 col-md-3 col-auto mt-3 mb-4"
+              className="col-lg-3 col-md-3 col-auto mt-3 mb-4 "
               key={index}
               variants={fadeInAnimationVariants}
               initial="initial"
@@ -105,17 +104,16 @@ function Ourclients() {
               }}
               custom={index}
             >
-              <div className="card">
+              <div className="card d-flex justify-content-center align-items-center">
                 <Image
                   src={item.logo}
-                  className="card-img-top p-1"
+                  className="img-fluid p-1 bg-light"
                   alt={item.name}
-                  fill
+                  width={100}
+                  height={100}
                   sizes="{max-width: 100px} 25vw, 100px"
                   style={{ objectFit: "contain" }}
-                  priority
                 />
-                <div className="card-body"></div>
               </div>
             </motion.div>
           ))}

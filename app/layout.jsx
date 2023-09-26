@@ -1,8 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
-// import "../app/styles/globals.css";
 import Navbar from "./components/header/navbar";
-import Footer from "./components/footer/footer";
 
 export const metadata = {
   title: "Create Next App",

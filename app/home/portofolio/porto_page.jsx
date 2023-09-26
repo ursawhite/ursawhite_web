@@ -69,9 +69,11 @@ function PortoPages({ items, f_color }) {
               </ul>
               <div className="btn bg-none">
                 <Link
-                  href="/ourworks/nod_credit"
                   className="text-decoration-none fw-bold"
-                  style={{ color: `${f_color}` }}
+                  href={{
+                    pathname: `/ourworks/project`,
+                    query: { items: JSON.stringify(items) },
+                  }}
                 >
                   Check Now
                 </Link>

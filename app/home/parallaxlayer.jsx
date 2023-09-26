@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import "../../styles/parallax.scss";
+
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import React, { useRef, useEffect, useState } from "react";
-import Banner from "../home/banner";
-import Ourclients from "../home/ourclients";
-import PortoPage from "../home/portofolio/porto_page";
+import Banner from "./banner/banner";
+import Ourclients from "./our_clients/ourclients";
+import PortoPage from "./portofolio/porto_page";
 import Image from "next/image";
-import Footer from "../footer/footer";
-import Section6 from "./section6";
+import Footer from "../components/footer/footer";
+import Section6 from "./section6/section6";
 
 export default function MultiLayerParallax(props) {
   const ref = useRef(null);
@@ -23,9 +23,9 @@ export default function MultiLayerParallax(props) {
   //Not working
   const handleClickScroll = (item) => {
     const element = document.getElementById(item);
-    console.log(element);
+
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo(element);
       setActiveSection(item);
     }
   };
@@ -95,7 +95,7 @@ export default function MultiLayerParallax(props) {
 
   return (
     <>
-      <div className="progress_bar text-white position-absolute top-50 end-0 translate-middle-y z-3">
+      {/* <div className="progress_bar text-white position-absolute top-50 end-0 translate-middle-y z-3">
         {sectionList.map((item, index) => (
           <div key={index + 1} className="">
             <button
@@ -110,7 +110,7 @@ export default function MultiLayerParallax(props) {
             </button>
           </div>
         ))}
-      </div>
+      </div> */}
       <Parallax
         ref={ref}
         pages={maksPage}
@@ -211,7 +211,7 @@ export default function MultiLayerParallax(props) {
           offset={6}
           speed={0}
           factor={1}
-          id="section4"
+          id="3"
           style={{
             display: "flex",
             alignItems: "center",
@@ -225,7 +225,7 @@ export default function MultiLayerParallax(props) {
           offset={8}
           speed={0}
           factor={1}
-          id="section5"
+          id="4"
           style={{
             display: "flex",
             alignItems: "center",
@@ -239,7 +239,7 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={10}
           factor={1}
-          id="section6"
+          id="5"
           speed={0}
           style={{
             display: "flex",
@@ -254,7 +254,7 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={12}
           factor={1}
-          id="section7"
+          id="6"
           speed={0}
           style={{
             display: "flex",

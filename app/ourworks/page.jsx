@@ -17,7 +17,7 @@ function OurWorks() {
   return (
     <div
       style={{
-        backgroundColor: "rgba(32,28,28)",
+        backgroundColor: "rgba(27,27,29,255)",
       }}
     >
       {isDesktop && isClient && <Our_Work items={jsonData} />}

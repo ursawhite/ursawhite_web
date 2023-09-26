@@ -25,7 +25,10 @@ function Project() {
           justifyContent: "center",
         }}
       >
-        <div className="display-2 text-center text-white fw-bold">
+        <div
+          className="display-2 text-center text-white fw-bold"
+          style={{ marginTop: "3%" }}
+        >
           {project.title}
         </div>
 
@@ -159,24 +162,17 @@ function Project() {
           justifyContent: "center",
         }}
       >
-        <Image
-          src="/images/galery-hkgo-1.png"
-          alt="NodCredit"
-          width={500}
-          height={500}
-        />
-        <Image
-          src="/images/galery-hkgo-2.png"
-          alt="NodCredit"
-          width={500}
-          height={500}
-        />
-        <Image
-          src="/images/galery-hkgo-3.png"
-          alt="NodCredit"
-          width={500}
-          height={500}
-        />
+        {project.img_details.map((item, index) => (
+          <div className="col-lg-4 col-md-4" key={index}>
+            <Image
+              className="img-fluid"
+              src={item}
+              alt="details project"
+              width={500}
+              height={500}
+            />
+          </div>
+        ))}
       </ParallaxLayer>
     </Parallax>
   );

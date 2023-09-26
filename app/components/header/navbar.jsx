@@ -32,8 +32,8 @@ function Navbar() {
           <Image
             className=""
             src="/logo.png"
-            width={width < 1024 ? "150" : "300"}
-            height={width < 1024 ? "25" : "50"}
+            width={width < 1024 ? "150" : "200"}
+            height={width < 1024 ? "25" : "35"}
             priority={true}
             alt="logo"
           />

@@ -11,6 +11,81 @@ function AboutUs() {
       <Parallax ref={ref} pages={5} style={{ background: "black" }}>
         <ParallaxLayer
           offset={0}
+          speed={0.3}
+          style={{ marginLeft: "90%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/1.png"
+            width={350}
+            height={350}
+            alt="logo"
+            style={{ objectFit: "contain" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={1}
+          speed={0.3}
+          style={{ marginLeft: "-5%", marginTop: "-10%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/2.png"
+            width={250}
+            height={250}
+            alt="logo"
+            style={{ objectFit: "contain" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={1}
+          speed={0.3}
+          style={{ marginLeft: "90%", marginTop: "30%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/3.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2}
+          speed={0.3}
+          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/4.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={3}
+          speed={0.3}
+          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
+        >
+          <Image
+            src="/images/obj/5.png"
+            width={300}
+            height={300}
+            alt="logo"
+            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            priority
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={0}
           speed={0}
           style={{
             display: "flex",
@@ -67,9 +142,9 @@ function AboutUs() {
         <ParallaxLayer
           offset={0}
           speed={0}
-          style={{ marginTop: "20%", zIndex: -1 }}
+          style={{ marginTop: "20%", zIndex: -2 }}
         >
-          <Test_SVG item="About Us" />
+          <Test_SVG item="About" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={1}
@@ -79,29 +154,55 @@ function AboutUs() {
           }}
         ></ParallaxLayer>
         <ParallaxLayer offset={1} speed={0.5}>
-          <Image
-            src="/images/work.jpg"
-            alt="work1"
-            width={400}
-            height={250}
-            style={{ objectFit: "cover", marginLeft: "10%", marginTop: "5%" }}
-          />
-          <Image
-            src="/images/work2.png"
-            alt="work1"
-            width={400}
-            height={250}
-            style={{ objectFit: "cover", marginLeft: "30%", marginTop: "15%" }}
-          />
+          <div className="row">
+            <div className="col-lg-4 col-md-4">
+              <Image
+                className="img-fluid"
+                src="/images/work.jpg"
+                alt="work1"
+                width={400}
+                height={250}
+                style={{
+                  objectFit: "cover",
+                  marginLeft: "40%",
+                  marginRight: "60%",
+                }}
+              />
+            </div>
+            <div className="col-lg-6 col-md-6">
+              <Image
+                className="img-fluid"
+                src="/images/work2.png"
+                alt="work1"
+                width={400}
+                height={250}
+                style={{
+                  objectFit: "cover",
+                  marginLeft: "60%",
+                  marginRight: "40%",
+                }}
+              />
+            </div>
+          </div>
         </ParallaxLayer>
+
         <ParallaxLayer offset={1} speed={0.8}>
-          <Image
-            src="/images/work3.png"
-            alt="work1"
-            width={600}
-            height={350}
-            style={{ objectFit: "cover", marginLeft: "30%", marginTop: "20%" }}
-          />
+          <div className="col-lg-6 col-md-6">
+            <Image
+              className="img-fluid"
+              src="/images/work3.png"
+              alt="work1"
+              width={600}
+              height={350}
+              style={{
+                objectFit: "cover",
+                marginLeft: "60%",
+                marginRight: "50%",
+                marginTop: "10%",
+                marginBottom: "10%",
+              }}
+            />
+          </div>
         </ParallaxLayer>
         <ParallaxLayer
           offset={2}

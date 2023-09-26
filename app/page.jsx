@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import Para from "./components/home/parallaxlayer";
+import Para from "./home/parallaxlayer";
 import HomeMobile from "./components/mobile_view/home/home";
 import jsonData from "../public/data.json";
 
@@ -20,7 +20,6 @@ function Section() {
     <div
       style={{
         backgroundColor: "rgba(27,27,29,255)",
-        overflowY: "auto",
       }}
     >
       {isDesktop && isClient && <Para items={jsonData} />}
