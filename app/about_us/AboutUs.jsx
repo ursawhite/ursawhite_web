@@ -169,17 +169,17 @@ function AboutUs() {
                 }}
               />
             </div>
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-4 col-md-4">
               <Image
                 className="img-fluid"
                 src="/images/work2.png"
-                alt="work1"
+                alt="work2"
                 width={400}
                 height={250}
                 style={{
                   objectFit: "cover",
-                  marginLeft: "60%",
-                  marginRight: "40%",
+                  marginLeft: "75%",
+                  marginRight: "25%",
                 }}
               />
             </div>
@@ -191,15 +191,13 @@ function AboutUs() {
             <Image
               className="img-fluid"
               src="/images/work3.png"
-              alt="work1"
+              alt="work3"
               width={600}
               height={350}
               style={{
                 objectFit: "cover",
                 marginLeft: "60%",
                 marginRight: "50%",
-                marginTop: "10%",
-                marginBottom: "10%",
               }}
             />
           </div>

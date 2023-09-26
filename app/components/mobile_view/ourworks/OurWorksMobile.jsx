@@ -43,9 +43,9 @@ function OurWorks(props) {
                 query: { items: JSON.stringify(ourWork) },
               }}
             >
-              <div className="col-lg-6 col-md-6 col-sm-4 col-xs-4 d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
+              <div className="col-lg-6 col-md-6 col-auto d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
                 <Image
-                  className="mt-3 mb-3"
+                  className="mt-3 mb-3 img-fluid"
                   src={ourWork.image}
                   width={300}
                   height={300}
