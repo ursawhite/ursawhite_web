@@ -80,7 +80,7 @@ function MarqueeLogo() {
             width={100}
             height={100}
             alt={item.alt}
-            className="m-3"
+            className="img-fluid m-3"
           />
         ))}
       </Marquee>
@@ -98,7 +98,7 @@ function MarqueeLogo() {
             width={100}
             height={100}
             alt={item.alt}
-            className="m-3"
+            className="img-fluid m-3"
           />
         ))}
       </Marquee>

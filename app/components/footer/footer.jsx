@@ -1,15 +1,14 @@
 import React from "react";
-import "./footer.css";
 
 function Footer() {
   return (
     <>
       <div className="container ">
         <div
-          className="row gx-1"
+          className="row gx-2 g-2"
           style={{ marginTop: "20%", marginBottom: "20%" }}
         >
-          <div className="col-lg-6 col-md-6 border  p-lg-5 p-md-3">
+          <div className="col-lg-6 col-md-6 border border-2 p-lg-5 p-md-3">
             <div className="text-white display-3 fw-bold">
               Let’s ideate, validate & ship fast
             </div>
@@ -26,8 +25,16 @@ function Footer() {
               </button>
             </div>
           </div>
-          <div className="col-lg-6 col-md-6 border p-lg-5 p-md-3">
-            <h1 className="text_title_right fw-bold">
+          <div className="col-lg-6 col-md-6 border border-2 p-lg-5 p-md-4">
+            <h1
+              className="fw-bold"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(182, 117, 214, 1) 0%, rgba(79, 66, 152, 1) 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
               We’re a fun team of strategists, designers and developers
             </h1>
             <h4 className="text-white mt-5">hello@helooo.hellooo</h4>
@@ -44,18 +51,6 @@ function Footer() {
           </div>
         </div>
       </div>
-      {/* <div className="row fixed-bottom ms-5 me-5">
-        <div className="col-6 d-flex justify-content-start ">
-          <p className="text-white mt-5" style={{ marginLeft: "15%" }}>
-            © 2023 Ursawhite. All rights reserved.
-          </p>
-        </div>
-        <div className="col-6 d-flex justify-content-end ">
-          <p className="text-white mt-5" style={{ marginRight: "15%" }}>
-            Terms of Service | Privacy Policy
-          </p>
-        </div>
-      </div> */}
     </>
   );
 }

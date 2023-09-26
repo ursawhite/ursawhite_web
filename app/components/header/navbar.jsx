@@ -39,12 +39,12 @@ function Navbar() {
           />
         </Link>
         <button
-          className="navbar-toggler shadow-none border bg-light "
+          className="navbar-toggler shadow-none "
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
-          style={{ color: "white" }}
+          style={{ background: "rgba(255,255,255,0.5)" }}
         >
           <div className="navbar-toggler-icon text-danger"></div>
         </button>
@@ -93,44 +93,6 @@ function Navbar() {
                 </li>
               ))}
             </ul>
-
-            {/* <li className="nav-item mx-2 fw-bold ">
-                  <Link
-                    className={`nav-link fs-6 ${
-                      activeLink === "/ourworks" ? "active border-bottom" : ""
-                    }`}
-                    id="linkOurWorks"
-                    href="/ourworks"
-                    onClick={() => setActiveLink("/ourworks")}
-                  >
-                    <span>Our Work</span>
-                  </Link>
-                </li>
-                <li className="nav-item mx-2 fw-bold ">
-                  <Link
-                    className={`nav-link fs-6 ${
-                      activeLink === "/about_us" ? "active border-bottom" : ""
-                    }`}
-                    id="linkAboutUs"
-                    href="/about_us"
-                    onClick={() => setActiveLink("/about_us")}
-                  >
-                    <span>About Us</span>
-                  </Link>
-                </li>
-                <li className="nav-item mx-2 fw-bold ">
-                  <Link
-                    className={`nav-link fs-6 ${
-                      activeLink === "/services" ? "active border-bottom" : ""
-                    }`}
-                    id="linkServices"
-                    href="/services"
-                    onClick={() => setActiveLink("/services")}
-                  >
-                    <span>Services</span>
-                  </Link>
-                </li> */}
-            {/* </ul> */}
             <div className="d-flex justify-content-center flex-column">
               <button
                 type="button"

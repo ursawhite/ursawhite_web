@@ -18,8 +18,8 @@ function Portofolio_Mobile({ items }) {
                 alt="logo"
                 style={{
                   objectFit: "contain",
-                  width: "100%",
-                  height: "auto",
+                  // width: "100%",
+                  // height: "auto",
                 }}
               />
             </div>

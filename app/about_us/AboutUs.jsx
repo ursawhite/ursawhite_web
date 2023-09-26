@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import "../styles/about_us.css";
 import Image from "next/image";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Test_SVG from "../components/test_svg/test_svg";

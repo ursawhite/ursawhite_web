@@ -20,8 +20,10 @@ export default function MultiLayerParallax(props) {
   const sectionList = [0, 1, 2, 3, 4, 5, 6];
   const data = props.items;
 
+  //Not working
   const handleClickScroll = (item) => {
     const element = document.getElementById(item);
+    console.log(element);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setActiveSection(item);
@@ -31,24 +33,28 @@ export default function MultiLayerParallax(props) {
   useEffect(() => {
     const options = { passive: false };
     let isScrolling = false;
+    let isScrollProcessed = false;
+    let accumulatedDeltaY = 0;
 
     const scroll = (event) => {
       const deltaY = event.deltaY;
-      if (deltaY === 0) return;
+      accumulatedDeltaY += deltaY;
+
+      if (isScrolling || Math.abs(accumulatedDeltaY) < 1) return;
 
       event.preventDefault();
+      isScrolling = true;
 
-      if (!isScrolling) {
-        isScrolling = true;
+      if (!isScrollProcessed) {
+        isScrollProcessed = true;
 
         setTimeout(() => {
-          if (deltaY > 0) {
+          if (accumulatedDeltaY > 0) {
             // Scrolling down
             if (referenceNode < maksPage - 2) {
               ref.current.scrollTo(referenceNode + 2);
               setReferenceNode(referenceNode + 2);
               setActiveSection(activeSection + 1);
-              isScrolling = false;
             } else if (
               referenceNode === maksPage - 2 &&
               activeSection < sectionList.length - 1
@@ -57,7 +63,6 @@ export default function MultiLayerParallax(props) {
               ref.current.scrollTo(maksPage);
               setReferenceNode(maksPage);
               setActiveSection(activeSection + 1);
-              isScrolling = false;
             }
           } else {
             // Scrolling up
@@ -65,19 +70,20 @@ export default function MultiLayerParallax(props) {
               ref.current.scrollTo(referenceNode - 2);
               setReferenceNode(referenceNode - 2);
               setActiveSection(activeSection - 1);
-              isScrolling = false;
             } else if (referenceNode === 0 && activeSection > 0) {
               // When you are on the first page, and scrolling up
               ref.current.scrollTo(0);
               setReferenceNode(0);
               setActiveSection(activeSection - 1);
-              isScrolling = false;
             }
           }
 
-          isScrolling = false;
+          isScrollProcessed = false;
+          accumulatedDeltaY = 0;
         }, scrollDelay);
       }
+
+      isScrolling = false;
     };
 
     document.addEventListener("wheel", scroll, options);
@@ -85,7 +91,7 @@ export default function MultiLayerParallax(props) {
     return () => {
       document.removeEventListener("wheel", scroll, options);
     };
-  }, [referenceNode, activeSection, sectionList, maksPage, scrollDelay]);
+  }, [referenceNode, activeSection, maksPage, scrollDelay]);
 
   return (
     <>
@@ -118,7 +124,7 @@ export default function MultiLayerParallax(props) {
           speed={0}
           tabIndex="0"
           factor={1}
-          id="section1"
+          id="0"
           style={{
             display: "flex",
             alignItems: "center",
@@ -175,7 +181,7 @@ export default function MultiLayerParallax(props) {
           offset={2}
           speed={0}
           factor={1}
-          id="section2"
+          id="1"
           style={{
             display: "flex",
             alignItems: "center",
@@ -190,7 +196,7 @@ export default function MultiLayerParallax(props) {
           offset={4}
           speed={0}
           factor={1}
-          id="section3"
+          id="2"
           style={{
             display: "flex",
             alignItems: "center",
@@ -284,7 +290,7 @@ export default function MultiLayerParallax(props) {
         </ParallaxLayer>
         <ParallaxLayer
           offset={4}
-          speed={0.8}
+          speed={0}
           style={{
             display: "flex",
             alignItems: "center",
@@ -326,7 +332,7 @@ export default function MultiLayerParallax(props) {
 
         <ParallaxLayer
           offset={6}
-          speed={0.8}
+          speed={0}
           style={{
             display: "flex",
             alignItems: "center",
@@ -390,7 +396,7 @@ export default function MultiLayerParallax(props) {
 
         <ParallaxLayer
           offset={8}
-          speed={0.8}
+          speed={0}
           style={{
             display: "flex",
             alignItems: "center",
