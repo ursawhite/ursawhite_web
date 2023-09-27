@@ -13,7 +13,7 @@ function BannerMobile() {
         }}
       >
         <div className="col">
-          <h1 className="display-1 fw-bold text-white">URSAWHITE</h1>
+          <div className="display-1 fw-bold text-white mt-5">URSAWHITE</div>
           <div className="d-flex">
             <h1 className="display-2 fw-bold text-white">Apps Is&nbsp;</h1>
             <TypeAnimation

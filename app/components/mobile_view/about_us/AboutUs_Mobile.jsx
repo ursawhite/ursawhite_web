@@ -8,12 +8,18 @@ function AboutUs_Mobile() {
       <div className="container">
         <div className="row d-flex align-items-center">
           <div className="col-12 ">
-            <h1
-              className="text-title text-center text-white fw-bold "
-              style={{ marginTop: "20%" }}
+            <div
+              className="display-4 text-center text-white fw-bold "
+              style={{
+                background:
+                  "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                marginTop: "20%",
+              }}
             >
               About Us
-            </h1>
+            </div>
             <h1 className="text-title text-left display-1 text-white fw-bold mt-5 mb-5">
               Your Digital Design Partner
             </h1>

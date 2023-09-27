@@ -43,12 +43,18 @@ function Services_Mobile() {
       <div className="container">
         <div className="row d-flex align-items-center">
           <div className="col-12 ">
-            <h1
-              className="text-title text-center text-white fw-bold "
-              style={{ marginTop: "20%" }}
+            <div
+              className="display-4 text-title text-center text-white fw-bold "
+              style={{
+                background:
+                  "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                marginTop: "20%",
+              }}
             >
               Our Services
-            </h1>
+            </div>
             <h1 className="text-title text-left display-1 text-white fw-bold mt-5 mb-5">
               Your Digital Design Partner
             </h1>
@@ -69,7 +75,9 @@ function Services_Mobile() {
       </div>
       <div className="container">
         <div className="">
-          <h1 className="text-white fw-bold text-center mt-5">Services</h1>
+          <h1 className="fw-bold text-center mt-5" style={{ color: "#c457d5" }}>
+            Services
+          </h1>
           {services.map((item, index) => (
             <div
               className={`row d-flex justify-content-center align-items-center ${

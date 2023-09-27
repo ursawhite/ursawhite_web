@@ -4,8 +4,9 @@ import Image from "next/image";
 
 function ProjectMobile() {
   const searchParams = useSearchParams();
-  const items = searchParams.get("items");
-  const project = JSON.parse(items);
+  const item = searchParams.get("items");
+  const project = JSON.parse(item);
+  console.log(item);
 
   return (
     <>
@@ -22,7 +23,7 @@ function ProjectMobile() {
         <div className="col-12 d-flex flex-column align-items-center justify-content-center">
           <div className="display-1 text-white fw-bold">{project.title}</div>
           <Image
-            src={project.img_back[2]}
+            src={project.image_mobile}
             alt={project.title}
             width={300}
             height={300}

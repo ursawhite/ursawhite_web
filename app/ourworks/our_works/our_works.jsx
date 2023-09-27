@@ -10,7 +10,11 @@ function Our_Works(props) {
 
   return (
     <>
-      <Parallax pages={5} offset={0} style={{ backgroundColor: "black" }}>
+      <Parallax
+        pages={5}
+        offset={0}
+        style={{ backgroundColor: "rgba(27,27,29,255)" }}
+      >
         <ParallaxLayer
           offset={0}
           speed={0.3}
@@ -21,7 +25,11 @@ function Our_Works(props) {
             width={350}
             height={350}
             alt="logo"
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "contain",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -36,7 +44,11 @@ function Our_Works(props) {
             width={250}
             height={250}
             alt="logo"
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "contain",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -51,7 +63,12 @@ function Our_Works(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(350deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -66,7 +83,12 @@ function Our_Works(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(350deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -81,7 +103,12 @@ function Our_Works(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(350deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -93,22 +120,21 @@ function Our_Works(props) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(30,30,32,0.9 )",
           }}
         >
           <div className="container">
             <div className="row">
-              <h1
-                className="text-center text-white fw-bold m-5"
+              <div
+                className="text-center text-white display-2 fw-bold m-5"
                 style={{
                   background:
-                    "linear-gradient(90deg, rgba(182, 117, 214, 1) 0%, rgba(79, 66, 152, 1) 100%)",
+                    "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
               >
                 Our Works
-              </h1>
+              </div>
               <div className="col-lg-6 col-md-6 border border-5 border-end-0 border-bottom-0">
                 <p
                   className="text-left fw-bolder ms-5 mt-5"
@@ -158,7 +184,6 @@ function Our_Works(props) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(30,30,32,0.9 )",
           }}
         >
           <div className="container">
@@ -207,7 +232,6 @@ function Our_Works(props) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(30,30,32,0.9 )",
           }}
         >
           <div className="container">
@@ -254,7 +278,6 @@ function Our_Works(props) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(30,30,32,0.9 )",
           }}
         >
           <div className="container" style={{}}>
@@ -301,7 +324,6 @@ function Our_Works(props) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(30,30,32,0.9 )",
           }}
         >
           <Footer />

@@ -1,15 +1,19 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import React, { useRef, useEffect, useState } from "react";
-import Banner from "./banner/banner";
-import Ourclients from "./our_clients/ourclients";
-import PortoPage from "./portofolio/porto_page";
+import Banner from "../banner/banner";
+import Ourclients from "../our_clients/ourclients";
+import PortoPage from "../portofolio/porto_page";
 import Image from "next/image";
-import Footer from "../components/footer/footer";
-import Section6 from "./section6/section6";
+import Link from "next/link";
+import Items from "../../../public/data.json";
+
+import Footer from "../../components/footer/footer";
+import Section6 from "../section6/section6";
+import ImageLeft from "../../components/home_our_works/image_left";
+import ImageRight from "../../components/home_our_works/image_right";
+import ImageFont from "../../components/home_our_works/image_font";
 
 export default function MultiLayerParallax(props) {
   const ref = useRef(null);
@@ -116,7 +120,7 @@ export default function MultiLayerParallax(props) {
         pages={maksPage}
         style={{
           overflowY: "hidden",
-          backgroundColor: "black",
+          backgroundColor: "rgba(27,27,29,255)",
         }}
       >
         <ParallaxLayer
@@ -129,53 +133,17 @@ export default function MultiLayerParallax(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
+            // backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Banner />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={1}
-          speed={0}
-          style={{
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        ></ParallaxLayer>
-        <ParallaxLayer
-          offset={3}
-          speed={0}
-          style={{
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        ></ParallaxLayer>
-        <ParallaxLayer
-          offset={5}
-          speed={0}
-          style={{
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        ></ParallaxLayer>
-        <ParallaxLayer
-          offset={7}
-          speed={0}
-          style={{
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        ></ParallaxLayer>
-        <ParallaxLayer
-          offset={9}
-          speed={0}
-          style={{
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        ></ParallaxLayer>
-        <ParallaxLayer
-          offset={11}
-          speed={0}
-          style={{
-            backgroundColor: "rgba(30,30,32,0.9)",
-          }}
-        ></ParallaxLayer>
+        <ParallaxLayer offset={1} speed={0}></ParallaxLayer>
+        <ParallaxLayer offset={3} speed={0}></ParallaxLayer>
+        <ParallaxLayer offset={5} speed={0}></ParallaxLayer>
+        <ParallaxLayer offset={7} speed={0}></ParallaxLayer>
+        <ParallaxLayer offset={9} speed={0}></ParallaxLayer>
+        <ParallaxLayer offset={11} speed={0}></ParallaxLayer>
 
         <ParallaxLayer
           offset={2}
@@ -186,7 +154,6 @@ export default function MultiLayerParallax(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Ourclients />
@@ -201,8 +168,8 @@ export default function MultiLayerParallax(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: "1",
-            backgroundColor: "rgba(30,30,32,0.9)",
+            zIndex: "4",
+            // backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <PortoPage items={data[0]} f_color={"rgba(6,104,227,255)"} />
@@ -216,7 +183,7 @@ export default function MultiLayerParallax(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
+            zIndex: "4",
           }}
         >
           <PortoPage items={data[1]} f_color={"rgba(86,133,65,255)"} />
@@ -230,7 +197,7 @@ export default function MultiLayerParallax(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
+            zIndex: "4",
           }}
         >
           <PortoPage items={data[2]} f_color={"rgba(34,97,170,255)"} />
@@ -245,7 +212,6 @@ export default function MultiLayerParallax(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Section6 />
@@ -260,7 +226,6 @@ export default function MultiLayerParallax(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Footer />
@@ -270,192 +235,111 @@ export default function MultiLayerParallax(props) {
           offset={4}
           speed={0.3}
           style={{
+            zIndex: "2",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            zIndex: "2",
-            marginLeft: "30%",
-            marginTop: "6%",
+            justifyContent: "end",
           }}
         >
-          <Image
-            className="logo m-5"
-            src="/images/our-works/project1.png"
-            width={500}
-            height={400}
-            alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
-            style={{ objectFit: "contain" }}
-          />
+          <ImageRight src="/images/our-works/project1.png" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={4}
           speed={0}
           style={{
+            zIndex: "1",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: "1",
-            marginLeft: "20%",
           }}
         >
-          <Image
-            className="logo m-5"
-            src="/images/img-back/nod.png"
-            width={400}
-            height={400}
-            alt="logo"
-            style={{ objectFit: "contain" }}
-          />
+          <ImageFont src="/images/img-back/nod.png" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={4}
-          speed={1}
+          speed={0.5}
           style={{
+            zIndex: "3",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: "7",
-            marginLeft: "15%",
-            marginTop: "8%",
           }}
         >
-          <Image
-            className="logo m-5"
-            src="/images/img-back/Nod_credit.png"
-            width={500}
-            height={500}
-            alt="Image by upklyak"
-            style={{ objectFit: "contain" }}
-          />
+          <ImageLeft src="/images/img-back/nod_credit.png" />
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={6}
           speed={0}
           style={{
+            zIndex: "1",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: "1",
-            marginLeft: "20%",
           }}
         >
-          <Image
-            className="logo m-5"
-            src="/images/img-back/feco.png"
-            width={400}
-            height={400}
-            alt="logo"
-            style={{ objectFit: "contain" }}
-          />
+          <ImageFont src="/images/img-back/feco.png" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={6}
           speed={0.3}
           style={{
+            zIndex: "2",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            zIndex: "2",
-            marginLeft: "30%",
-            marginTop: "6%",
+            justifyContent: "end",
           }}
         >
-          <Image
-            className="logo m-5"
-            src="/images/our-works/project2.png"
-            width={500}
-            height={400}
-            alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
-            style={{ objectFit: "contain" }}
-          />
+          <ImageRight src="/images/our-works/project2.png" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={6}
-          speed={1}
+          speed={0.5}
           style={{
+            zIndex: "3",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: "7",
-            marginLeft: "15%",
-            marginTop: "8%",
           }}
         >
-          <Image
-            className="logo m-5"
-            src="/images/img-back/feco_playbook.png"
-            width={400}
-            height={400}
-            alt="Image by upklyak"
-            style={{ objectFit: "contain" }}
-          />
+          <ImageLeft src="/images/img-back/feco_playbook.png" />
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={8}
           speed={0}
           style={{
+            zIndex: "1",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: "1",
-            marginLeft: "20%",
           }}
         >
-          <Image
-            className="logo m-5"
-            src="/images/img-back/hkgo.png"
-            width={400}
-            height={400}
-            alt="logo"
-            style={{ objectFit: "contain" }}
-          />
+          <ImageFont src="/images/img-back/hkgo.png" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={8}
           speed={0.3}
           style={{
+            zIndex: "2",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            zIndex: "2",
-            marginLeft: "30%",
-            marginTop: "6%",
+            justifyContent: "end",
           }}
         >
-          <Image
-            className="logo m-5"
-            src="/images/our-works/project3.png"
-            width={500}
-            height={400}
-            alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
-            style={{ objectFit: "contain" }}
-          />
+          <ImageRight src="/images/our-works/project3.png" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={8}
-          speed={1}
+          speed={0.5}
           style={{
+            zIndex: "3",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: "7",
-            marginLeft: "15%",
-            marginTop: "8%",
           }}
         >
-          <Image
-            className="logo m-5"
-            src="/images/img-back/hkgo_back.png"
-            width={400}
-            height={400}
-            alt="Image by upklyak"
-            style={{ objectFit: "contain" }}
-          />
+          <ImageLeft src="/images/img-back/hkgo_back.png" />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -468,7 +352,11 @@ export default function MultiLayerParallax(props) {
             width={350}
             height={350}
             alt="logo"
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "contain",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -483,7 +371,11 @@ export default function MultiLayerParallax(props) {
             width={250}
             height={250}
             alt="logo"
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "contain",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -498,7 +390,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(350deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -513,7 +410,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(350deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -528,7 +430,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(350deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -543,7 +450,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(30deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -558,7 +470,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(30deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -573,7 +490,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(30deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -587,7 +509,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(30deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -601,7 +528,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(30deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -615,7 +547,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(30deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -629,7 +566,12 @@ export default function MultiLayerParallax(props) {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(30deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>

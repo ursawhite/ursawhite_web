@@ -83,9 +83,8 @@ function Services() {
     <>
       <Parallax
         ref={ref}
-        className="parallax"
         pages={6}
-        style={{ background: "black" }}
+        style={{ backgroundColor: "rgba(27,27,29,255)" }}
       >
         <ParallaxLayer
           offset={0}
@@ -97,7 +96,11 @@ function Services() {
             width={350}
             height={350}
             alt="logo"
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "contain",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -112,7 +115,11 @@ function Services() {
             width={250}
             height={250}
             alt="logo"
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "contain",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -127,7 +134,12 @@ function Services() {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(350deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -142,7 +154,12 @@ function Services() {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(350deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -157,7 +174,12 @@ function Services() {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(350deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(350deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -172,7 +194,12 @@ function Services() {
             width={300}
             height={300}
             alt="logo"
-            style={{ objectFit: "contain", transform: "rotate(30deg)" }}
+            style={{
+              objectFit: "contain",
+              transform: "rotate(30deg)",
+              opacity: "0.3",
+              filter: "blur(8px)",
+            }}
             priority
           />
         </ParallaxLayer>
@@ -185,16 +212,15 @@ function Services() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(30,30,32,0.9 )",
           }}
         >
           <div className="container">
             <div className="row">
               <h1
-                className="text-center text-white fw-bold m-5"
+                className="text-center text-white display-2 fw-bold m-5"
                 style={{
                   background:
-                    "linear-gradient(90deg, rgba(182, 117, 214, 1) 0%, rgba(79, 66, 152, 1) 100%)",
+                    "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -247,7 +273,6 @@ function Services() {
           factor={10}
           style={{
             display: "flex",
-            backgroundColor: "rgba(30,30,32,0.9)",
             height: "150%",
             width: "100%",
           }}
@@ -347,7 +372,7 @@ function Services() {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer
+        {/* <ParallaxLayer
           offset={2}
           speed={0.5}
           style={{
@@ -577,7 +602,7 @@ function Services() {
             height={50}
             alt="typescript"
           />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         <ParallaxLayer
           offset={4}

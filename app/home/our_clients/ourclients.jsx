@@ -76,47 +76,49 @@ function Ourclients() {
   return (
     <div className="container-fluid">
       <div className="container">
-        <div className="d-flex flex-column justify-content-center align-items-center ">
-          <p className="text-white">A DIGITAL PRODUCT AGENCY LIKE NO OTHER</p>
-          <h1 className="title text-white text-center mb-3 fw-bold mb-4">
-            Skip the long meetings and email <br /> threads. We focus on getting
-            things done.
-          </h1>
-
-          <p className="text-center text-white">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry’s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.{" "}
-          </p>
-        </div>
-
-        <div className="row d-flex justify-content-center align-items-center">
-          {company.map((item, index) => (
-            <motion.div
-              className="col-lg-3 col-md-3 col-auto mt-3 mb-4 "
-              key={index}
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              custom={index}
-            >
-              <div className="card d-flex justify-content-center align-items-center">
-                <Image
-                  src={item.logo}
-                  className="img-fluid p-1 bg-light"
-                  alt={item.name}
-                  width={100}
-                  height={100}
-                  sizes="{max-width: 100px} 25vw, 100px"
-                  style={{ objectFit: "contain" }}
-                />
-              </div>
-            </motion.div>
-          ))}
+        <div className="row d-flex flex-column justify-content-center align-items-center">
+          <div className="col-lg-8">
+            <p className="text-center fw-bold" style={{ color: "#c457d5" }}>
+              A DIGITAL PRODUCT AGENCY LIKE NO OTHER
+            </p>
+            <h1 className="title text-white text-center mb-3 fw-bold mb-4">
+              Skip the long meetings and email <br /> threads. We focus on
+              getting things done.
+            </h1>
+            <p className="text-white">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry’s standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+            <div className=" d-flex flex-wrap justify-content-center align-items-center ">
+              {company.map((item, index) => (
+                <motion.div
+                  className="mb-2"
+                  key={index}
+                  variants={fadeInAnimationVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={index}
+                >
+                  <div className="d-flex justify-content-center align-items-center me-lg-2 me-md-1">
+                    <Image
+                      src={item.logo}
+                      className="img-fluid p-1 bg-light"
+                      alt={item.name}
+                      width={150}
+                      height={150}
+                      sizes="{max-width: 100px} 25vw, 100px"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

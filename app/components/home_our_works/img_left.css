@@ -1,0 +1,29 @@
+@media (min-width: 768px) and (max-width: 991px) {
+  .img-left {
+    margin-left: 55%;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1024px) {
+  .img-left {
+    margin-left: 50%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .img-left {
+    margin-left: 50%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .img-left {
+    margin-left: 50%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .img-left {
+    margin-left: 50%;
+  }
+}

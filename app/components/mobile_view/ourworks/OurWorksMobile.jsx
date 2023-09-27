@@ -10,12 +10,18 @@ function OurWorks(props) {
       <div className="container">
         <div className="row d-flex align-items-center">
           <div className="col-12 ">
-            <h1
-              className="text-title text-center text-white fw-bold "
-              style={{ marginTop: "20%" }}
+            <div
+              className="display-3 text-title text-center fw-bold "
+              style={{
+                background:
+                  "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                marginTop: "20%",
+              }}
             >
               Our Works
-            </h1>
+            </div>
             <h1 className="text-title text-left display-1 text-white fw-bold mt-5 mb-5">
               We are a digital design agency
             </h1>
@@ -33,9 +39,9 @@ function OurWorks(props) {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container ">
         {data.map((ourWork) => (
-          <div className="row" key={ourWork.id}>
+          <div className="row " key={ourWork.id}>
             <Link
               className="text-decoration-none"
               href={{
@@ -43,9 +49,9 @@ function OurWorks(props) {
                 query: { items: JSON.stringify(ourWork) },
               }}
             >
-              <div className="col-lg-6 col-md-6 col-auto d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
+              <div className="col-lg-6 col-md-6 col-6 mt-5 mb-5">
                 <Image
-                  className="mt-3 mb-3 img-fluid"
+                  className="img-fluid mt-3 mb-3 "
                   src={ourWork.image}
                   width={300}
                   height={300}
@@ -53,25 +59,17 @@ function OurWorks(props) {
                   alt={ourWork.title}
                   style={{
                     objectFit: "contain",
-                    // width: "100%",
-                    // height: "auto",
+                    marginLeft: "50%",
+                    marginRight: "50%",
                   }}
                 />
-                <h1 className="text-white text-center mt-5">{ourWork.title}</h1>
               </div>
+              <h1 className="text-white text-center mt-5">{ourWork.title}</h1>
             </Link>
           </div>
         ))}
 
         <Footer />
-        <div className="row " style={{ width: "100%", height: "100vh" }}>
-          <div className="col-12 d-flex flex-column justify-content-center align-items-center">
-            <p className="text-white ">Go To Next Section</p>
-            <button className="btn bg-none shadow-0 ">
-              <span className="text-white fw-bold h4"> Next</span>
-            </button>
-          </div>
-        </div>
       </div>
     </>
   );

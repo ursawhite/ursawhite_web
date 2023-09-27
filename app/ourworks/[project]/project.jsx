@@ -8,11 +8,12 @@ function Project() {
   const searchParams = useSearchParams();
   const items = searchParams.get("items");
   const project = JSON.parse(items);
+  console.log(project);
   return (
     <Parallax
       ref={ref}
       pages={4}
-      style={{ backgroundColor: "rgba(27,27,29,255)" }}
+      // style={{ backgroundColor: "rgba(27,27,29,255)" }}
     >
       <ParallaxLayer
         offset={0}

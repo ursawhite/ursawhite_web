@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import Para from "./home/parallaxlayer";
+import Para from "./home/parallax/parallaxlayer";
 import HomeMobile from "./components/mobile_view/home/home";
 import jsonData from "../public/data.json";
 

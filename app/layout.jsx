@@ -17,7 +17,11 @@ export default function RootLayout({ children }) {
         ></link>
       </head>
 
-      <body>
+      <body
+        style={{
+          backgroundColor: "rgba(27, 27, 29)",
+        }}
+      >
         <header>
           <Navbar />
         </header>

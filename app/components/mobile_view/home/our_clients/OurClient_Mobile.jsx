@@ -63,7 +63,9 @@ function OurClient() {
     <div className="container">
       <div className="row d-flex justify-content-left align-items-center ">
         <div className="col">
-          <p className="text-white">A DIGITAL PRODUCT AGENCY LIKE NO OTHER</p>
+          <p className="fw-bold" style={{ color: "#c457d5" }}>
+            A DIGITAL PRODUCT AGENCY LIKE NO OTHER
+          </p>
           <h1 className="title text-white mb-3 fw-bold ">
             Skip the long meetings and email <br /> threads. We focus on getting
             things done.
@@ -80,7 +82,7 @@ function OurClient() {
       <div className="row d-flex ">
         {company.map((item, index) => (
           <motion.div
-            className="col mt-3 mb-4"
+            className="col-4 mt-3 mb-4"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -90,12 +92,13 @@ function OurClient() {
             }}
             custom={index}
           >
-            <div className="card">
+            <div className="">
               <Image
                 src={item.logo}
-                className="card-img-top p-1"
+                className="img-fluid bg-light rounded p-1"
                 alt={item.name}
-                fill
+                width={100}
+                height={100}
                 sizes="{max-width: 100px} 25vw, 100px"
                 style={{ objectFit: "contain" }}
                 priority

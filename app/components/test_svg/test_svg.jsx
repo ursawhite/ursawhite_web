@@ -11,7 +11,7 @@ function Test_svg({ item }) {
           y="50%"
           textAnchor="middle"
           fontSize="100px"
-          color="white"
+          color="#70747c"
         >
           {text}
         </text>

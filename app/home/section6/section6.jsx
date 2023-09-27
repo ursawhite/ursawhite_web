@@ -3,10 +3,13 @@ import React from "react";
 function Section6() {
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-lg-6 col-md-6 ">
-          <p className="text-white "> FOR STARTUPS AND CORPORATION</p>
-          <h1 className="text-white display-3 fw-bold ">
+      <div className="row d-flex justify-content-center ">
+        <div className="col-lg-3 col-md-5 ">
+          <p className="fw-bold" style={{ color: "#c457d5" }}>
+            {" "}
+            FOR STARTUPS AND CORPORATION
+          </p>
+          <h1 className="text-white display-5 fw-bold ">
             Design Sprint Your Product Idea
           </h1>
           <p className="text-white ">
@@ -19,9 +22,12 @@ function Section6() {
           </p>
           <button className="btn btn-secondary ">{`Let's Explore`}</button>
         </div>
-        <div className="col-lg-6 col-md-6">
-          <p className="text-white "> FOR STARTUPS AND CORPORATION</p>
-          <h1 className="text-white display-3 fw-bold ">Development Sprint</h1>
+        <div className="col-lg-1 col-md-1"></div>
+        <div className="col-lg-3 col-md-5">
+          <p className="fw-bold" style={{ color: "#c457d5" }}>
+            FOR STARTUPS AND CORPORATION
+          </p>
+          <h1 className="text-white display-5 fw-bold ">Development Sprint</h1>
           <p className="text-white ">
             You can go fast or slow, you can let us develop your own designs or
             develop our own design from our “Design Sprint Package”

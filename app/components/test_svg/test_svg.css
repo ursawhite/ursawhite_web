@@ -1,10 +1,12 @@
 svg text {
   letter-spacing: 10px;
-  stroke: #fffefe;
+  stroke: #70747c;
   font-size: 350px;
   font-weight: 800;
   stroke-width: 3;
   animation: textAnimate 5s;
+  fill: rgba(27, 27, 29, 255);
+  filter: blur(5px);
 }
 
 @keyframes textAnimate {

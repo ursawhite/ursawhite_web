@@ -80,8 +80,8 @@ function Navbar() {
                   <Link
                     className={`nav-link fs-6 ${
                       activeLink === `${item.link}`
-                        ? "active border-bottom bg-light rounded p-2"
-                        : "text-white"
+                        ? "active border-bottom border-3 text-white p-2"
+                        : "text-secondary"
                     }`}
                     id={item.id}
                     aria-current="page"
