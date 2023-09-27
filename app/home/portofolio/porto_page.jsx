@@ -2,16 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const fadeInRight = {
+const fadeInTop = {
   initial: {
     opacity: 0,
-    x: 150,
+    y: 300,
   },
   animate: () => ({
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       delay: 0.3,
+      duration: 1,
     },
   }),
 };
@@ -37,7 +38,7 @@ function PortoPages({ items, f_color }) {
         <div className="row d-flex justify-content-center align-items-center">
           <motion.div
             className="col-lg-5 col-md-7 p-5"
-            variants={fadeInLeft}
+            variants={fadeInTop}
             initial="initial"
             whileInView="animate"
           >

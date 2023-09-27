@@ -101,8 +101,8 @@
     "id": 4,
     "title": "JPCC",
     "type": "Mobile App",
-    "subject": "P2P lending app, now live on Google Playstore.",
-    "desc": "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
+    "subject": "Unlock the JPCC experience! ",
+    "desc": "Stay Connected with the Jakarta Praise Community Church through the official MyJPCC Application. Get the latest news and information, register for exciting programs and events, and discover JPCC small group communities all in one place.",
     "tech": [
       "Flutter",
       "Google Maps API",
@@ -116,12 +116,19 @@
     "location": "Lagos, Nigeria",
     "year": "2020",
     "image": "/images/our-works/project4.png",
+    "image_mobile": "/images/img-back/jpcc_mobile.png",
     "img_details": [
       "/images/our-works/details/galery-hkgo-1.png",
       "/images/our-works/details/galery-hkgo-2.png",
       "/images/our-works/details/galery-hkgo-3.png"
     ],
-    "linkTo": "/ourworks/jpcc"
+    "img_back": [
+      "/images/img-back/jpcc.png",
+      "/images/img-back/jpcc_back.png",
+      "/images/img-back/jpcc_mobile.png"
+    ],
+    "linkTo": "/ourworks/jpcc",
+    "main_color": "rgba(92,27,168,255)"
   },
   {
     "id": 5,
@@ -142,12 +149,19 @@
     "location": "Lagos, Nigeria",
     "year": "2020",
     "image": "/images/our-works/project5.png",
+    "image_mobile": "/images/img-back/nakedpress_mobile.png",
     "img_details": [
       "/images/our-works/details/galery-hkgo-1.png",
       "/images/our-works/details/galery-hkgo-2.png",
       "/images/our-works/details/galery-hkgo-3.png"
     ],
-    "linkTo": "/ourworks/naked_press"
+    "img_back": [
+      "/images/img-back/naked_press.png",
+      "/images/img-back/naked_back.png",
+      "/images/img-back/nakedpress_mobile.png"
+    ],
+    "linkTo": "/ourworks/naked_press",
+    "main_color": "rgba(227,153,106)"
   },
   {
     "id": 6,
@@ -168,11 +182,18 @@
     "location": "Lagos, Nigeria",
     "year": "2020",
     "image": "/images/our-works/project6.png",
+    "image_mobile": "/images/img-back/bni_mobile.png",
+    "img_back": [
+      "/images/img-back/bni.png",
+      "/images/img-back/bni_back.png",
+      "/images/img-back/bni_mobile.png"
+    ],
     "img_details": [
       "/images/our-works/details/galery-hkgo-1.png",
       "/images/our-works/details/galery-hkgo-2.png",
       "/images/our-works/details/galery-hkgo-3"
     ],
-    "linkTo": "/ourworks/bni_direct"
+    "linkTo": "/ourworks/bni_direct",
+    "main_color": "rgba(242,108,75)"
   }
 ]
