@@ -13,7 +13,7 @@ function Project() {
     <Parallax
       ref={ref}
       pages={4}
-      // style={{ backgroundColor: "rgba(27,27,29,255)" }}
+      style={{ backgroundColor: "rgba(27,27,29,255)" }}
     >
       <ParallaxLayer
         offset={0}
