@@ -265,7 +265,7 @@ export default function MultiLayerParallax(props) {
             justifyContent: "center",
           }}
         >
-          <ImageLeft src="/images/img-back/nod_credit.png" />
+          <ImageLeft src="/images/img-back/Nod_credit.png" />
         </ParallaxLayer>
 
         <ParallaxLayer
