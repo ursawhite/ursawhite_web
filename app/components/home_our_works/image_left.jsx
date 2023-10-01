@@ -18,6 +18,7 @@ const ImageLeft = (props) => {
             sizes="(max-width: 500px) 85vw, (max-width: 1000px) 50vw, 33vw"
             style={{
               objectFit: "contain",
+              height: "auto",
             }}
           />
         </div>

@@ -169,7 +169,7 @@ export default function MultiLayerParallax(props) {
               className={`btn shadow-0 ${
                 activeSection === item
                   ? "fw-bold text-danger d-flex align-items-center justify-content-center border-end border-5 me-2"
-                  : "text-white m-3"
+                  : "text-secondary border-end border-5 me-2"
               }`}
               onClick={() => handleClickScroll(item)}
               style={{
@@ -180,16 +180,6 @@ export default function MultiLayerParallax(props) {
                 {/* <>{activeSection ? item : " "}</> */}
                 {item}
               </div>
-              <div
-                className="vertical"
-                style={{
-                  borderRight: "5px solid #808080",
-                  height: "50px",
-                  position: "absolute",
-                  right: "18%",
-                  opacity: "0.1",
-                }}
-              ></div>
             </button>
           </div>
         ))}
