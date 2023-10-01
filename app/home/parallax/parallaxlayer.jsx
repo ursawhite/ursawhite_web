@@ -1,6 +1,7 @@
 "use client";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { useSpring, config } from "@react-spring/core";
 import React, { useRef, useEffect, useState } from "react";
 import Banner from "../banner/banner";
 import Ourclients from "../our_clients/ourclients";
@@ -19,17 +20,17 @@ export default function MultiLayerParallax(props) {
   const ref = useRef(null);
   const [referenceNode, setReferenceNode] = useState(0);
   const [activeSection, setActiveSection] = useState(0);
-  const maksPage = 14;
+  const maksPage = 13;
   const scrollDelay = 500;
   const sectionList = [0, 1, 2, 3, 4, 5, 6];
   const data = props.items;
 
-  //Not working
   const handleClickScroll = (item) => {
-    const element = document.getElementById(item);
+    const offset = item * 2;
 
-    if (element) {
-      window.scrollTo(element);
+    if (offset >= 0 && offset <= maksPage) {
+      ref.current.scrollTo(offset);
+      setReferenceNode(offset);
       setActiveSection(item);
     }
   };
@@ -39,12 +40,15 @@ export default function MultiLayerParallax(props) {
     let isScrolling = false;
     let isScrollProcessed = false;
     let accumulatedDeltaY = 0;
+    let scrollCount = 0;
 
     const scroll = (event) => {
       const deltaY = event.deltaY;
-      accumulatedDeltaY += deltaY;
+      console.log(deltaY);
+      const newAccumulatedDeltaY = accumulatedDeltaY + deltaY;
+      accumulatedDeltaY = Math.max(Math.min(newAccumulatedDeltaY, 125), -125);
 
-      if (isScrolling || Math.abs(accumulatedDeltaY) < 1) return;
+      if (isScrolling || (accumulatedDeltaY === 0 && deltaY === 0)) return;
 
       event.preventDefault();
       isScrolling = true;
@@ -53,36 +57,49 @@ export default function MultiLayerParallax(props) {
         isScrollProcessed = true;
 
         setTimeout(() => {
+          let targetOffset;
+
           if (accumulatedDeltaY > 0) {
-            // Scrolling down
-            if (referenceNode < maksPage - 2) {
-              ref.current.scrollTo(referenceNode + 2);
-              setReferenceNode(referenceNode + 2);
-              setActiveSection(activeSection + 1);
-            } else if (
-              referenceNode === maksPage - 2 &&
-              activeSection < sectionList.length - 1
-            ) {
-              // When you are on the second to last page, and scrolling down
-              ref.current.scrollTo(maksPage);
-              setReferenceNode(maksPage);
-              setActiveSection(activeSection + 1);
+            if (referenceNode === maksPage && accumulatedDeltaY >= 125) {
+              targetOffset = Math.max(referenceNode - 2, 0);
+            } else {
+              targetOffset = Math.min(referenceNode + 2, maksPage);
+            }
+          } else if (accumulatedDeltaY < 0) {
+            if (referenceNode === 0 && accumulatedDeltaY <= -125) {
+              targetOffset = referenceNode;
+            } else {
+              targetOffset = Math.max(referenceNode - 2, 0);
             }
           } else {
-            // Scrolling up
-            if (referenceNode > 0) {
-              ref.current.scrollTo(referenceNode - 2);
-              setReferenceNode(referenceNode - 2);
-              setActiveSection(activeSection - 1);
-            } else if (referenceNode === 0 && activeSection > 0) {
-              // When you are on the first page, and scrolling up
-              ref.current.scrollTo(0);
-              setReferenceNode(0);
-              setActiveSection(activeSection - 1);
-            }
+            targetOffset = referenceNode;
           }
 
-          isScrollProcessed = false;
+          if (targetOffset === referenceNode) {
+            isScrollProcessed = false;
+          } else {
+            if (targetOffset === maksPage && accumulatedDeltaY > 0) {
+              scrollCount = 0;
+            }
+
+            if (
+              targetOffset % 2 === 1 &&
+              targetOffset !== maksPage &&
+              scrollCount < 2
+            ) {
+              targetOffset += 1;
+              scrollCount++;
+            }
+
+            ref.current.scrollTo(targetOffset);
+            setReferenceNode(targetOffset);
+            setActiveSection(Math.floor(targetOffset / 2));
+
+            setTimeout(() => {
+              isScrollProcessed = false;
+            }, 3000);
+          }
+
           accumulatedDeltaY = 0;
         }, scrollDelay);
       }
@@ -97,24 +114,87 @@ export default function MultiLayerParallax(props) {
     };
   }, [referenceNode, activeSection, maksPage, scrollDelay]);
 
+  // useEffect(() => {
+  //   const options = { passive: false };
+  //   let scrollTimeout;
+
+  //   const scroll = (event) => {
+  //     clearTimeout(scrollTimeout); // Clear any existing timeout
+
+  //     const deltaY = event.deltaY;
+  //     if (event.deltaY === 0) return;
+  //     event.preventDefault();
+
+  //     // Delay in milliseconds (adjust as needed)
+  //     const delay = 500; // 500 milliseconds (half a second)
+
+  //     scrollTimeout = setTimeout(() => {
+  //       if (deltaY > 0 && referenceNode < maksPage - 2) {
+  //         ref.current.scrollTo(referenceNode + 2);
+  //         setReferenceNode(referenceNode + 2);
+  //         setActiveSection(referenceNode + 2);
+  //       } else if (deltaY > 0 && referenceNode === maksPage - 2) {
+  //         ref.current.scrollTo(maksPage - 1);
+  //         setReferenceNode(maksPage - 1);
+  //         setActiveSection(maksPage - 1);
+  //       } else if (deltaY > 0 && referenceNode === maksPage - 1) {
+  //         ref.current.scrollTo(maksPage - 1);
+  //         setReferenceNode(maksPage - 1);
+  //         setActiveSection(maksPage - 1);
+  //       } else if (deltaY < 0 && referenceNode > 0) {
+  //         ref.current.scrollTo(referenceNode - 2);
+  //         setReferenceNode(referenceNode - 2);
+  //         setActiveSection(referenceNode - 2);
+  //       } else if (deltaY < 0 && referenceNode === 0) {
+  //         ref.current.scrollTo(0);
+  //         setReferenceNode(0);
+  //         setActiveSection(0);
+  //       }
+  //     }, delay);
+  //   };
+
+  //   document.addEventListener("wheel", scroll, options);
+
+  //   return () => {
+  //     document.removeEventListener("wheel", scroll, options);
+  //   };
+  // }, [referenceNode]);
+
   return (
     <>
-      {/* <div className="progress_bar text-white position-absolute top-50 end-0 translate-middle-y z-3">
+      <div className="progress_bar text-white position-absolute top-50 end-0 translate-middle-y z-3">
         {sectionList.map((item, index) => (
           <div key={index + 1} className="">
             <button
-              className={`btn shadow-0  border-0 p-3 ${
+              className={`btn shadow-0 ${
                 activeSection === item
-                  ? "fw-bold text-danger d-flex align-items-center justify-content-center "
-                  : "text-white"
+                  ? "fw-bold text-danger d-flex align-items-center justify-content-center border-end border-5 me-2"
+                  : "text-white m-3"
               }`}
               onClick={() => handleClickScroll(item)}
+              style={{
+                borderRadius: "0px",
+              }}
             >
-              <span>{item}</span>
+              <div className="me-3">
+                {/* <>{activeSection ? item : " "}</> */}
+                {item}
+              </div>
+              <div
+                className="vertical"
+                style={{
+                  borderRight: "5px solid #808080",
+                  height: "50px",
+                  position: "absolute",
+                  right: "18%",
+                  opacity: "0.1",
+                }}
+              ></div>
             </button>
           </div>
         ))}
-      </div> */}
+      </div>
+
       <Parallax
         ref={ref}
         pages={maksPage}
@@ -123,12 +203,18 @@ export default function MultiLayerParallax(props) {
           backgroundColor: "rgba(27,27,29,255)",
         }}
       >
+        <ParallaxLayer offset={1} speed={0} factor={0.5}></ParallaxLayer>
+        <ParallaxLayer offset={3} speed={0} factor={0.5}></ParallaxLayer>
+        <ParallaxLayer offset={5} speed={0} factor={0.5}></ParallaxLayer>
+        <ParallaxLayer offset={7} speed={0} factor={0.5}></ParallaxLayer>
+        <ParallaxLayer offset={9} speed={0} factor={0.5}></ParallaxLayer>
+        <ParallaxLayer offset={11} speed={0} factor={0.5}></ParallaxLayer>
         <ParallaxLayer
           offset={0}
           speed={0}
           tabIndex="0"
           factor={1}
-          id="0"
+          id="section1"
           style={{
             display: "flex",
             alignItems: "center",
@@ -138,18 +224,12 @@ export default function MultiLayerParallax(props) {
         >
           <Banner />
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={0}></ParallaxLayer>
-        <ParallaxLayer offset={3} speed={0}></ParallaxLayer>
-        <ParallaxLayer offset={5} speed={0}></ParallaxLayer>
-        <ParallaxLayer offset={7} speed={0}></ParallaxLayer>
-        <ParallaxLayer offset={9} speed={0}></ParallaxLayer>
-        <ParallaxLayer offset={11} speed={0}></ParallaxLayer>
 
         <ParallaxLayer
           offset={2}
           speed={0}
           factor={1}
-          id="1"
+          id="section2"
           style={{
             display: "flex",
             alignItems: "center",
@@ -163,7 +243,7 @@ export default function MultiLayerParallax(props) {
           offset={4}
           speed={0}
           factor={1}
-          id="2"
+          id="section3"
           style={{
             display: "flex",
             alignItems: "center",
@@ -178,7 +258,7 @@ export default function MultiLayerParallax(props) {
           offset={6}
           speed={0}
           factor={1}
-          id="3"
+          id="section4"
           style={{
             display: "flex",
             alignItems: "center",
@@ -192,7 +272,7 @@ export default function MultiLayerParallax(props) {
           offset={8}
           speed={0}
           factor={1}
-          id="4"
+          id="section5"
           style={{
             display: "flex",
             alignItems: "center",
@@ -206,7 +286,7 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={10}
           factor={1}
-          id="5"
+          id="section6"
           speed={0}
           style={{
             display: "flex",
@@ -220,7 +300,7 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={12}
           factor={1}
-          id="6"
+          id="section7"
           speed={0}
           style={{
             display: "flex",
