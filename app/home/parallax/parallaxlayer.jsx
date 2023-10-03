@@ -20,13 +20,12 @@ export default function MultiLayerParallax(props) {
   const ref = useRef(null);
   const [referenceNode, setReferenceNode] = useState(0);
   const [activeSection, setActiveSection] = useState(0);
-  console.log(activeSection);
+  console.log("active", activeSection);
+  console.log("reference", referenceNode);
   const maksPage = 13;
   const scrollDelay = 300;
   const sectionList = [0, 1, 2, 3, 4, 5, 6];
   const data = props.items;
-
-  console.log(new Date().getTime());
 
   const handleClickScroll = (item) => {
     const offset = item * 2;
@@ -112,15 +111,13 @@ export default function MultiLayerParallax(props) {
               scrollCount++;
             }
 
-            // Delay the scroll action by 1000 milliseconds (1 second)
             scrollTimeout = setTimeout(() => {
               ref.current.scrollTo(targetOffset);
               setReferenceNode(targetOffset);
               setActiveSection(Math.floor(targetOffset / 2));
 
               isScrollProcessed = true;
-              // console.log("Scroll processed will appear after 1 second");
-            }, 300);
+            }, 150);
 
             accumulatedDeltaY = 0;
           }
@@ -141,41 +138,45 @@ export default function MultiLayerParallax(props) {
     };
   }, [referenceNode, activeSection, scrollDelay]);
 
+  // useEffect(() => {
+  //   const option = { passive: false };
+  //   let scrollTimeout;
+
+  //   const scroll = (event) => {
+  //     event.preventDefault();
+
+  //     if (scrollTimeout) {
+  //       clearTimeout(scrollTimeout);
+  //     }
+
+  //     scrollTimeout = setTimeout(() => {
+  //       const deltaY = event.deltaY;
+
+  //       if (deltaY > 0 && activeSection <= (maksPage - 1) / 2) {
+  //         setActiveSection((prevSection) => prevSection + 1);
+  //         scrollToSection(activeSection + 1);
+  //       } else if (deltaY < 0 && activeSection > 0) {
+  //         setActiveSection((prevSection) => prevSection - 1);
+  //         scrollToSection(activeSection - 1);
+  //       }
+  //     }, 500);
+  //   };
+
+  //   const scrollToSection = (section) => {
+  //     const targetSection = section * 2;
+  //     ref.current.scrollTo(targetSection);
+  //     setReferenceNode(targetSection);
+  //   };
+
+  //   document.addEventListener("wheel", scroll, option);
+
+  //   return () => {
+  //     document.removeEventListener("wheel", scroll, option);
+  //   };
+  // }, [activeSection, maksPage, ref, setReferenceNode]);
+
   return (
     <>
-      <div className="progress_bar position-absolute top-50 end-0 translate-middle-y z-3">
-        <div className="btn" onClick={handleClickButtonUp}>
-          <i
-            className="bi bi bi-chevron-double-up"
-            style={{ color: "gray" }}
-          ></i>
-        </div>
-        {sectionList.map((item, index) => (
-          <div key={index + 1 + activeSection + new Date().getTime()}>
-            <button
-              className={`btn fw-bold border-0 shadow-0 me-3 ${
-                activeSection === item
-                  ? " text-danger bg-dark border-end border-5 "
-                  : " text-secondary bg-transparent border-end border-5 border-secondary"
-              }`}
-              onClick={() => handleClickScroll(item)}
-              style={{
-                borderRadius: "0px",
-              }}
-            >
-              {item}
-              {/* <p>{index + 1 + activeSection + new Date().getTime()} </p> */}
-            </button>
-          </div>
-        ))}
-        <div className="btn" onClick={handleClickButtonDown}>
-          <i
-            className="bi bi-chevron-double-down"
-            style={{ color: "gray" }}
-          ></i>
-        </div>
-      </div>
-
       <Parallax
         ref={ref}
         pages={maksPage}
@@ -190,6 +191,53 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer offset={7} speed={0} factor={0.5}></ParallaxLayer>
         <ParallaxLayer offset={9} speed={0} factor={0.5}></ParallaxLayer>
         <ParallaxLayer offset={11} speed={0} factor={0.5}></ParallaxLayer>
+        <ParallaxLayer
+          offset={0}
+          speed={0}
+          tabIndex="0"
+          factor={1}
+          sticky={{ start: 0, end: 13 }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            className="progress_bar position-absolute top-50 end-0 translate-middle-y"
+            style={{ zIndex: "10" }}
+          >
+            <div className="btn" onClick={handleClickButtonUp}>
+              <i
+                className="bi bi bi-chevron-double-up"
+                style={{ color: "gray" }}
+              ></i>
+            </div>
+            {sectionList.map((item, index) => (
+              <div key={index + 1 + activeSection + new Date().getTime()}>
+                <button
+                  className={`btn fw-bold border-0 shadow-0 me-3 ${
+                    activeSection === item
+                      ? " text-danger bg-dark border-end border-5 "
+                      : " text-secondary bg-transparent border-end border-5 border-secondary"
+                  }`}
+                  onClick={() => handleClickScroll(item)}
+                  style={{
+                    borderRadius: "0px",
+                  }}
+                >
+                  {item}
+                </button>
+              </div>
+            ))}
+            <div className="btn " onClick={handleClickButtonDown}>
+              <i
+                className="bi bi-chevron-double-down"
+                style={{ color: "gray" }}
+              ></i>
+            </div>
+          </div>
+        </ParallaxLayer>
         <ParallaxLayer
           offset={0}
           speed={0}
