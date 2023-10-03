@@ -15,6 +15,7 @@ const ImageLeft = (props) => {
             width={400}
             height={400}
             alt="Image by upklyak"
+            loading="lazy"
             sizes="(max-width: 300px) 85vw, (max-width: 500px) 50vw, 33vw"
             style={{
               objectFit: "contain",
