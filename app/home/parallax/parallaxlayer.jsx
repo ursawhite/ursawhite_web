@@ -54,90 +54,6 @@ export default function MultiLayerParallax(props) {
     }
   };
 
-  // useEffect(() => {
-  //   const options = { passive: false };
-  //   let isScrolling = false;
-  //   let isScrollProcessed = false;
-  //   let accumulatedDeltaY = 0;
-  //   let scrollCount = 0;
-  //   let scrollTimeout = null;
-
-  //   const scroll = (event) => {
-  //     const deltaY = event.deltaY;
-
-  //     const newAccumulatedDeltaY = accumulatedDeltaY + deltaY;
-  //     accumulatedDeltaY = Math.max(Math.min(newAccumulatedDeltaY, 125), -125);
-
-  //     if (isScrolling || (accumulatedDeltaY === 0 && deltaY === 0)) return;
-
-  //     event.preventDefault();
-  //     isScrolling = true;
-
-  //     if (!isScrollProcessed) {
-  //       isScrollProcessed = true;
-
-  //       setTimeout(() => {
-  //         let targetOffset;
-
-  //         if (accumulatedDeltaY > 0) {
-  //           if (referenceNode === maksPage && accumulatedDeltaY > 0) {
-  //             targetOffset = Math.max(referenceNode - 2, 0);
-  //           } else {
-  //             targetOffset = Math.min(referenceNode + 2, maksPage);
-  //           }
-  //         } else if (accumulatedDeltaY < 0) {
-  //           if (referenceNode === 0 && accumulatedDeltaY < -0) {
-  //             targetOffset = referenceNode;
-  //           } else {
-  //             targetOffset = Math.max(referenceNode - 2, 0);
-  //           }
-  //         } else {
-  //           targetOffset = referenceNode;
-  //         }
-
-  //         if (targetOffset === referenceNode) {
-  //           isScrollProcessed = false;
-  //         } else {
-  //           if (targetOffset === maksPage && accumulatedDeltaY > 0) {
-  //             scrollCount = 0;
-  //           }
-
-  //           if (
-  //             targetOffset % 2 === 1 &&
-  //             targetOffset !== maksPage &&
-  //             scrollCount < 2
-  //           ) {
-  //             targetOffset += 1;
-  //             scrollCount++;
-  //           }
-
-  //           scrollTimeout = setTimeout(() => {
-  //             ref.current.scrollTo(targetOffset);
-  //             setReferenceNode(targetOffset);
-  //             setActiveSection(Math.floor(targetOffset / 2));
-
-  //             isScrollProcessed = true;
-  //           }, 300);
-
-  //           accumulatedDeltaY = 0;
-  //         }
-  //       }, scrollDelay);
-  //     }
-  //     isScrollProcessed = false;
-  //     isScrolling = false;
-  //   };
-
-  //   document.addEventListener("wheel", scroll, options);
-
-  //   return () => {
-  //     document.removeEventListener("wheel", scroll, options);
-
-  //     if (scrollTimeout) {
-  //       clearTimeout(scrollTimeout);
-  //     }
-  //   };
-  // }, [referenceNode, activeSection, scrollDelay]);
-
   useEffect(() => {
     const option = { passive: false };
     let scrollTimeout;
@@ -222,7 +138,7 @@ export default function MultiLayerParallax(props) {
               <motion.div
                 whileHover={{ scale: 1.5 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                key={index + 1 + activeSection + new Date().getTime()}
+                key={index + 1}
               >
                 <button
                   className={`btn fw-bold border-0 shadow-0 me-3 ${
