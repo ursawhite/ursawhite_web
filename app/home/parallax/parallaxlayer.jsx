@@ -36,132 +36,42 @@ export default function MultiLayerParallax(props) {
     }
   };
 
-  // useEffect(() => {
-  //   handleClickScroll();
-  // }, [activeSection]);
+  useEffect(() => {
+    const option = { passive: false };
+    let scrollTimeout;
 
-  // useEffect(() => {
-  //   const options = { passive: false };
-  //   let isScrolling = false;
-  //   let isScrollProcessed = false;
-  //   let accumulatedDeltaY = 0;
-  //   let scrollCount = 0;
-  //   let scrollTimeout = null;
+    const scroll = (event) => {
+      event.preventDefault();
 
-  //   const scroll = (event) => {
-  //     const deltaY = event.deltaY;
-  //     console.log(deltaY);
-  //     const newAccumulatedDeltaY = accumulatedDeltaY + deltaY;
-  //     accumulatedDeltaY = Math.max(Math.min(newAccumulatedDeltaY, 125), -125);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
 
-  //     if (isScrolling || (accumulatedDeltaY === 0 && deltaY === 0)) return;
+      scrollTimeout = setTimeout(() => {
+        const deltaY = event.deltaY;
 
-  //     event.preventDefault();
-  //     isScrolling = true;
+        if (deltaY > 0 && activeSection < (maksPage - 1) / 2) {
+          setActiveSection((prevSection) => prevSection + 1);
+          scrollToSection(activeSection + 1);
+        } else if (deltaY < 0 && activeSection > 0) {
+          setActiveSection((prevSection) => prevSection - 1);
+          scrollToSection(activeSection - 1);
+        }
+      }, 1000);
+    };
 
-  //     if (!isScrollProcessed) {
-  //       isScrollProcessed = true;
+    const scrollToSection = (section) => {
+      const targetSection = section * 2;
+      ref.current.scrollTo(targetSection);
+      setReferenceNode(targetSection);
+    };
 
-  //       setTimeout(() => {
-  //         let targetOffset;
+    document.addEventListener("wheel", scroll, option);
 
-  //         if (accumulatedDeltaY > 0) {
-  //           if (referenceNode === maksPage && accumulatedDeltaY > 0) {
-  //             targetOffset = Math.max(referenceNode - 2, 0);
-  //           } else {
-  //             targetOffset = Math.min(referenceNode + 2, maksPage);
-  //           }
-  //         } else if (accumulatedDeltaY < 0) {
-  //           if (referenceNode === 0 && accumulatedDeltaY < -0) {
-  //             targetOffset = referenceNode;
-  //           } else {
-  //             targetOffset = Math.max(referenceNode - 2, 0);
-  //           }
-  //         } else {
-  //           targetOffset = referenceNode;
-  //         }
-
-  //         if (targetOffset === referenceNode) {
-  //           isScrollProcessed = false;
-  //         } else {
-  //           if (targetOffset === maksPage && accumulatedDeltaY > 0) {
-  //             scrollCount = 0;
-  //           }
-
-  //           if (
-  //             targetOffset % 2 === 1 &&
-  //             targetOffset !== maksPage &&
-  //             scrollCount < 2
-  //           ) {
-  //             targetOffset += 1;
-  //             scrollCount++;
-  //           }
-
-  //           // Delay the scroll action by 1000 milliseconds (1 second)
-  //           scrollTimeout = setTimeout(() => {
-  //             ref.current.scrollTo(targetOffset);
-  //             setReferenceNode(targetOffset);
-  //             setActiveSection(Math.floor(targetOffset / 2));
-
-  //             isScrollProcessed = true;
-  //             console.log("Scroll processed will appear after 1 second");
-  //           }, 500);
-
-  //           accumulatedDeltaY = 0;
-  //         }
-  //       }, scrollDelay);
-  //     }
-  //     isScrollProcessed = false;
-  //     isScrolling = false;
-  //   };
-
-  //   document.addEventListener("wheel", scroll, options);
-
-  //   return () => {
-  //     document.removeEventListener("wheel", scroll, options);
-
-  //     // Clear the scroll timeout when unmounting the component
-  //     if (scrollTimeout) {
-  //       clearTimeout(scrollTimeout);
-  //     }
-  //   };
-  // }, [referenceNode, activeSection, scrollDelay]);
-  // useEffect(() => {
-  //   const option = { passive: false };
-  //   let scrollTimeout;
-
-  //   const scroll = (event) => {
-  //     event.preventDefault();
-
-  //     if (scrollTimeout) {
-  //       clearTimeout(scrollTimeout);
-  //     }
-
-  //     scrollTimeout = setTimeout(() => {
-  //       const deltaY = event.deltaY;
-
-  //       if (deltaY > 0 && activeSection < (maksPage - 1) / 2) {
-  //         setActiveSection((prevSection) => prevSection + 1);
-  //         scrollToSection(activeSection + 1);
-  //       } else if (deltaY < 0 && activeSection > 0) {
-  //         setActiveSection((prevSection) => prevSection - 1);
-  //         scrollToSection(activeSection - 1);
-  //       }
-  //     }, 1000);
-  //   };
-
-  //   const scrollToSection = (section) => {
-  //     const targetSection = section * 2;
-  //     ref.current.scrollTo(targetSection);
-  //     setReferenceNode(targetSection);
-  //   };
-
-  //   document.addEventListener("wheel", scroll, option);
-
-  //   return () => {
-  //     document.removeEventListener("wheel", scroll, option);
-  //   };
-  // }, [activeSection, maksPage, ref, setReferenceNode]);
+    return () => {
+      document.removeEventListener("wheel", scroll, option);
+    };
+  }, [activeSection, maksPage, ref, setReferenceNode]);
 
   return (
     <>
