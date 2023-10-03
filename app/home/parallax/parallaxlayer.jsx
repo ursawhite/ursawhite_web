@@ -1,14 +1,13 @@
 "use client";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { useSpring, config } from "@react-spring/core";
 import React, { useRef, useEffect, useState } from "react";
 import Banner from "../banner/banner";
 import Ourclients from "../our_clients/ourclients";
 import PortoPage from "../portofolio/porto_page";
 import Image from "next/image";
-import Link from "next/link";
 import Items from "../../../public/data.json";
+import { motion } from "framer-motion";
 
 import Footer from "../../components/footer/footer";
 import Section6 from "../section6/section6";
@@ -208,14 +207,23 @@ export default function MultiLayerParallax(props) {
             className="progress_bar position-absolute top-50 end-0 translate-middle-y"
             style={{ zIndex: "10" }}
           >
-            <div className="btn" onClick={handleClickButtonUp}>
+            <motion.div
+              whileHover={{ scale: 1.5 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="btn"
+              onClick={handleClickButtonUp}
+            >
               <i
                 className="bi bi bi-chevron-double-up"
                 style={{ color: "gray" }}
               ></i>
-            </div>
+            </motion.div>
             {sectionList.map((item, index) => (
-              <div key={index + 1 + activeSection + new Date().getTime()}>
+              <motion.div
+                whileHover={{ scale: 1.5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                key={index + 1 + activeSection + new Date().getTime()}
+              >
                 <button
                   className={`btn fw-bold border-0 shadow-0 me-3 ${
                     activeSection === item
@@ -229,14 +237,19 @@ export default function MultiLayerParallax(props) {
                 >
                   {item}
                 </button>
-              </div>
+              </motion.div>
             ))}
-            <div className="btn " onClick={handleClickButtonDown}>
+            <motion.div
+              whileHover={{ scale: 1.5 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="btn "
+              onClick={handleClickButtonDown}
+            >
               <i
                 className="bi bi-chevron-double-down"
                 style={{ color: "gray" }}
               ></i>
-            </div>
+            </motion.div>
           </div>
         </ParallaxLayer>
         <ParallaxLayer

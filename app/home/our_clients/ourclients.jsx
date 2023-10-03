@@ -12,22 +12,23 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.1 * index,
+      delay: 0.2 * index,
     },
   }),
 };
 
-const item = {
-  hidden: {
-    y: "200%",
-    color: "#0055FF",
-    transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+const fadeInText = {
+  initial: {
+    opacity: 0,
+    y: 100,
   },
-  visible: {
+  animate: () => ({
+    opacity: 1,
     y: 0,
-    color: "#FF0088",
-    transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
-  },
+    transition: {
+      delay: 0.5,
+    },
+  }),
 };
 
 function Ourclients() {
@@ -78,19 +79,44 @@ function Ourclients() {
       <div className="container">
         <div className="row d-flex flex-column justify-content-center align-items-center">
           <div className="col-lg-8">
-            <p className="text-center fw-bold" style={{ color: "#c457d5" }}>
+            <motion.p
+              variants={fadeInText}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              className="text-center fw-bold"
+              style={{ color: "#c457d5" }}
+            >
               A DIGITAL PRODUCT AGENCY LIKE NO OTHER
-            </p>
-            <h1 className="title text-white text-center mb-3 fw-bold mb-4">
+            </motion.p>
+            <motion.h1
+              variants={fadeInText}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              className="title text-white text-center mb-3 fw-bold mb-4"
+            >
               Skip the long meetings and email <br /> threads. We focus on
               getting things done.
-            </h1>
-            <p className="text-white">
+            </motion.h1>
+            <motion.p
+              variants={fadeInText}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              className="text-white"
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry’s standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
-            </p>
+            </motion.p>
             <div className=" d-flex flex-wrap justify-content-center align-items-center ">
               {company.map((item, index) => (
                 <motion.div

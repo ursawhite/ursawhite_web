@@ -41,6 +41,9 @@ function PortoPages({ items, f_color }) {
             variants={fadeInTop}
             initial="initial"
             whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <div className="d-flex ">
               <div
