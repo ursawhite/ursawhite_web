@@ -26,10 +26,11 @@ export default function MultiLayerParallax(props) {
   const sectionList = [0, 1, 2, 3, 4, 5, 6];
   const data = props.items;
 
+  console.log(new Date().getTime());
+
   const handleClickScroll = (item) => {
     const offset = item * 2;
     if (offset >= 0 && offset <= maksPage) {
-      console.log(offset);
       ref.current.scrollTo(offset);
       setActiveSection(item);
       setReferenceNode(offset);
@@ -39,7 +40,6 @@ export default function MultiLayerParallax(props) {
   const handleClickButtonDown = () => {
     const offset = (activeSection + 1) * 2;
     if (offset >= 0 && offset <= maksPage) {
-      console.log(offset);
       ref.current.scrollTo(offset);
       setActiveSection((prevSection) => prevSection + 1);
       setReferenceNode(offset);
@@ -49,7 +49,6 @@ export default function MultiLayerParallax(props) {
   const handleClickButtonUp = () => {
     const offset = (activeSection - 1) * 2;
     if (offset >= 0 && offset <= maksPage) {
-      console.log(offset);
       ref.current.scrollTo(offset);
       setActiveSection((prevSection) => prevSection - 1);
       setReferenceNode(offset);
@@ -66,7 +65,7 @@ export default function MultiLayerParallax(props) {
 
     const scroll = (event) => {
       const deltaY = event.deltaY;
-      console.log(deltaY);
+
       const newAccumulatedDeltaY = accumulatedDeltaY + deltaY;
       accumulatedDeltaY = Math.max(Math.min(newAccumulatedDeltaY, 125), -125);
 
@@ -120,7 +119,7 @@ export default function MultiLayerParallax(props) {
               setActiveSection(Math.floor(targetOffset / 2));
 
               isScrollProcessed = true;
-              console.log("Scroll processed will appear after 1 second");
+              // console.log("Scroll processed will appear after 1 second");
             }, 300);
 
             accumulatedDeltaY = 0;
@@ -136,7 +135,6 @@ export default function MultiLayerParallax(props) {
     return () => {
       document.removeEventListener("wheel", scroll, options);
 
-      // Clear the scroll timeout when unmounting the component
       if (scrollTimeout) {
         clearTimeout(scrollTimeout);
       }
@@ -147,10 +145,13 @@ export default function MultiLayerParallax(props) {
     <>
       <div className="progress_bar position-absolute top-50 end-0 translate-middle-y z-3">
         <div className="btn" onClick={handleClickButtonUp}>
-          <i class="bi bi bi-chevron-double-up" style={{ color: "gray" }}></i>
+          <i
+            className="bi bi bi-chevron-double-up"
+            style={{ color: "gray" }}
+          ></i>
         </div>
         {sectionList.map((item, index) => (
-          <div key={index + 1}>
+          <div key={index + 1 + activeSection + new Date().getTime()}>
             <button
               className={`btn fw-bold border-0 shadow-0 me-3 ${
                 activeSection === item
@@ -163,11 +164,15 @@ export default function MultiLayerParallax(props) {
               }}
             >
               {item}
+              {/* <p>{index + 1 + activeSection + new Date().getTime()} </p> */}
             </button>
           </div>
         ))}
         <div className="btn" onClick={handleClickButtonDown}>
-          <i class="bi bi-chevron-double-down" style={{ color: "gray" }}></i>
+          <i
+            className="bi bi-chevron-double-down"
+            style={{ color: "gray" }}
+          ></i>
         </div>
       </div>
 
