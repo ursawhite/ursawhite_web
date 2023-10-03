@@ -1,0 +1,15 @@
+.button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  .active {
+    color: "red";
+    background: #000;
+  }
+
+  .not-active {
+    color: "blue";
+    background: #000;
+  }
+}

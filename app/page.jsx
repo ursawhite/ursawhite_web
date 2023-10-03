@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import Para from "./home/parallax/parallaxlayer";
 import HomeMobile from "./components/mobile_view/home/home";
 import jsonData from "../public/data.json";
+import Page from "./layout";
 
 function Section() {
   const [isClient, setIsClient] = useState(false);

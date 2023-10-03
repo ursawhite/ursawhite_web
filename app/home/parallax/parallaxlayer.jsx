@@ -20,6 +20,7 @@ export default function MultiLayerParallax(props) {
   const ref = useRef(null);
   const [referenceNode, setReferenceNode] = useState(0);
   const [activeSection, setActiveSection] = useState(0);
+  console.log(activeSection);
   const maksPage = 13;
   const scrollDelay = 500;
   const sectionList = [0, 1, 2, 3, 4, 5, 6];
@@ -27,159 +28,158 @@ export default function MultiLayerParallax(props) {
 
   const handleClickScroll = (item) => {
     const offset = item * 2;
-
     if (offset >= 0 && offset <= maksPage) {
+      console.log(offset);
       ref.current.scrollTo(offset);
-      setReferenceNode(offset);
       setActiveSection(item);
+      setReferenceNode(offset);
     }
   };
 
-  useEffect(() => {
-    const options = { passive: false };
-    let isScrolling = false;
-    let isScrollProcessed = false;
-    let accumulatedDeltaY = 0;
-    let scrollCount = 0;
-
-    const scroll = (event) => {
-      const deltaY = event.deltaY;
-      console.log(deltaY);
-      const newAccumulatedDeltaY = accumulatedDeltaY + deltaY;
-      accumulatedDeltaY = Math.max(Math.min(newAccumulatedDeltaY, 125), -125);
-
-      if (isScrolling || (accumulatedDeltaY === 0 && deltaY === 0)) return;
-
-      event.preventDefault();
-      isScrolling = true;
-
-      if (!isScrollProcessed) {
-        isScrollProcessed = true;
-
-        setTimeout(() => {
-          let targetOffset;
-
-          if (accumulatedDeltaY > 0) {
-            if (referenceNode === maksPage && accumulatedDeltaY >= 125) {
-              targetOffset = Math.max(referenceNode - 2, 0);
-            } else {
-              targetOffset = Math.min(referenceNode + 2, maksPage);
-            }
-          } else if (accumulatedDeltaY < 0) {
-            if (referenceNode === 0 && accumulatedDeltaY <= -125) {
-              targetOffset = referenceNode;
-            } else {
-              targetOffset = Math.max(referenceNode - 2, 0);
-            }
-          } else {
-            targetOffset = referenceNode;
-          }
-
-          if (targetOffset === referenceNode) {
-            isScrollProcessed = false;
-          } else {
-            if (targetOffset === maksPage && accumulatedDeltaY > 0) {
-              scrollCount = 0;
-            }
-
-            if (
-              targetOffset % 2 === 1 &&
-              targetOffset !== maksPage &&
-              scrollCount < 2
-            ) {
-              targetOffset += 1;
-              scrollCount++;
-            }
-
-            ref.current.scrollTo(targetOffset);
-            setReferenceNode(targetOffset);
-            setActiveSection(Math.floor(targetOffset / 2));
-
-            setTimeout(() => {
-              isScrollProcessed = false;
-            }, 3000);
-          }
-
-          accumulatedDeltaY = 0;
-        }, scrollDelay);
-      }
-
-      isScrolling = false;
-    };
-
-    document.addEventListener("wheel", scroll, options);
-
-    return () => {
-      document.removeEventListener("wheel", scroll, options);
-    };
-  }, [referenceNode, activeSection, maksPage, scrollDelay]);
+  // useEffect(() => {
+  //   handleClickScroll();
+  // }, [activeSection]);
 
   // useEffect(() => {
   //   const options = { passive: false };
-  //   let scrollTimeout;
+  //   let isScrolling = false;
+  //   let isScrollProcessed = false;
+  //   let accumulatedDeltaY = 0;
+  //   let scrollCount = 0;
+  //   let scrollTimeout = null;
 
   //   const scroll = (event) => {
-  //     clearTimeout(scrollTimeout); // Clear any existing timeout
-
   //     const deltaY = event.deltaY;
-  //     if (event.deltaY === 0) return;
+  //     console.log(deltaY);
+  //     const newAccumulatedDeltaY = accumulatedDeltaY + deltaY;
+  //     accumulatedDeltaY = Math.max(Math.min(newAccumulatedDeltaY, 125), -125);
+
+  //     if (isScrolling || (accumulatedDeltaY === 0 && deltaY === 0)) return;
+
   //     event.preventDefault();
+  //     isScrolling = true;
 
-  //     // Delay in milliseconds (adjust as needed)
-  //     const delay = 500; // 500 milliseconds (half a second)
+  //     if (!isScrollProcessed) {
+  //       isScrollProcessed = true;
 
-  //     scrollTimeout = setTimeout(() => {
-  //       if (deltaY > 0 && referenceNode < maksPage - 2) {
-  //         ref.current.scrollTo(referenceNode + 2);
-  //         setReferenceNode(referenceNode + 2);
-  //         setActiveSection(referenceNode + 2);
-  //       } else if (deltaY > 0 && referenceNode === maksPage - 2) {
-  //         ref.current.scrollTo(maksPage - 1);
-  //         setReferenceNode(maksPage - 1);
-  //         setActiveSection(maksPage - 1);
-  //       } else if (deltaY > 0 && referenceNode === maksPage - 1) {
-  //         ref.current.scrollTo(maksPage - 1);
-  //         setReferenceNode(maksPage - 1);
-  //         setActiveSection(maksPage - 1);
-  //       } else if (deltaY < 0 && referenceNode > 0) {
-  //         ref.current.scrollTo(referenceNode - 2);
-  //         setReferenceNode(referenceNode - 2);
-  //         setActiveSection(referenceNode - 2);
-  //       } else if (deltaY < 0 && referenceNode === 0) {
-  //         ref.current.scrollTo(0);
-  //         setReferenceNode(0);
-  //         setActiveSection(0);
-  //       }
-  //     }, delay);
+  //       setTimeout(() => {
+  //         let targetOffset;
+
+  //         if (accumulatedDeltaY > 0) {
+  //           if (referenceNode === maksPage && accumulatedDeltaY > 0) {
+  //             targetOffset = Math.max(referenceNode - 2, 0);
+  //           } else {
+  //             targetOffset = Math.min(referenceNode + 2, maksPage);
+  //           }
+  //         } else if (accumulatedDeltaY < 0) {
+  //           if (referenceNode === 0 && accumulatedDeltaY < -0) {
+  //             targetOffset = referenceNode;
+  //           } else {
+  //             targetOffset = Math.max(referenceNode - 2, 0);
+  //           }
+  //         } else {
+  //           targetOffset = referenceNode;
+  //         }
+
+  //         if (targetOffset === referenceNode) {
+  //           isScrollProcessed = false;
+  //         } else {
+  //           if (targetOffset === maksPage && accumulatedDeltaY > 0) {
+  //             scrollCount = 0;
+  //           }
+
+  //           if (
+  //             targetOffset % 2 === 1 &&
+  //             targetOffset !== maksPage &&
+  //             scrollCount < 2
+  //           ) {
+  //             targetOffset += 1;
+  //             scrollCount++;
+  //           }
+
+  //           // Delay the scroll action by 1000 milliseconds (1 second)
+  //           scrollTimeout = setTimeout(() => {
+  //             ref.current.scrollTo(targetOffset);
+  //             setReferenceNode(targetOffset);
+  //             setActiveSection(Math.floor(targetOffset / 2));
+
+  //             isScrollProcessed = true;
+  //             console.log("Scroll processed will appear after 1 second");
+  //           }, 500);
+
+  //           accumulatedDeltaY = 0;
+  //         }
+  //       }, scrollDelay);
+  //     }
+  //     isScrollProcessed = false;
+  //     isScrolling = false;
   //   };
 
   //   document.addEventListener("wheel", scroll, options);
 
   //   return () => {
   //     document.removeEventListener("wheel", scroll, options);
+
+  //     // Clear the scroll timeout when unmounting the component
+  //     if (scrollTimeout) {
+  //       clearTimeout(scrollTimeout);
+  //     }
   //   };
-  // }, [referenceNode]);
+  // }, [referenceNode, activeSection, scrollDelay]);
+  // useEffect(() => {
+  //   const option = { passive: false };
+  //   let scrollTimeout;
+
+  //   const scroll = (event) => {
+  //     event.preventDefault();
+
+  //     if (scrollTimeout) {
+  //       clearTimeout(scrollTimeout);
+  //     }
+
+  //     scrollTimeout = setTimeout(() => {
+  //       const deltaY = event.deltaY;
+
+  //       if (deltaY > 0 && activeSection < (maksPage - 1) / 2) {
+  //         setActiveSection((prevSection) => prevSection + 1);
+  //         scrollToSection(activeSection + 1);
+  //       } else if (deltaY < 0 && activeSection > 0) {
+  //         setActiveSection((prevSection) => prevSection - 1);
+  //         scrollToSection(activeSection - 1);
+  //       }
+  //     }, 1000);
+  //   };
+
+  //   const scrollToSection = (section) => {
+  //     const targetSection = section * 2;
+  //     ref.current.scrollTo(targetSection);
+  //     setReferenceNode(targetSection);
+  //   };
+
+  //   document.addEventListener("wheel", scroll, option);
+
+  //   return () => {
+  //     document.removeEventListener("wheel", scroll, option);
+  //   };
+  // }, [activeSection, maksPage, ref, setReferenceNode]);
 
   return (
     <>
-      <div className="progress_bar text-white position-absolute top-50 end-0 translate-middle-y z-3">
+      <div className="progress_bar position-absolute top-50 end-0 translate-middle-y z-3">
         {sectionList.map((item, index) => (
-          <div key={index + 1} className="">
+          <div key={index + 1}>
             <button
-              className={`btn shadow-0 ${
+              className={`btn fw-bold border-0 shadow-0 me-3 ${
                 activeSection === item
-                  ? "fw-bold text-danger d-flex align-items-center justify-content-center border-end border-5 me-2"
-                  : "text-secondary border-end border-5 me-2"
+                  ? " text-danger bg-dark border-end border-5 "
+                  : " text-secondary bg-transparent border-end border-5 border-secondary"
               }`}
               onClick={() => handleClickScroll(item)}
               style={{
                 borderRadius: "0px",
               }}
             >
-              <div className="me-3">
-                {/* <>{activeSection ? item : " "}</> */}
-                {item}
-              </div>
+              {item}
             </button>
           </div>
         ))}
@@ -209,7 +209,6 @@ export default function MultiLayerParallax(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            // backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <Banner />

@@ -4,7 +4,7 @@ function Section6() {
   return (
     <div className="container">
       <div className="row d-flex justify-content-center ">
-        <div className="col-lg-3 col-md-5 ">
+        <div className="col-lg-4 col-md-5 ">
           <p className="fw-bold" style={{ color: "#c457d5" }}>
             {" "}
             FOR STARTUPS AND CORPORATION
@@ -23,7 +23,7 @@ function Section6() {
           <button className="btn btn-secondary ">{`Let's Explore`}</button>
         </div>
         <div className="col-lg-1 col-md-1"></div>
-        <div className="col-lg-3 col-md-5">
+        <div className="col-lg-4 col-md-5">
           <p className="fw-bold" style={{ color: "#c457d5" }}>
             FOR STARTUPS AND CORPORATION
           </p>
