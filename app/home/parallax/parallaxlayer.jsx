@@ -22,7 +22,7 @@ export default function MultiLayerParallax(props) {
   const [activeSection, setActiveSection] = useState(0);
   console.log(activeSection);
   const maksPage = 13;
-  const scrollDelay = 500;
+  const scrollDelay = 300;
   const sectionList = [0, 1, 2, 3, 4, 5, 6];
   const data = props.items;
 
@@ -36,46 +36,119 @@ export default function MultiLayerParallax(props) {
     }
   };
 
+  const handleClickButtonDown = () => {
+    const offset = (activeSection + 1) * 2;
+    if (offset >= 0 && offset <= maksPage) {
+      console.log(offset);
+      ref.current.scrollTo(offset);
+      setActiveSection((prevSection) => prevSection + 1);
+      setReferenceNode(offset);
+    }
+  };
+
+  const handleClickButtonUp = () => {
+    const offset = (activeSection - 1) * 2;
+    if (offset >= 0 && offset <= maksPage) {
+      console.log(offset);
+      ref.current.scrollTo(offset);
+      setActiveSection((prevSection) => prevSection - 1);
+      setReferenceNode(offset);
+    }
+  };
+
   useEffect(() => {
-    const option = { passive: false };
-    let scrollTimeout;
+    const options = { passive: false };
+    let isScrolling = false;
+    let isScrollProcessed = false;
+    let accumulatedDeltaY = 0;
+    let scrollCount = 0;
+    let scrollTimeout = null;
 
     const scroll = (event) => {
-      event.preventDefault();
+      const deltaY = event.deltaY;
+      console.log(deltaY);
+      const newAccumulatedDeltaY = accumulatedDeltaY + deltaY;
+      accumulatedDeltaY = Math.max(Math.min(newAccumulatedDeltaY, 125), -125);
 
+      if (isScrolling || (accumulatedDeltaY === 0 && deltaY === 0)) return;
+
+      event.preventDefault();
+      isScrolling = true;
+
+      if (!isScrollProcessed) {
+        isScrollProcessed = true;
+
+        setTimeout(() => {
+          let targetOffset;
+
+          if (accumulatedDeltaY > 0) {
+            if (referenceNode === maksPage && accumulatedDeltaY > 0) {
+              targetOffset = Math.max(referenceNode - 2, 0);
+            } else {
+              targetOffset = Math.min(referenceNode + 2, maksPage);
+            }
+          } else if (accumulatedDeltaY < 0) {
+            if (referenceNode === 0 && accumulatedDeltaY < -0) {
+              targetOffset = referenceNode;
+            } else {
+              targetOffset = Math.max(referenceNode - 2, 0);
+            }
+          } else {
+            targetOffset = referenceNode;
+          }
+
+          if (targetOffset === referenceNode) {
+            isScrollProcessed = false;
+          } else {
+            if (targetOffset === maksPage && accumulatedDeltaY > 0) {
+              scrollCount = 0;
+            }
+
+            if (
+              targetOffset % 2 === 1 &&
+              targetOffset !== maksPage &&
+              scrollCount < 2
+            ) {
+              targetOffset += 1;
+              scrollCount++;
+            }
+
+            // Delay the scroll action by 1000 milliseconds (1 second)
+            scrollTimeout = setTimeout(() => {
+              ref.current.scrollTo(targetOffset);
+              setReferenceNode(targetOffset);
+              setActiveSection(Math.floor(targetOffset / 2));
+
+              isScrollProcessed = true;
+              console.log("Scroll processed will appear after 1 second");
+            }, 300);
+
+            accumulatedDeltaY = 0;
+          }
+        }, scrollDelay);
+      }
+      isScrollProcessed = false;
+      isScrolling = false;
+    };
+
+    document.addEventListener("wheel", scroll, options);
+
+    return () => {
+      document.removeEventListener("wheel", scroll, options);
+
+      // Clear the scroll timeout when unmounting the component
       if (scrollTimeout) {
         clearTimeout(scrollTimeout);
       }
-
-      scrollTimeout = setTimeout(() => {
-        const deltaY = event.deltaY;
-
-        if (deltaY > 0 && activeSection < (maksPage - 1) / 2) {
-          setActiveSection((prevSection) => prevSection + 1);
-          scrollToSection(activeSection + 1);
-        } else if (deltaY < 0 && activeSection > 0) {
-          setActiveSection((prevSection) => prevSection - 1);
-          scrollToSection(activeSection - 1);
-        }
-      }, 1000);
     };
-
-    const scrollToSection = (section) => {
-      const targetSection = section * 2;
-      ref.current.scrollTo(targetSection);
-      setReferenceNode(targetSection);
-    };
-
-    document.addEventListener("wheel", scroll, option);
-
-    return () => {
-      document.removeEventListener("wheel", scroll, option);
-    };
-  }, [activeSection, maksPage, ref, setReferenceNode]);
+  }, [referenceNode, activeSection, scrollDelay]);
 
   return (
     <>
       <div className="progress_bar position-absolute top-50 end-0 translate-middle-y z-3">
+        <div className="btn" onClick={handleClickButtonUp}>
+          <i class="bi bi bi-chevron-double-up" style={{ color: "gray" }}></i>
+        </div>
         {sectionList.map((item, index) => (
           <div key={index + 1}>
             <button
@@ -93,6 +166,9 @@ export default function MultiLayerParallax(props) {
             </button>
           </div>
         ))}
+        <div className="btn" onClick={handleClickButtonDown}>
+          <i class="bi bi-chevron-double-down" style={{ color: "gray" }}></i>
+        </div>
       </div>
 
       <Parallax
