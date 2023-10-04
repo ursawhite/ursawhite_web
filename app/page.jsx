@@ -1,33 +1,17 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
-import Para from "./home/parallax/parallaxlayer";
-import HomeMobile from "./components/mobile_view/home/home";
-import jsonData from "../public/data.json";
+import React from "react";
+import Home from "./home/home_page.jsx";
 
-function Section() {
-  const [isClient, setIsClient] = useState(false);
-  const isDesktop = useMediaQuery({ minWidth: 992 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isNotMobile = useMediaQuery({ minWidth: 768 });
+export const metadata = {
+  title: "Ursawhite Pte Ltd | Home",
+  description: "Home Page of Ursawhite Pte Ltd",
+};
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
+function HomePage() {
   return (
-    <div
-      style={{
-        backgroundColor: "rgba(27,27,29,255)",
-      }}
-    >
-      {isDesktop && isClient && <Para items={jsonData} />}
-      {isTablet && isClient && <Para items={jsonData} />}
-      {isMobile && isClient && <HomeMobile items={jsonData} />}
-      {isNotMobile && isClient && <Para items={jsonData} />}
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
-export default Section;
+export default HomePage;
