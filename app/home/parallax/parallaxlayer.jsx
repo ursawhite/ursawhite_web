@@ -23,7 +23,6 @@ export default function MultiLayerParallax(props) {
   console.log("reference", referenceNode);
 
   const maksPage = 13;
-  const scrollDelay = 300;
   const sectionList = [0, 1, 2, 3, 4, 5, 6];
   const data = props.items;
 
@@ -101,12 +100,6 @@ export default function MultiLayerParallax(props) {
           backgroundColor: "rgba(27,27,29,255)",
         }}
       >
-        <ParallaxLayer offset={1} speed={0} factor={0.5}></ParallaxLayer>
-        <ParallaxLayer offset={3} speed={0} factor={0.5}></ParallaxLayer>
-        <ParallaxLayer offset={5} speed={0} factor={0.5}></ParallaxLayer>
-        <ParallaxLayer offset={7} speed={0} factor={0.5}></ParallaxLayer>
-        <ParallaxLayer offset={9} speed={0} factor={0.5}></ParallaxLayer>
-        <ParallaxLayer offset={11} speed={0} factor={0.5}></ParallaxLayer>
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -207,7 +200,6 @@ export default function MultiLayerParallax(props) {
             alignItems: "center",
             justifyContent: "center",
             zIndex: "4",
-            // backgroundColor: "rgba(30,30,32,0.9)",
           }}
         >
           <PortoPage items={data[0]} f_color={"rgba(6,104,227,255)"} />
