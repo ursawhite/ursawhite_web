@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@fullpage/react-fullpage": "^0.1.40",
     "@react-spring/parallax": "^9.7.3",
     "@studio-freight/lenis": "^1.0.22",
@@ -24,6 +25,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-fast-marquee": "^1.6.0",
+    "react-intersection-observer": "^9.5.2",
     "react-responsive": "^9.0.2",
     "react-scroll-parallax": "^3.4.2",
     "react-spring": "^9.7.2",

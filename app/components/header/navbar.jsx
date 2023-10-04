@@ -12,6 +12,7 @@ function Navbar() {
     { name: "Our Work", link: "/ourworks", id: "linkOurWorks" },
     { name: "About Us", link: "/about_us", id: "linkAboutUs" },
     { name: "Services", link: "/services", id: "linkServices" },
+    { name: "Contact Us", link: "/contact_us", id: "linkContactUs" },
   ];
 
   const updateWidth = () => {
@@ -73,8 +74,8 @@ function Navbar() {
               aria-label="Close"
             ></button>
           </div>
-          <div className="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-            <ul className="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3">
+          <div className="offcanvas-body d-flex flex-column p-4 p-lg-0">
+            <ul className="navbar-nav justify-content-lg-end pe-3">
               {list.map((item, index) => (
                 <li className="stroke nav-item mx-2 fw-bold " key={index}>
                   <Link
@@ -93,14 +94,6 @@ function Navbar() {
                 </li>
               ))}
             </ul>
-            <div className="d-flex justify-content-center flex-column">
-              <button
-                type="button"
-                className="btn btn-secondary bg-transparent shadow-none border border-3 border-light "
-              >
-                Contact Us
-              </button>
-            </div>
           </div>
         </div>
       </div>
