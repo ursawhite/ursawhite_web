@@ -2,11 +2,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
 import Navbar from "./components/header/navbar";
 
-export const metadata = {
-  title: "Ursawhite Pte Ltd",
-  description: "Home page of Ursawhite Pte Ltd",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

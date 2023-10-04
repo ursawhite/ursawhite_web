@@ -2,56 +2,28 @@
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import React, { useRef, useEffect, useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import styles from "./parallax.module.css";
+
 import Banner from "../banner/banner";
 import Ourclients from "../our_clients/ourclients";
 import PortoPage from "../portofolio/porto_page";
-import Image from "next/image";
-import Items from "../../../public/data.json";
-import { motion } from "framer-motion";
-
 import Footer from "../../components/footer/footer";
 import Section6 from "../section6/section6";
 import ImageLeft from "../../components/home_our_works/image_left";
 import ImageRight from "../../components/home_our_works/image_right";
 import ImageFont from "../../components/home_our_works/image_font";
 
+import * as ButtonFunctions from "../../components/button/button";
+
 export default function MultiLayerParallax(props) {
   const ref = useRef(null);
   const [referenceNode, setReferenceNode] = useState(0);
   const [activeSection, setActiveSection] = useState(0);
-  console.log("active", activeSection);
-  console.log("reference", referenceNode);
-
   const maksPage = 13;
   const sectionList = [0, 1, 2, 3, 4, 5, 6];
   const data = props.items;
-
-  const handleClickScroll = (item) => {
-    const offset = item * 2;
-    if (offset >= 0 && offset <= maksPage) {
-      ref.current.scrollTo(offset);
-      setActiveSection(item);
-      setReferenceNode(offset);
-    }
-  };
-
-  const handleClickButtonDown = () => {
-    const offset = (activeSection + 1) * 2;
-    if (offset >= 0 && offset <= maksPage) {
-      ref.current.scrollTo(offset);
-      setActiveSection((prevSection) => prevSection + 1);
-      setReferenceNode(offset);
-    }
-  };
-
-  const handleClickButtonUp = () => {
-    const offset = (activeSection - 1) * 2;
-    if (offset >= 0 && offset <= maksPage) {
-      ref.current.scrollTo(offset);
-      setActiveSection((prevSection) => prevSection - 1);
-      setReferenceNode(offset);
-    }
-  };
 
   useEffect(() => {
     const option = { passive: false };
@@ -103,29 +75,33 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={0}
           speed={0}
-          tabIndex="0"
           factor={1}
           sticky={{ start: 0, end: 13 }}
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            inset: "50% 100% 0",
+            top: "50%",
+            transform: "translate(0%, -50%)",
+            zIndex: "5",
+            height: "50vh",
+            width: "10%",
           }}
         >
-          <div
-            className="progress_bar position-absolute top-50 end-0 translate-middle-y"
-            style={{ zIndex: "10" }}
-          >
+          <div className="progress_bar position-absolute top-50 end-0 translate-middle-y">
             <motion.div
               whileHover={{ scale: 1.5 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="btn"
-              onClick={handleClickButtonUp}
+              className={`btn ${styles.button}`}
+              onClick={() =>
+                ButtonFunctions.handleClickButtonUp(
+                  activeSection,
+                  setActiveSection,
+                  setReferenceNode,
+                  ref,
+                  maksPage
+                )
+              }
             >
-              <i
-                className="bi bi bi-chevron-double-up"
-                style={{ color: "gray" }}
-              ></i>
+              <i className={`bi bi-chevron-double-up ${styles.icon}`}></i>
             </motion.div>
             {sectionList.map((item, index) => (
               <motion.div
@@ -133,31 +109,44 @@ export default function MultiLayerParallax(props) {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 key={index + 1}
               >
-                <button
+                <div
                   className={`btn fw-bold border-0 shadow-0 me-3 ${
                     activeSection === item
                       ? " text-danger bg-dark border-end border-5 "
                       : " text-secondary bg-transparent border-end border-5 border-secondary"
                   }`}
-                  onClick={() => handleClickScroll(item)}
+                  onClick={() =>
+                    ButtonFunctions.handleClickScroll(
+                      item,
+                      setActiveSection,
+                      setReferenceNode,
+                      ref,
+                      maksPage
+                    )
+                  }
                   style={{
                     borderRadius: "0px",
                   }}
                 >
                   {item}
-                </button>
+                </div>
               </motion.div>
             ))}
             <motion.div
               whileHover={{ scale: 1.5 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
               className="btn "
-              onClick={handleClickButtonDown}
+              onClick={() =>
+                ButtonFunctions.handleClickButtonDown(
+                  activeSection,
+                  setActiveSection,
+                  setReferenceNode,
+                  ref,
+                  maksPage
+                )
+              }
             >
-              <i
-                className="bi bi-chevron-double-down"
-                style={{ color: "gray" }}
-              ></i>
+              <i className={`bi bi-chevron-double-down ${styles.icon}`}></i>
             </motion.div>
           </div>
         </ParallaxLayer>
@@ -167,11 +156,7 @@ export default function MultiLayerParallax(props) {
           tabIndex="0"
           factor={1}
           id="section1"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          className={styles.parallaxLayer}
         >
           <Banner />
         </ParallaxLayer>
@@ -181,11 +166,7 @@ export default function MultiLayerParallax(props) {
           speed={0}
           factor={1}
           id="section2"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          className={styles.parallaxLayer}
         >
           <Ourclients />
         </ParallaxLayer>
@@ -195,11 +176,9 @@ export default function MultiLayerParallax(props) {
           speed={0}
           factor={1}
           id="section3"
+          className={styles.parallaxLayer}
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: "4",
+            zIndex: "100",
           }}
         >
           <PortoPage items={data[0]} f_color={"rgba(6,104,227,255)"} />
@@ -209,10 +188,8 @@ export default function MultiLayerParallax(props) {
           speed={0}
           factor={1}
           id="section4"
+          className={styles.parallaxLayer}
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
             zIndex: "4",
           }}
         >
@@ -223,10 +200,8 @@ export default function MultiLayerParallax(props) {
           speed={0}
           factor={1}
           id="section5"
+          className={styles.parallaxLayer}
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
             zIndex: "4",
           }}
         >
@@ -238,11 +213,7 @@ export default function MultiLayerParallax(props) {
           factor={1}
           id="section6"
           speed={0}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          className={styles.parallaxLayer}
         >
           <Section6 />
         </ParallaxLayer>
@@ -252,11 +223,7 @@ export default function MultiLayerParallax(props) {
           factor={1}
           id="section7"
           speed={0}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          className={styles.parallaxLayer}
         >
           <Footer />
         </ParallaxLayer>
@@ -264,11 +231,9 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={4}
           speed={0.3}
+          className={styles.parallaxLayer_end}
           style={{
             zIndex: "2",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "end",
           }}
         >
           <ImageRight src="/images/our-works/project1.png" />
@@ -276,11 +241,9 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={4}
           speed={0}
+          className={styles.parallaxLayer}
           style={{
             zIndex: "1",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
           }}
         >
           <ImageFont src="/images/img-back/nod.png" />
@@ -288,11 +251,9 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={4}
           speed={0.5}
+          className={styles.parallaxLayer}
           style={{
             zIndex: "3",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
           }}
         >
           <ImageLeft src="/images/img-back/Nod_credit.png" />
@@ -301,11 +262,9 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={6}
           speed={0}
+          className={styles.parallaxLayer}
           style={{
             zIndex: "1",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
           }}
         >
           <ImageFont src="/images/img-back/feco.png" />
@@ -313,11 +272,9 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={6}
           speed={0.3}
+          className={styles.parallaxLayer_end}
           style={{
             zIndex: "2",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "end",
           }}
         >
           <ImageRight src="/images/our-works/project2.png" />
@@ -325,11 +282,9 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={6}
           speed={0.5}
+          className={styles.parallaxLayer}
           style={{
             zIndex: "3",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
           }}
         >
           <ImageLeft src="/images/img-back/feco_playbook.png" />
@@ -338,11 +293,9 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={8}
           speed={0}
+          className={styles.parallaxLayer}
           style={{
             zIndex: "1",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
           }}
         >
           <ImageFont src="/images/img-back/hkgo.png" />
@@ -350,11 +303,9 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={8}
           speed={0.3}
+          className={styles.parallaxLayer_end}
           style={{
             zIndex: "2",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "end",
           }}
         >
           <ImageRight src="/images/our-works/project3.png" />
@@ -362,246 +313,138 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={8}
           speed={0.5}
+          className={styles.parallaxLayer}
           style={{
             zIndex: "3",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
           }}
         >
           <ImageLeft src="/images/img-back/hkgo_back.png" />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={0}
-          speed={0.3}
-          style={{ marginLeft: "90%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={0} speed={0.3} className={styles.layer_object1}>
           <Image
             src="/images/obj/1.png"
             width={350}
             height={350}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object1"
+            className={styles.object}
             priority
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={1}
-          speed={0.3}
-          style={{ marginLeft: "-5%", marginTop: "-10%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={1} speed={0.3} className={styles.layer_object2}>
           <Image
             src="/images/obj/2.png"
             width={250}
             height={250}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object2"
+            className={styles.object}
             priority
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={1}
-          speed={0.3}
-          style={{ marginLeft: "90%", marginTop: "30%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={1} speed={0.3} className={styles.layer_object3}>
           <Image
             src="/images/obj/3.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(350deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object3"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={2}
-          speed={0.3}
-          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={2} speed={0.3} className={styles.layer_object4}>
           <Image
             src="/images/obj/4.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(350deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object4"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={3}
-          speed={0.3}
-          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={3} speed={0.3} className={styles.layer_object5}>
           <Image
             src="/images/obj/5.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(350deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object5"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={4}
-          speed={0.3}
-          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={4} speed={0.3} className={styles.layer_object4}>
           <Image
             src="/images/obj/6.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(30deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object6"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={5}
-          speed={0.3}
-          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={5} speed={0.3} className={styles.layer_object5}>
           <Image
             src="/images/obj/7.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(30deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object7"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={6}
-          speed={0.3}
-          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={6} speed={0.3} className={styles.layer_object4}>
           <Image
             src="/images/obj/8.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(30deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object8"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={7}
-          speed={0.3}
-          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={7} speed={0.3} className={styles.layer_object5}>
           <Image
             src="/images/obj/9.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(30deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object9"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={8}
-          speed={0.3}
-          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={8} speed={0.3} className={styles.layer_object4}>
           <Image
             src="/images/obj/10.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(30deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object10"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={9}
-          speed={0.3}
-          style={{ marginLeft: "88%", marginTop: "20%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={9} speed={0.3} className={styles.layer_object5}>
           <Image
             src="/images/obj/11.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(30deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object11"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={10}
-          speed={0.3}
-          style={{ marginLeft: "-8%", marginTop: "30%", zIndex: -1 }}
-        >
+        <ParallaxLayer offset={10} speed={0.3} className={styles.layer_object4}>
           <Image
             src="/images/obj/12.png"
             width={300}
             height={300}
-            alt="logo"
-            style={{
-              objectFit: "contain",
-              transform: "rotate(30deg)",
-              opacity: "0.3",
-              filter: "blur(8px)",
-            }}
+            alt="object12"
+            className={styles.object2}
             priority
           />
         </ParallaxLayer>

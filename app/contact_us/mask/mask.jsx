@@ -3,28 +3,16 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styles from "./page.module.css";
-const phrases = ["Let's Build Great", "Products Together"];
+import { animation } from "../../components/animation/animation";
 
-export default function MaskText() {
-  const animation = {
-    initial: { y: "100%" },
-    enter: (i) => ({
-      y: "0",
-      transition: {
-        duration: 0.75,
-        ease: [0.33, 1, 0.68, 1],
-        delay: 0.075 * i,
-      },
-    }),
-  };
-
+export default function MaskText(text) {
+  const phrases = text.text;
   const { ref, inView, entry } = useInView({
     threshold: 0.75,
     triggerOnce: true,
   });
 
   return (
-    // <></>
     <div ref={ref} className={styles.body}>
       {phrases.map((phrase, index) => {
         return (
@@ -34,7 +22,6 @@ export default function MaskText() {
               variants={animation}
               initial="initial"
               animate={inView ? "enter" : ""}
-              className="border-bottom border-secondary border-3"
             >
               {phrase}
             </motion.p>

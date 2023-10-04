@@ -1,35 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-const fadeInTop = {
-  initial: {
-    opacity: 0,
-    y: 300,
-  },
-  animate: () => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.3,
-      duration: 1,
-    },
-  }),
-};
-
-const fadeInLeft = {
-  initial: {
-    opacity: 0,
-    x: -100,
-  },
-  animate: () => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: 0.3,
-    },
-  }),
-};
+import { fadeInTop } from "../../components/animation/animation";
 
 function PortoPages({ items, f_color }) {
   return (
@@ -74,7 +46,7 @@ function PortoPages({ items, f_color }) {
               <Link
                 className="text-decoration-none fw-bold"
                 href={{
-                  pathname: "/ourworks/project",
+                  pathname: "/our_works/project",
                   query: { items: JSON.stringify(items) },
                 }}
               >

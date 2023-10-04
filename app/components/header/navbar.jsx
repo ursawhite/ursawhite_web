@@ -9,7 +9,7 @@ function Navbar() {
   const [width, setWidth] = useState(0);
   const list = [
     { name: "Home", link: "/", id: "linkHome" },
-    { name: "Our Work", link: "/ourworks", id: "linkOurWorks" },
+    { name: "Our Work", link: "/our_works", id: "linkOurWorks" },
     { name: "About Us", link: "/about_us", id: "linkAboutUs" },
     { name: "Services", link: "/services", id: "linkServices" },
     { name: "Contact Us", link: "/contact_us", id: "linkContactUs" },

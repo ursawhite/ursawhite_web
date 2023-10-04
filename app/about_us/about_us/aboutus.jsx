@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import Test_SVG from "../components/test_svg/test_svg";
-import Banner from "./banner/banner";
-import Footer from "../components/footer/footer";
+import Test_SVG from "../../components/test_svg/test_svg";
+import Banner from "../banner/banner";
+import Footer from "../../components/footer/footer";
 
 function AboutUs() {
   const ref = useRef(null);
