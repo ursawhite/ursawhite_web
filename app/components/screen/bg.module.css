@@ -24,7 +24,7 @@
 }
 .object {
   object-fit: contain;
-  opacity: 0.3;
+
   filter: blur(8px);
 }
 
