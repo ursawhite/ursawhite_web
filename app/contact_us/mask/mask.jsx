@@ -15,16 +15,16 @@ export default function MaskText(text) {
     <div ref={ref}>
       {phrases.map((phrase, index) => {
         return (
-          <div key={index} style={{ overflow: "hidden" }}>
-            <motion.p
+          <div className="mt-5" key={index} style={{ overflow: "hidden" }}>
+            <motion.div
+              className="display-2 fw-bold"
               custom={index}
               variants={animation}
               initial="initial"
               animate={inView ? "enter" : ""}
-              style={{ fontSize: "10vh" }}
             >
               {phrase}
-            </motion.p>
+            </motion.div>
           </div>
         );
       })}

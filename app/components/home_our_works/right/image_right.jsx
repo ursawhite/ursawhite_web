@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./right.module.css";
+import styles from "./right.module.scss";
 
 function image_right(props) {
   const image = props.src;

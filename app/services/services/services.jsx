@@ -45,7 +45,7 @@ function Services() {
         <ParallaxLayer
           offset={1}
           speed={0}
-          factor={10}
+          factor={1}
           style={{
             display: "flex",
             height: "150%",
@@ -54,16 +54,6 @@ function Services() {
         >
           <Serv />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={2}
-          speed={0}
-          style={{
-            display: "flex",
-            alignItems: "end",
-            justifyContent: "center",
-            marginTop: "10%",
-          }}
-        ></ParallaxLayer>
 
         <ParallaxLayer
           offset={3}

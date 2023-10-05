@@ -1,6 +1,5 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import styles from "./ourworks.module.css";
 
 import Bg from "../../components/screen/bg";
 import Banner from "../banner/banner";
@@ -11,6 +10,12 @@ import Test_SVG from "../../components/test_svg/test_svg";
 function Our_Works(props) {
   const data = props.items;
 
+  const parallaxLayer = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
+
   return (
     <>
       <Parallax
@@ -20,7 +25,7 @@ function Our_Works(props) {
       >
         <Bg />
 
-        <ParallaxLayer offset={0} speed={0} className={styles.parallax_layer}>
+        <ParallaxLayer offset={0} speed={0} style={parallaxLayer}>
           <Banner />
         </ParallaxLayer>
 
@@ -31,21 +36,16 @@ function Our_Works(props) {
         >
           <Test_SVG item="Project" />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={1}
-          speed={0}
-          factor={2.5}
-          className={styles.parallax_layer}
-        >
+        <ParallaxLayer offset={1} speed={0} factor={2.5} style={parallaxLayer}>
           <Porto items={data} />
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={2}
           speed={0}
-          className={styles.parallax_layer}
+          style={parallaxLayer}
         ></ParallaxLayer>
-        <ParallaxLayer offset={4} speed={0} className={styles.parallax_layer}>
+        <ParallaxLayer offset={4} speed={0} style={parallaxLayer}>
           <Footer />
         </ParallaxLayer>
       </Parallax>

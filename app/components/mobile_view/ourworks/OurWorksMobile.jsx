@@ -45,7 +45,7 @@ function OurWorks(props) {
             <Link
               className="text-decoration-none"
               href={{
-                pathname: `/ourworks/project`,
+                pathname: `/our_works/project`,
                 query: { items: JSON.stringify(ourWork) },
               }}
             >

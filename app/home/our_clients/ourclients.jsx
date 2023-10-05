@@ -66,18 +66,17 @@ function Ourclients() {
             </p>
             <div className=" d-flex flex-wrap justify-content-center align-items-center ">
               {company.map((item, index) => (
-                <motion.div
-                  className="mb-2"
-                  key={index}
-                  variants={fadeInAnimationVariants}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
-                  custom={index}
-                >
-                  <div className="d-flex justify-content-center align-items-center me-lg-2 me-md-1">
+                <div className="mb-2" key={index}>
+                  <motion.div
+                    className="d-flex justify-content-center align-items-center me-lg-2 me-md-1"
+                    variants={fadeInAnimationVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{
+                      once: true,
+                    }}
+                    custom={index}
+                  >
                     <Image
                       src={item.logo}
                       className="img-fluid p-1 bg-light"
@@ -87,8 +86,8 @@ function Ourclients() {
                       sizes="{max-width: 100px} 25vw, 100px"
                       style={{ objectFit: "contain" }}
                     />
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               ))}
             </div>
           </div>

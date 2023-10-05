@@ -50,7 +50,7 @@ function Portofolio_Mobile({ items }) {
                 <Link
                   className="text-decoration-none fw-bold"
                   href={{
-                    pathname: "/ourworks/project",
+                    pathname: "/our_works/project",
                     query: { items: JSON.stringify(item) },
                   }}
                 >

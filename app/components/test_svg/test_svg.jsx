@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./svg.module.css";
+import styles from "./svg.module.scss";
 
 function Test_svg({ item }) {
   const text = item;

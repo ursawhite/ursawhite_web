@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./crew.module.css";
 
 const Crew = () => {
   const crew = [
@@ -29,13 +28,18 @@ const Crew = () => {
       profile_pic: "/images/ava/ava4.jpg",
     },
   ];
+  const title = {
+    color: "rgba(169, 80, 210, 255)",
+  };
 
   return (
     <div className="container">
       <div className="row">
-        <p className={`text-center ${styles.title}`}>THE LEADERSHIP CREW</p>
+        <p className="text-center fw-bold">THE LEADERSHIP CREW</p>
 
-        <h1 className="text-center text-white fw-bold">Meet The Shipmates</h1>
+        <h1 className="text-center text-white fw-bold" style={title}>
+          Meet The Shipmates
+        </h1>
         {crew.map((item) => {
           return (
             <div className="col-lg-3 col-md-6 mt-5 text-center" key={item.id}>

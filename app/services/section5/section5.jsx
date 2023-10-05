@@ -7,7 +7,7 @@ const Section5 = () => {
       style={{
         width: "100vw",
         height: "50vh",
-        marginTop: "30%",
+        marginTop: "10%",
         backgroundColor: "rgba(79, 66, 152, 0.5)",
       }}
     >
