@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import "../../styles/navbar.scss";
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState("/");
@@ -37,7 +36,7 @@ function Navbar() {
             src="/logo.png"
             width={width < 1024 ? "150" : "200"}
             height={width < 1024 ? "25" : "35"}
-            priority={true}
+            priority
             alt="logo"
           />
         </Link>

@@ -14,11 +14,13 @@ const ImageLeft = (props) => {
             src={image}
             width={400}
             height={400}
+            placeholder="blur"
+            blurDataURL={image}
             alt="Image by upklyak"
-            loading="lazy"
-            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{
               objectFit: "contain",
+              height: "auto",
             }}
           />
         </div>

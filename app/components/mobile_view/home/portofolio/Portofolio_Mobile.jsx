@@ -29,8 +29,8 @@ function Portofolio_Mobile({ items }) {
                   alt="logo"
                   style={{
                     objectFit: "contain",
-                    // width: "100%",
-                    // height: "auto",
+                    width: "100%",
+                    height: "auto",
                   }}
                 />
               </div>
@@ -62,7 +62,7 @@ function Portofolio_Mobile({ items }) {
         ))}
         <div className="col-12 d-flex justify-content-center align-items-center">
           <button className="btn btn-secondary mt-3 mb-3">
-            <Link className="text-decoration-none text-white" href="/ourworks">
+            <Link className="text-decoration-none text-white" href="/our_works">
               Show More
             </Link>
           </button>

@@ -112,7 +112,7 @@ function AboutUs_Mobile() {
           <div className="col-6 col-md-3 mt-5 text-center">
             <Image
               className="img-fluid"
-              src="/images/ava1.jpg"
+              src="/images/ava/ava1.jpg"
               alt="ava1"
               width={200}
               height={200}
@@ -124,7 +124,7 @@ function AboutUs_Mobile() {
           <div className="col-6 col-md-6 col-md-3 mt-5 text-center">
             <Image
               className="img-fluid"
-              src="/images/ava2.jpg"
+              src="/images/ava/ava2.jpg"
               alt="ava2"
               width={200}
               height={200}
@@ -136,7 +136,7 @@ function AboutUs_Mobile() {
           <div className="col-6 col-md-6  mt-5 text-center">
             <Image
               className="img-fluid"
-              src="/images/ava3.jpg"
+              src="/images/ava/ava3.jpg"
               alt="ava3"
               width={200}
               height={200}
@@ -148,7 +148,7 @@ function AboutUs_Mobile() {
           <div className="col-6 col-md-3 mt-5 text-center">
             <Image
               className="img-fluid"
-              src="/images/ava4.jpg"
+              src="/images/ava/ava4.jpg"
               alt="ava4"
               width={200}
               height={200}
