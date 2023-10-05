@@ -1,4 +1,9 @@
-svg text {
+.patterns {
+  margin-top: -25%;
+  z-index: -10;
+}
+
+.text {
   letter-spacing: 10px;
   stroke: #70747c;
   font-size: 350px;
@@ -13,12 +18,9 @@ svg text {
   0% {
     stroke-dasharray: 0 50%;
     stroke-dashoffset: 20%;
-    /* fill: hsl(189, 68%, 75%); */
   }
 
   100% {
     stroke-dasharray: 50% 0;
-    /* stroke-dashoffstet: -20%; */
-    /* fill: hsla(189, 68%, 75%, 0%); */
   }
 }
