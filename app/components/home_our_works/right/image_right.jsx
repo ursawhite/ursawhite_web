@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import "./img_right.css";
+import styles from "./right.module.css";
 
 function image_right(props) {
   const image = props.src;
@@ -9,7 +9,7 @@ function image_right(props) {
       <div className="row ">
         <div className="col-lg-12 col-md-10">
           <Image
-            className="img-fluid img-right"
+            className={`img-fluid ${styles.img_right}`}
             src={image}
             width={250}
             height={150}

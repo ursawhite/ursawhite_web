@@ -6,14 +6,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./parallax.module.css";
 
+import Bg from "../../components/screen/bg";
 import Banner from "../banner/banner";
 import Ourclients from "../our_clients/ourclients";
 import PortoPage from "../portofolio/porto_page";
 import Footer from "../../components/footer/footer";
 import Section6 from "../section6/section6";
-import ImageLeft from "../../components/home_our_works/image_left";
-import ImageRight from "../../components/home_our_works/image_right";
-import ImageFont from "../../components/home_our_works/image_font";
+import ImageLeft from "../../components/home_our_works/left/image_left";
+import ImageRight from "../../components/home_our_works/right/image_right";
+import ImageFont from "../../components/home_our_works/img_font/image_font";
 
 import * as ButtonFunctions from "../../components/button/button";
 
@@ -72,6 +73,7 @@ export default function MultiLayerParallax(props) {
           backgroundColor: "rgba(27,27,29,255)",
         }}
       >
+        <Bg />
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -319,134 +321,6 @@ export default function MultiLayerParallax(props) {
           }}
         >
           <ImageLeft src="/images/img-back/hkgo_back.png" />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={0} speed={0.3} className={styles.layer_object1}>
-          <Image
-            src="/images/obj/1.png"
-            width={350}
-            height={350}
-            alt="object1"
-            className={styles.object}
-            priority
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.3} className={styles.layer_object2}>
-          <Image
-            src="/images/obj/2.png"
-            width={250}
-            height={250}
-            alt="object2"
-            className={styles.object}
-            priority
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.3} className={styles.layer_object3}>
-          <Image
-            src="/images/obj/3.png"
-            width={300}
-            height={300}
-            alt="object3"
-            className={styles.object2}
-            priority
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={2} speed={0.3} className={styles.layer_object4}>
-          <Image
-            src="/images/obj/4.png"
-            width={300}
-            height={300}
-            alt="object4"
-            className={styles.object2}
-            priority
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={3} speed={0.3} className={styles.layer_object5}>
-          <Image
-            src="/images/obj/5.png"
-            width={300}
-            height={300}
-            alt="object5"
-            className={styles.object2}
-            priority
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={4} speed={0.3} className={styles.layer_object4}>
-          <Image
-            src="/images/obj/6.png"
-            width={300}
-            height={300}
-            alt="object6"
-            className={styles.object2}
-            priority
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={5} speed={0.3} className={styles.layer_object5}>
-          <Image
-            src="/images/obj/7.png"
-            width={300}
-            height={300}
-            alt="object7"
-            className={styles.object2}
-            priority
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={6} speed={0.3} className={styles.layer_object4}>
-          <Image
-            src="/images/obj/8.png"
-            width={300}
-            height={300}
-            alt="object8"
-            className={styles.object2}
-            priority
-          />
-        </ParallaxLayer>
-        <ParallaxLayer offset={7} speed={0.3} className={styles.layer_object5}>
-          <Image
-            src="/images/obj/9.png"
-            width={300}
-            height={300}
-            alt="object9"
-            className={styles.object2}
-            priority
-          />
-        </ParallaxLayer>
-        <ParallaxLayer offset={8} speed={0.3} className={styles.layer_object4}>
-          <Image
-            src="/images/obj/10.png"
-            width={300}
-            height={300}
-            alt="object10"
-            className={styles.object2}
-            priority
-          />
-        </ParallaxLayer>
-        <ParallaxLayer offset={9} speed={0.3} className={styles.layer_object5}>
-          <Image
-            src="/images/obj/11.png"
-            width={300}
-            height={300}
-            alt="object11"
-            className={styles.object2}
-            priority
-          />
-        </ParallaxLayer>
-        <ParallaxLayer offset={10} speed={0.3} className={styles.layer_object4}>
-          <Image
-            src="/images/obj/12.png"
-            width={300}
-            height={300}
-            alt="object12"
-            className={styles.object2}
-            priority
-          />
         </ParallaxLayer>
       </Parallax>
     </>

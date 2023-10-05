@@ -6,7 +6,6 @@ function ProjectMobile() {
   const searchParams = useSearchParams();
   const item = searchParams.get("items");
   const project = JSON.parse(item);
-  console.log(project.image_mobile);
 
   return (
     <>

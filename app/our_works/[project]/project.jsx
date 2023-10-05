@@ -8,7 +8,7 @@ function Project() {
   const searchParams = useSearchParams();
   const items = searchParams.get("items");
   const project = JSON.parse(items);
-  console.log(project);
+
   return (
     <Parallax
       ref={ref}

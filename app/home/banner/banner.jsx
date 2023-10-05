@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
-
 import { TypeAnimation } from "react-type-animation";
+
 function Banner() {
   return (
     <div className="container-overlay">

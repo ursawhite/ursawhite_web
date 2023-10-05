@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import "./img_left.css";
+import styles from "./left.module.css";
 
 const ImageLeft = (props) => {
   const image = props.src;
@@ -10,13 +10,13 @@ const ImageLeft = (props) => {
       <div className="row">
         <div className="col-lg-12 col-md-10">
           <Image
-            className="img-fluid img-left"
+            className={`img-fluid ${styles.img_left}`}
             src={image}
             width={400}
             height={400}
             alt="Image by upklyak"
             loading="lazy"
-            sizes="(max-width: 300px) 85vw, (max-width: 500px) 50vw, 33vw"
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
             style={{
               objectFit: "contain",
             }}

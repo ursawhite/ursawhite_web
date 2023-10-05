@@ -45,7 +45,6 @@ const Form = () => {
         return;
       }
 
-      console.log(nameRef.current.value.length);
       await emailjs.send(serviceId, templateId, {
         name: nameRef.current.value,
         email: emailRef.current.value,

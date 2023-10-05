@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import "../../styles/navbar.scss";
 
 function Navbar() {
@@ -14,7 +15,10 @@ function Navbar() {
     { name: "Services", link: "/services", id: "linkServices" },
     { name: "Contact Us", link: "/contact_us", id: "linkContactUs" },
   ];
-
+  const pathname = usePathname();
+  useEffect(() => {
+    setActiveLink(pathname);
+  }, [pathname]);
   const updateWidth = () => {
     const newWidth = window.innerWidth;
     setWidth(newWidth);
@@ -22,8 +26,6 @@ function Navbar() {
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
     updateWidth();
-    const currentPath = window.location.pathname;
-    setActiveLink(currentPath);
   }, []);
 
   return (

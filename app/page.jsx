@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "./home/home_page.jsx";
 
 export const metadata = {
