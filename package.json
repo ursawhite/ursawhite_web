@@ -14,11 +14,9 @@
     "@react-spring/parallax": "^9.7.3",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.11.0",
-    "bourbon": "^7.3.0",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "framer-motion": "^10.16.4",
-    "locomotive-scroll": "^4.1.4",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -26,11 +24,6 @@
     "react-intersection-observer": "^9.5.2",
     "react-responsive": "^9.0.2",
     "react-spring": "^9.7.2",
-    "react-type-animation": "^3.1.0",
-    "sass": "^1.67.0",
-    "styled-components": "^6.0.8"
-  },
-  "devDependencies": {
-    "@types/locomotive-scroll": "^4.1.1"
+    "react-type-animation": "^3.1.0"
   }
 }
