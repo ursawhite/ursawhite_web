@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./mask/page.module.css";
 import MaskText from "./mask/mask.jsx";
 import Form from "./form/form.jsx";
 
@@ -13,7 +12,16 @@ const ContactUs = () => {
   return (
     <>
       <div className="container text-white fw-bold">
-        <div className={styles.container}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            flexDirection: "column",
+            gap: "20vw",
+            marginTop: "10%",
+            marginBottom: "10%",
+          }}
+        >
           <MaskText text={phrases} />
         </div>
       </div>
