@@ -68,7 +68,7 @@ function Ourclients() {
             <div className=" d-flex flex-wrap justify-content-center align-items-center ">
               {company.map((item, index) => (
                 <div className={`mb-2 me-2 ${styles.back_logo}`} key={index}>
-                  <div
+                  <motion.div
                     className="d-flex justify-content-center align-items-center me-lg-2 me-md-1"
                     variants={fadeInAnimationVariants}
                     initial="initial"
@@ -87,7 +87,7 @@ function Ourclients() {
                       sizes="{max-width: 100px} 25vw, 100px"
                       style={{ objectFit: "contain" }}
                     />
-                  </div>
+                  </motion.div>
                 </div>
               ))}
             </div>
