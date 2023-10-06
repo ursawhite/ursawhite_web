@@ -8,7 +8,7 @@ import Serv from "../serv/serv";
 import Tech from "../tech/tech";
 import Section5 from "../section5/section5";
 import Footer from "../../components/footer/footer";
-import Test_SVG from "../../components/test_svg/test_svg";
+import Test_SVG from "../../components/svg/svg";
 
 function Services() {
   const ref = useRef(null);

@@ -5,7 +5,7 @@ import Bg from "../../components/screen/bg";
 import Banner from "../banner/banner";
 import Porto from "../porto/porto";
 import Footer from "../../components/footer/footer";
-import Test_SVG from "../../components/test_svg/test_svg";
+import Test_SVG from "../../components/svg/svg";
 
 function Our_Works(props) {
   const data = props.items;

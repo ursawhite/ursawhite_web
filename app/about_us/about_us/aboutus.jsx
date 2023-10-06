@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Bg from "../../components/screen/bg";
-import Test_SVG from "../../components/test_svg/test_svg";
+import Test_SVG from "../../components/svg/svg";
 import Banner from "../banner/banner";
 import ImgSectionBack from "../img_section/back/img_section_back";
 import ImgSectionFront from "../img_section/front/img_section_front";
