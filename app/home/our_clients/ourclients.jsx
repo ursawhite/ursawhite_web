@@ -67,9 +67,9 @@ function Ourclients() {
             </p>
             <div className=" d-flex flex-wrap justify-content-center align-items-center ">
               {company.map((item, index) => (
-                <div className={`mb-2 me-2 ${styles.back_logo}`} key={index}>
+                <div className={`mb-2 me-2  ${styles.back_logo}`} key={index}>
                   <motion.div
-                    className="d-flex justify-content-center align-items-center me-lg-2 me-md-1"
+                    className="d-flex justify-content-center bg-light  align-items-center me-lg-2 me-md-1"
                     variants={fadeInAnimationVariants}
                     initial="initial"
                     whileInView="animate"
