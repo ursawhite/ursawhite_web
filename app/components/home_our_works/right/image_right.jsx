@@ -1,22 +1,25 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./right.module.scss";
+// import styles from "./right.module.scss";
 
 function image_right(props) {
   const image = props.src;
   return (
-    <div className="container d-flex align-items-center justify-content-end">
-      <div className="row ">
-        <div className="col-lg-12 col-md-10">
+    <div className="container ">
+      <div className="row d-flex align-items-center justify-content-end">
+        <div className="col-lg-3 col-md-3">
           <Image
-            className={`img-fluid ${styles.img_right}`}
+            className="img-fluid object-fit-contain"
             src={image}
-            width={250}
+            width={300}
             height={150}
             alt="logo"
-            sizes="(max-width: 500px) 85vw, (max-width: 800px) 50vw, 33vw"
+            sizes="100vw"
+            loading="lazy"
             style={{
-              objectFit: "contain",
+              width: "100%",
+              height: "auto",
+              marginLeft: "8%",
             }}
           />
         </div>

@@ -70,30 +70,34 @@ function Ourclients() {
           </p>
           <div className=" d-flex flex-wrap justify-content-center align-items-center ">
             {company.map((item, index) => (
-              <motion.div
-                className={`d-flex justify-content-center bg-light align-items-center me-lg-2 me-md-1 mb-lg-2 mb-lg-2 ${styles.back_logo}`}
-                variants={fadeInAnimationVariants}
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: true,
-                }}
-                custom={index}
+              <div
+                className={`d-flex justify-content-center align-items-center me-lg-2 me-md-1 mb-lg-2 mb-lg-2 ${styles.back_logo}`}
                 key={index}
               >
-                <Image
-                  src={item.logo}
-                  className={`img-fluid p-1 ${styles.logo}`}
-                  alt={item.name}
-                  width={150}
-                  height={150}
-                  sizes={
-                    "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
-                  }
-                  priority
-                  style={{ objectFit: "contain" }}
-                />
-              </motion.div>
+                <motion.div
+                  className="bg-light "
+                  variants={fadeInAnimationVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={index}
+                >
+                  <Image
+                    src={item.logo}
+                    className={`img-fluid p-1 ${styles.logo}`}
+                    alt={item.name}
+                    width={150}
+                    height={150}
+                    sizes={
+                      "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                    }
+                    priority
+                    style={{ objectFit: "contain" }}
+                  />
+                </motion.div>
+              </div>
             ))}
           </div>
         </div>
