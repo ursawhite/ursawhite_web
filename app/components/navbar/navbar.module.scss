@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+}
+
+.textbtn {
+  order: 1;
+}
+
+.btn:hover .textbtn {
+  order: 2;
+  background-color: yellow; /* Debugging color */
+}
+
+.iconbtn {
+  order: 2;
+}
+
+.btn:hover .iconbtn {
+  order: 1;
+  background-color: lightblue; /* Debugging color */
+}

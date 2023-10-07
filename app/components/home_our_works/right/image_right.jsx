@@ -7,19 +7,18 @@ function image_right(props) {
   return (
     <div className="container ">
       <div className="row d-flex align-items-center justify-content-end">
-        <div className="col-lg-3 col-md-3">
+        <div className="col-lg-3 col-md-4">
           <Image
             className="img-fluid object-fit-contain"
             src={image}
-            width={300}
-            height={150}
+            width={400}
+            height={400}
             alt="logo"
             sizes="100vw"
             loading="lazy"
             style={{
-              width: "100%",
+              width: "80%",
               height: "auto",
-              marginLeft: "8%",
             }}
           />
         </div>

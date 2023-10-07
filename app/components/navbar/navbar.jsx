@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import styles from "./navbar.module.scss";
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState("/");
@@ -56,8 +57,8 @@ function Navbar() {
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
-          <div className="offcanvas-header border-bottom text-white">
-            <div className="offcanvas-title" id="offcanvasNavbarLabel">
+          <div className="offcanvas-header border-bottom text-white ">
+            <div className="offcanvas-title " id="offcanvasNavbarLabel">
               <Image
                 className="logo-logo m-1"
                 src="/logo.png"
@@ -75,23 +76,51 @@ function Navbar() {
               aria-label="Close"
             ></button>
           </div>
-          <div className="offcanvas-body d-flex flex-column p-4 p-lg-0">
-            <ul className="navbar-nav justify-content-lg-end pe-3">
+          <div className="offcanvas-body d-flex flex-column p-4 p-lg-0 ">
+            <ul className="navbar-nav justify-content-lg-end pe-3 align-items-center">
               {list.map((item, index) => (
-                <li className="stroke nav-item mx-2 fw-bold " key={index}>
-                  <Link
-                    className={`nav-link fs-6 ${
-                      activeLink === `${item.link}`
-                        ? "active border-bottom border-3 text-white p-2"
-                        : "text-secondary"
-                    }`}
-                    id={item.id}
-                    aria-current="page"
-                    href={item.link}
-                    onClick={() => setActiveLink(`${item.link}`)}
-                  >
-                    <span>{item.name}</span>
-                  </Link>
+                <li className="nav-item mx-2 fw-bold" key={index}>
+                  {index === list.length - 1 ? (
+                    <Link
+                      className="nav-link fs-6"
+                      id={item.id}
+                      href={item.link}
+                      onClick={() => setActiveLink(`${item.link}`)}
+                    >
+                      <div
+                        className={`btn text-white p-2 ${styles.btn}`}
+                        style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
+                      >
+                        <span
+                          className={`ms-3 me-3 ${
+                            activeLink === item.link
+                              ? "fw-bold " + styles.textbtn
+                              : ""
+                          }`}
+                        >
+                          {item.name}
+                        </span>
+
+                        <i
+                          className={`bi bi-envelope ms-2 me-2 ${styles.iconbtn}`}
+                        ></i>
+                      </div>
+                    </Link>
+                  ) : (
+                    <Link
+                      className={`nav-link fs-6 ${
+                        activeLink === `${item.link}`
+                          ? "active border-bottom border-3 text-white p-2"
+                          : "text-secondary"
+                      }`}
+                      id={item.id}
+                      aria-current="page"
+                      href={item.link}
+                      onClick={() => setActiveLink(`${item.link}`)}
+                    >
+                      <span>{item.name}</span>
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

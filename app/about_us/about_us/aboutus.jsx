@@ -9,7 +9,7 @@ import ImgSectionBack from "../img_section/back/img_section_back";
 import ImgSectionFront from "../img_section/front/img_section_front";
 import Section3 from "../section3/section3";
 import Crew from "../crew/crew";
-import Footer from "../../components/footer/footer";
+import Footer from "../../components/footer/footer2";
 
 function AboutUs() {
   const ref = useRef(null);
@@ -22,7 +22,7 @@ function AboutUs() {
       <Bg />
       <ParallaxLayer
         offset={0}
-        speed={0}
+        speed={0.3}
         style={{ marginTop: "20%", zIndex: -2 }}
       >
         <Test_SVG item="About" />
@@ -40,9 +40,19 @@ function AboutUs() {
       >
         <Banner />
       </ParallaxLayer>
-
       <ParallaxLayer
         offset={1}
+        speed={0}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Section3 />
+      </ParallaxLayer>
+      <ParallaxLayer
+        offset={2}
         speed={0.5}
         style={{
           display: "flex",
@@ -53,20 +63,10 @@ function AboutUs() {
         <ImgSectionBack />
       </ParallaxLayer>
 
-      <ParallaxLayer offset={1} speed={0.8}>
+      <ParallaxLayer offset={2} speed={0.8}>
         <ImgSectionFront />
       </ParallaxLayer>
-      <ParallaxLayer
-        offset={2}
-        speed={0}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Section3 />
-      </ParallaxLayer>
+
       <ParallaxLayer
         offset={3}
         speed={0}
@@ -81,11 +81,7 @@ function AboutUs() {
       <ParallaxLayer
         offset={4}
         speed={0}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+        className="d-flex justify-content-center align-items-end"
       >
         <Footer />
       </ParallaxLayer>

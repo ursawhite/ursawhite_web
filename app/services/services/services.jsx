@@ -7,7 +7,7 @@ import Banner from "../banner/banner";
 import Serv from "../serv/serv";
 import Tech from "../tech/tech";
 import Section5 from "../section5/section5";
-import Footer from "../../components/footer/footer";
+import Footer from "../../components/footer/footer2";
 import Test_SVG from "../../components/svg/svg";
 
 function Services() {
@@ -82,11 +82,7 @@ function Services() {
         <ParallaxLayer
           offset={5}
           speed={0}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          className="d-flex justify-content-center align-items-end"
         >
           <Footer />
         </ParallaxLayer>

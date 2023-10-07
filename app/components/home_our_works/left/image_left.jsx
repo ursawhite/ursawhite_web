@@ -7,8 +7,8 @@ const ImageLeft = (props) => {
 
   return (
     <div className="container ">
-      <div className="row d-flex justify-content-center align-items-end">
-        <div className="col-lg-4 col-md-4">
+      <div className="row d-flex justify-content-center align-items-center">
+        <div className="col-lg-3 col-md-4">
           <Image
             className="img-fluid object-fit-contain"
             src={image}
@@ -22,7 +22,7 @@ const ImageLeft = (props) => {
             style={{
               width: "100%",
               height: "auto",
-              marginLeft: "50%",
+              marginLeft: "15vw",
             }}
           />
         </div>

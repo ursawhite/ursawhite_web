@@ -1,6 +1,7 @@
 import React from "react";
 import MaskText from "./mask/mask.jsx";
 import Form from "./form/form.jsx";
+import Footer from "../components/footer/footer2.jsx";
 
 export const metadata = {
   title: "Ursawhite Pte Ltd | Contact Us",
@@ -32,6 +33,7 @@ const ContactUs = () => {
         </div>
         <Form />
       </div>
+      <Footer />
     </>
   );
 };

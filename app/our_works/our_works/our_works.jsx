@@ -4,7 +4,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Bg from "../../components/screen/bg";
 import Banner from "../banner/banner";
 import Porto from "../porto/porto";
-import Footer from "../../components/footer/footer";
+import Footer from "../../components/footer/footer2";
 import Test_SVG from "../../components/svg/svg";
 
 function Our_Works(props) {
@@ -45,7 +45,7 @@ function Our_Works(props) {
           speed={0}
           style={parallaxLayer}
         ></ParallaxLayer>
-        <ParallaxLayer offset={4} speed={0} style={parallaxLayer}>
+        <ParallaxLayer offset={4} speed={0} className="d-flex align-items-end">
           <Footer />
         </ParallaxLayer>
       </Parallax>
