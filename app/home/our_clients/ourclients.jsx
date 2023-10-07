@@ -48,49 +48,53 @@ function Ourclients() {
     },
   ];
   return (
-    <div className="container-fluid">
-      <div className="container">
-        <div className="row d-flex flex-column justify-content-center align-items-center">
-          <div className="col-lg-8">
-            <p className="text-center fw-bold" style={{ color: "#c457d5" }}>
-              A DIGITAL PRODUCT AGENCY LIKE NO OTHER
-            </p>
-            <h1 className="title text-white text-center mb-3 fw-bold mb-4">
-              Skip the long meetings and email <br /> threads. We focus on
-              getting things done.
-            </h1>
-            <p className="text-white">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry’s standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-            <div className=" d-flex flex-wrap justify-content-center align-items-center ">
-              {company.map((item, index) => (
-                <div className={`mb-2 me-2  ${styles.back_logo}`} key={index}>
-                  <motion.div
-                    className="d-flex justify-content-center bg-light  align-items-center me-lg-2 me-md-1"
-                    variants={fadeInAnimationVariants}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{
-                      once: true,
-                    }}
-                    custom={index}
-                  >
-                    <Image
-                      src={item.logo}
-                      className={`img-fluid p-1 ${styles.logo}`}
-                      alt={item.name}
-                      width={150}
-                      height={150}
-                      sizes="{max-width: 100px} 25vw, 100px"
-                      style={{ objectFit: "contain" }}
-                    />
-                  </motion.div>
-                </div>
-              ))}
-            </div>
+    <div className="container">
+      <div className="row d-flex flex-column justify-content-center align-items-center">
+        <div className="col-lg-8">
+          <h4 className="text-center fw-bold" style={{ color: "#c457d5" }}>
+            Our Clients
+          </h4>
+          <h1 className="title text-white text-center mb-3 fw-bold mb-4">
+            Discover the success stories <br />
+            of our satisfied clients who have already harnessed the power of our
+            services.
+          </h1>
+          <p className="text-white ms-3">
+            Our commitment to excellence and dedication to delivering top-notch
+            services have allowed us to build strong and enduring relationships
+            with a diverse range of clients. <br />{" "}
+            {`We take immense pride in the
+            trust these organizations have placed in us, and we'd like to
+            introduce you to some of our valued clients who have already
+            experienced the benefits of our services.`}
+          </p>
+          <div className=" d-flex flex-wrap justify-content-center align-items-center ">
+            {company.map((item, index) => (
+              <motion.div
+                className={`d-flex justify-content-center bg-light align-items-center me-lg-2 me-md-1 mb-lg-2 mb-lg-2 ${styles.back_logo}`}
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: true,
+                }}
+                custom={index}
+                key={index}
+              >
+                <Image
+                  src={item.logo}
+                  className={`img-fluid p-1 ${styles.logo}`}
+                  alt={item.name}
+                  width={150}
+                  height={150}
+                  sizes={
+                    "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                  }
+                  priority
+                  style={{ objectFit: "contain" }}
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

@@ -35,11 +35,11 @@ const Crew = () => {
   return (
     <div className="container">
       <div className="row">
-        <p className="text-center fw-bold">THE LEADERSHIP CREW</p>
+        <p className="text-center fw-bold" style={title}>
+          THE LEADERSHIP CREW
+        </p>
 
-        <h1 className="text-center text-white fw-bold" style={title}>
-          Meet The Shipmates
-        </h1>
+        <h1 className="text-center text-white fw-bold">Meet The Shipmates</h1>
         {crew.map((item) => {
           return (
             <div className="col-lg-3 col-md-6 mt-5 text-center" key={item.id}>

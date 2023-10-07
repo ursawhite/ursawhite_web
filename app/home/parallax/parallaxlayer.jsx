@@ -16,14 +16,31 @@ import ImageRight from "../../components/home_our_works/right/image_right";
 import ImageFont from "../../components/home_our_works/img_font/image_font";
 
 import * as ButtonFunctions from "../../components/button/button";
+import { a } from "react-spring";
 
 export default function MultiLayerParallax(props) {
   const ref = useRef(null);
   const [referenceNode, setReferenceNode] = useState(0);
   const [activeSection, setActiveSection] = useState(0);
+  const [isFirst, setIsFirst] = useState(false);
+  const [isLast, setIsLast] = useState(false);
   const maksPage = 13;
   const sectionList = [0, 1, 2, 3, 4, 5, 6];
   const data = props.items;
+
+  useEffect(() => {
+    if (activeSection === 0) {
+      setIsFirst(true);
+    } else {
+      setIsFirst(false);
+    }
+
+    if (activeSection === (maksPage - 1) / 2) {
+      setIsLast(true);
+    } else {
+      setIsLast(false);
+    }
+  }, [activeSection]);
 
   useEffect(() => {
     const option = { passive: false };
@@ -46,7 +63,7 @@ export default function MultiLayerParallax(props) {
           setActiveSection((prevSection) => prevSection - 1);
           scrollToSection(activeSection - 1);
         }
-      }, 500);
+      }, 400);
     };
 
     const scrollToSection = (section) => {
@@ -60,7 +77,7 @@ export default function MultiLayerParallax(props) {
     return () => {
       document.removeEventListener("wheel", scroll, option);
     };
-  }, [activeSection, maksPage, ref, setReferenceNode]);
+  }, [activeSection, setReferenceNode]);
 
   return (
     <>
@@ -92,6 +109,7 @@ export default function MultiLayerParallax(props) {
               whileHover={{ scale: 1.5 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
               className={`btn ${styles.button}`}
+              style={{ display: isFirst ? "none" : "" }}
               onClick={() =>
                 ButtonFunctions.handleClickButtonUp(
                   activeSection,
@@ -136,7 +154,8 @@ export default function MultiLayerParallax(props) {
             <motion.div
               whileHover={{ scale: 1.5 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="btn "
+              className="btn"
+              style={{ display: isLast ? "none" : "" }}
               onClick={() =>
                 ButtonFunctions.handleClickButtonDown(
                   activeSection,
@@ -151,6 +170,7 @@ export default function MultiLayerParallax(props) {
             </motion.div>
           </div>
         </ParallaxLayer>
+
         <ParallaxLayer
           offset={0}
           speed={0}

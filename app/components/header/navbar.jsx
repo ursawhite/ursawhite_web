@@ -28,7 +28,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg fixed-top">
+    <nav className="navbar navbar-expand-lg fixed-top ">
       <div className="container ">
         <Link className="" href="/">
           <Image
