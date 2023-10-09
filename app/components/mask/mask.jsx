@@ -15,9 +15,9 @@ export default function MaskText(text) {
     <div ref={ref}>
       {phrases.map((phrase, index) => {
         return (
-          <div className="mt-5" key={index} style={{ overflow: "hidden" }}>
+          <div key={index} style={{ overflow: "hidden" }}>
             <motion.div
-              className="display-2 fw-bold"
+              className="display-3 fw-bold text-white"
               custom={index}
               variants={animation}
               initial="initial"

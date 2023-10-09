@@ -40,6 +40,7 @@ function AboutUs() {
       >
         <Banner />
       </ParallaxLayer>
+
       <ParallaxLayer
         offset={1}
         speed={0}
@@ -53,7 +54,7 @@ function AboutUs() {
       </ParallaxLayer>
       <ParallaxLayer
         offset={2}
-        speed={0.5}
+        speed={0.2}
         style={{
           display: "flex",
           alignItems: "center",
@@ -63,7 +64,7 @@ function AboutUs() {
         <ImgSectionBack />
       </ParallaxLayer>
 
-      <ParallaxLayer offset={2} speed={0.8}>
+      <ParallaxLayer offset={2} speed={0.4}>
         <ImgSectionFront />
       </ParallaxLayer>
 

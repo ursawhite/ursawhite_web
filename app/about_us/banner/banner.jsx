@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import MaskText from "../../components/mask/mask";
+import { motion } from "framer-motion";
 
 function banner() {
+  const phrases = ["We Help Startups", "And companies Succeed"];
   return (
     <div className="container">
-      <div className="row">
+      <div className="row d-flex align-items-center">
         {/* <h1
           className="text-white display-2 fw-bold m-5"
           style={{
@@ -16,42 +19,46 @@ function banner() {
         >
           About Us
         </h1> */}
-        <div className="col-lg-6 col-md-6 d-flex flex-column justify-content-center ">
+        <div className="col-lg-6 col-md-6 ">
           <p
             className="text-left fw-bolder ms-lg-5"
             style={{ color: "rgba(169,80,210,255)" }}
           >
             YOUR DIGITAL DESIGN PARTNER
           </p>
-          <h1
-            className="text-left display-4 text-white fw-bold ms-lg-5"
-            style={{
-              background:
-                "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            We Help Startups And Companies Succeed
-          </h1>
-          <h5 className="text-white ms-lg-5">
+          <div className="container text-white fw-bold">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                flexDirection: "row",
+                gap: "20vw",
+                marginTop: "10%",
+                marginBottom: "10%",
+              }}
+            >
+              <MaskText text={phrases} />
+            </div>
+          </div>
+
+          {/* <h5 className="text-white ms-lg-5">
             {`TechCrafters specializes in crafting exceptional digital solutions
             tailored to your business needs. Our dedicated team prioritizes user
             experience, scalability, and effective user engagement strategies.
             Whether it's designing and developing cutting-edge web and mobile
             applications or devising innovative digital marketing campaigns,
             we've got you covered!`}
-          </h5>
+          </h5> */}
         </div>
-        <div className="col-lg-6 col-md-6 d-flex justify-content-center align-item-center">
+        <div className="col-lg-6 col-md-6 ">
           <Image
             className="img-fluid object-fit-contain"
-            src="/images/img_about.png"
+            src="/images/img2.png"
             width={500}
             height={500}
             placeholder="blur"
             blurDataURL="/images/img_about.png"
-            alt="Image by upklyak"
+            alt="Image by pikisuperstar on Freepik"
             sizes="100vw"
             loading="lazy"
             style={{

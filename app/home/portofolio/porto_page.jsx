@@ -9,7 +9,7 @@ function PortoPages({ items, f_color }) {
       <div className="container" style={{ zIndex: "10" }}>
         <div className="row d-flex justify-content-center align-items-center">
           <motion.div
-            className="col-lg-6 col-md-7 p-5"
+            className="col-lg-6 col-md-7 p-lg-5"
             variants={fadeInTop}
             initial="initial"
             whileInView="animate"

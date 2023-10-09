@@ -5,22 +5,25 @@ const ImgSection = () => {
   const img_front = {
     objectFit: "cover",
     width: "auto",
-    height: "auto",
-    marginLeft: "60%",
-    marginRight: "50%",
+    height: "100%",
   };
 
   return (
-    <div className="col-lg-6 col-md-6">
-      <Image
-        className="img-fluid "
-        src="/images/work3.png"
-        alt="work3"
-        width={600}
-        height={350}
-        style={img_front}
-        priority
-      />
+    <div
+      className="row d-flex justify-content-center"
+      style={{ width: "auto", height: "100vh" }}
+    >
+      <div className="col-lg-6 col-md-6">
+        <Image
+          className="img-fluid object-fit-contain"
+          src="/images/work3.png"
+          alt="work3"
+          width={300}
+          height={200}
+          style={img_front}
+          priority
+        />
+      </div>
     </div>
   );
 };

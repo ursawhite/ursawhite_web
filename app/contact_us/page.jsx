@@ -1,5 +1,5 @@
 import React from "react";
-import MaskText from "./mask/mask.jsx";
+import MaskText from "../components/mask/mask";
 import Form from "./form/form.jsx";
 import Footer from "../components/footer/footer2.jsx";
 

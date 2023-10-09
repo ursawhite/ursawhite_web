@@ -5,24 +5,24 @@ const imgsection = () => {
   const img_left = {
     objectFit: "cover",
     width: "auto",
-    height: "auto",
-    marginLeft: "20%",
-    marginRight: "10%",
+    height: "100%",
+    marginLeft: "-15vw",
+    marginRight: "30vw",
   };
 
   const img_right = {
     objectFit: "cover",
     width: "auto",
-    height: "auto",
-    marginLeft: "30%",
-    marginTop: "30%",
+    height: "100%",
+    marginLeft: "5vw",
+    marginTop: "15vh",
   };
   return (
     <div className="container ">
-      <div className="row ">
-        <div className="col-lg-6 col-md-6">
+      <div className="row d-flex justify-content-center">
+        <div className="col-lg-4 col-md-4">
           <Image
-            className="img-fluid "
+            className="img-fluid object-fit-contain"
             src="/images/work.jpg"
             alt="work1"
             width={400}
@@ -34,7 +34,7 @@ const imgsection = () => {
         </div>
         <div className="col-lg-4 col-md-4">
           <Image
-            className="img-fluid "
+            className="img-fluid object-fit-contain"
             src="/images/work2.png"
             alt="work2"
             width={400}

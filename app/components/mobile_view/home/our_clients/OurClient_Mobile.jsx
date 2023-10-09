@@ -20,43 +20,43 @@ function OurClient() {
   const company = [
     {
       name: "Company 1",
-      logo: "/logo-1.png",
+      logo: "/images/clients/logo-1.png",
     },
     {
       name: "Company 2",
-      logo: "/logo-2.png",
+      logo: "/images/clients/logo-2.png",
     },
     {
       name: "Company 3",
-      logo: "/logo-3.png",
+      logo: "/images/clients/logo-3.png",
     },
     {
       name: "Company 4",
-      logo: "/logo-4.png",
+      logo: "/images/clients/logo-4.png",
     },
     {
       name: "Company 5",
-      logo: "/logo-5.png",
+      logo: "/images/clients/logo-5.png",
     },
     {
       name: "Company 6",
-      logo: "/logo-6.png",
+      logo: "/images/clients/logo-6.png",
     },
     {
       name: "Company 7",
-      logo: "/logo-7.png",
+      logo: "/images/clients/logo-7.png",
     },
     {
       name: "Company 8",
-      logo: "/logo-12.png",
+      logo: "/images/clients/logo-12.png",
     },
     {
       name: "Company 9",
-      logo: "/logo-13.png",
+      logo: "/images/clients/logo-13.png",
     },
     {
       name: "Company 10",
-      logo: "/logo-14.png",
+      logo: "/images/clients/logo-14.png",
     },
   ];
   return (

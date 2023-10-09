@@ -5,8 +5,9 @@ function ImageFont(props) {
   const image = props.src;
   return (
     <div className="container">
-      <div className="row d-flex justify-content-end align-items-center">
-        <div className="col-lg-4 col-md-5">
+      <div className="row d-flex justify-content-center align-items-center">
+        <div className="col-lg-6 col-md-6"></div>
+        <div className="col-lg-4 col-md-4">
           <Image
             className="img-fluid object-fit-contain"
             src={image}
@@ -18,7 +19,7 @@ function ImageFont(props) {
             style={{
               width: "100%",
               height: "auto",
-              marginLeft: "-8vw",
+              // marginLeft: "-8vw",
             }}
           />
         </div>
