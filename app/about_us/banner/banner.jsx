@@ -20,12 +20,12 @@ function banner() {
           About Us
         </h1> */}
         <div className="col-lg-6 col-md-6 ">
-          <p
+          {/* <p
             className="text-left fw-bolder ms-lg-5"
             style={{ color: "rgba(169,80,210,255)" }}
           >
             YOUR DIGITAL DESIGN PARTNER
-          </p>
+          </p> */}
           <div className="container text-white fw-bold">
             <div
               style={{
@@ -57,7 +57,7 @@ function banner() {
             width={500}
             height={500}
             placeholder="blur"
-            blurDataURL="/images/img_about.png"
+            blurDataURL="/images/img2.png"
             alt="Image by pikisuperstar on Freepik"
             sizes="100vw"
             loading="lazy"

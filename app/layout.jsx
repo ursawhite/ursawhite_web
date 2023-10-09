@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
 import Navbar from "./components/navbar/navbar";
-import Footer from "./components/footer/footer2";
 
 export const metadata = {
   metadataBase: new URL("https://ursawhite-web.vercel.app/"),

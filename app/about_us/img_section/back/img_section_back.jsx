@@ -6,21 +6,19 @@ const imgsection = () => {
     objectFit: "cover",
     width: "auto",
     height: "100%",
-    marginLeft: "-15vw",
-    marginRight: "30vw",
+    marginLeft: "-10vw",
   };
 
   const img_right = {
     objectFit: "cover",
     width: "auto",
     height: "100%",
-    marginLeft: "5vw",
-    marginTop: "15vh",
+    marginLeft: "10vw",
   };
   return (
     <div className="container ">
       <div className="row d-flex justify-content-center">
-        <div className="col-lg-4 col-md-4">
+        <div className="col-lg-3 col-md-3">
           <Image
             className="img-fluid object-fit-contain"
             src="/images/work.jpg"
@@ -32,7 +30,7 @@ const imgsection = () => {
             style={img_left}
           />
         </div>
-        <div className="col-lg-4 col-md-4">
+        <div className="col-lg-3 col-md-3">
           <Image
             className="img-fluid object-fit-contain"
             src="/images/work2.png"

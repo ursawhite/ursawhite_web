@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import styles from "./parallax.module.scss";
 import Image from "next/image";
 
-// import Bg from "../../components/screen/bg";
+import Bg from "../../components/screen/bg";
 import Banner from "../banner/banner";
 import Ourclients from "../our_clients/ourclients";
 import PortoPage from "../portofolio/porto_page";
@@ -90,7 +90,7 @@ export default function MultiLayerParallax(props) {
           backgroundColor: "rgba(27,27,29,255)",
         }}
       >
-        {/* <Bg /> */}
+        <Bg />
         <ParallaxLayer
           offset={0}
           speed={0}

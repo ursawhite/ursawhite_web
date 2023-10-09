@@ -41,7 +41,7 @@ const Crew = () => {
 
         <h1 className="text-center text-white fw-bold">Meet The Shipmates</h1>
         <div className="col-lg-8 ">
-          <h3 className=" text-white fw-bold m-3">Our Core Intelligence</h3>
+          <h3 className=" text-white fw-bold m-3">Our Captain</h3>
         </div>
         <div className="row d-flex justify-content-center">
           <div className="col-lg-2 col-md-3">
@@ -71,10 +71,15 @@ const Crew = () => {
             </p>
           </div>
         </div>
+        <div className="row d-flex justify-content-sm-around">
+          <div className="col-lg-8 ">
+            <h3 className=" text-white fw-bold m-3">Crew Member</h3>
+          </div>
+        </div>
 
         {crew.map((item) => {
           return (
-            <div className="col-lg-2 col-md-3 mt-5 text-center" key={item.id}>
+            <div className="col-lg-2 col-md-3 mt-2 text-center" key={item.id}>
               <Image
                 className="img-fluid object-fit-contain"
                 src={item.profile_pic}
