@@ -2,6 +2,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
 import Navbar from "./components/navbar/navbar";
 
+import "./global.css";
+
 export const metadata = {
   metadataBase: new URL("https://ursawhite-web.vercel.app/"),
   title: "Ursawhite Pte Ltd | Home",
@@ -32,6 +34,7 @@ export const metadata = {
     title: "Ursawhite Pte Ltd | Home",
     images: "/opengraph-image.jpg",
   },
+  icons: "/logo.png",
 };
 
 export default function RootLayout({ children }) {

@@ -17,11 +17,17 @@ export default function MaskText(text) {
         return (
           <div key={index} style={{ overflow: "hidden" }}>
             <motion.div
-              className="display-3 fw-bold text-white"
+              className="display-4 fw-bold text-white"
               custom={index}
               variants={animation}
               initial="initial"
               animate={inView ? "enter" : ""}
+              // style={{
+              //   background:
+              //     "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
+              //   WebkitBackgroundClip: "text",
+              //   WebkitTextFillColor: "transparent",
+              // }}
             >
               {phrase}
             </motion.div>

@@ -1,6 +1,13 @@
 import React from "react";
+import MaskText from "../../components/mask/mask";
+import Image from "next/image";
 
 const Banner = () => {
+  const phrases = [
+    "Committed to turning your ideas",
+    "into reality with top performance",
+    "and user-friendliness.",
+  ];
   const title = {
     background:
       "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
@@ -13,8 +20,8 @@ const Banner = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className="container ">
+      {/* <div className="row">
         <h1
           className="text-center text-white display-2 fw-bold m-5 "
           style={title}
@@ -40,6 +47,41 @@ const Banner = () => {
             Ursa White is a team who Create comprehensive and impactful sofware
             solutions spanning user experience and technical funtionality.
           </h6>
+        </div>
+      </div> */}
+      <div className="container text-white fw-bold">
+        <div className="row d-flex align-items-center">
+          <div className="col-lg-6 col-md-6">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                flexDirection: "row",
+                gap: "20vw",
+                marginTop: "10%",
+                marginBottom: "10%",
+              }}
+            >
+              <MaskText text={phrases} />
+            </div>
+          </div>
+          {/* <div className="col-lg-6 col-md-6">
+            <Image
+              className="img-fluid object-fit-contain"
+              src="/images/img3.png"
+              width={500}
+              height={500}
+              placeholder="blur"
+              blurDataURL="/images/img3.png"
+              alt="Image by pikisuperstar on Freepik"
+              sizes="100vw"
+              loading="lazy"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div> */}
         </div>
       </div>
     </div>

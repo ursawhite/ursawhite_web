@@ -25,7 +25,7 @@ function AboutUs() {
         speed={0.3}
         style={{ marginTop: "20%", zIndex: -2 }}
       >
-        <Test_SVG item="About" />
+        <Test_SVG as="style" item="About" />
       </ParallaxLayer>
 
       <ParallaxLayer

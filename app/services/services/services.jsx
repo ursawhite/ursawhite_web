@@ -4,7 +4,10 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Bg from "../../components/screen/bg";
 import Banner from "../banner/banner";
+import BannerV2 from "../banner/bannerv2";
 import Serv from "../serv/serv";
+import Serv2 from "../serv/serv2";
+
 import Tech from "../tech/tech";
 import Section5 from "../section5/section5";
 import Footer from "../../components/footer/footer2";
@@ -32,7 +35,8 @@ function Services() {
             justifyContent: "center",
           }}
         >
-          <Banner />
+          <BannerV2 />
+          {/* <Banner /> */}
         </ParallaxLayer>
         <ParallaxLayer
           offset={0}
@@ -42,17 +46,9 @@ function Services() {
           <Test_SVG item="Services" />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={1}
-          speed={0}
-          factor={1}
-          style={{
-            display: "flex",
-            height: "150%",
-            width: "100%",
-          }}
-        >
-          <Serv />
+        <ParallaxLayer offset={1} speed={0} factor={1} style={{}}>
+          {/* <Serv /> */}
+          <Serv2 />
         </ParallaxLayer>
 
         <ParallaxLayer

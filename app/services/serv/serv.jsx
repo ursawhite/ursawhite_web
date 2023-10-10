@@ -42,22 +42,20 @@ const Service = () => {
     <div className="container">
       {services.map((item, index) => (
         <div
-          className={`row d-flex justify-content-center align-items-center ${
+          className={`row d-flex justify-content-center mb-2 align-items-center ${
             index % 2 !== 0 ? "flex-row-reverse" : ""
           }`}
           key={item.id}
         >
           <motion.div
-            className="col-lg-6 col-md-6 order-lg-1 order-2"
+            className="col-lg-6 col-md-6 order-lg-1 order-2 d-flex flex-column"
             variants={ffBottom}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
           >
-            <div className="d-flex flex-column ">
-              <h2 className="text-white fw-bold ms-3 mb-3">{item.title}</h2>
-              <h5 className="text-white ms-3 ">{item.description}</h5>
-            </div>
+            <h2 className="text-white fw-bold ms-3 mb-3">{item.title}</h2>
+            <h5 className="text-white ms-3 ">{item.description}</h5>
           </motion.div>
           <motion.div
             className="col-lg-6 col-md-6  order-lg-2 "

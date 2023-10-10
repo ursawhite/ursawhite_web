@@ -4,7 +4,7 @@ import MaskText from "../../components/mask/mask";
 import { motion } from "framer-motion";
 
 function banner() {
-  const phrases = ["We Help Startups", "And companies Succeed"];
+  const phrases = ["Transforming Ideas ", "into Digital Realities."];
   return (
     <div className="container">
       <div className="row d-flex align-items-center">

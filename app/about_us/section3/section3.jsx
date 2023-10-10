@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import styles from "./section3.module.scss";
 
 const Section3 = () => {
   const list = [
@@ -81,12 +82,8 @@ const Section3 = () => {
           <div className="row">
             {list.map((item, index) => (
               <div
-                className="col-lg-3 col-md-6 mt-5 bg-light shadow-lg"
+                className={`col-lg-3 col-md-6 mt-5 bg-light shadow-lg ${styles.box}`}
                 key={index}
-                // style={{
-                //   borderTopRightRadius: "5vw",
-                //   borderBottomLeftRadius: "5vw",
-                // }}
               >
                 <div className="p-4 ">
                   <h3
