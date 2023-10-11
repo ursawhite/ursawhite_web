@@ -3,15 +3,15 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import data from "../../../public/about.json";
 
-const Page = (props) => {
+const Page = ({ params }) => {
   const router = useRouter();
-  const title = props.params.slug;
-  const titleNow = title.replace(/%20/g, " ");
-  const searchParams = data.find((item) => item.title === titleNow);
-  console.log(searchParams.list[0]);
+
+  // const titleNow = title.replace(/%20/g, " ");
+
+  console.log(params);
   return (
     <>
-      <div
+      {/* <div
         className="container d-flex align-items-center"
         style={{ width: "auto", height: "100vh" }}
       >
@@ -29,7 +29,7 @@ const Page = (props) => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

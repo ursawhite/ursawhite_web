@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "User Engagement",
+    "description": "Discover proven tactics and strategies to boost user engagement and satisfaction",
+    "list": [
+      "Effective Onboarding",
+      "Feedback and Personalization",
+      "Community Building",
+      "Communication",
+      "Continuous Improvement"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Business Understanding",
+    "description": "Explore how a deep understanding of the business landscape of the project drives success",
+    "list": [
+      "Market Research",
+      "Customer Segmentation and Feedback",
+      "Key Performance Indicators (KPIs)",
+      "Strategic Planning and Innovation",
+      "Continuous Monitoring and Improvement"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Expertise and Experience",
+    "description": "Explore how a deep understanding of the business landscape drives project success in your software company.",
+    "list": [
+      "Technical Proficiency",
+      "Domain Knowledge",
+      "Project Portfolio",
+      "Mentorship and Collaboration",
+      "Professional Networking"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Startup and Corporate Client",
+    "description": "Discover proven tactics and strategies to boost user engagement and satisfaction",
+    "list": [
+      "Customization vs. Scalability",
+      "Budget Flexibility",
+      "Speed vs. Stability",
+      "Communication and Project Management",
+      "Long-Term Relationship Building"
+    ]
+  }
+]

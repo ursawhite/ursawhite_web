@@ -4,8 +4,8 @@ import Marquee_Logo from "../../components/test_marquee/marquee_logo";
 const Tech = () => {
   return (
     <div className="container">
-      <div className="row">
-        <div className="col">
+      <div className="row d-flex justify-content-center align-items-center">
+        <div className="col-lg-8 col-md-12">
           <div className="technologies mt-5">
             <p
               className="text-center fw-bold"

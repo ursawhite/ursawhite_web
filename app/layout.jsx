@@ -13,7 +13,12 @@ export const metadata = {
     description: "Home Page of Ursawhite Pte Ltd",
     url: "https://ursawhite-web.vercel.app/",
     siteName: "Ursawhite Pte Ltd | Home",
-    images: "/opengraph-image.jpg",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        alt: "Ursawhite Pte Ltd",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },

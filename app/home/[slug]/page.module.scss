@@ -1,0 +1,16 @@
+.box {
+  background: radial-gradient(
+    at center,
+    rgba(58, 129, 209, 0.3),
+    rgba(53, 57, 59, 0.3)
+  );
+  // height: 20vh;
+}
+
+.back {
+  overflow: hidden;
+  background-image: url("../../../public/images/back.png");
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}

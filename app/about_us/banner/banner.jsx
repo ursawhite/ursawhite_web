@@ -7,7 +7,7 @@ function banner() {
   const phrases = ["Transforming Ideas ", "into Digital Realities."];
   return (
     <div className="container">
-      <div className="row d-flex align-items-center">
+      <div className="row d-flex align-items-center justify-content-center">
         {/* <h1
           className="text-white display-2 fw-bold m-5"
           style={{
@@ -19,14 +19,14 @@ function banner() {
         >
           About Us
         </h1> */}
-        <div className="col-lg-6 col-md-6 ">
+        <div className="col-lg-8 col-md-8 d-flex align-items-center justify-content-center">
           {/* <p
             className="text-left fw-bolder ms-lg-5"
             style={{ color: "rgba(169,80,210,255)" }}
           >
             YOUR DIGITAL DESIGN PARTNER
           </p> */}
-          <div className="container text-white fw-bold">
+          <div className="display-1 text-white text-center fw-bold">
             <div
               style={{
                 display: "flex",
@@ -51,21 +51,6 @@ function banner() {
           </h5> */}
         </div>
         <div className="col-lg-6 col-md-6 ">
-          <Image
-            className="img-fluid object-fit-contain"
-            src="/images/img2.png"
-            width={500}
-            height={500}
-            placeholder="blur"
-            blurDataURL="/images/img2.png"
-            alt="Image by pikisuperstar on Freepik"
-            sizes="100vw"
-            loading="lazy"
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          />
           {/* <h2
             className="text-right fw-bold me-5 mt-5 ms-5"
             style={{

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-// import styles from "./navbar.module.scss";
+import styles from "./navbar.module.scss";
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState("/");
@@ -87,7 +87,7 @@ function Navbar() {
                       onClick={() => setActiveLink(`${item.link}`)}
                     >
                       <div
-                        className="btn text-white p-2 d-flex align-items-center justify-content-center "
+                        className={`btn text-white p-2 d-flex align-items-center justify-content-center ${styles.button}`}
                         style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
                       >
                         <span className="ms-3 me-3 fw-bold ">{item.name}</span>

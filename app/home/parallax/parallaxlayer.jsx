@@ -10,7 +10,7 @@ import Bg from "../../components/screen/bg";
 import Banner from "../banner/banner";
 import Ourclients from "../our_clients/ourclients";
 import PortoPage from "../portofolio/porto_page";
-import Footer from "../../components/footer/footer2";
+import Footer from "../../components/footer/footer";
 import Section6 from "../section6/section6";
 import ImageLeft from "../../components/home_our_works/left/image_left";
 import ImageRight from "../../components/home_our_works/right/image_right";
@@ -245,7 +245,7 @@ export default function MultiLayerParallax(props) {
           factor={1}
           id="section7"
           speed={0}
-          className="d-flex align-items-end"
+          className="d-flex align-items-center justify-content-center"
         >
           <Footer />
         </ParallaxLayer>

@@ -4,20 +4,11 @@ import Image from "next/image";
 
 const Banner = () => {
   const phrases = [
-    "Committed to turning your ideas",
-    "into reality with top performance",
-    "and user-friendliness.",
+    "Dedicated to transforming",
+    "your concepts into",
+    "tangible results through exceptional",
+    "ease of use and excellence.",
   ];
-  const title = {
-    background:
-      "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
-    backgroundClip: "text",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-  };
-  const subtitle = {
-    color: "rgba(169, 80, 210, 255)",
-  };
 
   return (
     <div className="container text-white text-center fw-bold">

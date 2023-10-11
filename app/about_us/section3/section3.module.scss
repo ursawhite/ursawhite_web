@@ -1,5 +1,9 @@
+.box {
+  background-color: whitesmoke;
+}
+
 .box:hover {
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0 0 10px #000;
   transform: scale(1.01);
   transition: all 0.3s ease-in-out;

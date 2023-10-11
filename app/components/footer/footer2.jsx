@@ -10,19 +10,25 @@ const Footer2 = () => {
         overflow: "hidden",
       }}
     >
-      <div className="bg-dark ">
+      <div
+        className=""
+        style={{
+          backgroundColor: "rgba(53, 57, 59, 0.3)",
+          borderTopRightRadius: "100px",
+          borderTopLeftRadius: "100px",
+        }}
+      >
         <div className="container">
           <div className="row d-flex flex-row">
             <div className="col-lg-6 col-md-6 text-white mt-5 mb-5">
-              <div className="col-lg-5">
+              <div className="col-lg-4">
                 <Image
-                  className="img-fluid mb-2"
+                  className="img-fluid mb-2 object-fit-contain"
                   src="/logo.png"
-                  width={200}
+                  width={150}
                   height={50}
                   alt="logo"
                   style={{
-                    objectFit: "contain",
                     objectPosition: "left top",
                     width: "100%",
                     height: "auto",

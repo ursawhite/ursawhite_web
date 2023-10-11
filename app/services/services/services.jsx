@@ -20,7 +20,7 @@ function Services() {
     <>
       <Parallax
         ref={ref}
-        pages={6}
+        pages={5}
         style={{ backgroundColor: "rgba(27,27,29,255)" }}
       >
         <Bg />
@@ -46,26 +46,34 @@ function Services() {
           <Test_SVG item="Services" />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0} factor={1} style={{}}>
+        <ParallaxLayer
+          offset={1}
+          speed={0}
+          factor={1}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           {/* <Serv /> */}
           <Serv2 />
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3}
+          offset={2}
           speed={0}
           style={{
             display: "flex",
-            alignItems: "end",
+            alignItems: "center",
             justifyContent: "center",
-            marginTop: "10%",
           }}
         >
           <Tech />
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={4}
+          offset={3}
           speed={0}
           style={{
             display: "flex",
@@ -76,7 +84,7 @@ function Services() {
           <Section5 />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={5}
+          offset={4}
           speed={0}
           className="d-flex justify-content-center align-items-end"
         >

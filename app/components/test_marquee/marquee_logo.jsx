@@ -14,7 +14,6 @@ function MarqueeLogo() {
     {
       src: "/images/logo/expressjs.png",
       alt: "expressjs",
-      style: { backgroundColor: "white", padding: "1%" },
     },
     {
       src: "/images/logo/firebase.png",
@@ -71,7 +70,9 @@ function MarqueeLogo() {
         speed={100}
         autoFill={true}
         gradient={true}
-        gradientColor={[27, 27, 29]}
+        gradientColor="rgba(27, 27, 29)"
+        gradientWidth="10vh"
+        pauseOnHover={true}
       >
         {image.slice(0, 8).map((item, index) => (
           <Image
@@ -88,8 +89,10 @@ function MarqueeLogo() {
         speed={100}
         autoFill={true}
         gradient={true}
-        gradientColor={[27, 27, 29]}
+        gradientColor="rgba(27, 27, 29)"
+        gradientWidth="10vh"
         direction={"right"}
+        pauseOnHover={true}
       >
         {image.slice(8, 15).map((item, index) => (
           <Image

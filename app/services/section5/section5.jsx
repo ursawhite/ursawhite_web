@@ -3,16 +3,16 @@ import React from "react";
 const Section5 = () => {
   return (
     <div className="container">
-      <div
-        className="row p-5 "
-        style={{
-          marginTop: "10%",
-          backgroundColor: "rgba(79, 66, 152, 0.5)",
-          borderTopRightRadius: "100px",
-          borderBottomLeftRadius: "100px",
-        }}
-      >
-        <div className="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+      <div className="row p-5 d-flex justify-content-center align-items-center">
+        <div
+          className="col-lg-8 d-flex flex-column justify-content-center align-items-center"
+          style={{
+            background:
+              "radial-gradient(at center, rgba(155, 89, 182, 0.3), rgba(53, 57, 59, 0.3))",
+            borderTopRightRadius: "100px",
+            borderBottomLeftRadius: "100px",
+          }}
+        >
           <h1
             className="text-white text-center fw-bold mt-5"
             style={{
