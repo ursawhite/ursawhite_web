@@ -1,13 +1,12 @@
 import React from "react";
-import styles from "../../../public/styles/svg.module.scss";
 
 function Test_svg({ item }) {
   const text = item;
   return (
-    <div className={styles.patterns}>
+    <div className="patterns">
       <svg width="100%" height="800px">
         <text
-          className={styles.text}
+          className="text"
           x="50%"
           y="50%"
           textAnchor="middle"
