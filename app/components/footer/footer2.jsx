@@ -18,10 +18,10 @@ const Footer2 = () => {
           borderTopLeftRadius: "100px",
         }}
       >
-        <div className="container">
+        <div className="container ">
           <div className="row d-flex flex-row">
             <div className="col-lg-6 col-md-6 text-white mt-5 mb-5">
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-md-6 col-sm-4 col-xs-4">
                 <Image
                   className="img-fluid mb-2 object-fit-contain"
                   src="/logo.png"

@@ -5,18 +5,22 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Bg from "../../components/screen/bg";
 import Test_SVG from "../../components/svg/svg";
 import Banner from "../banner/banner";
+import Approach from "../approach/approach";
 import ImgSectionBack from "../img_section/back/img_section_back";
 import ImgSectionFront from "../img_section/front/img_section_front";
+import ImgSectionCenter from "../img_section/center/center_image";
+import ImgSectionBottom from "../img_section/bottom/bottom";
+
 import Section3 from "../section3/section3";
 import Crew from "../crew/crew";
-import Footer from "../../components/footer/footer2";
+import Footer from "../../components/footer/footer";
 
 function AboutUs() {
   const ref = useRef(null);
   return (
     <Parallax
       ref={ref}
-      pages={5}
+      pages={8}
       style={{ backgroundColor: "rgba(27,27,29,255)" }}
     >
       <Bg />
@@ -31,10 +35,8 @@ function AboutUs() {
       <ParallaxLayer
         offset={0}
         speed={0}
+        className="d-flex justify-content-center align-items-center"
         style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
           zIndex: 4,
         }}
       >
@@ -44,46 +46,40 @@ function AboutUs() {
       <ParallaxLayer
         offset={1}
         speed={0}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+        className="d-flex justify-content-center align-items-center"
       >
         <Section3 />
       </ParallaxLayer>
       <ParallaxLayer
         offset={2}
-        speed={0.2}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+        speed={0}
+        className="d-flex justify-content-center align-items-center"
       >
+        <Approach />
+      </ParallaxLayer>
+      <ParallaxLayer offset={3} factor={3} speed={0.2}>
         <ImgSectionBack />
       </ParallaxLayer>
 
-      <ParallaxLayer offset={2} speed={0.4}>
+      <ParallaxLayer offset={3} speed={0.4} factor={1}>
         <ImgSectionFront />
+      </ParallaxLayer>
+      <ParallaxLayer offset={3} speed={0.6} factor={1}>
+        <ImgSectionCenter />
+      </ParallaxLayer>
+      <ParallaxLayer offset={3} speed={0.8} factor={1}>
+        <ImgSectionBottom />
       </ParallaxLayer>
 
       <ParallaxLayer
-        offset={3}
+        offset={5}
         speed={0}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+        className="d-flex justify-content-center align-items-center"
       >
         <Crew />
       </ParallaxLayer>
-      <ParallaxLayer
-        offset={4}
-        speed={0}
-        className="d-flex justify-content-center align-items-end"
-      >
+
+      <ParallaxLayer offset={7} speed={0} style={{ bottom: "0" }}>
         <Footer />
       </ParallaxLayer>
     </Parallax>

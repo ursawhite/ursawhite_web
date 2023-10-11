@@ -17,7 +17,9 @@ function Navbar() {
   ];
   const pathname = usePathname();
   useEffect(() => {
-    setActiveLink(pathname);
+    const firstSegment = pathname.split("/")[1];
+    const result = "/" + firstSegment;
+    setActiveLink(result);
   }, [pathname]);
   const updateWidth = () => {
     const newWidth = window.innerWidth;

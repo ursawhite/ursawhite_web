@@ -3,11 +3,8 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="container ">
-        <div
-          className="row gx-2 g-2 d-flex justify-content-center align-content-center"
-          style={{ marginTop: "20%", marginBottom: "20%" }}
-        >
+      <div className="container" style={{ width: "auto", height: "100vh" }}>
+        <div className="row gx-2 g-2 d-flex justify-content-center align-content-center">
           <div
             className="col-lg-5 col-md-6 border p-lg-5 p-md-4 d-flex flex-column align-content-center"
             style={{

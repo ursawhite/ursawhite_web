@@ -1,31 +1,32 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Crew = () => {
   const crew = [
     {
       id: 1,
-      name: "user1",
-      position: "CEO",
-      profile_pic: "/images/ava/ava1.jpg",
+      name: "Ardian Kristya",
+      position: "Member",
+      profile_pic: "/images/ava/ArdianKristya.jpg",
     },
     {
       id: 2,
-      name: "user2",
-      position: "COO",
-      profile_pic: "/images/ava/ava2.jpg",
+      name: "Sandi Muhamad Rizatul",
+      position: "Member",
+      profile_pic: "/images/ava/SANDIMUHAMADRIZALUL.jpg",
     },
     {
       id: 3,
-      name: "user3",
-      position: "CTO",
-      profile_pic: "/images/ava/ava3.jpg",
+      name: "Subiyantoro S",
+      position: "Member",
+      profile_pic: "/images/ava/SubiyantoroS.jpg",
     },
     {
       id: 4,
-      name: "user4",
-      position: "CFO",
-      profile_pic: "/images/ava/ava4.jpg",
+      name: "Sulthan Qintara",
+      position: "Member",
+      profile_pic: "/images/ava/SulthanQintara.jpg",
     },
   ];
   const title = {
@@ -46,8 +47,8 @@ const Crew = () => {
         <div className="row d-flex justify-content-center">
           <div className="col-lg-2 col-md-3">
             <Image
-              className="img-fluid object-fit-contain"
-              src="/images/ava/ava1.jpg"
+              className="img-fluid object-fit-contain rounded-circle"
+              src="/images/ava/SuryaPermana.jpg"
               alt="lord"
               width={200}
               height={200}
@@ -56,7 +57,7 @@ const Crew = () => {
             />
           </div>
           <div className="col-lg-6 col-md-8">
-            <h2 className="text-white fw-bold">The Lord</h2>
+            <h2 className="text-white fw-bold">Surya Permana</h2>
             <h4 className="text-white">Founder</h4>
             <h5 className="text-white">{`"Operating a business is just like a painting on a canvas. Appealing to an audience with the right strategy outlines and marketing it with the right colours to make it shine."`}</h5>
             <p className="text-white">
@@ -81,7 +82,7 @@ const Crew = () => {
           return (
             <div className="col-lg-2 col-md-3 mt-2 text-center" key={item.id}>
               <Image
-                className="img-fluid object-fit-contain"
+                className="img-fluid object-fit-contain rounded-circle"
                 src={item.profile_pic}
                 alt={item.name}
                 width={200}
@@ -91,16 +92,16 @@ const Crew = () => {
                 }
                 priority
               />
-              <p className="text-white mt-3 mb-0">{item.position}</p>
-              <p className="text-white">{item.name}</p>
+              <p className="text-white mt-3 mb-0">{item.name}</p>
+              <p className="text-white">{item.position}</p>
             </div>
           );
         })}
       </div>
       <div className="d-flex justify-content-center m-5">
-        <button className="btn btn-primary p-2 ">
+        <Link className="btn btn-primary p-2 " href="/contact_us">
           <span className="ms-4 me-4">Join Us</span>
-        </button>
+        </Link>
       </div>
     </div>
   );

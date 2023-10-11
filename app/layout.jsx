@@ -15,8 +15,10 @@ export const metadata = {
     siteName: "Ursawhite Pte Ltd | Home",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "https://res.cloudinary.com/dkp658sgi/image/upload/v1697044030/iq9huffxsyir0dsmi1x3.png",
         alt: "Ursawhite Pte Ltd",
+        width: 800,
+        height: 600,
       },
     ],
     locale: "en_US",
