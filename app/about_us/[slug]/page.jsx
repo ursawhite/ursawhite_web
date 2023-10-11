@@ -1,13 +1,15 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { useRouter } from "next/navigation";
 import data from "../../../public/approach.json";
 import Image from "next/image";
 import Footer from "../../components/footer/footer2";
 import MaskText from "../../components/mask/mask";
 import { motion } from "framer-motion";
+import { fadeInTop } from "../../components/animation/animation";
 
 const Page = ({ params }) => {
+  const ref = useRef(null);
   const router = useRouter();
   // console.log(params.slug.replace(/-/g, " "));
   const dataNow = data.filter((item) => {
@@ -32,8 +34,6 @@ const Page = ({ params }) => {
               src={dataNow[0].image}
               width={500}
               height={500}
-              placeholder="blur"
-              blurDataURL={dataNow[0].image}
               alt={dataNow[0].alt}
               sizes="100vw"
               loading="lazy"

@@ -4,8 +4,9 @@ import { useRouter } from "next/navigation";
 import data from "../../../public/sprint.json";
 import MaskText from "../../components/mask/mask";
 import Image from "next/image";
-import Footer2 from "../../components/footer/footer2";
+import Footer from "../../components/footer/footer";
 import styles from "./page.module.scss";
+import { motion } from "framer-motion";
 
 const Sprint = ({ params }) => {
   const router = useRouter();
@@ -45,8 +46,22 @@ const Sprint = ({ params }) => {
             <div className="display-1 fw-bold text-white">
               <MaskText text={result} />
             </div>
-            <h4 className="text-white fw-bold">{sprint.subtitle}</h4>
-            <p className="text-white">{sprint.description}</p>
+            <motion.h4
+              className="text-white fw-bold"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              {sprint.subtitle}
+            </motion.h4>
+            <motion.p
+              className="text-white"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              {sprint.description}
+            </motion.p>
           </div>
           <div className="col-lg-4 col-md-6 d-flex align-items-center">
             <Image
@@ -91,7 +106,7 @@ const Sprint = ({ params }) => {
       </div>
       <div
         className={` d-flex align-items-center ${styles.back}`}
-        style={{ width: "auto", height: "50vh" }}
+        style={{ width: "auto", height: "100vh" }}
       >
         <div className="row d-flex justify-content-center align-items-center">
           <div className={`col-lg-8 p-5 `}>
@@ -101,7 +116,12 @@ const Sprint = ({ params }) => {
           </div>
         </div>
       </div>
-      <Footer2 />
+      <div
+        className="d-flex align-items-center"
+        style={{ height: "100vh", width: "auto" }}
+      >
+        <Footer />
+      </div>
     </>
   );
 };

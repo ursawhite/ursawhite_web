@@ -13,7 +13,7 @@ const Approach = () => {
               className="text-center fw-bold"
               style={{ color: "rgba(169, 80, 210, 255)" }}
             >
-              TECHNIQUE
+              Navigating Success Together.
             </p>
             <h2 className="text-white text-center fw-bold ">Our Approach</h2>
             {data.map((item, index) => (

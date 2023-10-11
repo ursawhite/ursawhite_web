@@ -1,34 +1,40 @@
 import React from "react";
+import styles from "./section5.module.scss";
+import style from "../../../public/styles/button.module.scss";
+import Link from "next/link";
 
 const Section5 = () => {
   return (
-    <div className="container">
-      <div className="row p-5 d-flex justify-content-center align-items-center">
+    <>
+      <div className="container ">
         <div
-          className="col-lg-8 d-flex flex-column justify-content-center align-items-center"
-          style={{
-            background:
-              "radial-gradient(at center, rgba(155, 89, 182, 0.3), rgba(53, 57, 59, 0.3))",
-            borderTopRightRadius: "100px",
-            borderBottomLeftRadius: "100px",
-          }}
+          className={` d-flex justify-content-center ${styles.back}`}
+          style={{ width: "auto", height: "100vh" }}
         >
-          <h1
-            className="text-white text-center fw-bold mt-5"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(182, 117, 214, 1) 0%, rgba(79, 66, 152, 1) 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >{`Can't find what you're looking for?`}</h1>
-          <p className="text-white text-center ">
-            Our team will be happy to help you
-          </p>
-          <button className="btn btn-secondary mt-3 mb-5">Contact Us</button>
+          <div className="row ">
+            <div className="col-lg-12 p-5 d-flex justify-content-center flex-column">
+              <h1 className=" fw-bold text-white text-center">
+                {`Can't find what you're looking for?`}
+              </h1>
+              <h5 className="text-white text-center ">
+                Our team will be happy to help you
+              </h5>
+              <div className="d-flex justify-content-center m-5">
+                <Link
+                  className={`btn text-white p-2 d-flex align-items-center justify-content-center ${style.button}`}
+                  style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
+                  href="/contact_us"
+                >
+                  <span className="ms-3 me-3 fw-bold ">Contact Us</span>
+
+                  <i className="bi bi-envelope ms-2 me-2"></i>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

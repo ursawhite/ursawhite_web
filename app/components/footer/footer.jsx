@@ -1,60 +1,95 @@
 import React from "react";
+import styles from "../../../public/styles/navbar.module.scss";
 
 function Footer() {
   return (
-    <>
-      <div className="container" style={{ width: "auto", height: "100vh" }}>
-        <div className="row gx-2 g-2 d-flex justify-content-center align-content-center">
-          <div
-            className="col-lg-5 col-md-6 border p-lg-5 p-md-4 d-flex flex-column align-content-center"
-            style={{
-              backgroundImage: "url(/images/2480553.png)",
-              objectFit: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "25vw auto ",
-              position: "relative",
-              backgroundPosition: "right bottom",
-            }}
-          >
-            <h1 className="text-white fw-bolder">
-              Unlock Your Potential with Our Innovative Solutions
-            </h1>
-            {/* <p className="text-white mt-2">{` We blend tech and creativity to bring your ideas to life. Whether you're a startup aiming to disrupt the market or an established enterprise seeking efficiency and growth, our software solutions are your key to success. Let's make it happen!`}</p> */}
-            <div className="button_contact ">
-              <button className="btn p-3 rounded mt-5 ">
-                <div
-                  className={`btn text-white p-2 d-flex align-items-center justify-content-center `}
-                  style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
-                >
-                  <span className="ms-3 me-3 fw-bold ">Contact Us!</span>
+    <div className="container ">
+      <div className="row gx-2 g-2 d-flex justify-content-center">
+        <div
+          className="col-lg-5 col-md-6 border p-lg-5 p-md-4 d-flex flex-column"
+          style={{
+            backgroundImage: "url(/images/2480553.png)",
+            objectFit: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "20vw auto ",
+            position: "relative",
+            backgroundPosition: "right bottom",
+          }}
+        >
+          <h1 className="text-white fw-bolder">
+            Unlock Your Potential with Our Innovative Solutions
+          </h1>
+          <p className="text-white mt-2 ">{` We blend tech and creativity to bring your ideas to life. Whether you're a startup aiming to disrupt the market or an established enterprise seeking efficiency and growth, our software solutions are your key to success. Let's make it happen!`}</p>
+          <div className="button_contact ">
+            <button className="btn p-3 rounded mt-5 ">
+              <div
+                className={`btn text-white p-2 d-flex align-items-center justify-content-center ${styles.button}`}
+                style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
+              >
+                <span className="ms-3 me-3 fw-bold ">Contact Us!</span>
 
-                  <i className="bi bi-envelope ms-2 me-2"></i>
-                </div>
-              </button>
+                <i className="bi bi-envelope ms-2 me-2"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div className="col-lg-5 col-md-6 border p-lg-5 p-md-4 ">
+          <div className="d-flex align-items-center m-3">
+            <span
+              className="h3 bi bi-envelope-at ps-4 pe-4 pt-3 pb-3 rounded-4 "
+              style={{ backgroundColor: "rgb(244,212,228)" }}
+            ></span>
+            <div className="d-flex flex-column ">
+              <p className="text-secondary mb-0 ms-3">
+                We love our inbox – drop us an email.
+              </p>
+              <h4 className="text-white fw-bold mt-0 ms-3">
+                surya@ursawhite.com
+              </h4>
             </div>
           </div>
-          <div className="col-lg-5 col-md-6 border  p-lg-5 p-md-4">
-            <p className="text-white fw-bold">
-              {` We blend tech and creativity to bring your ideas to life. Whether
-              you're a startup aiming to disrupt the market or an established
-              enterprise seeking efficiency and growth, our software solutions
-              are your key to success. Let's make it happen!`}
-            </p>
-            <h4 className="text-white fw-bold mt-4">hello@helooo.hellooo</h4>
-            <p className="text-secondary">
-              We love our inbox – drop us an email.
-            </p>
-            <h4 className="text-white fw-bold mt-4">+628123123123</h4>
-            <p className="text-secondary">Call Jeff, his line is open 24/7</p>
 
-            <h4 className="text-white fw-bold mt-4">@ursawhite</h4>
-            <p className="text-secondary">
-              Stalking us? Use this handle to find us on the interwebs.
-            </p>
+          <div className="d-flex align-items-center m-3">
+            <span
+              className="h3 bi bi-phone-vibrate ps-4 pe-4 pt-3 pb-3 rounded-4 "
+              style={{ backgroundColor: "rgb(196,228,236)" }}
+            ></span>
+            <div className="d-flex flex-column">
+              <p className="text-secondary mb-0 ms-3">
+                Call Jeff, his line is open 24/7
+              </p>
+              <h4 className="text-white fw-bold mt-0 ms-3">+628123123123</h4>
+            </div>
+          </div>
+
+          <div className="d-flex align-items-center m-3">
+            <span
+              className="h3 text-white bi bi-linkedin ps-4 pe-4 pt-3 pb-3 rounded-4 "
+              style={{ backgroundColor: "rgb(45,121,213)" }}
+            ></span>
+            <div className="d-flex flex-column ">
+              <p className="text-secondary mb-0 ms-3">
+                {`Let's connect on LinkedIn`}
+              </p>
+              <h5 className="text-white fw-bold mt-0 ms-3">@ursawhite</h5>
+            </div>
+          </div>
+
+          <div className="d-flex align-items-center m-3">
+            <span
+              className="h3 bi bi-map ps-4 pe-4 pt-3 pb-3 rounded-4 "
+              style={{ backgroundColor: "rgb(228,204,244)" }}
+            ></span>
+            <div className="d-flex flex-column ">
+              <p className="text-secondary mb-0 ms-3">Visit us at</p>
+              <h5 className="text-white fw-bold mt-0 ms-3">
+                Jl. Terusan Buah batu, Ciganitri, Bandung
+              </h5>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

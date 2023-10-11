@@ -6,11 +6,11 @@ import "./global.css";
 
 export const metadata = {
   metadataBase: new URL("https://ursawhite-web.vercel.app/"),
-  title: "Ursawhite Pte Ltd | Home",
-  description: "Home Page of Ursawhite Pte Ltd",
+  title: "Ursawhite Pte Ltt | Home",
+  description: "Home Page of Ursawhite Pte Ltt",
   openGraph: {
     title: "Ursawhite Pte Ltd | Home",
-    description: "Home Page of Ursawhite Pte Ltd",
+    description: "Home Page of Ursawhite Pte Ltt",
     url: "https://ursawhite-web.vercel.app/",
     siteName: "Ursawhite Pte Ltd | Home",
     images: [
@@ -19,6 +19,12 @@ export const metadata = {
         alt: "Ursawhite Pte Ltd",
         width: 800,
         height: 600,
+      },
+      {
+        url: "/logo.png",
+        alt: "Ursawhite Pte Ltd",
+        width: 50,
+        height: 50,
       },
     ],
     locale: "en_US",
@@ -38,7 +44,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ursawhite Pte Ltd | Home",
+    title: "Ursawhite Pte Ltt | Home",
     images: "/opengraph-image.jpg",
   },
   icons: "/logo.png",

@@ -79,7 +79,7 @@ function AboutUs() {
         <Crew />
       </ParallaxLayer>
 
-      <ParallaxLayer offset={7} speed={0} style={{ bottom: "0" }}>
+      <ParallaxLayer offset={7} speed={0} className="d-flex align-items-center">
         <Footer />
       </ParallaxLayer>
     </Parallax>

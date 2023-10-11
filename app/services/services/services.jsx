@@ -83,7 +83,11 @@ function Services() {
         >
           <Section5 />
         </ParallaxLayer>
-        <ParallaxLayer offset={4} speed={0}>
+        <ParallaxLayer
+          offset={4}
+          speed={0}
+          className="d-flex align-items-center"
+        >
           <Footer />
         </ParallaxLayer>
       </Parallax>
