@@ -1,41 +1,16 @@
 import React from "react";
-import MaskText from "../components/mask/mask";
-import Form from "./form/form.jsx";
-import Footer from "../components/footer/footer2.jsx";
+import ContactUs from "./contactus";
 
 export const metadata = {
   title: "Ursawhite Pte Ltd | Contact Us",
   description: "Contact Us Page of Ursawhite Pte Ltd",
 };
 
-const ContactUs = () => {
-  const phrases = ["Let's Build Great", "Products Together"];
+function Contact_Us() {
   return (
     <>
-      <div className="container text-white fw-bold">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            flexDirection: "column",
-            gap: "20vw",
-            marginTop: "10%",
-            marginBottom: "10%",
-          }}
-        >
-          <MaskText text={phrases} />
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="display-6 fw-bold text-white">
-          Tell Us About Your Dream Product
-        </div>
-        <Form />
-      </div>
-      <Footer />
+      <ContactUs />
     </>
   );
-};
-
-export default ContactUs;
+}
+export default Contact_Us;
