@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ffBottom } from "../../components/animation/animation";
-import styles from "./serv.module.scss";
 import { useRouter } from "next/navigation";
 import data from "../../../public/services.json";
 
@@ -25,7 +24,7 @@ const Service = () => {
             <div className="col-lg-2 col-md-3 p-1 " key={item.id}>
               <div
                 className={`box rounded d-flex flex-column justify-content-center align-items-center p-1 ${
-                  activeItem === item.id ? styles.boxTop : styles.boxPassive
+                  activeItem === item.id ? "boxTop" : "boxPassive"
                 }`}
                 onClick={() => handleItemClick(item.id)}
               >
@@ -46,7 +45,7 @@ const Service = () => {
                 </h3>
                 <p className="text-white">{data[activeItem - 1].description}</p>
                 <button
-                  className={`btn shadow-lg border-1 border-light ${styles.button}`}
+                  className="button btn shadow-lg border-1 border-light "
                   onClick={() =>
                     Router.push(
                       `/services/${data[activeItem - 1].title

@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../../public/styles/navbar.module.scss";
 
 function Footer() {
   return (
@@ -23,7 +22,7 @@ function Footer() {
           <div className="button_contact ">
             <button className="btn p-3 rounded mt-5 ">
               <div
-                className={`btn text-white p-2 d-flex align-items-center justify-content-center ${styles.button}`}
+                className="button btn text-white p-2 d-flex align-items-center justify-content-center"
                 style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
               >
                 <span className="ms-3 me-3 fw-bold ">Contact Us!</span>
