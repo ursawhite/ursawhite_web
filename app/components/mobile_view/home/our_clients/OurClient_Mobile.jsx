@@ -98,15 +98,13 @@ function OurClient() {
           >
             <Image
               src={item.logo}
-              className="img-fluid bg-light rounded p-1"
+              className="img-fluid bg-light rounded p-1 object-fit-contain"
               alt={item.name}
-              width={100}
-              height={100}
-              sizes="{max-width: 100px} 25vw, 100px"
-              style={{ objectFit: "contain" }}
+              width={300}
+              height={300}
+              style={{ width: "auto", height: "100%" }}
               priority
             />
-            <div className="card-body"></div>
           </motion.div>
         ))}
       </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./section5.module.scss";
-import style from "../../../public/styles/button.module.scss";
 import Link from "next/link";
 
 const Section5 = () => {
@@ -21,7 +20,7 @@ const Section5 = () => {
               </h5>
               <div className="d-flex justify-content-center m-5">
                 <Link
-                  className={`btn text-white p-2 d-flex align-items-center justify-content-center ${style.button}`}
+                  className="button btn text-white p-2 d-flex align-items-center justify-content-center"
                   style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
                   href="/contact_us"
                 >
