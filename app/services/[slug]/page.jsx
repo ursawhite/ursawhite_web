@@ -125,6 +125,23 @@ const Services = ({ params }) => {
         </div>
       </div>
       <div
+        className="container "
+        style={{ height: "100vh", width: "auto", marginTop: "25vh" }}
+      >
+        <div className="row d-flex justify-content-center align-items-center">
+          <div className="col-lg-8 d-flex justify-content-center ">
+            <div className="h1 bi bi-quote text-white"></div>
+            <h4 className="text-white fw-bold text-center">
+              {dataServices[0].closing}
+            </h4>
+            <div
+              className="h1 bi bi-quote text-white"
+              style={{ transform: "rotateY(180deg)" }}
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div
         className="container d-flex justify-content-center align-items-center"
         style={{ height: "100vh", width: "auto", marginTop: "25vh" }}
       >
