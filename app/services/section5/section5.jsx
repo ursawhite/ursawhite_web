@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./section5.module.scss";
 import Link from "next/link";
 
 const Section5 = () => {
@@ -7,7 +6,7 @@ const Section5 = () => {
     <>
       <div className="container ">
         <div
-          className={` d-flex justify-content-center ${styles.back}`}
+          className="back d-flex justify-content-center"
           style={{ width: "auto", height: "100vh" }}
         >
           <div className="row ">
