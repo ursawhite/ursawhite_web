@@ -6,7 +6,7 @@ function Footer() {
     <div className="container ">
       <div className="row gx-2 g-2 d-flex justify-content-center">
         <div
-          className="col-lg-5 col-md-6 border p-lg-5 p-md-4 d-flex flex-column"
+          className="col-lg-5 col-md-6 border p-3 p-md-4 d-flex flex-column"
           style={{
             backgroundImage: "url(/images/2480553.png)",
             objectFit: "cover",
@@ -33,59 +33,52 @@ function Footer() {
             </button>
           </div>
         </div>
-        <div className="col-lg-5 col-md-6 border p-lg-5 p-md-4 ">
-          <div className="d-flex align-items-center m-3">
-            <span
-              className="h3 bi bi-envelope-at ps-4 pe-4 pt-3 pb-3 rounded-4 "
-              style={{ backgroundColor: "rgb(244,212,228)" }}
-            ></span>
-            <div className="d-flex flex-column ">
-              <p className="text-secondary mb-0 ms-3">
-                We love our inbox – drop us an email.
-              </p>
-              <h4 className="text-white fw-bold mt-0 ms-3">
-                surya@ursawhite.com
-              </h4>
-            </div>
+        <div className="col-lg-5 col-md-6 border p-lg-5 p-md-4 d-flex flex-column align-items-start">
+          <div
+            className="h3 bi bi-envelope-at ps-4 pe-4 pt-3 pb-3 m-3 rounded-4 "
+            style={{ backgroundColor: "rgb(244,212,228)" }}
+          ></div>
+
+          <div className="d-flex flex-column ">
+            <p className="text-secondary mb-0 ms-3">
+              We love our inbox – drop us an email.
+            </p>
+            <h5 className="text-white fw-bold mt-0 ms-3">
+              surya@ursawhite.com
+            </h5>
           </div>
 
-          <div className="d-flex align-items-center m-3">
-            <span
-              className="h3 bi bi-phone-vibrate ps-4 pe-4 pt-3 pb-3 rounded-4 "
-              style={{ backgroundColor: "rgb(196,228,236)" }}
-            ></span>
-            <div className="d-flex flex-column">
-              <p className="text-secondary mb-0 ms-3">
-                Call Jeff, his line is open 24/7
-              </p>
-              <h4 className="text-white fw-bold mt-0 ms-3">+628123123123</h4>
-            </div>
+          <span
+            className="h3 bi bi-phone-vibrate ps-4 pe-4 pt-3 pb-3 m-3 rounded-4 "
+            style={{ backgroundColor: "rgb(196,228,236)" }}
+          ></span>
+          <div className="d-flex flex-column">
+            <p className="text-secondary mb-0 ms-3">
+              Call Jeff, his line is open 24/7
+            </p>
+            <h5 className="text-white fw-bold mt-0 ms-3">+628123123123</h5>
           </div>
 
-          <div className="d-flex align-items-center m-3">
-            <span
-              className="h3 text-white bi bi-linkedin ps-4 pe-4 pt-3 pb-3 rounded-4 "
-              style={{ backgroundColor: "rgb(45,121,213)" }}
-            ></span>
-            <div className="d-flex flex-column ">
-              <p className="text-secondary mb-0 ms-3">
-                {`Let's connect on LinkedIn`}
-              </p>
-              <h5 className="text-white fw-bold mt-0 ms-3">@ursawhite</h5>
-            </div>
+          <span
+            className="h3 text-white bi bi-linkedin ps-4 pe-4 pt-3 pb-3 m-3 rounded-4 "
+            style={{ backgroundColor: "rgb(45,121,213)" }}
+          ></span>
+          <div className="d-flex flex-column ">
+            <p className="text-secondary mb-0 ms-3">
+              {`Let's connect on LinkedIn`}
+            </p>
+            <h5 className="text-white fw-bold mt-0 ms-3">@ursawhite</h5>
           </div>
 
-          <div className="d-flex align-items-center m-3">
-            <span
-              className="h3 bi bi-map ps-4 pe-4 pt-3 pb-3 rounded-4 "
-              style={{ backgroundColor: "rgb(228,204,244)" }}
-            ></span>
-            <div className="d-flex flex-column ">
-              <p className="text-secondary mb-0 ms-3">Visit us at</p>
-              <h5 className="text-white fw-bold mt-0 ms-3">
-                Jl. Terusan Buah batu, Ciganitri, Bandung
-              </h5>
-            </div>
+          <span
+            className="h3 bi bi-map ps-4 pe-4 pt-3 pb-3  m-3 rounded-4 "
+            style={{ backgroundColor: "rgb(228,204,244)" }}
+          ></span>
+          <div className="d-flex flex-column ">
+            <p className="text-secondary mb-0 ms-3">Visit us at</p>
+            <h5 className="text-white fw-bold mt-0 ms-3">
+              Jl. Terusan Buah batu, Ciganitri, Bandung
+            </h5>
           </div>
         </div>
       </div>

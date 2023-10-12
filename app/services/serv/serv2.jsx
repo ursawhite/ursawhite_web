@@ -67,7 +67,7 @@ const Service = () => {
               <div className="col-lg-4 col-md-4 d-flex justify-content-center align-items-center">
                 <Image
                   className="img-fluid object-fit-contain"
-                  src={data[activeItem - 1].img}
+                  src={data[activeItem - 1].image}
                   width={300}
                   height={300}
                   sizes="(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"

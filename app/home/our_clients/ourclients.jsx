@@ -62,7 +62,7 @@ function Ourclients() {
           <p className="text-white ms-3">
             Our commitment to excellence and dedication to delivering top-notch
             services have allowed us to build strong and enduring relationships
-            with a diverse range of clients. <br />{" "}
+            with a diverse range of clients. <br />
             {`We take immense pride in the
             trust these organizations have placed in us, and we'd like to
             introduce you to some of our valued clients who have already
@@ -71,7 +71,7 @@ function Ourclients() {
           <div className=" d-flex flex-wrap justify-content-center align-items-center ">
             {company.map((item, index) => (
               <div
-                className={`d-flex justify-content-center align-items-center me-lg-2 me-md-1 mb-lg-2 mb-lg-2 ${styles.back_logo}`}
+                className="d-flex justify-content-center align-items-center me-lg-2 me-md-1 mb-lg-2 mb-lg-2"
                 key={index}
               >
                 <motion.div
@@ -86,7 +86,7 @@ function Ourclients() {
                 >
                   <Image
                     src={item.logo}
-                    className={`img-fluid p-1 ${styles.logo}`}
+                    className="logo img-fluid p-1"
                     alt={item.name}
                     width={150}
                     height={150}
