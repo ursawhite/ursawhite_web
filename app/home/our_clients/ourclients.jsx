@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInAnimationVariants } from "../../components/animation/animation";
-import styles from "./clients.module.scss";
 
 function Ourclients() {
   const company = [
@@ -50,7 +49,7 @@ function Ourclients() {
   return (
     <div className="container">
       <div className="row d-flex flex-column justify-content-center align-items-center">
-        <div className="col-lg-8">
+        <div className="col-lg-8 col-md-12">
           <h4 className="text-center fw-bold" style={{ color: "#c457d5" }}>
             Our Clients
           </h4>

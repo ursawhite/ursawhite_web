@@ -1,6 +1,5 @@
 import React from "react";
 import MaskText from "../../components/mask/mask";
-import Image from "next/image";
 
 const Banner = () => {
   const phrases = [

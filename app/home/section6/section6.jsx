@@ -5,7 +5,7 @@ import data from "../../../public/sprint.json";
 function Section6() {
   const Router = useRouter();
   return (
-    <div className="container">
+    <div className="container ">
       <div className="row d-flex justify-content-center gx-2">
         {data.map((item) => (
           <div className="col-lg-5 col-md-6 " key={item.id}>

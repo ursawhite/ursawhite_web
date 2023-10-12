@@ -18,14 +18,13 @@ const Form = () => {
   const list = [
     { name: "Front-end Development", icon: "bi-code-slash" },
     { name: "Back-end Development", icon: "bi bi-hash" },
-    { name: "Content Management System (CMS)", icon: "bi bi-bezier2" },
+    { name: "CMS ", icon: "bi bi-bezier2" },
     { name: "DevOps and Maintenance", icon: "bi bi-bar-chart-steps" },
   ];
 
-  const handleInterest = async (e, item) => {
-    e.preventDefault();
-    setInterest(item.name);
+  var handleInterest = (e, item) => {
     console.log(interest);
+    setInterest(item.name);
   };
 
   useEffect(() => emailjs.init("ATQpSfjaBU46S2Jfu"), []);
@@ -95,102 +94,131 @@ const Form = () => {
     }
   };
   return (
-    <div className="row d-flex justify-content-center">
-      <div className="col-lg-6 mt-5 mb-5">
-        <form>
-          <div className="row d-flex g-lg-2">
-            <div className="col-lg-6 ">
-              <div className="form-floating mb-3 ">
-                <input
-                  type="text"
-                  className="form-control "
-                  id="floatingInputName"
-                  placeholder=""
-                  ref={nameRef}
-                />
-                <label htmlFor="floatingInputName" className="fw-bold">
-                  Name*
-                </label>
+    <>
+      <div className="container">
+        <div className="row d-flex justify-content-center">
+          <div className="col-lg-5">
+            <div className="display-4 fw-bold text-white ">
+              Tell Us About Your Dream Product
+            </div>
+            <h5 className="text-secondary mt-2">
+              Discover a world of possibilities with our exceptional service
+            </h5>
+
+            <h5 className="text-secondary mt-2">{`Feel free to get in touch with us today! `}</h5>
+            <h5 className="text-secondary mt-2">{`You can reach out via email at surya@ursawhite.com or send us a message at +628123123123.`}</h5>
+          </div>
+          <div className="col-lg-6">
+            <div className="row">
+              <div className="col">
+                <div className="form-floating mb-3 ">
+                  <input
+                    type="text"
+                    className="form-control "
+                    id="floatingInputName"
+                    placeholder=""
+                    ref={nameRef}
+                  />
+                  <label htmlFor="floatingInputName" className="fw-bold">
+                    Name*
+                  </label>
+                </div>
               </div>
             </div>
-            <div className="col-lg-6">
-              <div className="form-floating mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="floatingInputEmail"
-                  placeholder=""
-                  ref={emailRef}
-                />
-                <label htmlFor="floatingInputEmail" className="fw-bold">
-                  Email*
-                </label>
+            <div className="row">
+              <div className="col">
+                <div className="form-floating mb-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="floatingInputEmail"
+                    placeholder=""
+                    ref={emailRef}
+                  />
+                  <label htmlFor="floatingInputEmail" className="fw-bold">
+                    Email*
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="form-floating mb-3">
-            <input
-              type="text"
-              className="form-control"
-              id="floatingInputPurpose"
-              placeholder=""
-              ref={purposeRef}
-            />
-            <label htmlFor="floatingInputPurpose" className="fw-bold">
-              Purpose*
-            </label>
-          </div>
-          <p className="text-white fw-bold mt-2">Interested Services*</p>
-          <div className="d-flex flex-ward justify-content-center bg-light mb-3 rounded">
-            {list.map((item, index) => (
-              <div className="col-lg-3 d-flex p-3 " key={index}>
+            <div className="row">
+              <div className="col">
+                <div className="form-floating mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="floatingInputPurpose"
+                    placeholder=""
+                    ref={purposeRef}
+                  />
+                  <label htmlFor="floatingInputPurpose" className="fw-bold">
+                    Purpose*
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="row g-2">
+              {list.map((item, index) => (
                 <button
-                  className={`box p-2 d-flex flex-column align-items-center  bg-transparent ${
-                    interest === item.name ? "border-5" : "border"
-                  }`}
-                  onClick={(e) => handleInterest(e, item)}
+                  className="col-lg-6 col-md-6 col-sm-12 border-0 bg-transparent "
+                  key={index}
                 >
-                  <div className={`display-5 ${item.icon} `} />
-                  <p className="text-center mt-2">{item.name}</p>
+                  <div
+                    className={`p-2 rounded bg-light ${
+                      interest === item.name ? "text-success" : ""
+                    }`}
+                    onClick={(e) => handleInterest(e, item)}
+                  >
+                    <div className={`display-5 p-3 `}>
+                      <div className={`${item.icon}`}></div>
+                    </div>
+                    <p className="text-center mt-3">{item.name}</p>
+                  </div>
                 </button>
+              ))}
+            </div>
+            <div className="row">
+              <div className="col">
+                <div className="form-floating mb-3 mt-3">
+                  <textarea
+                    type="text"
+                    className="form-control"
+                    id="floatingInputMessage"
+                    placeholder=""
+                    ref={messageRef}
+                  />
+                  <label htmlFor="floatingInputMessage" className="fw-bold">
+                    Messages*
+                  </label>
+                </div>
               </div>
-            ))}
+            </div>
+            <div className="row">
+              <div className="col">
+                {msg[0].status === "error" ? (
+                  <div className="text-danger mt-2 mb-2">{msg[0].message}</div>
+                ) : (
+                  <div className="text-success mt-2 mb-2">
+                    {" "}
+                    {msg[0].message}
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <div
+                  className="btn btn-success ps-5 pe-5 rounded "
+                  onClick={handleSubmit}
+                >
+                  {isLoading ? "Loading..." : "Submit"}
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div className="form-floating mb-3">
-            <textarea
-              type="text"
-              className="form-control"
-              id="floatingInputMessage"
-              placeholder=""
-              ref={messageRef}
-            />
-            <label htmlFor="floatingInputMessage" className="fw-bold">
-              Messages*
-            </label>
-          </div>
-          {msg[0].status === "error" ? (
-            <div className="text-danger mt-2 mb-2">{msg[0].message}</div>
-          ) : (
-            <div className="text-success mt-2 mb-2"> {msg[0].message}</div>
-          )}
-          <div className="btn btn-success ps-5 pe-5 " onClick={handleSubmit}>
-            {isLoading ? "Loading..." : "Submit"}
-          </div>
-        </form>
-      </div>
-
-      <div className="col-lg-4 mt-5 mb-5 ">
-        <div className="display-6 fw-bold text-white ">
-          Tell Us About Your Dream Product
         </div>
-        <h4 className="text-secondary mt-2">
-          Discover a world of possibilities with our exceptional service
-        </h4>
-
-        <h4 className="text-white mt-4">{`Feel free to get in touch with us today! You can reach out via email at surya@ursawhite.com or send us a message at +628123123123.`}</h4>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -3,10 +3,9 @@ import React, { useRef } from "react";
 import { useRouter } from "next/navigation";
 import data from "../../../public/approach.json";
 import Image from "next/image";
-import Footer from "../../components/footer/footer2";
+import Footer from "../../components/footer/footer";
 import MaskText from "../../components/mask/mask";
 import { motion } from "framer-motion";
-import { fadeInTop } from "../../components/animation/animation";
 
 const Page = ({ params }) => {
   const ref = useRef(null);

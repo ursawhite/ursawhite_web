@@ -21,7 +21,7 @@ const Approach = () => {
                 href={`/about_us/${item.title
                   .replace(/\s+/g, "_")
                   .toLowerCase()}`}
-                className={`col-lg-6 col-md-6 mt-5 shadow-lg text-decoration-none text-dark ${styles.box}`}
+                className={`col-lg-6 col-md-6 col-sm-6 mt-5 shadow-lg text-decoration-none text-dark ${styles.box_approach}`}
                 key={index}
               >
                 <div className="p-4 ">

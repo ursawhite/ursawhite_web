@@ -23,10 +23,10 @@ function BannerMobile() {
             />
           </div>
           <p className="fs-5 fs-lg-3 mt-3 text-white">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry’s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            {`We combine technology with creativity to bring your ideas to life.
+            Whether you're a startup looking to disrupt the market or an
+            established enterprise seeking efficiency and growth, we have the
+            right software solutions for you.`}
           </p>
         </div>
       </div>

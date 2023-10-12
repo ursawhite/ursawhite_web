@@ -1,40 +1,33 @@
 import React from "react";
 import Image from "next/image";
 import Marquee from "../../test_marquee/marquee_logo";
-import Footer from "../footer/Footer_Mobile";
+import Footer from "../../../components/footer/footer";
+import Section5 from "../../../services/section5/section5";
 
 function Services_Mobile() {
   const services = [
     {
       id: 1,
       title: "Front-end Development",
-      description: ` We provide front-end development services to help you build
-          your website. We also provide front-end development services
-          to help you build your web application.`,
+      description: ` Our Front-end Development services are designed to create visually appealing and user-friendly websites and web applications. We specialize in crafting responsive and interactive user interfaces that enhance your online presence. Whether you need a stunning website or a dynamic web app, our team is here to bring your ideas to life.`,
       img: "/images/frontend.png",
     },
     {
       id: 2,
       title: "Back-end Development",
-      description: ` We provide back-end development services to help you build
-          your website. We also provide back-end development services
-          to help you build your web application.`,
+      description: ` With our Back-end Development services, we ensure the functionality and performance of your website or web application. We build robust server-side components, databases, and APIs that power your online platform. Our expertise lies in creating scalable and secure back-end solutions that support your business operations and user experiences.`,
       img: "/images/backend.png",
     },
     {
       id: 3,
       title: "CMS Implementation",
-      description: ` We provide CMS implementation services to help you build
-          your website. We also provide CMS implementation services
-          to help you build your web application.`,
+      description: ` CMS Implementation is crucial for efficient content management on your website or web app. We provide CMS Implementation services that enable you to easily create, update, and organize your digital content. Our solutions streamline content publishing, making it simple for you to maintain an up-to-date and engaging online presence.`,
       img: "/images/cms.png",
     },
     {
       id: 4,
       title: "DevOps & Maintenance",
-      description: ` We provide DevOps & Maintenance services to help you build
-          your website. We also provide DevOps & Maintenance services
-          to help you build your web application.`,
+      description: `Our DevOps & Maintenance services ensure the continuous operation and optimization of your web platform. We handle infrastructure management, automation, and monitoring to keep your website or web app running smoothly. Our proactive approach guarantees minimal downtime and efficient maintenance, so you can focus on your core business activities.`,
       img: "/images/devops.png",
     },
   ];
@@ -43,27 +36,10 @@ function Services_Mobile() {
       <div className="container">
         <div className="row d-flex align-items-center">
           <div className="col-12 ">
-            <div
-              className="display-4 text-title text-center text-white fw-bold "
-              style={{
-                background:
-                  "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                marginTop: "20%",
-              }}
-            >
-              Our Services
+            <div className="display-3 text-title text-left text-white fw-bold mt-5 mb-5">
+              Dedicated to transforming your concepts into tangible results
+              through exceptional ease of use and excellence.
             </div>
-            <h1 className="text-title text-left display-1 text-white fw-bold mt-5 mb-5">
-              Your Digital Design Partner
-            </h1>
-            <h3 className="text-white display-6 fw-bold " id="text-right-title">
-              We are a digital design agency
-            </h3>
-            <h4 className="text-white display-6fw-bold " id="text-right-title">
-              Web & Mobile Development
-            </h4>
 
             <p className=" text-white ">
               Ursa White is a team who Create comprehensive and impactful
@@ -124,23 +100,8 @@ function Services_Mobile() {
           </p>
           <Marquee />
         </div>
-        <div
-          className="row mt-5 gx-1"
-          style={{ marginTop: "20%", marginBottom: "20%" }}
-        >
-          <div className="col -lg-12 d-flex flex-column border border-3 p-5">
-            <h1 className="text-white text-center fw-bold">
-              {`Can't Find What you're Looking For?`}
-            </h1>
-            <p className="text-white text-center">
-              Our team will be happy to help you
-            </p>
-            <button className="btn btn-secondary d-block mx-auto mt-5">
-              Contact Us
-            </button>
-          </div>
-        </div>
       </div>
+      <Section5 />
       <div className="container">
         <Footer />
       </div>

@@ -37,7 +37,7 @@ const Sprint = ({ params }) => {
   return (
     <>
       <div
-        className="container d-flex align-items-center"
+        className="container d-flex align-items-center mt-5 mb-5"
         style={{ width: "auto", height: "100vh" }}
       >
         <div className="row ">
@@ -63,7 +63,7 @@ const Sprint = ({ params }) => {
               {sprint.description}
             </motion.p>
           </div>
-          <div className="col-lg-4 col-md-6 d-flex align-items-center">
+          <div className="col-lg-4 col-md-5 col-sm-7 col-10 d-flex align-items-center ">
             <Image
               className="img-fluid object-fit-contain"
               src={sprint.image}
@@ -82,7 +82,7 @@ const Sprint = ({ params }) => {
           </div>
         </div>
       </div>
-      <div className="container " style={{ width: "auto", height: "80vh" }}>
+      <div className="container " style={{ width: "auto", height: "100vh" }}>
         <div className="row d-flex justify-content-center">
           {Object.entries(sprint.list[0]).map(([key, value], index) => (
             <div
@@ -90,7 +90,7 @@ const Sprint = ({ params }) => {
               key={key}
             >
               <div
-                className={`box p-4 d-flex justify-content-center flex-column align-items-center ${styles.box}`}
+                className={`box p-4 d-flex justify-content-center flex-column align-items-center ${styles.box_sprint}`}
               >
                 <i
                   className={`h2 ${icon[index]} text-danger p-2 me-2 rounded`}
@@ -104,15 +104,12 @@ const Sprint = ({ params }) => {
           ))}
         </div>
       </div>
-      <div
-        className={` d-flex align-items-center ${styles.back}`}
-        style={{ width: "auto", height: "100vh" }}
-      >
+      <div className={` d-flex align-items-center ${styles.banner_sprint}`}>
         <div className="row d-flex justify-content-center align-items-center">
-          <div className={`col-lg-8 p-5 `}>
-            <h4 className=" fw-bold text-white text-center">
+          <div className={`col-lg-8 col-md-10 col-sm-10 col-12 p-5 `}>
+            <h5 className=" fw-bold text-white text-center">
               {sprint.closing}
-            </h4>
+            </h5>
           </div>
         </div>
       </div>

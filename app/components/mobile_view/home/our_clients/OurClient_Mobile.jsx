@@ -63,23 +63,27 @@ function OurClient() {
     <div className="container">
       <div className="row d-flex justify-content-left align-items-center ">
         <div className="col">
-          <p className="fw-bold" style={{ color: "#c457d5" }}>
-            A DIGITAL PRODUCT AGENCY LIKE NO OTHER
-          </p>
+          <h4 className="fw-bold" style={{ color: "#c457d5" }}>
+            Our Clients
+          </h4>
           <h1 className="title text-white mb-3 fw-bold ">
-            Skip the long meetings and email <br /> threads. We focus on getting
-            things done.
+            Discover the success stories <br />
+            of our satisfied clients who have already harnessed the power of our
+            services.
           </h1>
           <p className="text-white">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry’s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.{" "}
+            Our commitment to excellence and dedication to delivering top-notch
+            services have allowed us to build strong and enduring relationships
+            with a diverse range of clients. <br />
+            {`We take immense pride in the
+            trust these organizations have placed in us, and we'd like to
+            introduce you to some of our valued clients who have already
+            experienced the benefits of our services.`}
           </p>
         </div>
       </div>
 
-      <div className="row d-flex ">
+      <div className="row d-flex justify-content-center">
         {company.map((item, index) => (
           <motion.div
             className="col-4 mt-3 mb-4"
@@ -92,19 +96,17 @@ function OurClient() {
             }}
             custom={index}
           >
-            <div className="">
-              <Image
-                src={item.logo}
-                className="img-fluid bg-light rounded p-1"
-                alt={item.name}
-                width={100}
-                height={100}
-                sizes="{max-width: 100px} 25vw, 100px"
-                style={{ objectFit: "contain" }}
-                priority
-              />
-              <div className="card-body"></div>
-            </div>
+            <Image
+              src={item.logo}
+              className="img-fluid bg-light rounded p-1"
+              alt={item.name}
+              width={100}
+              height={100}
+              sizes="{max-width: 100px} 25vw, 100px"
+              style={{ objectFit: "contain" }}
+              priority
+            />
+            <div className="card-body"></div>
           </motion.div>
         ))}
       </div>

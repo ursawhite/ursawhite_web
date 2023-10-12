@@ -14,7 +14,7 @@ const ContactUs = () => {
     <>
       <Parallax
         ref={ref}
-        pages={3}
+        pages={4}
         style={{ backgroundColor: "rgba(27,27,29,255)" }}
       >
         <Bg />
@@ -56,9 +56,10 @@ const ContactUs = () => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={2}
+          offset={3}
+          factor={1}
           speed={0}
-          className="d-flex align-items-center"
+          className="d-flex align-items-center justify-content-center"
         >
           <Footer />
         </ParallaxLayer>

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import Contact_Us from "./contact_us/contactus";
+import Contact_Us_Mobile from "../components/mobile_view/contact_us/contactus_mobile";
 
 const ContactUs = () => {
   const [isClient, setIsClient] = useState(false);
@@ -20,7 +21,7 @@ const ContactUs = () => {
     >
       {isDesktop && isClient && <Contact_Us />}
       {isTablet && isClient && <Contact_Us />}
-      {isMobile && isClient && <Contact_Us />}
+      {isMobile && isClient && <Contact_Us_Mobile />}
       {isNotMobile && isClient && <Contact_Us />}
     </div>
   );

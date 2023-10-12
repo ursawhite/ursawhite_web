@@ -12,7 +12,7 @@ const Crew = () => {
     },
     {
       id: 2,
-      name: "Sandi Muhamad Rizatul",
+      name: "Sandi M.Rizatul",
       position: "Member",
       profile_pic: "/images/ava/SANDIMUHAMADRIZALUL.jpg",
     },
@@ -36,16 +36,16 @@ const Crew = () => {
   return (
     <div className="container">
       <div className="row d-flex justify-content-center align-items-center">
-        <p className="text-center fw-bold" style={title}>
+        <p className="text-center fw-bold mt-5" style={title}>
           THE LEADERSHIP CREW
         </p>
 
         <h1 className="text-center text-white fw-bold">Meet The Shipmates</h1>
         <div className="col-lg-8 ">
-          <h3 className=" text-white fw-bold m-3">Our Captain</h3>
+          <h3 className=" text-white fw-bold m-4">Our Captain</h3>
         </div>
         <div className="row d-flex justify-content-center">
-          <div className="col-lg-2 col-md-3">
+          <div className="col-lg-2 col-md-3 col-sm-4 col ">
             <Image
               className="img-fluid object-fit-contain rounded-circle"
               src="/images/ava/SuryaPermana.jpg"
@@ -56,7 +56,7 @@ const Crew = () => {
               priority
             />
           </div>
-          <div className="col-lg-6 col-md-8">
+          <div className="col-lg-6 col-md-8 col-sm-8 ">
             <h2 className="text-white fw-bold">Surya Permana</h2>
             <h4 className="text-white">Founder</h4>
             <h5 className="text-white">{`"Operating a business is just like a painting on a canvas. Appealing to an audience with the right strategy outlines and marketing it with the right colours to make it shine."`}</h5>
@@ -72,15 +72,17 @@ const Crew = () => {
             </p>
           </div>
         </div>
-        <div className="row d-flex justify-content-sm-around">
+        <div className="row d-flex justify-content-lg-center">
           <div className="col-lg-8 ">
             <h3 className=" text-white fw-bold m-3">Crew Member</h3>
           </div>
         </div>
-
-        {crew.map((item) => {
-          return (
-            <div className="col-lg-2 col-md-3 mt-2 text-center" key={item.id}>
+        <div className="row d-flex justify-content-lg-center">
+          {crew.map((item) => (
+            <div
+              className="col-lg-2 col-md-3 col-sm-4 mt-2 text-center"
+              key={item.id}
+            >
               <Image
                 className="img-fluid object-fit-contain rounded-circle"
                 src={item.profile_pic}
@@ -95,14 +97,14 @@ const Crew = () => {
               <p className="text-white mt-3 mb-0">{item.name}</p>
               <p className="text-white">{item.position}</p>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
-      <div className="d-flex justify-content-center m-5">
+      {/* <div className="d-flex justify-content-center m-5">
         <Link className="btn btn-primary p-2 " href="/contact_us">
           <span className="ms-4 me-4">Join Us</span>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
