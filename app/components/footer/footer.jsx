@@ -1,6 +1,31 @@
 import React from "react";
+import styles from "./footer.module.scss";
+import Image from "next/image";
 
 function Footer() {
+  const info = [
+    {
+      icon: "bi bi-envelope-at",
+      text: "We love our inbox – drop us an email.",
+      contact: " surya@ursawhite.com",
+    },
+    {
+      icon: "bi bi-phone-vibrate",
+      text: "Call Jeff, his line is open 24/7",
+      contact: "+628123123123",
+    },
+    {
+      icon: "bi bi-linkedin",
+      text: "Let's connect on LinkedIn",
+      contact: "@ursawhite",
+    },
+    {
+      icon: "bi bi-map",
+      text: "Visit us at",
+      contact: "Jl. Kemang Timur No. 88",
+    },
+  ];
+
   return (
     <div className="container ">
       <div className="row gx-2 g-2 d-flex justify-content-center">
@@ -33,24 +58,26 @@ function Footer() {
           </div>
         </div>
         <div className="col-lg-5 col-md-6 border p-lg-5 p-md-4 d-flex flex-column align-items-start">
+          <>
+            <div
+              className="h3 bi bi-envelope-at ps-4 pe-4 pt-3 pb-3 m-3 rounded-4 "
+              style={{ backgroundColor: "rgb(244,212,228)" }}
+            ></div>
+
+            <div className="d-flex flex-column ">
+              <p className="text-secondary mb-0 ms-3">
+                We love our inbox – drop us an email.
+              </p>
+              <h5 className="text-white fw-bold mt-0 ms-3">
+                surya@ursawhite.com
+              </h5>
+            </div>
+          </>
+
           <div
-            className="h3 bi bi-envelope-at ps-4 pe-4 pt-3 pb-3 m-3 rounded-4 "
-            style={{ backgroundColor: "rgb(244,212,228)" }}
-          ></div>
-
-          <div className="d-flex flex-column ">
-            <p className="text-secondary mb-0 ms-3">
-              We love our inbox – drop us an email.
-            </p>
-            <h5 className="text-white fw-bold mt-0 ms-3">
-              surya@ursawhite.com
-            </h5>
-          </div>
-
-          <span
             className="h3 bi bi-phone-vibrate ps-4 pe-4 pt-3 pb-3 m-3 rounded-4 "
             style={{ backgroundColor: "rgb(196,228,236)" }}
-          ></span>
+          ></div>
           <div className="d-flex flex-column">
             <p className="text-secondary mb-0 ms-3">
               Call Jeff, his line is open 24/7

@@ -86,7 +86,7 @@ function Services() {
         <ParallaxLayer
           offset={4}
           speed={0}
-          className="d-flex align-items-center"
+          className="d-flex align-items-center justify-content-center"
         >
           <Footer />
         </ParallaxLayer>
