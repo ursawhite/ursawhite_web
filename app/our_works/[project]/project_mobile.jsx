@@ -1,11 +1,15 @@
 import React from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+import data from "../../../public/data.json";
+import Footer from "../../components/footer/footer";
 
-function ProjectMobile() {
-  const searchParams = useSearchParams();
-  const item = searchParams.get("items");
-  const project = JSON.parse(item);
+function ProjectMobile({ title }) {
+  const router = useRouter();
+  const project = data.find(
+    (item) => item.title.toLowerCase() === title.replace(/-/g, " ")
+  );
+  console.log(project);
 
   return (
     <>
@@ -75,7 +79,7 @@ function ProjectMobile() {
           </div>
         </div>
       </div>
-      <div className="container">
+      {/* <div className="container">
         <div className="row" style={{ marginTop: "20%", marginBottom: "20%" }}>
           <div className="col-lg-12">
             <h3 className="text-white text-center mb-5">Technologies</h3>
@@ -98,8 +102,8 @@ function ProjectMobile() {
             ))}
           </div>
         </div>
-      </div>
-      <div className="container">
+      </div> */}
+      {/* <div className="container">
         <div className="row">
           {project.img_details.map((item, index) => (
             <div className="col-lg-6 mt-5 mb-5" key={index + 1}>
@@ -117,7 +121,8 @@ function ProjectMobile() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
+      <Footer />
     </>
   );
 }

@@ -1,40 +1,24 @@
 import React from "react";
 import Image from "next/image";
-import Footer from "../footer/Footer_Mobile";
-import Link from "next/link";
+import Footer from "../../../components/footer/footer";
+import { useRouter } from "next/navigation";
 
 function OurWorks(props) {
+  const Router = useRouter();
   const data = props.items;
   return (
     <>
       <div className="container">
         <div className="row d-flex align-items-center">
           <div className="col-12 ">
-            <div
-              className="display-3 text-title text-center fw-bold "
-              style={{
-                background:
-                  "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                marginTop: "20%",
-              }}
-            >
-              Our Works
-            </div>
             <h1 className="text-title text-left display-1 text-white fw-bold mt-5 mb-5">
-              We are a digital design agency
+              Explore Our Portfolio Innovation and Success
             </h1>
-            <h6
-              className="text-white display-6 text-right fw-bold "
-              id="text-right-title"
-            >
-              We are a digital design agency
-            </h6>
-            <p className="text-right text-white ">
-              As a Software House that designs and develops web apps, mobile
-              apps, and PWAs since 2013, we have been trusted by our clients
-              from America, Europe, Australia, and Asia.
+            <p className="text-white  mt-5">
+              {`At Ursawhite, we take immense pride in showcasing our journey of
+              turning ideas into digital realities. Our 'Our Works' page is a
+              testament to the diverse range of projects we've undertaken and
+              successfully brought to life.`}
             </p>
           </div>
         </div>
@@ -42,14 +26,17 @@ function OurWorks(props) {
       <div className="container ">
         {data.map((ourWork) => (
           <div className="row " key={ourWork.id}>
-            <Link
-              className="text-decoration-none"
-              href={{
-                pathname: `/our_works/project`,
-                query: { items: JSON.stringify(ourWork) },
-              }}
+            <button
+              className="text-decoration-none bg-transparent border-0 shadow-0"
+              onClick={() =>
+                Router.push(
+                  `/our_works/${ourWork.title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`
+                )
+              }
             >
-              <div className="col-lg-6 col-md-6 col-6 mt-5 mb-5">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-6 mt-5 mb-5">
                 <Image
                   className="img-fluid mt-3 mb-3 "
                   src={ourWork.image}
@@ -65,12 +52,11 @@ function OurWorks(props) {
                 />
               </div>
               <h1 className="text-white text-center mt-5">{ourWork.title}</h1>
-            </Link>
+            </button>
           </div>
         ))}
-
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

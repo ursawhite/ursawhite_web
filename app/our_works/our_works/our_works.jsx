@@ -41,11 +41,6 @@ function Our_Works(props) {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2}
-          speed={0}
-          style={parallaxLayer}
-        ></ParallaxLayer>
-        <ParallaxLayer
           offset={4}
           speed={0}
           className="d-flex align-items-center"

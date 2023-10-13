@@ -198,10 +198,7 @@ const Form = () => {
                 {msg[0].status === "error" ? (
                   <div className="text-danger mt-2 mb-2">{msg[0].message}</div>
                 ) : (
-                  <div className="text-success mt-2 mb-2">
-                    {" "}
-                    {msg[0].message}
-                  </div>
+                  <div className="text-success mt-2 mb-2">{msg[0].message}</div>
                 )}
               </div>
             </div>

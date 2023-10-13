@@ -177,7 +177,6 @@ export default function MultiLayerParallax(props) {
           speed={0}
           tabIndex="0"
           factor={1}
-          id="section1"
           className={styles.parallaxLayer}
         >
           <Banner />
@@ -187,7 +186,6 @@ export default function MultiLayerParallax(props) {
           offset={2}
           speed={0}
           factor={1}
-          id="section2"
           className={styles.parallaxLayer}
         >
           <Ourclients />
@@ -197,7 +195,6 @@ export default function MultiLayerParallax(props) {
           offset={4}
           speed={0}
           factor={1}
-          id="section3"
           className={styles.parallaxLayer}
           style={{
             zIndex: "100",
@@ -209,7 +206,6 @@ export default function MultiLayerParallax(props) {
           offset={6}
           speed={0}
           factor={1}
-          id="section4"
           className={styles.parallaxLayer}
           style={{
             zIndex: "4",
@@ -221,7 +217,6 @@ export default function MultiLayerParallax(props) {
           offset={8}
           speed={0}
           factor={1}
-          id="section5"
           className={styles.parallaxLayer}
           style={{
             zIndex: "4",
@@ -233,7 +228,6 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={10}
           factor={1}
-          id="section6"
           speed={0}
           className={styles.parallaxLayer}
         >
@@ -243,7 +237,6 @@ export default function MultiLayerParallax(props) {
         <ParallaxLayer
           offset={12}
           factor={1}
-          id="section7"
           speed={0}
           className="d-flex align-items-center justify-content-center"
         >

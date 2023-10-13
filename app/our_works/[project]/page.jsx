@@ -4,13 +4,13 @@ import { useMediaQuery } from "react-responsive";
 import ProjectPage from "./project";
 import ProjectMobile from "./project_mobile";
 
-function Project() {
+function Project({ params }) {
   const [isClient, setIsClient] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 992 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isNotMobile = useMediaQuery({ minWidth: 768 });
-
+  const title = params.project;
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -22,10 +22,10 @@ function Project() {
         overflowY: "auto",
       }}
     >
-      {isDesktop && isClient && <ProjectPage />}
-      {isTablet && isClient && <ProjectPage />}
-      {isMobile && isClient && <ProjectMobile />}
-      {isNotMobile && isClient && <ProjectPage />}
+      {isDesktop && isClient && <ProjectPage title={title} />}
+      {isTablet && isClient && <ProjectPage title={title} />}
+      {isMobile && isClient && <ProjectMobile title={title} />}
+      {isNotMobile && isClient && <ProjectPage title={title} />}
     </div>
   );
 }

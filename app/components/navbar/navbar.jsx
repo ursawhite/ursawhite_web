@@ -64,7 +64,7 @@ function Navbar() {
                 src="/logo.png"
                 width={200}
                 height={40}
-                alt="logo"
+                alt="logo2"
                 style={{ objectFit: "contain", objectPosition: "left top" }}
                 priority
               />

@@ -1,18 +1,21 @@
 import React, { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Footer from "../../components/footer/footer";
+import data from "../../../public/data.json";
 
-function Project() {
+function Project({ title }) {
   const ref = useRef(null);
-  const searchParams = useSearchParams();
-  const items = searchParams.get("items");
-  const project = JSON.parse(items);
+  const router = useRouter();
+  const project = data.find(
+    (item) => item.title.toLowerCase() === title.replace(/-/g, " ")
+  );
 
   return (
     <Parallax
       ref={ref}
-      pages={4}
+      pages={3}
       style={{ backgroundColor: "rgba(27,27,29,255)" }}
     >
       <ParallaxLayer
@@ -94,6 +97,15 @@ function Project() {
               </div>
               <h5 className="text-white mt-4">{project.subject}</h5>
               <p className="text-white mt-4">{project.desc}</p>
+              {project.tech.map((item, index) => (
+                <ul className="d-flex align-items-center " key={index + 1}>
+                  <li style={{ color: "white" }}>
+                    <span className="h5 text-white text-center mt-3 mb-3 ms-3">
+                      {item}
+                    </span>
+                  </li>
+                </ul>
+              ))}
             </div>
             <div className="col-lg-4">
               <h6 className="text-left text-secondary fw-bold mt-4">Client</h6>
@@ -110,9 +122,7 @@ function Project() {
               <h6 className="text-left text-white fw-bold mt-4">
                 {project.year}
               </h6>
-              <h6 className="text-left text-secondary fw-bold mt-4">
-                Services
-              </h6>
+              <h6 className="text-left text-secondary fw-bold mt-4">Service</h6>
               <h6 className="text-left text-white fw-bold mt-4">
                 {project.type}
               </h6>
@@ -120,7 +130,8 @@ function Project() {
           </div>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer
+
+      {/* <ParallaxLayer
         offset={2}
         speed={0}
         style={{
@@ -153,9 +164,35 @@ function Project() {
             </div>
           </div>
         </div>
-      </ParallaxLayer>
-      <ParallaxLayer
+      </ParallaxLayer> */}
+      {/* <ParallaxLayer
         offset={3}
+        speed={0}
+        style={{
+          display: "flex",
+          // alignItems: "center",
+          // justifyContent: "center",
+        }}
+      >
+        <div className="container">
+          <div className="row d-flex justify-content-center">
+            {project.img_details.map((item, index) => (
+              <div className="col-lg-4 col-md-4 mb-4" key={index}>
+                <Image
+                  className="img-fluid object-fit-contain"
+                  src={item}
+                  alt="details project"
+                  width={500}
+                  height={500}
+                  style={{ width: "auto", height: "100%" }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </ParallaxLayer> */}
+      <ParallaxLayer
+        offset={2}
         speed={0}
         style={{
           display: "flex",
@@ -163,17 +200,7 @@ function Project() {
           justifyContent: "center",
         }}
       >
-        {project.img_details.map((item, index) => (
-          <div className="col-lg-4 col-md-4" key={index}>
-            <Image
-              className="img-fluid"
-              src={item}
-              alt="details project"
-              width={500}
-              height={500}
-            />
-          </div>
-        ))}
+        <Footer />
       </ParallaxLayer>
     </Parallax>
   );

@@ -2,25 +2,28 @@
   {
     "id": 1,
     "title": "Nod Credit",
-    "type": "Mobile App",
+    "type": "Front-end development",
     "subject": "Financial tool for managing credit and loans",
     "desc": "Helping users track their credit scores and access personalized loan offers.",
     "tech": [
-      "payment API integration",
+      "Payment API integration",
       "User dashboard",
-      "settings",
-      " referral link",
-      "beautiful animation"
+      "Settings",
+      "Referral link",
+      "Beautiful animation"
     ],
-    "client": "Zurich Hong Kong",
-    "location": "Hong Kong",
-    "year": "2020",
+    "client": "Nod Credit",
+    "location": "-",
+    "year": "2021-2022",
     "image": "/images/our-works/project1.png",
     "image_mobile": "/images/img-back/Nod_mobile.png",
     "img_details": [
-      "/images/our-works/details/galery-hkgo-1.png",
-      "/images/our-works/details/galery-hkgo-2.png",
-      "/images/our-works/details/galery-hkgo-3.png"
+      "/images/our-works/details/nod/1.png",
+      "/images/our-works/details/nod/2.png",
+      "/images/our-works/details/nod/3.png",
+      "/images/our-works/details/nod/4.png",
+      "/images/our-works/details/nod/5.png",
+      "/images/our-works/details/nod/6.png"
     ],
     "img_back": [
       "/images/img-back/nod.png",
@@ -33,21 +36,19 @@
   {
     "id": 2,
     "title": "Feco Playbook",
-    "type": "Mobile App",
+    "type": "Front-end development",
     "subject": "Empowering Cancer Warriors Hope",
     "desc": "A lot of people don't know where to ask many questions and this is the correct place.",
     "tech": [
-      "Flutter",
-      "Google Maps API",
-      "Directions API",
-      " Firebase cloud messaging (FCM)",
-      "Firebase Database",
-      "Google Analytics",
-      "QR/Bar code scanning"
+      "Payment API integration",
+      "User dashboard",
+      "Settings",
+      "Referral link",
+      "Beautiful animation"
     ],
     "client": "Feco Playbook",
-    "location": "Lagos, Nigeria",
-    "year": "2020",
+    "location": "-",
+    "year": "2021-2022",
     "image": "/images/our-works/project2.png",
     "image_mobile": "/images/img-back/Feco_mobile.png",
     "img_details": [
@@ -66,7 +67,7 @@
   {
     "id": 3,
     "title": "HKGO",
-    "type": "Mobile App",
+    "type": "Front-end development",
     "subject": "The Ultimate App for Drivers",
     "desc": "HKGO is a location-based app (Google Maps) with flutter for a big insurance company in Hong Kong.",
     "tech": [
@@ -78,9 +79,9 @@
       "Google Analytics",
       "QR/Bar code scanning"
     ],
-    "client": "Feco Playbook",
-    "location": "Lagos, Nigeria",
-    "year": "2020",
+    "client": "HKGO",
+    "location": "-",
+    "year": "2021-2022",
     "image": "/images/our-works/project3.png",
     "image_mobile": "/images/img-back/Hkgo_mobile.png",
     "img_details": [
@@ -100,7 +101,7 @@
   {
     "id": 4,
     "title": "JPCC",
-    "type": "Mobile App",
+    "type": "UI, UX, Front-end development, Back-end development",
     "subject": "Unlock the JPCC experience! ",
     "desc": "Stay Connected with the Jakarta Praise Community Church through the official MyJPCC Application. Get the latest news and information, register for exciting programs and events, and discover JPCC small group communities all in one place.",
     "tech": [
@@ -112,9 +113,9 @@
       "Google Analytics",
       "QR/Bar code scanning"
     ],
-    "client": "Feco Playbook",
-    "location": "Lagos, Nigeria",
-    "year": "2020",
+    "client": "JPCC",
+    "location": "-",
+    "year": "2021-2022",
     "image": "/images/our-works/project4.png",
     "image_mobile": "/images/img-back/jpcc_mobile.png",
     "img_details": [
@@ -133,7 +134,7 @@
   {
     "id": 5,
     "title": "Naked Press",
-    "type": "Mobile App",
+    "type": "UI, UX, Front-end development, Back-end development",
     "subject": "P2P lending app, now live on Google Playstore.",
     "desc": "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
     "tech": [
@@ -145,9 +146,9 @@
       "Google Analytics",
       "QR/Bar code scanning"
     ],
-    "client": "Feco Playbook",
-    "location": "Lagos, Nigeria",
-    "year": "2020",
+    "client": "Naked Press",
+    "location": "-",
+    "year": "2021-now",
     "image": "/images/our-works/project5.png",
     "image_mobile": "/images/img-back/nakedpress_mobile.png",
     "img_details": [
@@ -166,7 +167,7 @@
   {
     "id": 6,
     "title": "BNI Direct",
-    "type": "Mobile App",
+    "type": "Front-end development",
     "subject": "P2P lending app, now live on Google Playstore.",
     "desc": "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
     "tech": [
@@ -178,9 +179,9 @@
       "Google Analytics",
       "QR/Bar code scanning"
     ],
-    "client": "Feco Playbook",
-    "location": "Lagos, Nigeria",
-    "year": "2020",
+    "client": "BNI",
+    "location": "-",
+    "year": "2022-now",
     "image": "/images/our-works/project6.png",
     "image_mobile": "/images/img-back/bni_mobile.png",
     "img_back": [

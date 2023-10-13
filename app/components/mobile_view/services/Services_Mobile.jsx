@@ -3,34 +3,9 @@ import Image from "next/image";
 import Marquee from "../../test_marquee/marquee_logo";
 import Footer from "../../../components/footer/footer";
 import Section5 from "../../../services/section5/section5";
+import data from "../../../../public/services.json";
 
 function Services_Mobile() {
-  const services = [
-    {
-      id: 1,
-      title: "Front-end Development",
-      description: ` Our Front-end Development services are designed to create visually appealing and user-friendly websites and web applications. We specialize in crafting responsive and interactive user interfaces that enhance your online presence. Whether you need a stunning website or a dynamic web app, our team is here to bring your ideas to life.`,
-      img: "/images/frontend.png",
-    },
-    {
-      id: 2,
-      title: "Back-end Development",
-      description: ` With our Back-end Development services, we ensure the functionality and performance of your website or web application. We build robust server-side components, databases, and APIs that power your online platform. Our expertise lies in creating scalable and secure back-end solutions that support your business operations and user experiences.`,
-      img: "/images/backend.png",
-    },
-    {
-      id: 3,
-      title: "CMS Implementation",
-      description: ` CMS Implementation is crucial for efficient content management on your website or web app. We provide CMS Implementation services that enable you to easily create, update, and organize your digital content. Our solutions streamline content publishing, making it simple for you to maintain an up-to-date and engaging online presence.`,
-      img: "/images/cms.png",
-    },
-    {
-      id: 4,
-      title: "DevOps & Maintenance",
-      description: `Our DevOps & Maintenance services ensure the continuous operation and optimization of your web platform. We handle infrastructure management, automation, and monitoring to keep your website or web app running smoothly. Our proactive approach guarantees minimal downtime and efficient maintenance, so you can focus on your core business activities.`,
-      img: "/images/devops.png",
-    },
-  ];
   return (
     <>
       <div className="container">
@@ -54,7 +29,7 @@ function Services_Mobile() {
           <h1 className="fw-bold text-center mt-5" style={{ color: "#c457d5" }}>
             Services
           </h1>
-          {services.map((item, index) => (
+          {data.map((item, index) => (
             <div
               className={`row d-flex justify-content-center align-items-center ${
                 index % 2 !== 0 ? "flex-row-reverse" : ""
@@ -71,11 +46,11 @@ function Services_Mobile() {
                 <div className="service d-flex justify-content-center">
                   <Image
                     className="img-fluid"
-                    src={item.img}
+                    src={item.image}
                     width={400}
                     height={400}
                     style={{ objectFit: "contain" }}
-                    alt="services"
+                    alt={item.title}
                   />
                 </div>
               </div>

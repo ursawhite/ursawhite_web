@@ -98,10 +98,11 @@ function OurClient() {
           >
             <Image
               src={item.logo}
-              className="img-fluid bg-light rounded p-1 object-fit-contain"
+              className="img-fluid bg-light object-fit-contain"
               alt={item.name}
-              width={300}
-              height={300}
+              width={150}
+              height={150}
+              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
               style={{ width: "auto", height: "100%" }}
               priority
             />
