@@ -30,7 +30,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg fixed-top">
+    <nav className="navbar navbar-expand-lg fixed-top p-3">
       <div className="container ">
         <Link className="" href="/">
           <Image
@@ -89,7 +89,7 @@ function Navbar() {
                     >
                       <div
                         className="button btn text-white p-2 d-flex align-items-center justify-content-center"
-                        style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
+                        style={{ backgroundColor: "#5B0888" }}
                       >
                         <span className="ms-3 me-3 fw-bold ">{item.name}</span>
 

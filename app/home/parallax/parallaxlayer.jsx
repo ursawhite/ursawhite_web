@@ -17,7 +17,6 @@ import ImageRight from "../../components/home_our_works/right/image_right";
 import ImageFont from "../../components/home_our_works/img_font/image_font";
 
 import * as ButtonFunctions from "../../components/button/button";
-import { a } from "react-spring";
 
 export default function MultiLayerParallax(props) {
   const ref = useRef(null);
@@ -97,7 +96,7 @@ export default function MultiLayerParallax(props) {
           factor={1}
           sticky={{ start: 0, end: 13 }}
           style={{
-            inset: "50% 100% 0",
+            inset: "50% 87% 0",
             top: "50%",
             transform: "translate(0%, -50%)",
             zIndex: "5",
@@ -106,23 +105,6 @@ export default function MultiLayerParallax(props) {
           }}
         >
           <div className="progress_bar position-absolute top-50 end-0 translate-middle-y">
-            <motion.div
-              whileHover={{ scale: 1.5 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className={`btn ${styles.button}`}
-              style={{ display: isFirst ? "none" : "" }}
-              onClick={() =>
-                ButtonFunctions.handleClickButtonUp(
-                  activeSection,
-                  setActiveSection,
-                  setReferenceNode,
-                  ref,
-                  maksPage
-                )
-              }
-            >
-              <i className={`bi bi-chevron-double-up ${styles.icon}`}></i>
-            </motion.div>
             {sectionList.map((item, index) => (
               <motion.div
                 whileHover={{ scale: 1.5 }}
@@ -152,23 +134,86 @@ export default function MultiLayerParallax(props) {
                 </div>
               </motion.div>
             ))}
-            <motion.div
-              whileHover={{ scale: 1.5 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="btn"
-              style={{ display: isLast ? "none" : "" }}
-              onClick={() =>
-                ButtonFunctions.handleClickButtonDown(
-                  activeSection,
-                  setActiveSection,
-                  setReferenceNode,
-                  ref,
-                  maksPage
-                )
-              }
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={0}
+          speed={0}
+          sticky={{ start: 0, end: 13 }}
+          style={{
+            inset: "90% 90% 0",
+            top: "90%",
+            transform: "translate(0%, -50%)",
+            zIndex: "5",
+
+            height: "10vh",
+            width: "15%",
+            display: "flex",
+            justifyContent: "end",
+            alignItems: "start",
+          }}
+        >
+          <div
+            className="btn"
+            style={{
+              display: isLast ? "none" : "",
+            }}
+            onClick={() =>
+              ButtonFunctions.handleClickButtonDown(
+                activeSection,
+                setActiveSection,
+                setReferenceNode,
+                ref,
+                maksPage
+              )
+            }
+          >
+            <div
+              className={styles.scroll__down}
+              style={{ transform: "rotate(90deg)" }}
             >
-              <i className={`bi bi-chevron-double-down ${styles.icon}`}></i>
-            </motion.div>
+              <p className="">Scroll Down</p>
+              <div className="bi bi-chevron-compact-right ms-3 me-3 "></div>
+            </div>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={0}
+          speed={0}
+          sticky={{ start: 0, end: 13 }}
+          style={{
+            inset: "10% 93% 0",
+            top: "10%",
+            zIndex: "5",
+            height: "10vh",
+            width: "15%",
+            display: "flex",
+            justifyContent: "end",
+            alignItems: "start",
+          }}
+        >
+          <div
+            className={`btn ${styles.button}`}
+            style={{ display: isFirst ? "none" : "" }}
+            onClick={() =>
+              ButtonFunctions.handleClickButtonUp(
+                activeSection,
+                setActiveSection,
+                setReferenceNode,
+                ref,
+                maksPage
+              )
+            }
+          >
+            <div
+              className={styles.scroll__top}
+              style={{ transform: "rotate(270deg)" }}
+            >
+              <p className="">Scroll Top</p>
+              <div className="bi bi-chevron-compact-right ms-3 me-3 "></div>
+            </div>
           </div>
         </ParallaxLayer>
 
@@ -178,6 +223,7 @@ export default function MultiLayerParallax(props) {
           tabIndex="0"
           factor={1}
           className={styles.parallaxLayer}
+          style={{ position: "relative" }}
         >
           <Banner />
         </ParallaxLayer>

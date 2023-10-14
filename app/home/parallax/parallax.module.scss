@@ -25,3 +25,25 @@
 .icon:hover {
   color: white;
 }
+
+.scroll__down {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+}
+
+.scroll__down:hover {
+  display: flex;
+  color: white;
+}
+
+.scroll__top {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+}
+
+.scroll__top:hover {
+  display: flex;
+  color: white;
+}
