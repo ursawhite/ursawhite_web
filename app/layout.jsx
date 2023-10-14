@@ -6,23 +6,23 @@ import "./global.css";
 
 export const metadata = {
   metadataBase: new URL("https://ursawhite-web.vercel.app/"),
-  title: "Ursawhite Pte Ltt | Home",
-  description: "Home Page of Ursawhite Pte Ltt",
+  title: "Ursawhite Ltt | Home",
+  description: "Home Page of Ursawhite Ltt",
   openGraph: {
     title: "Ursawhite Pte Ltd | Home",
-    description: "Home Page of Ursawhite Pte Ltt",
+    description: "Home Page of Ursawhite Ltt",
     url: "https://ursawhite-web.vercel.app/",
-    siteName: "Ursawhite Pte Ltd | Home",
+    siteName: "Ursawhite Ltt | Home",
     images: [
       {
         url: "https://res.cloudinary.com/dkp658sgi/image/upload/v1697044030/iq9huffxsyir0dsmi1x3.png",
-        alt: "Ursawhite Pte Ltd",
+        alt: "Ursawhite Ltt",
         width: 800,
         height: 600,
       },
       {
         url: "/logo.png",
-        alt: "Ursawhite Pte Ltd",
+        alt: "Ursawhite Ltt",
         width: 50,
         height: 50,
       },
@@ -44,7 +44,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ursawhite Pte Ltt | Home",
+    title: "Ursawhite Ltt | Home",
     images: "/opengraph-image.jpg",
   },
   icons: "/logo.png",
