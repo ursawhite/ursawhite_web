@@ -1,6 +1,15 @@
+:root {
+  --main-color: #5b0888;
+  --second-color: #c457d5;
+}
+
 .patterns {
   margin-top: -25%;
   z-index: -10;
+}
+
+.text-title {
+  color: var(--second-color);
 }
 
 .text {
@@ -36,22 +45,25 @@
 .button {
   display: flex;
   color: white;
+  background-color: transparent;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-left: 2vw;
   padding-right: 3vw;
   background: transparent;
+  border: 1px solid white;
 }
 
 .button:hover {
   display: flex;
-  color: black;
+  color: white;
   font-weight: bold;
   flex-direction: row-reverse;
-  background: white;
+  background: var(--main-color);
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
+  border: none;
 }
 
 .boxTop {
@@ -98,4 +110,40 @@
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
+}
+
+.box_services_active {
+  background: radial-gradient(
+    at center,
+    rgba(155, 89, 182, 0.3),
+    rgba(53, 57, 59, 0.3)
+  );
+  height: 20vh;
+}
+
+.box_services_passive {
+  background: radial-gradient(
+    at center,
+    rgba(58, 51, 58, 0.3),
+    rgba(53, 57, 59, 0.3)
+  );
+  height: 20vh;
+}
+
+.button_learn_more {
+  background-color: transparent;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: white;
+}
+
+.button_learn_more:hover {
+  background-color: var(--main-color);
+  color: white;
+  flex-direction: row;
+  font-weight: bold;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
