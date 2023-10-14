@@ -18,6 +18,16 @@
   justify-content: flex-end;
 }
 
+.btn_scroll_active {
+  color: #9d76c1;
+  background-color: transparent;
+}
+
+.btn_scroll_passive {
+  color: gray;
+  background-color: transparent;
+}
+
 .icon {
   color: gray;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, use } from "react";
 import { motion } from "framer-motion";
 import styles from "./parallax.module.scss";
 import Image from "next/image";
@@ -114,8 +114,8 @@ export default function MultiLayerParallax(props) {
                 <div
                   className={`btn fw-bold border-0 shadow-0 me-3 ${
                     activeSection === item
-                      ? " text-danger bg-dark border-end border-5 "
-                      : " text-secondary bg-transparent border-end border-5 border-secondary"
+                      ? `${styles.btn_scroll_active} border-end border-5`
+                      : `${styles.btn_scroll_passive} border-end border-5 border-secondary`
                   }`}
                   onClick={() =>
                     ButtonFunctions.handleClickScroll(
@@ -130,7 +130,7 @@ export default function MultiLayerParallax(props) {
                     borderRadius: "0px",
                   }}
                 >
-                  {item}
+                  {"0" + item}
                 </div>
               </motion.div>
             ))}
@@ -145,10 +145,9 @@ export default function MultiLayerParallax(props) {
             inset: "90% 90% 0",
             top: "90%",
             transform: "translate(0%, -50%)",
-            zIndex: "5",
 
             height: "10vh",
-            width: "15%",
+            width: "13%",
             display: "flex",
             justifyContent: "end",
             alignItems: "start",
@@ -184,7 +183,7 @@ export default function MultiLayerParallax(props) {
           speed={0}
           sticky={{ start: 0, end: 13 }}
           style={{
-            inset: "10% 93% 0",
+            inset: "10% 90% 0",
             top: "10%",
             zIndex: "5",
             height: "10vh",
@@ -209,13 +208,30 @@ export default function MultiLayerParallax(props) {
           >
             <div
               className={styles.scroll__top}
-              style={{ transform: "rotate(270deg)" }}
+              style={{ transform: "rotate(90deg)" }}
             >
-              <p className="">Scroll Top</p>
               <div className="bi bi-chevron-compact-right ms-3 me-3 "></div>
+              <p className="">&nbsp; Scroll Up &nbsp;</p>
             </div>
           </div>
         </ParallaxLayer>
+
+        {/* <ParallaxLayer
+          offset={0}
+          speed={0}
+          factor={1}
+          sticky={{ start: 0, end: 13 }}
+          style={{
+            inset: "50% 0% 0",
+            top: "50%",
+            transform: "translate(0%, -50%)",
+            zIndex: "5",
+            height: "50vh",
+            width: "10%",
+          }}
+        >
+          <i class="text-white bi bi-envelope-at"></i>
+        </ParallaxLayer> */}
 
         <ParallaxLayer
           offset={0}
