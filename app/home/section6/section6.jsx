@@ -10,7 +10,7 @@ function Section6() {
         {data.map((item) => (
           <div className="col-lg-5 col-md-6 " key={item.id}>
             <div className="p-lg-5 p-lg-4">
-              <h1 className="text-white fw-bold ">{item.title}</h1>
+              <h1 className="text-title fw-bold ">{item.title}</h1>
               <h4 className="text-white fw-bold ">{item.subtitle}</h4>
               <p className="text-white">{item.description}</p>
               <button

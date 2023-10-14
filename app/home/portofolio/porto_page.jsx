@@ -27,10 +27,10 @@ function PortoPages({ items }) {
               >
                 {items.title}
               </div>
-              <div className="h6 title fw-bold text-white">{items.type}</div>
+              <div className="h6 text-white fw-bold ">{items.type}</div>
             </div>
             <div
-              className="title display-6 text-white fw-bold mb-3"
+              className="display-6 text-white fw-bold mb-3"
               style={{ textTransform: "capitalize" }}
             >
               {items.subject}
