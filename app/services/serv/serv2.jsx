@@ -48,7 +48,7 @@ const Service = () => {
                 </h3>
                 <p className="text-white">{data[activeItem - 1].description}</p>
                 <button
-                  className={`btn shadow-lg border-1 border-light ${styles.button_service}`}
+                  className="button btn shadow-lg border-1 border-light"
                   onClick={() =>
                     Router.push(
                       `/services/${data[activeItem - 1].title

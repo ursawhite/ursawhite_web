@@ -15,12 +15,12 @@ function ImageFont(props) {
             height={400}
             alt="logo"
             sizes="100vw"
-            loading="lazy"
             style={{
               width: "100%",
               height: "auto",
               // marginLeft: "-8vw",
             }}
+            priority
           />
         </div>
       </div>

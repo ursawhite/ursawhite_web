@@ -19,12 +19,12 @@ const ImageLeft = (props) => {
             blurDataURL={image}
             alt="Image by upklyak"
             sizes="100vw"
-            loading="lazy"
             style={{
               width: "90%",
               height: "auto",
               marginLeft: "-3vw",
             }}
+            priority
           />
         </div>
       </div>

@@ -15,24 +15,3 @@
   );
   height: 20vh;
 }
-
-.button_service {
-  display: flex;
-  color: white;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-left: 2vw;
-  padding-right: 3vw;
-  background: transparent;
-}
-
-.button_service:hover {
-  display: flex;
-  color: black;
-  font-weight: bold;
-  flex-direction: row-reverse;
-  background: white;
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-}

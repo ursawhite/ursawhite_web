@@ -210,7 +210,7 @@ export default function MultiLayerParallax(props) {
               className={styles.scroll__top}
               style={{ transform: "rotate(90deg)" }}
             >
-              <div className="bi bi-chevron-compact-right ms-3 me-3 "></div>
+              <div className="bi bi-chevron-compact-left ms-3 me-3 "></div>
               <p className="">&nbsp; Scroll Up &nbsp;</p>
             </div>
           </div>
