@@ -50,9 +50,7 @@ function Ourclients() {
     <div className="container">
       <div className="row d-flex flex-column justify-content-center align-items-center">
         <div className="col-lg-8 col-md-12">
-          <h4 className="text-center fw-bold" style={{ color: "#c457d5" }}>
-            Our Clients
-          </h4>
+          <h4 className="text-title text-center fw-bold">Our Clients</h4>
           <h1 className="title text-white text-center mb-3 fw-bold mb-4">
             Discover the success stories <br />
             of our satisfied clients who have already harnessed the power of our

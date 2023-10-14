@@ -87,10 +87,7 @@ function Navbar() {
                       href={item.link}
                       onClick={() => setActiveLink(`${item.link}`)}
                     >
-                      <div
-                        className="button btn text-white p-2 d-flex align-items-center justify-content-center"
-                        style={{ backgroundColor: "#5B0888" }}
-                      >
+                      <div className="button btn p-2">
                         <span className="ms-3 me-3 fw-bold ">{item.name}</span>
 
                         <i className="bi bi-envelope ms-2 me-2"></i>

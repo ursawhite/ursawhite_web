@@ -99,7 +99,7 @@ export default function MultiLayerParallax(props) {
             inset: "50% 87% 0",
             top: "50%",
             transform: "translate(0%, -50%)",
-            zIndex: "5",
+            zIndex: "6",
             height: "50vh",
             width: "10%",
           }}
@@ -107,7 +107,7 @@ export default function MultiLayerParallax(props) {
           <div className="progress_bar position-absolute top-50 end-0 translate-middle-y">
             {sectionList.map((item, index) => (
               <motion.div
-                whileHover={{ scale: 1.5 }}
+                whileHover={{ scale: 1.1, color: "#fff" }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 key={index + 1}
               >
@@ -262,7 +262,7 @@ export default function MultiLayerParallax(props) {
             zIndex: "100",
           }}
         >
-          <PortoPage items={data[0]} f_color={"rgba(6,104,227,255)"} />
+          <PortoPage items={data[0]} />
         </ParallaxLayer>
         <ParallaxLayer
           offset={6}
@@ -273,7 +273,7 @@ export default function MultiLayerParallax(props) {
             zIndex: "4",
           }}
         >
-          <PortoPage items={data[1]} f_color={"rgba(86,133,65,255)"} />
+          <PortoPage items={data[1]} />
         </ParallaxLayer>
         <ParallaxLayer
           offset={8}
@@ -284,7 +284,7 @@ export default function MultiLayerParallax(props) {
             zIndex: "4",
           }}
         >
-          <PortoPage items={data[2]} f_color={"rgba(34,97,170,255)"} />
+          <PortoPage items={data[2]} />
         </ParallaxLayer>
 
         <ParallaxLayer

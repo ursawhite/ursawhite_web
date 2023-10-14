@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./footer.module.scss";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 function Footer() {
+  const Router = useRouter();
   const info = [
     {
       icon: "bi bi-envelope-at",
@@ -45,11 +45,11 @@ function Footer() {
           </h1>
           <p className="text-white mt-2 ">{` We blend tech and creativity to bring your ideas to life. Whether you're a startup aiming to disrupt the market or an established enterprise seeking efficiency and growth, our software solutions are your key to success. Let's make it happen!`}</p>
           <div className="button_contact ">
-            <button className="btn p-3 rounded mt-5 ">
-              <div
-                className="button btn text-white p-2 d-flex align-items-center justify-content-center"
-                style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
-              >
+            <button
+              className="btn p-3 rounded mt-5 "
+              onClick={() => Router.push("/contact_us")}
+            >
+              <div className="button p-2 rounded ">
                 <span className="ms-3 me-3 fw-bold ">Contact Us!</span>
 
                 <i className="bi bi-envelope ms-2 me-2"></i>

@@ -10,21 +10,19 @@ function Section6() {
         {data.map((item) => (
           <div className="col-lg-5 col-md-6 " key={item.id}>
             <div className="p-lg-5 p-lg-4">
-              <p className="fw-bold" style={{ color: "#c457d5" }}>
-                FOR STARTUPS AND CORPORATION
-              </p>
               <h1 className="text-white fw-bold ">{item.title}</h1>
               <h4 className="text-white fw-bold ">{item.subtitle}</h4>
               <p className="text-white">{item.description}</p>
               <button
-                className="btn btn-secondary"
+                className="button btn"
                 onClick={() =>
                   Router.push(
                     `/home/${item.title.replace(/\s+/g, "-").toLowerCase()}`
                   )
                 }
               >
-                Learn More
+                <span>Learn More</span>
+                <div className="bi bi-chevron-double-right ms-lg-1 me-lg-2"></div>
               </button>
             </div>
           </div>

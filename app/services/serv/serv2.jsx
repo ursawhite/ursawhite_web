@@ -26,8 +26,8 @@ const Service = () => {
               <div
                 className={`box rounded d-flex flex-column justify-content-center align-items-center p-1 ${
                   activeItem === item.id
-                    ? styles.box_services_active
-                    : styles.box_services_passive
+                    ? "box_services_active"
+                    : "box_services_passive"
                 }`}
                 onClick={() => handleItemClick(item.id)}
               >

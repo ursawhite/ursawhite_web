@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { fadeInTop } from "../../components/animation/animation";
+import data from "../../../public/data.json";
 
-function PortoPages({ items, f_color }) {
+function PortoPages({ items }) {
+  const Router = useRouter();
+
   return (
     <>
       <div className="container" style={{ zIndex: "10" }}>
@@ -20,7 +23,7 @@ function PortoPages({ items, f_color }) {
             <div className="d-flex ">
               <div
                 className="h6 title fw-bold me-4"
-                style={{ color: `${f_color}` }}
+                style={{ color: `${items.main_color}` }}
               >
                 {items.title}
               </div>
@@ -42,17 +45,17 @@ function PortoPages({ items, f_color }) {
                 </li>
               ))}
             </ul>
-            <div className="btn ">
-              <Link
-                className="text-decoration-none fw-bold"
-                href={{
-                  pathname: "/our_works/project",
-                  query: { items: JSON.stringify(items) },
-                }}
-              >
-                <span style={{ color: `${f_color}` }}>Check Now</span>
-              </Link>
-            </div>
+
+            <button
+              className="bg-transparent shadow-0 border-0 fw-bold"
+              onClick={() =>
+                Router.push(
+                  `/our_works/${items.title.replace(/\s+/g, "-").toLowerCase()}`
+                )
+              }
+            >
+              <span style={{ color: `${items.main_color}` }}>Check Now</span>
+            </button>
           </motion.div>
           <div className="col-lg-4 col-md-4"></div>
         </div>
