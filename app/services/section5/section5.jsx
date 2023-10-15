@@ -19,7 +19,7 @@ const Section5 = () => {
               </h5>
               <div className="col-lg-12 d-flex justify-content-center mt-5">
                 <Link
-                  className="button btn text-white p-2 d-flex align-items-center justify-content-center"
+                  className="button btn text-white p-2 d-flex align-items-center justify-content-center border-0"
                   style={{ backgroundColor: "rgba(169, 80, 210, 255)" }}
                   href="/contact_us"
                 >

@@ -66,7 +66,7 @@ const Services = ({ params }) => {
           <div className="col-lg-9 col-md-12 d-flex flex-wrap p-4">
             {dataServices[0].services.map((service, index) => (
               <div className="col-lg-6 col-md-6 d-flex p-2 " key={index}>
-                <div className={`box p-5 ${styles.box_section}`}>
+                <div className={`p-5 ${styles.box_section}`}>
                   <h2>{service.Service}</h2>
                   <p>{service.Description}</p>
                 </div>
@@ -104,7 +104,7 @@ const Services = ({ params }) => {
                 className="col-lg-2 col-md-2 col-sm-3 d-flex p-3"
                 key={index}
               >
-                <div className={`box ${styles.box_section}`}>
+                <div className={`${styles.box__tech}`}>
                   <Image
                     className="logo img-fluid object-fit-contain p-3"
                     src={tech.logo}

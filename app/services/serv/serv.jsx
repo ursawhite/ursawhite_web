@@ -69,10 +69,10 @@ const Service = () => {
                   }
                 >
                   <div>
-                    <i className="bi bi-arrow-right me-2 ms-2 fw-bold"> </i>
+                    <span className="">Read More</span>
                   </div>
                   <div>
-                    <span className="">Read More</span>
+                    <i className="bi bi-arrow-right me-2 ms-2 fw-bold"> </i>
                   </div>
                 </button>
               </div>
