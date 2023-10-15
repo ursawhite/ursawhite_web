@@ -107,8 +107,7 @@
     "tech": [
       "Flutter",
       "Google Maps API",
-      "Directions API",
-      " Firebase cloud messaging (FCM)",
+      "Firebase cloud messaging (FCM)",
       "Firebase Database",
       "Google Analytics",
       "QR/Bar code scanning"
@@ -134,18 +133,10 @@
   {
     "id": 5,
     "title": "Naked Press",
-    "type": "UI, UX, Front-end development, Back-end development",
-    "subject": "P2P lending app, now live on Google Playstore.",
-    "desc": "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
-    "tech": [
-      "Flutter",
-      "Google Maps API",
-      "Directions API",
-      " Firebase cloud messaging (FCM)",
-      "Firebase Database",
-      "Google Analytics",
-      "QR/Bar code scanning"
-    ],
+    "type": "UI, UX, Front-end development, Back-end development, Shopify Plus",
+    "subject": "Experience the Natural Goodness of Naked Press",
+    "desc": "Naked Press is a cold-pressed juice company that has been proudly serving health-conscious customers since 2015. Driven by extensive medical research and customer success stories, Naked Press continuously expands its range of nutrient-rich beverages made from fresh vegetables and fruits. In addition to its commitment to quality, Naked Press is at the forefront of innovation, leveraging technology to enhance its customer interactions and streamline its sales processes. For nearly three years, Dewi Kusuma, the Founder and CEO of Naked Press, led the charge with the help of a team of freelance developers. However, in early 2019, Naked Press partnered with Studio Alva, aiming to elevate the development of their website and further improve their online presence.",
+    "tech": ["Flutter", "Node.js", "Firebase Database", "Google Analytics"],
     "client": "Naked Press",
     "location": "-",
     "year": "2021-now",
@@ -168,8 +159,8 @@
     "id": 6,
     "title": "BNI Direct",
     "type": "Front-end development",
-    "subject": "P2P lending app, now live on Google Playstore.",
-    "desc": "Discover how we’ve helped David & Seb build Asia’s leading coffee chain – by designing the experience of tech-enabled innovations.",
+    "subject": "Empowering Your Financial Freedom with BNI Direct",
+    "desc": "BNI Direct is the online banking platform offered by Bank Negara Indonesia (BNI), one of the leading banks in Indonesia. With BNI Direct, you can access a wide range of financial services at your fingertips. Key features of BNI Direct include secure online transactions, balance inquiries, fund transfers, bill payments, and access to various banking products. Whether you're an individual or a business, BNI Direct offers convenient and efficient solutions to manage your finances. BNI, with a history dating back to 1946, has a strong reputation for financial stability and innovation. BNI Direct reflects the bank's commitment to providing customers with the latest in banking technology and exceptional customer service. Take control of your finances and experience the convenience of banking on your terms with BNI Direct.",
     "tech": [
       "Flutter",
       "Google Maps API",
@@ -180,7 +171,7 @@
       "QR/Bar code scanning"
     ],
     "client": "BNI",
-    "location": "-",
+    "location": "Indonesia",
     "year": "2022-now",
     "image": "/images/our-works/project6.png",
     "image_mobile": "/images/img-back/bni_mobile.png",
