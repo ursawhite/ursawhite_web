@@ -101,7 +101,7 @@ const Services = ({ params }) => {
           <div className="col-lg-8 col-md-12 d-flex flex-wrap justify-content-center ">
             {dataServices[0].tech_used.map((tech, index) => (
               <div
-                className="col-lg-2 col-md-2 col-sm-3 d-flex p-3"
+                className="col-lg-2 col-md-2 col-sm-3 col-4 d-flex p-3"
                 key={index}
               >
                 <div className={`${styles.box__tech}`}>
@@ -149,7 +149,7 @@ const Services = ({ params }) => {
       </div>
 
       <div
-        className="container d-flex justify-content-center align-items-center"
+        className="d-flex justify-content-center align-items-center"
         style={{ height: "100vh", width: "auto", marginTop: "25vh" }}
       >
         <Footer />

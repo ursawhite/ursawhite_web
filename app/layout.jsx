@@ -6,25 +6,22 @@ import "./global.css";
 
 export const metadata = {
   metadataBase: new URL("https://ursawhite-web.vercel.app/"),
-  title: "Ursawhite Ltt | Home",
-  description: "Home Page of Ursawhite Ltt",
+  title: {
+    template: "%s | Ursawhite",
+    default: "Ursawhite",
+  },
+  description: "Home Page of Ursawhite",
   openGraph: {
-    title: "Ursawhite Pte Ltd | Home",
-    description: "Home Page of Ursawhite Ltt",
+    title: "Ursawhite",
+    description: "Home Page of Ursawhite ",
     url: "https://ursawhite-web.vercel.app/",
-    siteName: "Ursawhite Ltt | Home",
+    siteName: "Ursawhite",
     images: [
       {
-        url: "https://res.cloudinary.com/dkp658sgi/image/upload/v1697044030/iq9huffxsyir0dsmi1x3.png",
-        alt: "Ursawhite Ltt",
+        url: "/opengraph-image.png",
+        alt: "Ursawhite",
         width: 800,
         height: 600,
-      },
-      {
-        url: "/logo.png",
-        alt: "Ursawhite Ltt",
-        width: 50,
-        height: 50,
       },
     ],
     locale: "en_US",
@@ -36,7 +33,6 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -44,10 +40,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ursawhite Ltt | Home",
-    images: "/opengraph-image.jpg",
+    title: "Ursawhite",
+    images: "/opengraph-image.png",
   },
-  icons: "/logo.png",
+  icons: "/opengraph-image.png",
 };
 
 export default function RootLayout({ children }) {

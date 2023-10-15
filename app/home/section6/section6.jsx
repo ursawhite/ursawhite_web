@@ -47,18 +47,18 @@ function Section6() {
               >
                 {item.description}
               </motion.p>
-              <button
-                className="button btn"
-                onClick={() =>
-                  Router.push(
-                    `/home/${item.title.replace(/\s+/g, "-").toLowerCase()}`
-                  )
-                }
-              >
-                <span>Learn More</span>
-                <div className="bi bi-chevron-double-right ms-lg-1 me-lg-2"></div>
-              </button>
             </div>
+            <button
+              className="button p-2 rounded ms-lg-5"
+              onClick={() =>
+                Router.push(
+                  `/home/${item.title.replace(/\s+/g, "-").toLowerCase()}`
+                )
+              }
+            >
+              <span>Learn More</span>
+              <div className="bi bi-chevron-double-right ms-2 me-2"></div>
+            </button>
           </div>
         ))}
       </div>

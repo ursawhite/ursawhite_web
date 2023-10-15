@@ -22,14 +22,14 @@ const Section3 = () => {
           className="col-lg-5 col-md-6"
         >
           <h1 className="text-white fw-bold ">URSAWHITE </h1>
-          <h5 className="text-white ">
+          <p className="text-white ">
             {`Specializes in crafting exceptional digital solutions
         tailored to your business needs. Our dedicated team prioritizes user
         experience, scalability, and effective user engagement strategies.
         Whether it's designing and developing cutting-edge web and mobile
         applications or devising innovative digital marketing campaigns, we've
         got you covered!`}
-          </h5>
+          </p>
         </motion.div>
         <div className="col-lg-4 col-md-5">
           <Image

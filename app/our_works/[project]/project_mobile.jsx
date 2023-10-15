@@ -9,7 +9,6 @@ function ProjectMobile({ title }) {
   const project = data.find(
     (item) => item.title.toLowerCase() === title.replace(/-/g, " ")
   );
-  console.log(project);
 
   return (
     <>
@@ -38,18 +37,16 @@ function ProjectMobile({ title }) {
           />
         </div>
       </div>
-      <div className="container">
+      <div className="container ">
         <div className="row" style={{ marginTop: "10%", marginBottom: "10%" }}>
           <div className="col">
-            <div className="display-1 text-white fw-bold">{project.title}</div>
-            <div className="display-3 text-white fw-bold">
-              {project.subject}
-            </div>
-            <div className="display-6 text-white">{project.desc}</div>
+            <h1 className="text-white fw-bold">{project.title}</h1>
+            <h4 className="text-white fw-bold">{project.subject}</h4>
+            <p className="text-white">{project.desc}</p>
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container mb-5">
         <div className="row">
           <div className="col-12">
             <div className="col-xs-6">

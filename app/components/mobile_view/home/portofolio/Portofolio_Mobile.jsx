@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function Portofolio_Mobile({ items }) {
+  const Router = useRouter();
   return (
     <div className="container">
       <div className="row ">
@@ -36,8 +37,11 @@ function Portofolio_Mobile({ items }) {
               </div>
             </div>
             <div className="col-lg-6 order-lg-1">
-              <h1 className="title fw-bold text-white">{item.name}</h1>
-              <h6 className="subtitle text-white">{item.subject}</h6>
+              <h1 className="fw-bold" style={{ color: `${item.main_color}` }}>
+                {item.title}
+              </h1>
+              <p className="text-secondary">{item.type}</p>
+              <h5 className="subtitle text-white">{item.subject}</h5>
               <p className="text-white ">{item.desc}</p>
               <ul className="list text-white">
                 {item.tech.map((techItem, index) => (
@@ -46,25 +50,30 @@ function Portofolio_Mobile({ items }) {
                   </li>
                 ))}
               </ul>
-              <div className="btn ">
-                <Link
-                  className="text-decoration-none fw-bold"
-                  href={{
-                    pathname: "/our_works/project",
-                    query: { items: JSON.stringify(item) },
-                  }}
-                >
-                  <span>Check Now</span>
-                </Link>
-              </div>
+
+              <button
+                className="bg-transparent shadow-0 border-0 fw-bold"
+                style={{ color: `${item.main_color}` }}
+                onClick={() =>
+                  Router.push(
+                    `/our_works/${item.title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`
+                  )
+                }
+              >
+                <span>Check Now</span>
+              </button>
             </div>
           </div>
         ))}
-        <div className="col-12 d-flex justify-content-center align-items-center">
-          <button className="btn btn-secondary mt-3 mb-3">
-            <Link className="text-decoration-none text-white" href="/our_works">
-              Show More
-            </Link>
+        <div className="col-12 mt-5 d-flex justify-content-center align-items-center">
+          <button
+            className="button mt-3 mb-3 p-2 rounded"
+            onClick={() => Router.push("/our_works")}
+          >
+            <span>Show More</span>
+            <div className="bi bi-chevron-double-right ms-1"></div>
           </button>
         </div>
       </div>

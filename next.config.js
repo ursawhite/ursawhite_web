@@ -1,14 +1,8 @@
-// module.exports = {
-//   webpack: (config, { isServer }) => {
-//     if (!isServer) {
-//       config.resolve.fallback = {
-//         fs: false,
-//       };
-//     }
-
-//     return config;
-//   },
-// };
 module.exports = {
   reactStrictMode: false,
+  env: {
+    EMAILJS_INIT: process.env.EMAILJS_INIT,
+    EMAILJS_SERVICE: process.env.EMAILJS_SERVICE,
+    EMAILJS_TEMPLATE: process.env.EMAILJS_TEMPLATE,
+  },
 };

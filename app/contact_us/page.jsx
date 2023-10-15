@@ -2,8 +2,8 @@ import React from "react";
 import ContactUs from "./contactus";
 
 export const metadata = {
-  title: "Ursawhite Pte Ltd | Contact Us",
-  description: "Contact Us Page of Ursawhite Pte Ltd",
+  title: "Contact Us",
+  description: "Contact Us Page of Ursawhite",
 };
 
 function Contact_Us() {

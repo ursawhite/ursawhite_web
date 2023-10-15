@@ -1,14 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import Marquee from "../../test_marquee/marquee_logo";
+import Marquee from "../../marquee/marquee_logo";
 import Footer from "../../../components/footer/footer";
 import Section5 from "../../../services/section5/section5";
 import data from "../../../../public/services.json";
+import { useRouter } from "next/navigation";
 
 function Services_Mobile() {
+  const Router = useRouter();
   return (
     <>
-      <div className="container">
+      <div
+        className="container d-flex justify-content-center"
+        style={{ width: "auto", height: "100vh" }}
+      >
         <div className="row d-flex align-items-center">
           <div className="col-12 ">
             <div className="display-3 text-title text-left text-white fw-bold mt-5 mb-5">
@@ -25,38 +30,44 @@ function Services_Mobile() {
         </div>
       </div>
       <div className="container">
-        <div className="">
-          <h1 className="fw-bold text-center mt-5" style={{ color: "#c457d5" }}>
-            Services
-          </h1>
-          {data.map((item, index) => (
-            <div
-              className={`row d-flex justify-content-center align-items-center ${
-                index % 2 !== 0 ? "flex-row-reverse" : ""
-              }`}
-              key={item.id}
-            >
-              <div className="col-lg-6 order-lg-1 order-2">
-                <div className="d-flex flex-column ">
-                  <h2 className="text-white fw-bold ms-3 mb-3">{item.title}</h2>
-                  <h5 className="text-white ms-3 ">{item.description}</h5>
-                </div>
-              </div>
-              <div className="col-lg-6 order-lg-2 ">
-                <div className="service d-flex justify-content-center">
-                  <Image
-                    className="img-fluid"
-                    src={item.image}
-                    width={400}
-                    height={400}
-                    style={{ objectFit: "contain" }}
-                    alt={item.title}
-                  />
-                </div>
+        <h1 className="text-title fw-bold text-center mt-5">Services</h1>
+        {data.map((item, index) => (
+          <div className="row " key={item.id}>
+            <div className="col-lg-6 ">
+              <div className="service d-flex justify-content-center">
+                <Image
+                  className="img-fluid"
+                  src={item.image}
+                  width={400}
+                  height={400}
+                  style={{ objectFit: "contain" }}
+                  alt={item.title}
+                />
               </div>
             </div>
-          ))}
-        </div>
+            <div className="col-lg-6">
+              <div className="d-flex flex-column ">
+                <h4 className="text-white text-start fw-bold ">{item.title}</h4>
+                <p className="text-white text-start ">{item.description}</p>
+              </div>
+              <button
+                className="button btn shadow-lg border-1 border-light"
+                onClick={() =>
+                  Router.push(
+                    `/services/${item.title.replace(/\s+/g, "-").toLowerCase()}`
+                  )
+                }
+              >
+                <div>
+                  <span className="">Read More</span>
+                </div>
+                <div>
+                  <i className="bi bi-arrow-right me-2 ms-2 fw-bold"> </i>
+                </div>
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
       <div className="container">
         <div className="technologies mt-5">
@@ -77,9 +88,8 @@ function Services_Mobile() {
         </div>
       </div>
       <Section5 />
-      <div className="container">
-        <Footer />
-      </div>
+
+      <Footer />
     </>
   );
 }

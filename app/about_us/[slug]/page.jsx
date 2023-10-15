@@ -58,20 +58,14 @@ const Page = ({ params }) => {
         </div>
       </div>
 
-      <div className="container">
-        <div className="row gx-2">
+      <div className="container ">
+        <div className="row d-flex justify-content-center">
           {Object.entries(dataNow[0].list[0]).map(([key, value], index) => (
             <div
-              className={`col-lg-4 d-flex col-md-6 mb-2 d-flex `}
+              className="col-lg-4 col-md-6 p-1 d-flex justify-content-center"
               key={index}
             >
-              <div
-                className="text-white p-5"
-                style={{
-                  background:
-                    "radial-gradient(at center, rgba(155, 89, 182, 0.3), rgba(53, 57, 59, 0.3))",
-                }}
-              >
+              <div className="box text-white p-5">
                 <h5 className="fw-bold">{key}</h5>
                 <p>{value}</p>
               </div>
@@ -79,10 +73,9 @@ const Page = ({ params }) => {
           ))}
         </div>
       </div>
-
       <div
-        className="d-flex align-items-center"
-        style={{ width: "100%", height: "100vh" }}
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "100vh", width: "auto", marginTop: "50vh" }}
       >
         <Footer />
       </div>

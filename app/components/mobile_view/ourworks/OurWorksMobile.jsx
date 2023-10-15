@@ -8,7 +8,10 @@ function OurWorks(props) {
   const data = props.items;
   return (
     <>
-      <div className="container">
+      <div
+        className="container d-flex justify-content-center"
+        style={{ width: "auto", height: "100vh" }}
+      >
         <div className="row d-flex align-items-center">
           <div className="col-12 ">
             <h1 className="text-title text-left display-1 text-white fw-bold mt-5 mb-5">
@@ -23,7 +26,7 @@ function OurWorks(props) {
           </div>
         </div>
       </div>
-      <div className="container ">
+      <div className="container mb-5">
         {data.map((ourWork) => (
           <div className="row " key={ourWork.id}>
             <button

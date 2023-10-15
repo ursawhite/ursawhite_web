@@ -22,17 +22,20 @@ const Form = () => {
     { name: "DevOps and Maintenance", icon: "bi bi-bar-chart-steps" },
   ];
 
-  var handleInterest = (e, item) => {
-    console.log(interest);
-    setInterest(item.name);
+  const [isChecked, setIsChecked] = useState(false);
+  const [checked, setChecked] = useState("");
+
+  const checkHandler = (item) => {
+    setIsChecked(!isChecked);
+    setChecked(item.name);
   };
 
-  useEffect(() => emailjs.init("ATQpSfjaBU46S2Jfu"), []);
+  useEffect(() => emailjs.init(process.env.EMAILJS_INIT), []);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const serviceId = "service_cbk1pa7";
-    const templateId = "template_ats0ink";
+    const serviceId = process.env.EMAILJS_SERVICE;
+    const templateId = process.env.EMAILJS_TEMPLATE;
     try {
       const errorMessages = [];
 
@@ -64,7 +67,7 @@ const Form = () => {
         errorMessages.push("Message must be 5-300 characters.");
       }
 
-      if (interest === "") {
+      if (checked === "") {
         errorMessages.push("Please select an interest.");
       }
 
@@ -84,7 +87,7 @@ const Form = () => {
         email: emailRef.current.value,
         purpose: purposeRef.current.value,
         message: messageRef.current.value,
-        interest: interest,
+        checked: checked,
       });
       setMsg([{ status: "success", message: "Message sent successfully" }]);
     } catch (error) {
@@ -101,12 +104,12 @@ const Form = () => {
             <div className="display-4 fw-bold text-white ">
               Tell Us About Your Dream Product
             </div>
-            <h5 className="text-secondary mt-2">
+            <h6 className="text-secondary mt-2">
               Discover a world of possibilities with our exceptional service
-            </h5>
+            </h6>
 
-            <h5 className="text-secondary mt-2">{`Feel free to get in touch with us today! `}</h5>
-            <h5 className="text-secondary mt-2">{`You can reach out via email at surya@ursawhite.com or send us a message at +628123123123.`}</h5>
+            <h6 className="text-secondary mt-2">{`Feel free to get in touch with us today! `}</h6>
+            <p className="text-secondary mt-2">{`You can reach out via email at surya@ursawhite.com or send a message at +628123123123.`}</p>
           </div>
           <div className="col-lg-6">
             <div className="row">
@@ -115,11 +118,11 @@ const Form = () => {
                   <input
                     type="text"
                     className="form-control "
-                    id="floatingInputName"
+                    id="InputName"
                     placeholder=""
                     ref={nameRef}
                   />
-                  <label htmlFor="floatingInputName" className="fw-bold">
+                  <label htmlFor="InputName" className="fw-bold">
                     Name*
                   </label>
                 </div>
@@ -131,11 +134,11 @@ const Form = () => {
                   <input
                     type="email"
                     className="form-control"
-                    id="floatingInputEmail"
+                    id="InputEmail"
                     placeholder=""
                     ref={emailRef}
                   />
-                  <label htmlFor="floatingInputEmail" className="fw-bold">
+                  <label htmlFor="InputEmail" className="fw-bold">
                     Email*
                   </label>
                 </div>
@@ -147,11 +150,11 @@ const Form = () => {
                   <input
                     type="text"
                     className="form-control"
-                    id="floatingInputPurpose"
+                    id="InputPurpose"
                     placeholder=""
                     ref={purposeRef}
                   />
-                  <label htmlFor="floatingInputPurpose" className="fw-bold">
+                  <label htmlFor="InputPurpose" className="fw-bold">
                     Purpose*
                   </label>
                 </div>
@@ -159,22 +162,27 @@ const Form = () => {
             </div>
             <div className="row g-2">
               {list.map((item, index) => (
-                <button
+                <div
                   className="col-lg-6 col-md-6 col-sm-12 border-0 bg-transparent "
                   key={index}
                 >
-                  <div
-                    className={`p-2 rounded bg-light ${
-                      interest === item.name ? "text-success" : ""
-                    }`}
-                    onClick={(e) => handleInterest(e, item)}
-                  >
-                    <div className={`display-5 p-3 `}>
-                      <div className={`${item.icon}`}></div>
-                    </div>
-                    <p className="text-center mt-3">{item.name}</p>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id={item.name}
+                      checked={item.name === checked}
+                      onChange={() => checkHandler(item)}
+                    />
+                    <label
+                      className="form-check-label text-white"
+                      htmlFor={item.name}
+                    >
+                      {item.name}
+                    </label>
                   </div>
-                </button>
+                </div>
               ))}
             </div>
             <div className="row">
@@ -183,11 +191,11 @@ const Form = () => {
                   <textarea
                     type="text"
                     className="form-control"
-                    id="floatingInputMessage"
+                    id="InputMessage"
                     placeholder=""
                     ref={messageRef}
                   />
-                  <label htmlFor="floatingInputMessage" className="fw-bold">
+                  <label htmlFor="InputMessage" className="fw-bold">
                     Messages*
                   </label>
                 </div>
@@ -204,12 +212,15 @@ const Form = () => {
             </div>
             <div className="row">
               <div className="col">
-                <div
-                  className="btn btn-success ps-5 pe-5 rounded "
+                <button
+                  className="button p-2 rounded text-white rounded"
                   onClick={handleSubmit}
                 >
-                  {isLoading ? "Loading..." : "Submit"}
-                </div>
+                  <span className="me-2 ms-2">
+                    {isLoading ? "Loading..." : "Submit"}
+                  </span>
+                  <i className="bi bi-envelope ms-2 me-2"></i>
+                </button>
               </div>
             </div>
           </div>

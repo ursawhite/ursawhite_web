@@ -51,7 +51,6 @@ function Ourclients() {
       logo: "/images/clients/logo-14.png",
     },
   ];
-  const phrases = [""];
   return (
     <div className="container">
       <div className="row d-flex flex-column justify-content-center align-items-center">

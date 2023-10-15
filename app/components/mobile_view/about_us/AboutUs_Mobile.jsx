@@ -3,11 +3,15 @@ import Image from "next/image";
 import Footer from "../../../components/footer/footer";
 import Approach from "../../../about_us/approach/approach";
 import Crew from "../../../about_us/crew/crew";
+import Partner from "../../../about_us/partnership/pathnership";
 
 function AboutUs_Mobile() {
   return (
     <>
-      <div className="container">
+      <div
+        className="container d-flex justify-content-center"
+        style={{ width: "auto", height: "100vh" }}
+      >
         <div className="row d-flex align-items-center">
           <div className="col-12 ">
             <h1 className="text-title text-left display-1 text-white fw-bold mt-5 mb-5">
@@ -23,24 +27,26 @@ function AboutUs_Mobile() {
         got you covered!`}
               </p>
             </div>
-            <div className="col-lg-4 col-md-5 col-sm-7 col-8">
-              <Image
-                className="img-fluid object-fit-contain"
-                src="/images/img2.png"
-                width={500}
-                height={500}
-                placeholder="blur"
-                blurDataURL="/images/img2.png"
-                alt="Image by pikisuperstar on Freepik"
-                sizes="100vw"
-                loading="lazy"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
-              />
-            </div>
           </div>
+        </div>
+      </div>
+      <div className="row d-flex justify-content-center">
+        <div className="col-lg-4 col-md-5 col-sm-7 col-8">
+          <Image
+            className="img-fluid object-fit-contain"
+            src="/images/img2.png"
+            width={500}
+            height={500}
+            placeholder="blur"
+            blurDataURL="/images/img2.png"
+            alt="Image by pikisuperstar on Freepik"
+            sizes="100vw"
+            loading="lazy"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
         </div>
       </div>
       <Approach />
@@ -103,10 +109,9 @@ function AboutUs_Mobile() {
         </div>
       </div>
       <Crew />
+      <Partner />
 
-      <div className="continer">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

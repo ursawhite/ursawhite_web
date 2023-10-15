@@ -60,13 +60,11 @@ function Navbar() {
           <div className="offcanvas-header border-bottom text-white ">
             <div className="offcanvas-title " id="offcanvasNavbarLabel">
               <Image
-                className="logo-logo m-1"
                 src="/logo.png"
-                width={200}
-                height={40}
-                alt="logo2"
-                style={{ objectFit: "contain", objectPosition: "left top" }}
+                width={width < 1024 ? "150" : "200"}
+                height={width < 1024 ? "25" : "35"}
                 priority
+                alt="logo"
               />
             </div>
             <button

@@ -5,15 +5,12 @@ import data from "../../../public/approach.json";
 
 const Approach = () => {
   return (
-    <div className="container">
+    <div className="container mb-5">
       <div className="row d-flex justify-content-center">
         <div className="col-lg-8 d-flex">
           <div className="row">
-            <p
-              className="text-center fw-bold"
-              style={{ color: "rgba(169, 80, 210, 255)" }}
-            >
-              Navigating Success Together.
+            <p className="text-title text-center fw-bold">
+              Navigating Success Together
             </p>
             <h2 className="text-white text-center fw-bold ">Our Approach</h2>
             {data.map((item, index) => (

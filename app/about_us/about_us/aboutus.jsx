@@ -5,6 +5,7 @@ import Bg from "../../components/screen/bg";
 import Test_SVG from "../../components/svg/svg";
 import Banner from "../banner/banner";
 import Approach from "../approach/approach";
+import Partnership from "../partnership/pathnership";
 import ImgSectionBack from "../img_section/back/img_section_back";
 import ImgSectionFront from "../img_section/front/img_section_front";
 import ImgSectionCenter from "../img_section/center/center_image";
@@ -76,6 +77,14 @@ function AboutUs() {
         className="d-flex justify-content-center align-items-center"
       >
         <Crew />
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={6}
+        speed={0}
+        className="d-flex justify-content-center align-items-center"
+      >
+        <Partnership />
       </ParallaxLayer>
 
       <ParallaxLayer offset={7} speed={0} className="d-flex align-items-center">

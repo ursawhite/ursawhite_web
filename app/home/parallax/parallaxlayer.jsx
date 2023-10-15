@@ -231,7 +231,7 @@ export default function MultiLayerParallax(props) {
           }}
         >
           <div
-            className={`social_bar position-absolute top-50 start-0 translate-middle-y p-4 ${styles.social_bar}`}
+            className={`social_bar position-absolute top-50 start-0 translate-middle-y p-lg-4 ${styles.social_bar}`}
           >
             <div className="row m-1">
               <div className="col-12 ">
@@ -249,7 +249,7 @@ export default function MultiLayerParallax(props) {
             <div className="row m-1">
               <div className="col-12">
                 <a
-                  href="https://wa.me/1XXXXXXXXXX"
+                  href="https://wa.me/6287888927490"
                   className={`text-decoration-none ${styles.icon_container}`}
                 >
                   <div
@@ -275,7 +275,7 @@ export default function MultiLayerParallax(props) {
             <div className="row m-1">
               <div className="col-12">
                 <a
-                  href="https://maps.app.goo.gl/s5k7J32LGbZCBvF26"
+                  href="https://maps.app.goo.gl/FAoP7ErqB2tMr2kz7"
                   className={`text-decoration-none ${styles.icon_container}`}
                 >
                   <div

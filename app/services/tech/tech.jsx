@@ -1,5 +1,5 @@
 import React from "react";
-import Marquee_Logo from "../../components/test_marquee/marquee_logo";
+import Marquee_Logo from "../../components/marquee/marquee_logo";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { animationVariants } from "../../components/animation/animation";
@@ -18,7 +18,7 @@ const Tech = () => {
             >
               Technologies Used
             </p>
-            <motion.h1
+            <motion.h2
               ref={ref}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
@@ -27,7 +27,7 @@ const Tech = () => {
               className="text-white text-center fw-bold"
             >
               Technologies We Work With
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               ref={ref}
