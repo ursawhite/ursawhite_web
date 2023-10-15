@@ -216,7 +216,7 @@ export default function MultiLayerParallax(props) {
           </div>
         </ParallaxLayer>
 
-        {/* <ParallaxLayer
+        <ParallaxLayer
           offset={0}
           speed={0}
           factor={1}
@@ -230,8 +230,63 @@ export default function MultiLayerParallax(props) {
             width: "10%",
           }}
         >
-          <i class="text-white bi bi-envelope-at"></i>
-        </ParallaxLayer> */}
+          <div
+            className={`social_bar position-absolute top-50 start-0 translate-middle-y p-4 ${styles.social_bar}`}
+          >
+            <div className="row m-1">
+              <div className="col-12 ">
+                <a
+                  className={`text-decoration-none ${styles.icon_container}`}
+                  href="mailto:surya@ursawhite.com"
+                >
+                  <div
+                    className={`h5 bi bi-envelope-at rounded p-2 ${styles.icon_social}`}
+                  ></div>
+                  <div className={`ms-2 ${styles.text_social}`}>Email</div>
+                </a>
+              </div>
+            </div>
+            <div className="row m-1">
+              <div className="col-12">
+                <a
+                  href="https://wa.me/1XXXXXXXXXX"
+                  className={`text-decoration-none ${styles.icon_container}`}
+                >
+                  <div
+                    className={`h5 bi bi-phone-vibrate rounded p-2 ${styles.icon_social}`}
+                  ></div>
+                  <div className={`ms-2 ${styles.text_social}`}>Phone</div>
+                </a>
+              </div>
+            </div>
+            <div className="row m-1 ">
+              <div className="col-12 ">
+                <a
+                  href="https://www.linkedin.com/company/ursawhite/"
+                  className={`text-decoration-none ${styles.icon_container}`}
+                >
+                  <div
+                    className={`h5 bi bi-linkedin rounded p-2 ${styles.icon_social}`}
+                  ></div>
+                  <div className={`ms-2 ${styles.text_social}`}> Linkedin </div>
+                </a>
+              </div>
+            </div>
+            <div className="row m-1">
+              <div className="col-12">
+                <a
+                  href="https://maps.app.goo.gl/s5k7J32LGbZCBvF26"
+                  className={`text-decoration-none ${styles.icon_container}`}
+                >
+                  <div
+                    className={`h5 bi bi-geo-alt rounded p-2 ${styles.icon_social}`}
+                  ></div>
+                  <span className={`ms-2 ${styles.text_social}`}>Location</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </ParallaxLayer>
 
         <ParallaxLayer
           offset={0}

@@ -40,7 +40,7 @@ function Footer() {
             backgroundPosition: "right bottom",
           }}
         >
-          <h1 className="text-white fw-bolder">
+          <h1 className="text-title fw-bolder">
             Unlock Your Potential with Our Innovative Solutions
           </h1>
           <p className="text-white mt-2 ">{` We blend tech and creativity to bring your ideas to life. Whether you're a startup aiming to disrupt the market or an established enterprise seeking efficiency and growth, our software solutions are your key to success. Let's make it happen!`}</p>

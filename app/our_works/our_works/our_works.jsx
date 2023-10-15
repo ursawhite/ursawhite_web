@@ -19,7 +19,7 @@ function Our_Works(props) {
   return (
     <>
       <Parallax
-        pages={5}
+        pages={4}
         offset={0}
         style={{ backgroundColor: "rgba(27,27,29,255)" }}
       >
@@ -41,7 +41,7 @@ function Our_Works(props) {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={4}
+          offset={3}
           speed={0}
           className="d-flex align-items-center"
         >

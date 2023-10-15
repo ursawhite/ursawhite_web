@@ -57,3 +57,34 @@
   display: flex;
   color: white;
 }
+
+.social_bar {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+    color: gray;
+  }
+  .icon_container {
+    display: flex;
+    align-items: center;
+    .icon_social {
+      color: gray;
+
+      &:hover {
+        color: var(--second-color);
+      }
+    }
+
+    .icon_social:hover + .text_social {
+      opacity: 1;
+      color: var(--second-color);
+    }
+
+    .text_social {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+}
