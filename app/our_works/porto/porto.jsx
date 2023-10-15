@@ -15,7 +15,7 @@ const trans = (x, y, s) =>
 const Porto = (props) => {
   const Router = useRouter();
   const data = props.items;
-  const [asd, set] = useSpring(() => ({
+  const [asd, api] = useSpring(() => ({
     xys: [0, 0, 1],
     config: config.default,
   }));
@@ -41,9 +41,9 @@ const Porto = (props) => {
                 <div className="col-lg-6 col-md-6 col-sm-6 ">
                   <animated.div
                     onMouseMove={({ clientX: x, clientY: y }) =>
-                      set({ xys: calc(x, y) })
+                      api.start({ xys: calc(x, y) })
                     }
-                    onMouseLeave={() => set({ xys: [0, 0, 1] })}
+                    onMouseLeave={() => api.start({ xys: [0, 0, 1] })}
                     style={{
                       transform: asd.xys.to(trans),
                     }}
