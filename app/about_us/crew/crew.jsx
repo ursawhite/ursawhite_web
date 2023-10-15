@@ -14,7 +14,7 @@ const Crew = () => {
       id: 2,
       name: "Indra Santosa",
       position: "CTO",
-      profile_pic: "/images/ava/Indra_santosa.jpg",
+      profile_pic: "/images/ava/Indra_Santosa.jpg",
     },
     {
       id: 3,
