@@ -6,7 +6,6 @@ import Bg from "../../components/screen/bg";
 import Banner from "../banner/banner";
 import BannerV2 from "../banner/bannerv2";
 import Serv from "../serv/serv";
-import Serv2 from "../serv/serv2";
 
 import Tech from "../tech/tech";
 import Section5 from "../section5/section5";
@@ -56,8 +55,7 @@ function Services() {
             alignItems: "center",
           }}
         >
-          {/* <Serv /> */}
-          <Serv2 />
+          <Serv />
         </ParallaxLayer>
 
         <ParallaxLayer

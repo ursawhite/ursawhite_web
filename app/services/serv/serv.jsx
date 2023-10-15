@@ -1,85 +1,98 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+
 import Image from "next/image";
-import { ffBottom } from "../../components/animation/animation";
+import { useRouter } from "next/navigation";
+import data from "../../../public/services.json";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { animationVariants } from "../../components/animation/animation";
 
 const Service = () => {
-  const services = [
-    {
-      id: 1,
-      title: "Front-end Development",
-      description: ` We provide front-end development services to help you build
-          your website. We also provide front-end development services
-          to help you build your web application.`,
-      img: "/images/frontend.png",
-    },
-    {
-      id: 2,
-      title: "Back-end Development",
-      description: ` We provide back-end development services to help you build
-          your website. We also provide back-end development services
-          to help you build your web application.`,
-      img: "/images/backend.png",
-    },
-    {
-      id: 3,
-      title: "CMS Implementation",
-      description: ` We provide CMS implementation services to help you build
-          your website. We also provide CMS implementation services
-          to help you build your web application.`,
-      img: "/images/cms.png",
-    },
-    {
-      id: 4,
-      title: "DevOps & Maintenance",
-      description: ` We provide DevOps & Maintenance services to help you build
-          your website. We also provide DevOps & Maintenance services
-          to help you build your web application.`,
-      img: "/images/devops.png",
-    },
-  ];
+  const Router = useRouter();
+
+  const [activeItem, setActiveItem] = useState(data[0].id);
+
+  const handleItemClick = (itemId) => {
+    setActiveItem(itemId);
+  };
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
   return (
-    <div className="container">
-      {services.map((item, index) => (
+    <>
+      <div className={`container `}>
         <div
-          className={`row d-flex justify-content-center mb-2 align-items-center ${
-            index % 2 !== 0 ? "flex-row-reverse" : ""
-          }`}
-          key={item.id}
+          className={`row g-5 d-flex justify-content-center align-items-center `}
         >
-          <motion.div
-            className="col-lg-6 col-md-6 order-lg-1 order-2 d-flex flex-column"
-            variants={ffBottom}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            <h2 className="text-white fw-bold ms-3 mb-3">{item.title}</h2>
-            <h5 className="text-white ms-3 ">{item.description}</h5>
-          </motion.div>
-          <motion.div
-            className="col-lg-6 col-md-6  order-lg-2 "
-            variants={ffBottom}
-            initial="initial"
-            whileInView="animate"
-            animate="once"
-            viewport={{ once: true }}
-          >
-            <div className="service d-flex justify-content-center">
-              <Image
-                className="img-fluid ms-5 object-fit-contain"
-                src={item.img}
-                width={400}
-                height={400}
-                sizes="(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
-                alt="services"
-                priority
-              />
+          {data.map((item) => (
+            <div className="col-lg-2 col-md-3 p-1 " key={item.id}>
+              <div
+                className={`box rounded d-flex flex-column justify-content-center align-items-center p-1 ${
+                  activeItem === item.id
+                    ? "box_services_active"
+                    : "box_services_passive"
+                }`}
+                onClick={() => handleItemClick(item.id)}
+              >
+                <i
+                  className={`h1 text-danger d-flex flex-column justify-content-center align-items-center p-2 ${item.icon}`}
+                ></i>
+                <p className="fw-bold text-white text-center">{item.title}</p>
+              </div>
             </div>
-          </motion.div>
+          ))}
         </div>
-      ))}
-    </div>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={animationVariants}
+          transition={{ duration: 0.5 }}
+          className={`row g-5 d-flex justify-content-center `}
+        >
+          {activeItem !== null && (
+            <div className={`col-lg-8 d-flex `}>
+              <div className="p-3 rounded">
+                <h3 className="fw-bold text-white">
+                  {data[activeItem - 1].title}
+                </h3>
+                <p className="text-white">{data[activeItem - 1].description}</p>
+                <button
+                  className="button btn shadow-lg border-1 border-light"
+                  onClick={() =>
+                    Router.push(
+                      `/services/${data[activeItem - 1].title
+                        .replace(/\s+/g, "-")
+                        .toLowerCase()}`
+                    )
+                  }
+                >
+                  <div>
+                    <i className="bi bi-arrow-right me-2 ms-2 fw-bold"> </i>
+                  </div>
+                  <div>
+                    <span className="">Read More</span>
+                  </div>
+                </button>
+              </div>
+
+              <div className="col-lg-4 col-md-4 d-flex justify-content-center align-items-center">
+                <Image
+                  className="img-fluid object-fit-contain"
+                  src={data[activeItem - 1].image}
+                  width={300}
+                  height={300}
+                  sizes="(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                  alt="services"
+                  priority
+                />
+              </div>
+            </div>
+          )}
+        </motion.div>
+      </div>
+    </>
   );
 };
 

@@ -10,7 +10,7 @@ import ImgSectionFront from "../img_section/front/img_section_front";
 import ImgSectionCenter from "../img_section/center/center_image";
 import ImgSectionBottom from "../img_section/bottom/bottom";
 
-import Section3 from "../section3/section3";
+import Section3 from "../sub/sub";
 import Crew from "../crew/crew";
 import Footer from "../../components/footer/footer";
 

@@ -58,7 +58,7 @@ const Page = ({ params }) => {
         </div>
       </div>
 
-      <div className="container ">
+      <div className="container">
         <div className="row gx-2">
           {Object.entries(dataNow[0].list[0]).map(([key, value], index) => (
             <div
@@ -80,7 +80,10 @@ const Page = ({ params }) => {
         </div>
       </div>
 
-      <div className="d-flex align-items-end">
+      <div
+        className="d-flex align-items-center"
+        style={{ width: "100%", height: "100vh" }}
+      >
         <Footer />
       </div>
     </>

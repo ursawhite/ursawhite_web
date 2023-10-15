@@ -1,9 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { fadeInAnimationVariants } from "../../components/animation/animation";
-
+import { animationVariants } from "../../components/animation/animation";
 function Ourclients() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   const company = [
     {
       name: "Company 1",
@@ -46,17 +51,32 @@ function Ourclients() {
       logo: "/images/clients/logo-14.png",
     },
   ];
+  const phrases = [""];
   return (
     <div className="container">
       <div className="row d-flex flex-column justify-content-center align-items-center">
         <div className="col-lg-8 col-md-12">
           <h4 className="text-title text-center fw-bold">Our Clients</h4>
-          <h1 className="title text-white text-center mb-3 fw-bold mb-4">
+          <motion.h1
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={animationVariants}
+            transition={{ duration: 0.5 }}
+            className="title text-white text-center mb-3 fw-bold mb-4"
+          >
             Discover the success stories <br />
             of our satisfied clients who have already harnessed the power of our
             services.
-          </h1>
-          <p className="text-white ms-3">
+          </motion.h1>
+          <motion.p
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={animationVariants}
+            transition={{ duration: 0.5 }}
+            className="text-white ms-3"
+          >
             Our commitment to excellence and dedication to delivering top-notch
             services have allowed us to build strong and enduring relationships
             with a diverse range of clients. <br />
@@ -64,7 +84,7 @@ function Ourclients() {
             trust these organizations have placed in us, and we'd like to
             introduce you to some of our valued clients who have already
             experienced the benefits of our services.`}
-          </p>
+          </motion.p>
           <div className=" d-flex flex-wrap justify-content-center align-items-center ">
             {company.map((item, index) => (
               <div

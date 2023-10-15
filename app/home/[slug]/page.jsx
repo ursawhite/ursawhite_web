@@ -104,7 +104,9 @@ const Sprint = ({ params }) => {
           ))}
         </div>
       </div>
-      <div className={` d-flex align-items-center ${styles.banner_sprint}`}>
+      <div
+        className={` d-flex align-items-center justify-content-center ${styles.banner_sprint}`}
+      >
         <div className="row d-flex justify-content-center align-items-center">
           <div className={`col-lg-8 col-md-10 col-sm-10 col-12 p-5 `}>
             <h5 className=" fw-bold text-white text-center">
