@@ -24,7 +24,7 @@ const Partner = () => {
           <div className="col-lg-2 col-md-4 col-sm-4 col-6 d-flex flex-column align-items-center">
             <Image
               src="/images/partners/hingoray.webp"
-              className="logo img-fluid p-1"
+              className="img-fluid p-1"
               alt="hingoray"
               width={150}
               height={150}
@@ -37,7 +37,7 @@ const Partner = () => {
           <div className="col-lg-2 col-md-4 col-sm-4 col-6 d-flex flex-column align-items-center">
             <Image
               src="/images/partners/studia_alva.png"
-              className="logo img-fluid p-1"
+              className="img-fluid p-1"
               alt="studia_alva"
               width={150}
               height={150}
