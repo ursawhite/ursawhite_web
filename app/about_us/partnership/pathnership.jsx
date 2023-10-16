@@ -9,10 +9,10 @@ const Partner = () => {
           <p className="text-title fw-bold text-center">
             Introducing Our Trusted Partners
           </p>
-          <h2 className="text-center text-white fw-bold capi">
+          <h2 className="text-lg-center text-md-center text-white fw-bold capi">
             We Are Proud To Work With
           </h2>
-          <p className="text-center text-white">
+          <p className="text-lg-center text-md-center text-white">
             {` We believe in the power of collaboration to deliver outstanding
             digital solutions. We've established strong partnerships with
             companies that share our commitment to excellence and innovation.

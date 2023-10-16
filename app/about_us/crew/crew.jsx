@@ -9,24 +9,28 @@ const Crew = () => {
       name: "Surya Permana",
       position: "CEO",
       profile_pic: "/images/ava/SuryaPermana.jpg",
+      linkedin_Link: "https://www.linkedin.com/in/surya-permana-55028857/",
     },
     {
       id: 2,
       name: "Indra Santosa",
       position: "CTO",
       profile_pic: "/images/ava/Indra_Santosa.jpg",
+      linkedin_Link: "https://www.linkedin.com/in/indrasantosa/",
     },
     {
       id: 3,
       name: "Adli Ihsan H",
       position: "Senior Backend",
       profile_pic: "/images/ava/Adli_IhsanH.jpg",
+      linkedin_Link: "https://www.linkedin.com/in/adliih/",
     },
     {
       id: 4,
       name: "Naufal Luthfi S",
       position: "Fullstack Developer",
       profile_pic: "/images/ava/N_Luthfi.jpg",
+      linkedin_Link: "https://www.linkedin.com/in/naufal-luthfi-saputra/",
     },
   ];
 
@@ -58,7 +62,14 @@ const Crew = () => {
                 style={{ objectFit: "cover", resizeMode: "cover" }}
                 priority
               />
-              <h5 className="text-white mt-4 mb-0">{item.name}</h5>
+              <a
+                className="text-white text-decoration-none"
+                href={item.linkedin_Link}
+              >
+                {/* <i className="bi bi-linkedin"></i> */}
+                <h5 className="text-white mt-4 mb-0">{item.name}</h5>
+              </a>
+
               <h6 className="text-secondary mt-2">{item.position}</h6>
             </div>
           ))}
