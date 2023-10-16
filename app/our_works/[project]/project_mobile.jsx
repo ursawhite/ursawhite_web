@@ -100,25 +100,30 @@ function ProjectMobile({ title }) {
           </div>
         </div>
       </div> */}
-      {/* <div className="container">
+      <div className="container">
         <div className="row">
           {project.img_details.map((item, index) => (
-            <div className="col-lg-6 mt-5 mb-5" key={index + 1}>
+            <div
+              className="col-lg-6 col-md-6 col-sm-6 col-6 mt-5 mb-5 d-flex justify-content-center"
+              key={index + 1}
+            >
               <Image
+                className="img-fluid"
                 src={item}
                 alt={project.title}
                 width={500}
                 height={500}
                 style={{
-                  objectFit: "contain",
+                  objectFit: "cover",
                   width: "100%",
                   height: "auto",
                 }}
+                priority
               />
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
       <Footer />
     </>
   );

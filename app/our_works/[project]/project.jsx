@@ -4,25 +4,32 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Footer from "../../components/footer/footer";
 import data from "../../../public/data.json";
+import { redirect } from "next/navigation";
 
 function Project({ title }) {
   const ref = useRef(null);
-  const router = useRouter();
-  const project = data.find(
+  const Router = useRouter();
+  const project = data?.find(
     (item) => item.title.toLowerCase() === title.replace(/-/g, " ")
   );
+
+  if (!project) {
+    redirect("/our_works");
+  }
 
   return (
     <Parallax
       ref={ref}
-      pages={3}
+      pages={5}
       style={{ backgroundColor: "rgba(27,27,29,255)" }}
     >
       <ParallaxLayer
         offset={0}
         speed={0.3}
         style={{
-          backgroundColor: ` ${project.main_color}`,
+          backgroundColor: ` ${
+            project.main_color ? project.main_color : "#1B1B1D"
+          }`,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -165,34 +172,38 @@ function Project({ title }) {
           </div>
         </div>
       </ParallaxLayer> */}
-      {/* <ParallaxLayer
-        offset={3}
+      <ParallaxLayer
+        offset={2.5}
         speed={0}
         style={{
           display: "flex",
-          // alignItems: "center",
-          // justifyContent: "center",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <div className="container">
+        <div className="container d-flex justify-content-center">
           <div className="row d-flex justify-content-center">
             {project.img_details.map((item, index) => (
-              <div className="col-lg-4 col-md-4 mb-4" key={index}>
+              <div
+                className="col-lg-4 col-md-6 col-sm-6 col-6 mb-4 d-flex justify-content-center"
+                key={index}
+              >
                 <Image
-                  className="img-fluid object-fit-contain"
+                  className="img-fluid "
                   src={item}
                   alt="details project"
                   width={500}
                   height={500}
-                  style={{ width: "auto", height: "100%" }}
+                  style={{ width: "auto", height: "100%", objectFit: "cover" }}
+                  priority
                 />
               </div>
             ))}
           </div>
         </div>
-      </ParallaxLayer> */}
+      </ParallaxLayer>
       <ParallaxLayer
-        offset={2}
+        offset={4}
         speed={0}
         style={{
           display: "flex",
