@@ -72,10 +72,22 @@ export default function MultiLayerParallax(props) {
       setReferenceNode(targetSection);
     };
 
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowDown" && activeSection < (maksPage - 1) / 2) {
+        setActiveSection((prevSection) => prevSection + 1);
+        scrollToSection(activeSection + 1);
+      } else if (event.key === "ArrowUp" && activeSection > 0) {
+        setActiveSection((prevSection) => prevSection - 1);
+        scrollToSection(activeSection - 1);
+      }
+    };
+
     document.addEventListener("wheel", scroll, option);
+    document.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.removeEventListener("wheel", scroll, option);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [activeSection, setReferenceNode]);
 
