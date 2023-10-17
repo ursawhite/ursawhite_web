@@ -34,7 +34,6 @@ const Sprint = ({ title }) => {
   if (phrases[phrases.length - 1].split(" ").length === 1) {
     result.push(phrases[phrases.length - 1]);
   }
-  console.log(result);
 
   return (
     <>
@@ -74,7 +73,7 @@ const Sprint = ({ title }) => {
               placeholder="blur"
               blurDataURL={sprint.image}
               alt={sprint.alt}
-              sizes="100vw"
+              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
               loading="lazy"
               style={{
                 width: "100%",

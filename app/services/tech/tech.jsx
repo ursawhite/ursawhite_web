@@ -12,12 +12,7 @@ const Tech = () => {
       <div className="row d-flex justify-content-center align-items-center">
         <div className="col-lg-8 col-md-12">
           <div className="technologies mt-5">
-            <p
-              className="text-center fw-bold"
-              style={{ color: "rgba(169,80,210,255)" }}
-            >
-              Technologies Used
-            </p>
+            <p className="text-title text-center fw-bold">Technologies Used</p>
             <motion.h2
               ref={ref}
               initial="hidden"

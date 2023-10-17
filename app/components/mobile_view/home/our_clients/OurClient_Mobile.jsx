@@ -50,14 +50,11 @@ function OurClient() {
     <div className="container">
       <div className="row d-flex justify-content-left align-items-center ">
         <div className="col">
-          <h4 className="fw-bold" style={{ color: "#c457d5" }}>
-            Our Clients
-          </h4>
-          <h1 className="title text-white mb-3 fw-bold ">
-            Discover the success stories <br />
-            of our satisfied clients who have already harnessed the power of our
-            services.
-          </h1>
+          <p className="text-title fw-bold">Our Clients</p>
+          <h2 className="title text-white mb-3 fw-bold ">
+            Discover the success stories of our satisfied clients who have
+            already harnessed the power of our services.
+          </h2>
           <p className="text-white">
             Our commitment to excellence and dedication to delivering top-notch
             services have allowed us to build strong and enduring relationships

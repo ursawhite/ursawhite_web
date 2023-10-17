@@ -18,7 +18,7 @@ const ImageLeft = (props) => {
             placeholder="blur"
             blurDataURL={image}
             alt="Image by upklyak"
-            sizes="100vw"
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
             style={{
               width: "90%",
               height: "auto",

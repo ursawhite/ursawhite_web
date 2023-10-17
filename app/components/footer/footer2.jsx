@@ -28,6 +28,9 @@ const Footer2 = () => {
                   width={150}
                   height={50}
                   alt="logo"
+                  sizes={
+                    "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                  }
                   style={{
                     objectPosition: "left top",
                     width: "100%",

@@ -47,6 +47,11 @@ function OurWorks(props) {
                   width={300}
                   height={300}
                   loading="lazy"
+                  sizes={
+                    "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                  }
+                  placeholder="blur"
+                  blurDataURL={ourWork.image}
                   alt={ourWork.title}
                   style={{
                     objectFit: "contain",

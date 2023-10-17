@@ -18,12 +18,9 @@ const Porto = (props) => {
     <>
       <div className="container">
         <div className="row d-flex justify-content-center ">
-          <PortoContainer imageData={data[0]} />
-          <PortoContainer imageData={data[1]} />
-          <PortoContainer imageData={data[2]} />
-          <PortoContainer imageData={data[3]} />
-          <PortoContainer imageData={data[4]} />
-          <PortoContainer imageData={data[5]} />
+          {data.map((item, index) => (
+            <PortoContainer imageData={item} key={index} />
+          ))}
         </div>
       </div>
     </>

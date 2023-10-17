@@ -17,7 +17,8 @@ const ImgSection = () => {
             height={600}
             sizes="(max-width: 768px) 100vw,(max-width: 1024) 50vh, 30vw"
             style={{ width: "100%", height: "auto" }}
-            priority
+            placeholder="blur"
+            blurDataURL="/images/work3.png"
           />
         </div>
       </div>

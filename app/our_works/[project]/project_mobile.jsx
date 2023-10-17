@@ -29,6 +29,9 @@ function ProjectMobile({ title }) {
             alt={project.title}
             width={300}
             height={300}
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+            placeholder="blur"
+            blurDataURL={project.image_mobile}
             style={{
               objectFit: "contain",
               width: "100%",
@@ -118,7 +121,11 @@ function ProjectMobile({ title }) {
                   width: "100%",
                   height: "auto",
                 }}
-                priority
+                sizes={
+                  "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                }
+                placeholder="blur"
+                blurDataURL={item}
               />
             </div>
           ))}

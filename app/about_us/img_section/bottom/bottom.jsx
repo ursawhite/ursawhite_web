@@ -18,7 +18,9 @@ const Bottom = () => {
               marginTop: "30vh",
               marginLeft: "35vw",
             }}
-            priority
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+            placeholder="blur"
+            blurDataURL="/images/work7.png"
           />
         </div>
         <div className="col-lg-3 col-md-3">
@@ -34,7 +36,9 @@ const Bottom = () => {
               marginLeft: "-25vw",
               marginTop: "90vh",
             }}
-            priority
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+            placeholder="blur"
+            blurDataURL="/images/work8.png"
           />
         </div>
         <div className="col-lg-3 col-md-4">
@@ -50,7 +54,9 @@ const Bottom = () => {
               marginLeft: "-20vw",
               marginTop: "130vh",
             }}
-            priority
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+            placeholder="blur"
+            blurDataURL="/images/work9.png"
           />
         </div>
       </div>

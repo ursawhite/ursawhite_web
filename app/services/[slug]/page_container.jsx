@@ -35,8 +35,10 @@ const Services = ({ title }) => {
               width={500}
               height={500}
               alt={dataServices[0].image}
-              sizes="100vw"
               loading="lazy"
+              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+              placeholder="blur"
+              blurDataURL={dataServices[0].image}
               style={{
                 width: "100%",
                 height: "auto",
@@ -58,15 +60,15 @@ const Services = ({ title }) => {
       </div>
       <div className="container text-white ">
         <div className="d-flex flex-column justify-content-center align-items-center gx-2">
-          <h5 className="text-title text-center fw-bold">Services</h5>
-          <h1 className="text-white fw-bold text-center mb-5">
+          <p className="text-title text-center fw-bold mt-5">Services</p>
+          <h2 className="text-white fw-bold text-center mb-5">
             Our {dataServices[0].title} Services
-          </h1>
-          <div className="col-lg-9 col-md-12 d-flex flex-wrap p-4">
+          </h2>
+          <div className="row d-flex flex-wrap p-4">
             {dataServices[0].services.map((service, index) => (
-              <div className="col-lg-6 col-md-6 d-flex p-2 " key={index}>
+              <div className="col-lg-4 col-md-6 d-flex p-2 " key={index}>
                 <div className={`p-5 ${styles.box_section}`}>
-                  <h2>{service.Service}</h2>
+                  <h4>{service.Service}</h4>
                   <p>{service.Description}</p>
                 </div>
               </div>
@@ -80,15 +82,15 @@ const Services = ({ title }) => {
       >
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8">
-            <h5 className="text-title text-center fw-bold">Technologies</h5>
-            <h1 className="text-white fw-bold text-center">
+            <p className="text-title text-center fw-bold">Technologies</p>
+            <h2 className="text-white fw-bold text-center">
               Technologies Used
-            </h1>
-            <h5 className="text-white text-center">
+            </h2>
+            <p className="text-white text-center">
               Technological development is running exponentially. We ensure the
               technology we use is able to meet your business digitalization
               needs.
-            </h5>
+            </p>
           </div>
         </div>
         <div className="row d-flex justify-content-center align-items-center gx-2">
@@ -105,8 +107,12 @@ const Services = ({ title }) => {
                     width={100}
                     height={500}
                     alt={tech.tech}
-                    sizes="100vw"
                     loading="lazy"
+                    sizes={
+                      "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                    }
+                    placeholder="blur"
+                    blurDataURL={tech.logo}
                     style={{
                       width: "100%",
                       height: "auto",
@@ -125,9 +131,9 @@ const Services = ({ title }) => {
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-lg-8 d-flex justify-content-center ">
             <div className="h1 bi bi-quote text-white"></div>
-            <h4 className="text-white fw-bold text-center">
+            <h5 className="text-white fw-bold text-center">
               {dataServices[0].closing}
-            </h4>
+            </h5>
             <div
               className="h1 bi bi-quote text-white"
               style={{ transform: "rotateY(180deg)" }}

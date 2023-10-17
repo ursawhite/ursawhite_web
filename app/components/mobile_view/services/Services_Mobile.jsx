@@ -30,7 +30,9 @@ function Services_Mobile() {
         </div>
       </div>
       <div className="container">
-        <h1 className="text-title fw-bold text-center mt-5">Services</h1>
+        <div className="display-4 text-title fw-bold text-center mt-5">
+          Services
+        </div>
         {data.map((item, index) => (
           <div className="row " key={item.id}>
             <div className="col-lg-6 ">
@@ -40,8 +42,13 @@ function Services_Mobile() {
                   src={item.image}
                   width={400}
                   height={400}
+                  sizes={
+                    "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                  }
                   style={{ objectFit: "contain" }}
                   alt={item.title}
+                  placeholder="blur"
+                  blurDataURL={item.image}
                 />
               </div>
             </div>
@@ -71,9 +78,7 @@ function Services_Mobile() {
       </div>
       <div className="container">
         <div className="technologies mt-5">
-          <p className="fw-bold" style={{ color: "rgba(169,80,210,255)" }}>
-            Technologies Used
-          </p>
+          <h5 className="fw-bold text-title">Technologies Used</h5>
           <h1 className="text-white fw-bold">Technologies We Work With</h1>
           <p className="text-white ">
             As a premiere software development company, Innover helps to deliver

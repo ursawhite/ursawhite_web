@@ -4,15 +4,15 @@ import Image from "next/image";
 const Partner = () => {
   return (
     <div className="container mb-5">
-      <div className="row d-flex justify-content-center align-items-center">
+      <div className="row d-flex justify-content-center ">
         <div className="col-lg-8 col-md-12 ">
-          <p className="text-title fw-bold text-center">
+          <p className="text-title fw-bold text-lg-center text-sm-center">
             Introducing Our Trusted Partners
           </p>
-          <h2 className="text-lg-center text-md-center text-white fw-bold capi">
+          <h2 className="text-lg-center text-md-center text-sm-center text-white fw-bold capi">
             We Are Proud To Work With
           </h2>
-          <p className="text-lg-center text-md-center text-white">
+          <p className="text-lg-center text-md-center text-sm-center text-white">
             {` We believe in the power of collaboration to deliver outstanding
             digital solutions. We've established strong partnerships with
             companies that share our commitment to excellence and innovation.
@@ -21,7 +21,7 @@ const Partner = () => {
           </p>
         </div>
         <div className="row d-flex justify-content-center mt-5">
-          <div className="col-lg-2 col-md-4 col-sm-4 col-6 d-flex flex-column align-items-center">
+          <div className="col-lg-2 col-md-4 col-sm-4 col-5 d-flex flex-column align-items-center">
             <Image
               src="/images/partners/hingoray.webp"
               className="img-fluid p-1"
@@ -34,7 +34,7 @@ const Partner = () => {
             />
             <p className="text-center text-white mt-3">Hingoray</p>
           </div>
-          <div className="col-lg-2 col-md-4 col-sm-4 col-6 d-flex flex-column align-items-center">
+          <div className="col-lg-2 col-md-3 col-sm-3 col-5 d-flex flex-column align-items-center">
             <Image
               src="/images/partners/studia_alva.png"
               className="img-fluid p-1"

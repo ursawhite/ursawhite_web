@@ -40,7 +40,7 @@ function AboutUs_Mobile() {
             placeholder="blur"
             blurDataURL="/images/img2.png"
             alt="Image by pikisuperstar on Freepik"
-            sizes="100vw"
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
             loading="lazy"
             style={{
               width: "100%",
@@ -60,9 +60,9 @@ function AboutUs_Mobile() {
               width={500}
               height={500}
               placeholder="blur"
-              blurDataURL="/images/img2.png"
-              alt="ourteam1"
-              sizes="100vw"
+              blurDataURL="/images/work.jpg"
+              alt="Image by Freepik"
+              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
               loading="lazy"
               style={{
                 width: "100%",
@@ -78,8 +78,8 @@ function AboutUs_Mobile() {
               height={500}
               placeholder="blur"
               blurDataURL="/images/work3.png"
-              alt="ourteam2"
-              sizes="100vw"
+              alt="Image2 by Freepik"
+              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
               loading="lazy"
               style={{
                 width: "100%",
@@ -97,8 +97,8 @@ function AboutUs_Mobile() {
               height={500}
               placeholder="blur"
               blurDataURL="/images/work2.png"
-              alt="ourteam3"
-              sizes="100vw"
+              alt="Image3 by Freepik"
+              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
               loading="lazy"
               style={{
                 width: "100%",

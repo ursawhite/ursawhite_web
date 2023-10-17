@@ -51,6 +51,9 @@ function Project({ title }) {
           style={{
             objectFit: "contain",
           }}
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={project.img_back[0]}
         />
       </ParallaxLayer>
       <ParallaxLayer
@@ -70,9 +73,11 @@ function Project({ title }) {
           height={300}
           style={{
             objectFit: "contain",
-
             marginTop: "15%",
           }}
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={project.image}
         />
         <Image
           src={project.img_back[1]}
@@ -81,9 +86,11 @@ function Project({ title }) {
           height={400}
           style={{
             objectFit: "contain",
-
             marginTop: "15%",
           }}
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={project.img_back[1]}
         />
       </ParallaxLayer>
       <ParallaxLayer

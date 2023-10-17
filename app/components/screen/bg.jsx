@@ -16,7 +16,9 @@ const Bg = () => {
           height={350}
           alt="object1"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/1.png"}
           style={{ filter: "blur(8px)", opacity: 0.3 }}
         />
       </ParallaxLayer>
@@ -31,7 +33,9 @@ const Bg = () => {
           height={250}
           alt="object2"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/2.png"}
           style={{ filter: "blur(8px)", opacity: "0.3" }}
         />
       </ParallaxLayer>
@@ -46,7 +50,9 @@ const Bg = () => {
           height={300}
           alt="object3"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/3.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",
@@ -65,7 +71,9 @@ const Bg = () => {
           height={300}
           alt="object4"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/4.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",
@@ -84,7 +92,9 @@ const Bg = () => {
           height={300}
           alt="object5"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/5.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",
@@ -103,7 +113,9 @@ const Bg = () => {
           height={300}
           alt="object6"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/6.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",
@@ -122,7 +134,9 @@ const Bg = () => {
           height={300}
           alt="object7"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/7.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",
@@ -141,7 +155,9 @@ const Bg = () => {
           height={300}
           alt="object8"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/8.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",
@@ -160,7 +176,9 @@ const Bg = () => {
           height={300}
           alt="object9"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/9.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",
@@ -179,7 +197,9 @@ const Bg = () => {
           height={300}
           alt="object10"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/10.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",
@@ -198,7 +218,9 @@ const Bg = () => {
           height={300}
           alt="object11"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/11.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",
@@ -217,7 +239,9 @@ const Bg = () => {
           height={300}
           alt="object12"
           className="object-fit-contain"
-          priority
+          sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+          placeholder="blur"
+          blurDataURL={"/images/obj/12.png"}
           style={{
             transform: "rotate(350deg)",
             opacity: "0.3",

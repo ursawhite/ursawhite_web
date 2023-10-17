@@ -27,7 +27,8 @@ const imgsection = () => {
             width={400}
             height={250}
             sizes="(max-width: 768px) 100vw,(max-width: 1024) 50vh, 30vw"
-            priority
+            placeholder="blur"
+            blurDataURL="/images/work.png"
             style={img_left}
           />
         </div>
@@ -39,7 +40,8 @@ const imgsection = () => {
             width={400}
             height={250}
             sizes="(max-width: 768px) 100vw,(max-width: 1024) 50vh, 30vw"
-            priority
+            placeholder="blur"
+            blurDataURL="/images/work2.png"
             style={img_right}
           />
         </div>

@@ -12,13 +12,15 @@ const CenterImage = () => {
             alt="image by freepik"
             width={800}
             height={600}
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
             style={{
               width: "100%",
               height: "auto",
               marginTop: "10vh",
               marginLeft: "8vw",
             }}
-            priority
+            placeholder="blur"
+            blurDataURL="/images/work4.png"
           />
         </div>
         <div className="col-lg-3 col-md-3">
@@ -35,7 +37,8 @@ const CenterImage = () => {
               marginLeft: "-25vw",
               marginTop: "140vh",
             }}
-            priority
+            placeholder="blur"
+            blurDataURL="/images/work5.png"
           />
         </div>
         <div className="col-lg-3 col-md-3">
@@ -52,7 +55,8 @@ const CenterImage = () => {
               marginLeft: "3vw",
               marginTop: "110vh",
             }}
-            priority
+            placeholder="blur"
+            blurDataURL="/images/work6.png"
           />
         </div>
       </div>

@@ -14,7 +14,7 @@ function image_right(props) {
             width={400}
             height={400}
             alt="logo"
-            sizes="100vw"
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
             style={{
               width: "80%",
               height: "auto",

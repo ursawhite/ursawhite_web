@@ -16,6 +16,9 @@ function Footer_Mobile() {
             alt="ourteam"
             width={500}
             height={500}
+            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+            placeholder="blur"
+            blurDataURL="/images/work.jpg"
             style={{ objectFit: "contain", width: "100%", height: "auto" }}
           />
         </div>

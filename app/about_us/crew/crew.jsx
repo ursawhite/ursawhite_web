@@ -60,7 +60,8 @@ const Crew = () => {
                   "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
                 }
                 style={{ objectFit: "cover", resizeMode: "cover" }}
-                priority
+                placeholder="blur"
+                blurDataURL={item.profile_pic}
               />
               <a
                 className="text-white text-decoration-none"

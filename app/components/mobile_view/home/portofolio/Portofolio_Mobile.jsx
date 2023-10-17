@@ -6,15 +6,7 @@ function Portofolio_Mobile({ items }) {
   return (
     <div className="container">
       <div className="row ">
-        <div
-          className="display-4 fw-bold text-white text-center mt-5 mb-5"
-          style={{
-            background:
-              "linear-gradient(90deg, rgb(230, 212, 239) 0%, rgb(92, 4, 133) 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
+        <div className="display-4 fw-bold text-title text-center mt-5 mb-5">
           Our Works
         </div>
 
@@ -28,6 +20,11 @@ function Portofolio_Mobile({ items }) {
                   width={300}
                   height={300}
                   alt="logo"
+                  placeholder="blur"
+                  blurDataURL={item.image_mobile}
+                  sizes={
+                    "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                  }
                   style={{
                     objectFit: "contain",
                     width: "100%",

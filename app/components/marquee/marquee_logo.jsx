@@ -258,6 +258,11 @@ function MarqueeLogo() {
                 src={item.src}
                 width={100}
                 height={100}
+                sizes={
+                  "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                }
+                placeholder="blur"
+                blurDataURL={item.src}
                 alt={item.alt}
                 className="img-fluid m-3"
               />
@@ -275,10 +280,14 @@ function MarqueeLogo() {
           {image.slice(31, 61).map((item, index) => (
             <div className="col-lg-6 col-md-6 col-sm-6 col-6 " key={index}>
               <Image
-                key={index}
                 src={item.src}
                 width={100}
                 height={100}
+                sizes={
+                  "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                }
+                placeholder="blur"
+                blurDataURL={item.src}
                 alt={item.alt}
                 className="img-fluid m-3"
               />

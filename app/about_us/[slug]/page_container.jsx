@@ -19,7 +19,6 @@ const Page = ({ title }) => {
 
   let phrases = [];
   phrases.push(dataNow[0].title);
-  console.log(phrases);
 
   return (
     <>
@@ -35,7 +34,9 @@ const Page = ({ title }) => {
               width={500}
               height={500}
               alt={dataNow[0].alt}
-              sizes="100vw"
+              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+              placeholder="blur"
+              blurDataURL={dataNow[0].image}
               loading="lazy"
               style={{
                 width: "100%",
@@ -60,10 +61,14 @@ const Page = ({ title }) => {
       </div>
 
       <div className="container ">
-        <div className="row d-flex justify-content-center">
+        <div className="row">
+          <h5 className="text-title text-center fw-bold">Approach</h5>
+          <h1 className="text-white fw-bold text-center mb-5">
+            {dataNow[0].title}
+          </h1>
           {Object.entries(dataNow[0].list[0]).map(([key, value], index) => (
             <div
-              className="col-lg-4 col-md-6 p-1 d-flex justify-content-center"
+              className="col-lg-4 col-md-6 p-2 d-flex justify-content-center"
               key={index}
             >
               <div className="box text-white p-5">
