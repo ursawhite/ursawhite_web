@@ -56,7 +56,7 @@ function Section6() {
                 )
               }
             >
-              <span>Learn More</span>
+              <span className="ms-3 me-3">Learn More</span>
               <div className="bi bi-chevron-double-right ms-2 me-2"></div>
             </button>
           </div>

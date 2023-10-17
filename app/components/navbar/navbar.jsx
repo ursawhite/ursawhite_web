@@ -85,7 +85,7 @@ function Navbar() {
                       href={item.link}
                       onClick={() => setActiveLink(`${item.link}`)}
                     >
-                      <div className="button btn p-2">
+                      <div className="button p-2 ms-1 me-1 rounded">
                         <span className="ms-3 me-3 fw-bold ">{item.name}</span>
 
                         <i className="bi bi-envelope ms-2 me-2"></i>

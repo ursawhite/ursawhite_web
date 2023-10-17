@@ -4,7 +4,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import React, { useRef, useEffect, useState, use } from "react";
 import { motion } from "framer-motion";
 import styles from "./parallax.module.scss";
-import Image from "next/image";
+import { fadeInTop } from "../../components/animation/animation";
 
 import Bg from "../../components/screen/bg";
 import Banner from "../banner/banner";

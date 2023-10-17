@@ -17,7 +17,7 @@ export function generateMetadata({ params }) {
       title: project[0].title + " | Our Works",
       description: project[0].description,
       alternates: {
-        canonical: `/our works/${project[0].title}`,
+        canonical: `/our works/${params.project}`,
       },
     };
   } catch (error) {

@@ -59,7 +59,7 @@ const Service = () => {
                 </h3>
                 <p className="text-white">{data[activeItem - 1].description}</p>
                 <button
-                  className="button btn shadow-lg border-1 border-light"
+                  className="button p-2 ms-1 me-1 rounded"
                   onClick={() =>
                     Router.push(
                       `/services/${data[activeItem - 1].title
@@ -68,12 +68,9 @@ const Service = () => {
                     )
                   }
                 >
-                  <div>
-                    <span className="">Read More</span>
-                  </div>
-                  <div>
-                    <i className="bi bi-arrow-right me-2 ms-2 fw-bold"> </i>
-                  </div>
+                  <span className="ms-3 me-3 fw-bold">Read More</span>
+
+                  <i className="bi bi-arrow-right me-2 ms-2 " />
                 </button>
               </div>
 

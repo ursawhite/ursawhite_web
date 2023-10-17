@@ -46,14 +46,12 @@ function Footer() {
           <p className="text-white mt-2 ">{` We blend tech and creativity to bring your ideas to life. Whether you're a startup aiming to disrupt the market or an established enterprise seeking efficiency and growth, our software solutions are your key to success. Let's make it happen!`}</p>
           <div className="button_contact ">
             <button
-              className="btn p-3 rounded mt-5 "
+              className="button p-2 rounded mt-5 "
               onClick={() => Router.push("/contact_us")}
             >
-              <div className="button p-2 rounded ">
-                <span className="ms-3 me-3 fw-bold ">Contact Us!</span>
+              <span className="ms-3 me-3 fw-bold ">Contact Us!</span>
 
-                <i className="bi bi-envelope ms-2 me-2"></i>
-              </div>
+              <i className="bi bi-envelope ms-2 me-2"></i>
             </button>
           </div>
         </div>
