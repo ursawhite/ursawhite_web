@@ -15,15 +15,15 @@ export default function Error({ error, reset }) {
       className="container d-flex justify-content-center align-items-center "
       style={{ width: "auto", height: "100vh" }}
     >
-      <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
+      <div className="row d-flex justify-content-center align-items-center">
+        <div className="col-lg-6 col-md-6 col-sm-6 col-6 ">
           <h1 className="text-white">Something went wrong!</h1>
 
           <Link className="btn btn-danger ms-1" href={"/"}>
             Back Home
           </Link>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+        <div className="col-lg-6 col-md-6 col-sm-6 col-6 d-flex align-items-center">
           <Image
             className="img-fluid"
             src="/images/head_logo.png"

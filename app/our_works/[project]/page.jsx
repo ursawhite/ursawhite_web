@@ -1,32 +1,39 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
-import ProjectPage from "./project";
-import ProjectMobile from "./project_mobile";
+import React from "react";
+import ProjectPage from "./project_page";
+import data from "../../../public/data.json";
+
+export function generateMetadata({ params }) {
+  try {
+    const project = data.filter(
+      (item) => item.title.toLowerCase() === params.project.replace(/-/g, " ")
+    );
+
+    if (!project)
+      return {
+        title: "Not Found",
+        description: "The page you are looking for does not exist.",
+      };
+    return {
+      title: project[0].title + " | Our Works",
+      description: project[0].description,
+      alternates: {
+        canonical: `/our works/${project[0].title}`,
+      },
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      title: "Not Found",
+      description: "The page you are looking for does not exist.",
+    };
+  }
+}
 
 function Project({ params }) {
-  const [isClient, setIsClient] = useState(false);
-  const isDesktop = useMediaQuery({ minWidth: 992 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isNotMobile = useMediaQuery({ minWidth: 768 });
-  const title = params.project;
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   return (
-    <div
-      style={{
-        backgroundColor: "rgba(27,27,29,255)",
-        overflowY: "auto",
-      }}
-    >
-      {isDesktop && isClient && <ProjectPage title={title} />}
-      {isTablet && isClient && <ProjectPage title={title} />}
-      {isMobile && isClient && <ProjectMobile title={title} />}
-      {isNotMobile && isClient && <ProjectPage title={title} />}
-    </div>
+    <>
+      <ProjectPage title={params.project} />
+    </>
   );
 }
 

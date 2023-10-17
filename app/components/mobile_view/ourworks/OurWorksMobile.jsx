@@ -27,8 +27,8 @@ function OurWorks(props) {
         </div>
       </div>
       <div className="container mb-5">
-        {data.map((ourWork) => (
-          <div className="row " key={ourWork.id}>
+        <div className="row">
+          {data.map((ourWork) => (
             <button
               className="text-decoration-none bg-transparent border-0 shadow-0"
               onClick={() =>
@@ -38,6 +38,7 @@ function OurWorks(props) {
                     .toLowerCase()}`
                 )
               }
+              key={ourWork.id}
             >
               <div className="col-lg-6 col-md-6 col-sm-6 col-6 mt-5 mb-5">
                 <Image
@@ -56,8 +57,8 @@ function OurWorks(props) {
               </div>
               <h1 className="text-white text-center mt-5">{ourWork.title}</h1>
             </button>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <Footer />
     </>

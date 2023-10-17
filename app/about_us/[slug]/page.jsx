@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 const Page = ({ params }) => {
   const ref = useRef(null);
   const router = useRouter();
-  // console.log(params.slug.replace(/-/g, " "));
   const dataNow = data.filter((item) => {
     if (item.title) {
       return item.title.toLowerCase() === params.slug.replace(/_/g, " ");

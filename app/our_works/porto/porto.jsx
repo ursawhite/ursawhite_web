@@ -23,7 +23,7 @@ const Porto = (props) => {
           <PortoContainer imageData={data[2]} />
           <PortoContainer imageData={data[3]} />
           <PortoContainer imageData={data[4]} />
-          <PortoContainer imageData={data[5]} />{" "}
+          <PortoContainer imageData={data[5]} />
         </div>
       </div>
     </>

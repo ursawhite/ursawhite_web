@@ -4,13 +4,12 @@ import { useMediaQuery } from "react-responsive";
 import ProjectPage from "./project";
 import ProjectMobile from "./project_mobile";
 
-const ProjectWindow = () => {
+const ProjectWindow = ({ title }) => {
   const [isClient, setIsClient] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 992 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isNotMobile = useMediaQuery({ minWidth: 768 });
-  const title = params.project;
   useEffect(() => {
     setIsClient(true);
   }, []);
