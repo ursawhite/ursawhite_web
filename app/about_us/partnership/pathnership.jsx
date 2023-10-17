@@ -1,7 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { animationVariants } from "../../components/animation/animation";
 
 const Partner = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
   return (
     <div className="container mb-5">
       <div className="row d-flex justify-content-center ">
@@ -9,16 +15,30 @@ const Partner = () => {
           <p className="text-title fw-bold text-lg-center text-sm-center">
             Introducing Our Trusted Partners
           </p>
-          <h2 className="text-lg-center text-md-center text-sm-center text-white fw-bold capi">
+          <motion.h2
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={animationVariants}
+            transition={{ duration: 0.5 }}
+            className="text-lg-center text-md-center text-sm-center text-white fw-bold capi"
+          >
             We Are Proud To Work With
-          </h2>
-          <p className="text-lg-center text-md-center text-sm-center text-white">
+          </motion.h2>
+          <motion.p
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={animationVariants}
+            transition={{ duration: 0.5 }}
+            className="text-lg-center text-md-center text-sm-center text-white"
+          >
             {` We believe in the power of collaboration to deliver outstanding
             digital solutions. We've established strong partnerships with
             companies that share our commitment to excellence and innovation.
             Together, we leverage our expertise to elevate your business to new
             heights.`}
-          </p>
+          </motion.p>
         </div>
         <div className="row d-flex justify-content-center mt-5">
           <div className="col-lg-2 col-md-4 col-sm-4 col-5 d-flex flex-column align-items-center">

@@ -8,7 +8,6 @@ import MaskText from "../../components/mask/mask";
 import { motion } from "framer-motion";
 
 const Page = ({ title }) => {
-  const ref = useRef(null);
   const router = useRouter();
   const dataNow = data.filter((item) => {
     if (item.title) {
@@ -18,55 +17,56 @@ const Page = ({ title }) => {
   });
 
   let phrases = [];
-  phrases.push(dataNow[0].title);
+  phrases.push(dataNow[0]?.title);
 
   return (
     <>
       <div
-        className="container d-flex align-items-center"
-        style={{ width: "auto", height: "100vh" }}
+        className="container d-flex justify-content-center align-items-center"
+        style={{ height: "100vh", width: "auto" }}
       >
-        <div className="row d-flex justify-content-center">
-          <div className="col-lg-5 col-md-5 order-lg-2">
-            <Image
-              className="img-fluid object-fit-contain"
-              src={dataNow[0].image}
-              width={500}
-              height={500}
-              alt={dataNow[0].alt}
-              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
-              placeholder="blur"
-              blurDataURL={dataNow[0].image}
-              loading="lazy"
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-            />
+        <div className="row d-flex justify-content-center align-items-center">
+          <div className="col-lg-5 col-md-6 ">
+            <>
+              <Image
+                className="img-fluid object-fit-contain mb-5"
+                src={dataNow[0]?.image}
+                width={300}
+                height={300}
+                alt={dataNow[0]?.alt}
+                sizes={
+                  "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
+                }
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={dataNow[0]?.image}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </>
           </div>
-          <div className="col-lg-6 col-md-6 order-lg-1  d-flex flex-column justify-content-center">
-            <div className="display-3 fw-bold text-white ">
-              <MaskText text={phrases} />
-            </div>
-            <motion.h4
+          <div className="col-lg-6 col-md-6 d-flex flex-column">
+            <MaskText text={phrases} />
+            <motion.p
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               className="text-white"
             >
-              {dataNow[0].description}
-            </motion.h4>
+              {dataNow[0]?.description}
+            </motion.p>
           </div>
         </div>
       </div>
-
       <div className="container ">
         <div className="row">
-          <h5 className="text-title text-center fw-bold">Approach</h5>
-          <h1 className="text-white fw-bold text-center mb-5">
-            {dataNow[0].title}
-          </h1>
-          {Object.entries(dataNow[0].list[0]).map(([key, value], index) => (
+          <p className="text-title text-center fw-bold">Approach</p>
+          <h2 className="text-white fw-bold text-center mb-5">
+            {dataNow[0]?.title}
+          </h2>
+          {Object.entries(dataNow[0]?.list[0]).map(([key, value], index) => (
             <div
               className="col-lg-4 col-md-6 p-2 d-flex justify-content-center"
               key={index}

@@ -24,7 +24,7 @@ const Services = ({ title }) => {
   return (
     <>
       <div
-        className={`container d-flex justify-content-start align-items-center `}
+        className="container d-flex justify-content-start align-items-center"
         style={{ height: "100vh", width: "auto" }}
       >
         <div className="row d-flex justify-content-center align-items-center">

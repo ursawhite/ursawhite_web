@@ -2,7 +2,7 @@ import React from "react";
 import AboutUs from "./about_us";
 
 export const metadata = {
-  title: "About Us ",
+  title: "About Us",
   description: "About Us Page of Ursawhite",
 };
 
