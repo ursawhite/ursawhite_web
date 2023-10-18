@@ -111,8 +111,6 @@ const Services = ({ title }) => {
                     sizes={
                       "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
                     }
-                    placeholder="blur"
-                    blurDataURL={tech.logo}
                     style={{
                       width: "100%",
                       height: "auto",

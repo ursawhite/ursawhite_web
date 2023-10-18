@@ -49,7 +49,7 @@ function Navbar() {
           aria-controls="offcanvasNavbar"
           style={{ background: "rgba(255,255,255,0.5)" }}
         >
-          <div className="navbar-toggler-icon text-danger"></div>
+          <div className="navbar-toggler-icon"></div>
         </button>
         <div
           className="sidebar offcanvas offcanvas-start bg-dark "
@@ -77,7 +77,12 @@ function Navbar() {
           <div className="offcanvas-body d-flex flex-column p-4 p-lg-0 ">
             <ul className="navbar-nav justify-content-lg-end pe-3 align-items-center">
               {list.map((item, index) => (
-                <li className="nav-item mx-2 fw-bold" key={index}>
+                <li
+                  className="nav-item mx-2 fw-bold"
+                  key={index}
+                  data-bs-toggle="collapse"
+                  data-bs-target="#main-menu-navbar"
+                >
                   {index === list.length - 1 ? (
                     <Link
                       className="nav-link fs-6"
@@ -86,7 +91,12 @@ function Navbar() {
                       onClick={() => setActiveLink(`${item.link}`)}
                     >
                       <div className="button p-2 ms-1 me-1 rounded">
-                        <span className="ms-3 me-3 fw-bold ">{item.name}</span>
+                        <span
+                          className="ms-3 me-3 fw-bold "
+                          data-bs-dismiss="offcanvas"
+                        >
+                          {item.name}
+                        </span>
 
                         <i className="bi bi-envelope ms-2 me-2"></i>
                       </div>
@@ -103,7 +113,7 @@ function Navbar() {
                       href={item.link}
                       onClick={() => setActiveLink(`${item.link}`)}
                     >
-                      <span>{item.name}</span>
+                      <span data-bs-dismiss="offcanvas">{item.name}</span>
                     </Link>
                   )}
                 </li>
