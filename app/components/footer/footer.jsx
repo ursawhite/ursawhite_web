@@ -3,28 +3,6 @@ import { useRouter } from "next/navigation";
 
 function Footer() {
   const Router = useRouter();
-  const info = [
-    {
-      icon: "bi bi-envelope-at",
-      text: "We love our inbox – drop us an email.",
-      contact: " surya@ursawhite.com",
-    },
-    {
-      icon: "bi bi-phone-vibrate",
-      text: "Call Jeff, his line is open 24/7",
-      contact: "+628123123123",
-    },
-    {
-      icon: "bi bi-linkedin",
-      text: "Let's connect on LinkedIn",
-      contact: "@ursawhite",
-    },
-    {
-      icon: "bi bi-map",
-      text: "Visit us at",
-      contact: "Jl. Kemang Timur No. 88",
-    },
-  ];
 
   return (
     <div className="container ">

@@ -109,7 +109,7 @@ const Form = () => {
             </h6>
 
             <h6 className="text-secondary mt-2">{`Feel free to get in touch with us today! `}</h6>
-            <p className="text-secondary mt-2">{`You can reach out via email at surya@ursawhite.com or send a message at +628123123123.`}</p>
+            <p className="text-secondary mt-2">{`You can reach out via email at surya@ursawhite.com or send a message at +6287888927490.`}</p>
           </div>
           <div className="col-lg-6">
             <div className="row">
