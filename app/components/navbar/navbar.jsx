@@ -47,9 +47,9 @@ function Navbar() {
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
-          style={{ background: "rgba(255,255,255,0.5)" }}
+          // style={{ : "rgba(255,255,255,0.5)" }}
         >
-          <div className="navbar-toggler-icon"></div>
+          <div className="bi bi-list " style={{ color: "white" }}></div>
         </button>
         <div
           className="sidebar offcanvas offcanvas-start bg-dark "

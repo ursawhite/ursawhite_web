@@ -28,7 +28,7 @@ const imgsection = () => {
             height={250}
             sizes="(max-width: 768px) 100vw,(max-width: 1024) 50vh, 30vw"
             placeholder="blur"
-            blurDataURL="/images/work.png"
+            blurDataURL="/images/work.jpg"
             style={img_left}
           />
         </div>

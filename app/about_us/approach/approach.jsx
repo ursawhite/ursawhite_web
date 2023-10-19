@@ -8,7 +8,7 @@ const Approach = () => {
     <div className="container mb-5">
       <div className="row d-flex justify-content-center">
         <div className="col-lg-8 d-flex">
-          <div className="row">
+          <div className="row g-2">
             <p className="text-title text-center fw-bold">
               Navigating Success Together
             </p>
@@ -18,27 +18,23 @@ const Approach = () => {
                 href={`/about_us/${item.title
                   .replace(/\s+/g, "_")
                   .toLowerCase()}`}
-                className="box_approach col-lg-6 col-md-6 col-sm-6 mt-5 shadow-lg text-decoration-none text-dark"
+                className="box_approach col-lg-6 p-4 col-md-6 col-sm-6 mt-5 shadow-lg text-decoration-none text-dark"
                 key={index}
               >
-                <div className="p-4 ">
-                  <h3
-                    className="fw-bold mb-5 "
-                    style={{ height: "5vh", width: "auto" }}
-                  >
-                    {item.title}
-                  </h3>
-                  <ul className="list-unstyled mt-5">
-                    {Object.entries(item.list[0]).map(
-                      ([item, value], index) => (
-                        <li key={index}>
-                          <i className="bi bi-check2-square"></i>
-                          <span className="ms-3">{item}</span>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
+                <h3
+                  className="fw-bold mb-5 "
+                  style={{ height: "5vh", width: "auto" }}
+                >
+                  {item.title}
+                </h3>
+                <ul className="list-unstyled mt-5">
+                  {Object.entries(item.list[0]).map(([item, value], index) => (
+                    <li key={index}>
+                      <i className="bi bi-check2-square"></i>
+                      <span className="ms-3">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </Link>
             ))}
           </div>

@@ -14,41 +14,43 @@ function AboutUs_Mobile() {
       >
         <div className="row d-flex align-items-center">
           <div className="col-12 ">
-            <h1 className="text-title text-left display-1 text-white fw-bold mt-5 mb-5">
+            <h1 className="text-title text-left display-3 text-white fw-bold mt-5 mb-5">
               Transforming Ideas into Digital Realities.
             </h1>
-            <div className="col-lg-6">
-              <p className=" text-white ">
-                {` Specializes in crafting exceptional digital solutions
+
+            <p className=" text-white ">
+              {` Specializes in crafting exceptional digital solutions
         tailored to your business needs. Our dedicated team prioritizes user
         experience, scalability, and effective user engagement strategies.
         Whether it's designing and developing cutting-edge web and mobile
         applications or devising innovative digital marketing campaigns, we've
         got you covered!`}
-              </p>
-            </div>
+            </p>
           </div>
         </div>
       </div>
-      <div className="row d-flex justify-content-center">
-        <div className="col-lg-4 col-md-5 col-sm-7 col-8">
-          <Image
-            className="img-fluid object-fit-contain"
-            src="/images/img2.png"
-            width={500}
-            height={500}
-            placeholder="blur"
-            blurDataURL="/images/img2.png"
-            alt="Image by pikisuperstar on Freepik"
-            sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
-            loading="lazy"
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          />
+      <div className="container">
+        <div className="row d-flex justify-content-center">
+          <div className="col-lg-4 col-md-5 col-sm-7 col-8">
+            <Image
+              className="img-fluid object-fit-contain"
+              src="/images/img2.png"
+              width={500}
+              height={500}
+              placeholder="blur"
+              blurDataURL="/images/img2.png"
+              alt="Image by pikisuperstar on Freepik"
+              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+              loading="lazy"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
         </div>
       </div>
+
       <Approach />
 
       <div className="container">
