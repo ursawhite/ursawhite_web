@@ -82,6 +82,8 @@ const Service = () => {
                   height={300}
                   sizes="(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
                   alt="services"
+                  placeholder="blur"
+                  blurDataURL={data[activeItem - 1].image}
                   priority
                 />
               </div>

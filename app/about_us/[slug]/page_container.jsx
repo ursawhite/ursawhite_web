@@ -26,26 +26,22 @@ const Page = ({ title }) => {
         style={{ height: "100vh", width: "auto" }}
       >
         <div className="row d-flex justify-content-center align-items-center">
-          <div className="col-lg-5 col-md-6 ">
-            <>
-              <Image
-                className="img-fluid object-fit-contain mb-5"
-                src={dataNow[0]?.image}
-                width={300}
-                height={300}
-                alt={dataNow[0]?.alt}
-                sizes={
-                  "(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"
-                }
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL={dataNow[0]?.image}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
-              />
-            </>
+          <div className="col-lg-5 col-md-6 col-sm-8 col-8 order-lg-2 order-md-2 ">
+            <Image
+              className="img-fluid object-fit-contain mb-5"
+              src={dataNow[0]?.image}
+              width={300}
+              height={300}
+              alt={dataNow[0]?.alt}
+              sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
+              placeholder="blur"
+              blurDataURL={dataNow[0]?.image}
+              priority
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
           </div>
           <div className="col-lg-6 col-md-6 d-flex flex-column">
             <MaskText text={phrases} />
