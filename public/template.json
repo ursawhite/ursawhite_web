@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Construction",
+    "link": "https://elements.envato.com/factory-industrial-html-template-3TCFZM8",
+    "image": "/images/template/construction.avif"
+  },
+  {
+    "id": 2,
+    "name": "CV",
+    "link": "https://elements.envato.com/cvit-portfolio-vcard-cv-resume-template-CBL8Y3",
+    "image": "/images/template/cv.avif"
+  },
+  {
+    "id": 3,
+    "name": "Admin",
+    "link": "https://elements.envato.com/dadmin-responsive-bootstrap-admin-template-MADV95",
+    "image": "/images/template/admin.avif"
+  },
+  {
+    "id": 4,
+    "name": "Medical Health",
+    "link": "https://elements.envato.com/medical-health-pregnancy-care-clinic-template-4LDJFNW",
+    "image": "/images/template/medical_health.avif"
+  },
+  {
+    "id": 5,
+    "name": "Creative and Business, Multipurpose",
+    "link": "https://elements.envato.com/concept-creative-and-business-multipurpose-5KMVG7K",
+    "image": "/images/template/creative_business_multipurpose.avif"
+  },
+  {
+    "id": 6,
+    "name": "Hotel Resort Booking",
+    "link": "https://elements.envato.com/tavern-hotel-resort-booking-html5-template-V9ZJPT5",
+    "image": "/images/template/hotel_resort.avif"
+  },
+  {
+    "id": 7,
+    "name": "Software App, SaaS Landing",
+    "link": "https://elements.envato.com/astriol-software-app-saas-landing-html-template-FELRHZV",
+    "image": "/images/template/software_app_sass.avif"
+  },
+  {
+    "id": 8,
+    "name": "Beauty, Salon, Cosmetic",
+    "link": "https://elements.envato.com/eliah-beauty-salon-cosmetic-shop-psd-template-YYTWB53",
+    "image": "/images/template/salon_cosmetic.avif"
+  }
+]
