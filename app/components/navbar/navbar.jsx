@@ -12,7 +12,7 @@ function Navbar() {
     { name: "Our Work", link: "/our_works", id: "linkOurWorks" },
     { name: "About Us", link: "/about_us", id: "linkAboutUs" },
     { name: "Services", link: "/services", id: "linkServices" },
-    // { name: "Template", link: "/template", id: "linkTemplate" },
+    { name: "Template", link: "/template", id: "linkTemplate" },
     { name: "Contact Us", link: "/contact_us", id: "linkContactUs" },
   ];
   const pathname = usePathname();
