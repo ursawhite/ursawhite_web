@@ -20,26 +20,13 @@ function Navbar() {
     const result = "/" + firstSegment;
     setActiveLink(result);
   }, [pathname]);
-  const updateWidth = () => {
-    const newWidth = window.innerWidth;
-    setWidth(newWidth);
-  };
-  useEffect(() => {
-    window.addEventListener("resize", updateWidth);
-    updateWidth();
-  }, []);
+
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top p-3">
       <div className="container ">
         <Link className="" href="/">
-          <Image
-            src="/logo.png"
-            width={width < 1024 ? "150" : "200"}
-            height={width < 1024 ? "25" : "35"}
-            priority
-            alt="logo"
-          />
+        <Image src="/logo.png" width={150} height={27} priority alt="logo" />
         </Link>
         <button
           className="navbar-toggler shadow-none "
@@ -47,7 +34,6 @@ function Navbar() {
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
-          // style={{ : "rgba(255,255,255,0.5)" }}
         >
           <div className="bi bi-list " style={{ color: "white" }}></div>
         </button>
