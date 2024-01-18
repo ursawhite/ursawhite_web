@@ -41,9 +41,10 @@ const PageTemplate = () => {
         offset={1}
         speed={0}
         style={{
+          position: "relative",
           display: "flex",
-          justifyContent: "center",
           alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <Template />
