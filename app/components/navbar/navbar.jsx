@@ -5,8 +5,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 function Navbar() {
+  const pathname = usePathname();
   const [activeLink, setActiveLink] = useState("/");
   const [width, setWidth] = useState(0);
+
   const list = [
     { name: "Home", link: "/", id: "linkHome" },
     { name: "Our Work", link: "/our_works", id: "linkOurWorks" },
@@ -15,7 +17,7 @@ function Navbar() {
     { name: "Template", link: "/template", id: "linkTemplate" },
     { name: "Contact Us", link: "/contact_us", id: "linkContactUs" },
   ];
-  const pathname = usePathname();
+
   useEffect(() => {
     const firstSegment = pathname.split("/")[1];
     const result = "/" + firstSegment;
@@ -26,7 +28,15 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg fixed-top p-3">
       <div className="container ">
         <Link href="/">
-          <Image src="/logo.png" width={150} height={27} priority alt="logo" />
+          <Image
+            src="/logo.png"
+            width={150}
+            height={25}
+            loading="eager"
+            priority
+            alt="logo"
+            style={{ objectFit: "contain" }}
+          />
         </Link>
         <button
           className="navbar-toggler shadow-none "
@@ -35,10 +45,10 @@ function Navbar() {
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
         >
-          <div className="bi bi-list " style={{ color: "white" }}></div>
+          <div className="bi bi-list" style={{ color: "white" }}></div>
         </button>
         <div
-          className="sidebar offcanvas offcanvas-start bg-dark "
+          className="sidebar offcanvas offcanvas-start bg-dark"
           tabIndex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
@@ -51,6 +61,7 @@ function Navbar() {
                 height={width < 1024 ? "25" : "35"}
                 priority
                 alt="logo"
+                style={{ objectFit: "contain" }}
               />
             </div>
             <button
@@ -74,7 +85,6 @@ function Navbar() {
                       className="nav-link fs-6"
                       id={item.id}
                       href={item.link}
-                      onClick={() => setActiveLink(`${item.link}`)}
                     >
                       <div className="button p-2 ms-1 me-1 rounded">
                         <span
@@ -83,23 +93,26 @@ function Navbar() {
                         >
                           {item.name}
                         </span>
-
                         <i className="bi bi-envelope ms-2 me-2"></i>
                       </div>
                     </Link>
                   ) : (
                     <Link
-                      className={`nav-link fs-6 ${
-                        activeLink === `${item.link}`
-                          ? "active border-bottom border-3 text-white p-2"
-                          : "text-secondary"
-                      }`}
+                      className="text-decoration-none"
                       id={item.id}
-                      aria-current="page"
+                      aria-current={item.link}
                       href={item.link}
-                      onClick={() => setActiveLink(`${item.link}`)}
                     >
-                      <span data-bs-dismiss="offcanvas">{item.name}</span>
+                      <div
+                        data-bs-dismiss="offcanvas"
+                        className={`nav-link fs-6 ${
+                          activeLink === `${item.link}`
+                            ? "active border-bottom border-3 text-white p-2"
+                            : "text-secondary"
+                        }`}
+                      >
+                        {item.name}
+                      </div>
                     </Link>
                   )}
                 </li>
