@@ -16,6 +16,7 @@ const Bg = () => {
           height={350}
           alt="object1"
           className="object-fit-contain"
+          loading="lazy"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
           blurDataURL={"/images/obj/1.png"}
@@ -32,6 +33,7 @@ const Bg = () => {
           width={250}
           height={250}
           alt="object2"
+          loading="lazy"
           className="object-fit-contain"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
@@ -49,6 +51,7 @@ const Bg = () => {
           width={300}
           height={300}
           alt="object3"
+          loading="lazy"
           className="object-fit-contain"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
@@ -71,6 +74,7 @@ const Bg = () => {
           height={300}
           alt="object4"
           className="object-fit-contain"
+          loading="lazy"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
           blurDataURL={"/images/obj/4.png"}
@@ -91,6 +95,7 @@ const Bg = () => {
           width={300}
           height={300}
           alt="object5"
+          loading="lazy"
           className="object-fit-contain"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
@@ -112,6 +117,7 @@ const Bg = () => {
           width={300}
           height={300}
           alt="object6"
+          loading="lazy"
           className="object-fit-contain"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
@@ -133,6 +139,7 @@ const Bg = () => {
           width={300}
           height={300}
           alt="object7"
+          loading="lazy"
           className="object-fit-contain"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
@@ -154,6 +161,7 @@ const Bg = () => {
           width={300}
           height={300}
           alt="object8"
+          loading="lazy"
           className="object-fit-contain"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
@@ -176,6 +184,7 @@ const Bg = () => {
           height={300}
           alt="object9"
           className="object-fit-contain"
+          loading="lazy"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
           blurDataURL={"/images/obj/9.png"}
@@ -197,6 +206,7 @@ const Bg = () => {
           height={300}
           alt="object10"
           className="object-fit-contain"
+          loading="lazy"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
           blurDataURL={"/images/obj/10.png"}
@@ -218,6 +228,7 @@ const Bg = () => {
           height={300}
           alt="object11"
           className="object-fit-contain"
+          loading="lazy"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
           blurDataURL={"/images/obj/11.png"}
@@ -239,6 +250,7 @@ const Bg = () => {
           height={300}
           alt="object12"
           className="object-fit-contain"
+          loading="lazy"
           sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
           placeholder="blur"
           blurDataURL={"/images/obj/12.png"}

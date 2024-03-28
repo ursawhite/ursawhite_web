@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Bg from "../../components/screen/bg";
-import Banner from "../banner/banner";
 import BannerV2 from "../banner/bannerv2";
 import Serv from "../serv/serv";
 
@@ -35,7 +34,6 @@ function Services() {
           }}
         >
           <BannerV2 />
-          {/* <Banner /> */}
         </ParallaxLayer>
         <ParallaxLayer
           offset={0}

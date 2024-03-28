@@ -12,6 +12,7 @@ function Navbar() {
     { name: "Our Work", link: "/our_works", id: "linkOurWorks" },
     { name: "About Us", link: "/about_us", id: "linkAboutUs" },
     { name: "Services", link: "/services", id: "linkServices" },
+    { name: "Template", link: "/template", id: "linkTemplate" },
     { name: "Contact Us", link: "/contact_us", id: "linkContactUs" },
   ];
   const pathname = usePathname();
@@ -25,8 +26,8 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top p-3">
       <div className="container ">
-        <Link className="" href="/">
-        <Image src="/logo.png" width={150} height={27} priority alt="logo" />
+        <Link href="/">
+          <Image src="/logo.png" width={150} height={27} priority alt="logo" />
         </Link>
         <button
           className="navbar-toggler shadow-none "

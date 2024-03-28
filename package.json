@@ -10,23 +10,27 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-    "@fullpage/react-fullpage": "^0.1.40",
     "@react-spring/parallax": "^9.7.3",
     "@studio-freight/lenis": "^1.0.27",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.11.0",
     "dotenv": "^16.3.1",
     "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
+    "eslint-config-next": "^14.1.0",
     "framer-motion": "^10.16.4",
-    "next": "^13.5.4",
+    "google-auth-library": "^9.6.3",
+    "google-spreadsheet": "^4.1.1",
+    "gsap": "^3.12.4",
+    "next": "^14.1.0",
     "react": "^18.2.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.0",
+    "react-icons": "^4.12.0",
     "react-intersection-observer": "^9.5.2",
     "react-responsive": "^9.0.2",
     "react-spring": "^9.7.2",
     "react-type-animation": "^3.1.0",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "sharp": "^0.33.3"
   }
 }

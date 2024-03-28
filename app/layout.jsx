@@ -1,11 +1,11 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
-import Navbar from "./components/navbar/navbar";
+import NavProvider from "./components/nav_provider";
 
 import "./global.css";
 
 export const metadata = {
-  metadataBase: new URL("https://ursawhite-web.vercel.app/"),
+  metadataBase: new URL("https://www.ursawhite.com/"),
   title: {
     template: "%s | Ursawhite",
     default: "Ursawhite",
@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "Ursawhite",
     description: "Home Page of Ursawhite ",
-    url: "https://ursawhite-web.vercel.app/",
+    url: "https://www.ursawhite.com/",
     siteName: "Ursawhite",
     images: [
       {
@@ -62,10 +62,9 @@ export default function RootLayout({ children }) {
           backgroundColor: "rgba(27, 27, 29)",
         }}
       >
-        <header>
-          <Navbar />
-        </header>
-        <main>{children}</main>
+        <main>
+          <NavProvider>{children}</NavProvider>
+        </main>
       </body>
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
