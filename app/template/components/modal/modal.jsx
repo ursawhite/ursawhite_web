@@ -55,7 +55,7 @@ export default function Index({ modal, projects, image }) {
             return (
               <div
                 className={styles.modal}
-                style={{ backgroundColor: "black" }}
+                style={{ backgroundColor: "#26261f" }}
                 key={`modal_${index}`}
               >
                 <div className="d-flex align-items-center justify-content-center">

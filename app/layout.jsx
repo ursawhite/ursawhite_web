@@ -5,7 +5,7 @@ import NavProvider from "./components/nav_provider";
 import "./global.css";
 
 export const metadata = {
-  metadataBase: new URL("https://ursawhite-web.vercel.app/"),
+  metadataBase: new URL("https://www.ursawhite.com/"),
   title: {
     template: "%s | Ursawhite",
     default: "Ursawhite",
@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "Ursawhite",
     description: "Home Page of Ursawhite ",
-    url: "https://ursawhite-web.vercel.app/",
+    url: "https://www.ursawhite.com/",
     siteName: "Ursawhite",
     images: [
       {

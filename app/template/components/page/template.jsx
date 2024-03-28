@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Bg from "../../../components/screen/bg";
 import Banner from "../banner/banner";
@@ -9,6 +9,28 @@ import Footer from "../../../components/footer/footer";
 
 const PageTemplate = () => {
   const ref = useRef(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    const apiUrl = "/api/fetchGSheets";
+    setIsLoading(true);
+    try {
+      fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.error(error);
+          setIsLoading(false);
+        });
+    } catch (error) {
+      console.error(error);
+      setIsLoading(false);
+    }
+  }, []);
+
   return (
     <Parallax
       ref={ref}
@@ -47,7 +69,7 @@ const PageTemplate = () => {
           justifyContent: "center",
         }}
       >
-        <Template />
+        <Template isLoading={isLoading} data={data} />
       </ParallaxLayer>
 
       <ParallaxLayer
