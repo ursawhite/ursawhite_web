@@ -89,7 +89,7 @@ function Footer() {
             </div>
             <div className="col-lg-8 d-flex flex-column justify-content-center">
               <p className="text-secondary mb-0 ms-3">Visit us at</p>
-              <p className="text-white mt-0 ms-3">
+              <p className="text-white mt-0 ms-3" style={{ fontSize: "12px" }}>
                 Gedung Wirausaha Lantai 1, Jalan Haji R. Rasuna Said Kavling C5,
                 RT.3/RW.1, Karet, Kecamatan Setiabudi, Daerah Khusus Ibukota
                 Jakarta 12920, Indonesia

@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import styles from "./style.module.css";
+import styles from "./style.module.scss";
 import gsap from "gsap";
 
 const scaleAnimation = {
@@ -48,7 +48,7 @@ export default function Index({ modal, projects, image }) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        className={`${styles.modalContainer} relative`}
+        className={`${styles.modalContainer}`}
       >
         <div style={{ top: index * -100 + "%" }} className={styles.modalSlider}>
           {projects.map((project, index) => {
@@ -58,21 +58,26 @@ export default function Index({ modal, projects, image }) {
                 style={{ backgroundColor: "#26261f" }}
                 key={`modal_${index}`}
               >
-                <div className="d-flex align-items-center justify-content-center">
-                  <div className="object-fit-contain ">
-                    <Image
-                      src={project.image}
-                      width={500}
-                      height={0}
-                      alt="image"
-                      className="h-auto w-auto"
-                    />
-                  </div>
+                <div className="d-flex p-3 mt-0 flex-column ">
+                  <Image
+                    src={project.image}
+                    width={500}
+                    height={500}
+                    alt="image"
+                    className="img-fluid object-fit-contain "
+                  />
 
-                  <div className="d-flex flex-column justify-content-center ms-5 ">
-                    <p className="text-white "> Name : {project.name}</p>
-                    <p className="text-white">Category : {project.category}</p>
-                    <p className="text-white ">Type : {project.type}</p>
+                  <div className="row d-flex w-100 mt-4">
+                    <div className="col-3">
+                      <p className="text-white "> Name </p>
+                      <p className="text-white "> Category </p>
+                      <p className="text-white "> Type </p>
+                    </div>
+                    <div className="col-6">
+                      <p className="text-white "> : {project.name}</p>
+                      <p className="text-white"> : {project.category}</p>
+                      <p className="text-white "> : {project.type}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -82,7 +87,6 @@ export default function Index({ modal, projects, image }) {
         <div
           style={{
             position: "absolute",
-
             backgroundColor: "rgba(0,0,0,0.5)",
             display: "flex",
             alignItems: "center",

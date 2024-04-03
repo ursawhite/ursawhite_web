@@ -13,20 +13,39 @@ function BannerMobile() {
         }}
       >
         <div className="col">
-          <div className="display-1 fw-bold text-white mt-5">URSAWHITE</div>
+          {/* <div className="display-1 fw-bold text-white mt-5">URSAWHITE</div> */}
           <div className="d-flex">
-            <div className="display-2 fw-bold text-white">Apps Is&nbsp;</div>
+            <div className="text-header-mobile fw-bold text-white">
+              MVPs Made&nbsp;
+            </div>
             <TypeAnimation
-              className="display-2 fw-bold text-white"
-              sequence={["Fast", 1000, "Easy", 1000]}
+              className="text-header-mobile fw-bold text-white"
+              sequence={[
+                "Simple",
+                1000,
+                "Fast",
+                1000,
+                "Easy",
+                1000,
+                "Reliable",
+                1000,
+              ]}
               repeat={Infinity}
+              style={{ color: "#9d76c1" }}
             />
           </div>
-          <p className="mt-3 text-white">
-            {`We combine technology with creativity to bring your ideas to life.
-            Whether you're a startup looking to disrupt the market or an
-            established enterprise seeking efficiency and growth, we have the
-            right software solutions for you.`}
+          <p className="text-desc-mobile mt-3 text-white fw-semibold">
+            We provide — IT solutions that are
+            <span
+              className="text-desc-mobile fw-bold"
+              style={{
+                background: "linear-gradient(90deg, #c45af4 0%, #7163de 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              &nbsp;stress free and easy to work with.
+            </span>
           </p>
         </div>
       </div>

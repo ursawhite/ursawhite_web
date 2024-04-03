@@ -39,7 +39,9 @@ function Portofolio_Mobile({ items }) {
               </h1>
               <p className="text-secondary">{item.type}</p>
               <h5 className="subtitle text-white">{item.subject}</h5>
-              <p className="text-white ">{item.desc}</p>
+              <p className="text-white " style={{ fontSize: "12px" }}>
+                {item.desc}
+              </p>
               <ul className="list text-white">
                 {item.tech.map((techItem, index) => (
                   <li key={index}>

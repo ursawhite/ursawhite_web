@@ -18,16 +18,30 @@ const Template = ({ isLoading, data }) => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+    <div className="d-flex flex-column align-items-center justify-content-center">
       {isLoading ? (
-        <>Loading...</>
+        <div
+          style={{
+            minHeight: "100svh",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <span className="text-white">Loading...</span>
+        </div>
       ) : (
-        <>
+        <div style={{ overflow: "hidden" }}>
           <div
             className="row m-auto d-flex justify-content-center align-items-center"
-            style={{ paddingLeft: "15vw", paddingRight: "15vw" }}
+            style={{
+              paddingLeft: "15vw",
+              paddingRight: "15vw",
+              position: "relative",
+            }}
           >
-            {currentItems.map((item, index) => (
+            {data.map((item, index) => (
               <Project
                 item={item}
                 index={indexOfFirstItem + index}
@@ -37,29 +51,13 @@ const Template = ({ isLoading, data }) => {
               />
             ))}
           </div>
-          <div className="pagination">
-            {Array(Math.ceil(data.length / itemsPerPage))
-              .fill()
-              .map((_, i) => (
-                <button
-                  className={`btn border-1 border-light m-1 ${
-                    currentPage === i + 1
-                      ? "bg-light text-black fw-bold "
-                      : "text-white "
-                  }`}
-                  key={i}
-                  onClick={() => paginate(i + 1)}
-                >
-                  {i + 1}
-                </button>
-              ))}
-          </div>
+
           <Modal
             modal={modal}
             projects={data}
             image={data[modal.index].image}
           />
-        </>
+        </div>
       )}
     </div>
   );

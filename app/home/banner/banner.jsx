@@ -10,25 +10,42 @@ function Banner() {
       <div className="row d-flex flex-column justify-content-center align-items-center ">
         <div className="col-lg-8 col-md-8 text-center text-white ">
           {/* <div className="display-1 fw-bold">URSAWHITE</div> */}
-          <MaskTesk text={phrases} />
+          {/* <MaskTesk text={phrases} /> */}
           <div className="d-flex justify-content-center align-items-center">
-            <div className="display-1 fw-bold">Apps Is&nbsp;</div>
+            <div className="text-header fw-bold">MVPs Made&nbsp;</div>
             <TypeAnimation
-              className="display-1 fw-bold"
-              sequence={["Fast", 1000, "Easy", 1000]}
+              className="text-header fw-bold"
+              sequence={[
+                "Simple",
+                1000,
+                "Fast",
+                1000,
+                "Easy",
+                1000,
+                "Reliable",
+                1000,
+              ]}
               repeat={Infinity}
+              style={{ color: "#9d76c1" }}
             />
           </div>
           <motion.div
-            className="h5 mt-3"
+            className="text-desc-header mt-3 fw-semibold"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            {`We combine technology with creativity to bring your ideas to life.
-            Whether you're a startup looking to disrupt the market or an
-            established enterprise seeking efficiency and growth, we have the
-            right software solutions for you.`}
+            We provide — IT solutions that are <br className="divider" />
+            <span
+              className="text-desc-header fw-bold"
+              style={{
+                background: "linear-gradient(90deg, #c45af4 0%, #7163de 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              &nbsp;stress free and easy to work with.
+            </span>
           </motion.div>
         </div>
       </div>

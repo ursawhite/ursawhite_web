@@ -1,9 +1,10 @@
 import React from "react";
-import data from "../../../../public/template.json";
+// import data from "../../../../public/template.json";
 import Card from "react-bootstrap/Card";
 import Footer from "../../footer/footer";
 import Link from "next/link";
-const Template_Mobile = () => {
+const Template_Mobile = ({ isLoading, data }) => {
+  console.log(data);
   return (
     <>
       <div
