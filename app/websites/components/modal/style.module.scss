@@ -1,12 +1,13 @@
 .modalContainer {
-  height: 400px;
-  width: 900px;
+  height: 450px;
+  width: 500px;
   position: absolute;
   overflow: hidden;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: "20px";
 }
 
 .modalSlider {
@@ -20,7 +21,11 @@
   height: 100%;
   width: 100%;
   display: flex;
-  align-items: center;
+  border-radius: 10px;
+  padding: "0";
+  margin: "0";
+  border: 1px solid white;
+  z-index: 100;
 }
 
 .modal img {

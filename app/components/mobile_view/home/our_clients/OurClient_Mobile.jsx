@@ -55,7 +55,7 @@ function OurClient() {
             Discover the success stories of our satisfied clients who have
             already harnessed the power of our services.
           </h2>
-          <p className="text-white">
+          <p className="text-white" style={{ fontSize: "12px" }}>
             Our commitment to excellence and dedication to delivering top-notch
             services have allowed us to build strong and enduring relationships
             with a diverse range of clients. <br />
@@ -84,10 +84,10 @@ function OurClient() {
               src={item.logo}
               className="img-fluid bg-light object-fit-contain"
               alt={item.name}
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               sizes={"(max-width: 768px) 100vw,(max-width: 1224px) 50vw, 30vw"}
-              style={{ width: "auto", height: "100%" }}
+              style={{ width: "100%", height: "auto" }}
               priority
             />
           </motion.div>

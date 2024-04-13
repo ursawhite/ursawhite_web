@@ -14,7 +14,7 @@ function Navbar() {
     { name: "Our Work", link: "/our_works", id: "linkOurWorks" },
     { name: "About Us", link: "/about_us", id: "linkAboutUs" },
     { name: "Services", link: "/services", id: "linkServices" },
-    { name: "Template", link: "/template", id: "linkTemplate" },
+    { name: "Websites", link: "/websites", id: "linkWebsites" },
     { name: "Contact Us", link: "/contact_us", id: "linkContactUs" },
   ];
 
@@ -26,17 +26,17 @@ function Navbar() {
 
 
   return (
-    <nav className="navbar navbar-expand-lg fixed-top p-3">
+    <nav className="navbar navbar-expand-lg fixed-top pt-3">
       <div className="container ">
         <Link href="/">
           <Image
             src="/logo.png"
-            width={150}
-            height={25}
+            width={130}
+            height={50}
             loading="eager"
             priority
             alt="logo"
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "contain", width: "100%", height: "auto" }}
           />
         </Link>
         <button
@@ -54,8 +54,8 @@ function Navbar() {
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
-          <div className="offcanvas-header border-bottom text-white ">
-            <div className="offcanvas-title " id="offcanvasNavbarLabel">
+          <div className="offcanvas-header border-bottom text-white">
+            <div className="offcanvas-title" id="offcanvasNavbarLabel">
               <Image
                 src="/logo.png"
                 width={width < 1024 ? "150" : "200"}
@@ -67,12 +67,12 @@ function Navbar() {
             </div>
             <button
               type="button"
-              className="btn-close btn-close-white shadow-none border-0 ms-5 me-3"
+              className="btn-close btn-close-white shadow-none border-0"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
-          <div className="offcanvas-body d-flex flex-column p-4 p-lg-0 ">
+          <div className="offcanvas-body d-flex flex-column  p-4 p-lg-0 ">
             <ul className="navbar-nav justify-content-lg-end pe-3 align-items-center">
               {list.map((item, index) => (
                 <li

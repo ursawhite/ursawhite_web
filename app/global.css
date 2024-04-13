@@ -12,6 +12,22 @@
   color: var(--second-color);
 }
 
+.text-header {
+  font-size: clamp(2.2rem, 0.4173rem + 3.6661vw, 5rem);
+}
+
+.text-desc-header {
+  font-size: clamp(1.8rem, 1.3543rem + 0.9165vw, 2.5rem);
+}
+
+.text-header-mobile {
+  font-size: clamp(0.5rem, 1rem + 3.1291vw, 2.5rem);
+}
+
+.text-desc-mobile {
+  font-size: clamp(1rem, 1rem + 2.086vw, 2rem);
+}
+
 .text {
   letter-spacing: 10px;
   stroke: #70747c;
@@ -144,5 +160,11 @@
 @media screen and (max-width: 768px) {
   .back {
     background-image: none;
+  }
+}
+
+@media (min-width: 790px) and (max-width: 991px) {
+  .divider {
+    display: none;
   }
 }
