@@ -28,6 +28,12 @@ export function generateMetadata({ params }) {
   }
 }
 
+export async function generateStaticParams() {
+  return data.map((item) => ({
+    slug: item.title.replace(/\s/g, "-").toLowerCase(),
+  }));
+}
+
 const Sprint = ({ params }) => {
   const title = params.slug;
   return (
