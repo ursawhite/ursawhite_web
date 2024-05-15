@@ -12,7 +12,7 @@ const Banner = () => {
       <div className="container text-white text-center fw-bold ">
         <div
           className="row d-flex align-items-center justify-content-center"
-          style={{ width: "100%", minHeight: "100svh" }}
+          style={{ minHeight: "100svh" }}
         >
           <div className="col-lg-12 col-md-12">
             <div

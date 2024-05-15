@@ -40,12 +40,12 @@ function ProjectMobile({ title }) {
           />
         </div>
       </div>
-      <div className="container ">
+      <div className="container">
         <div className="row" style={{ marginTop: "10%", marginBottom: "10%" }}>
           <div className="col">
             <h1 className="text-white fw-bold">{project.title}</h1>
             <h4 className="text-white fw-bold">{project.subject}</h4>
-            <p className="text-white">{project.desc}</p>
+            <p className="text-white ">{project.desc}</p>
           </div>
         </div>
       </div>

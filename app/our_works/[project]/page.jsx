@@ -29,6 +29,12 @@ export function generateMetadata({ params }) {
   }
 }
 
+export async function generateStaticParams() {
+  return data.map((item) => ({
+    project: item.title.replace(/\s/g, "-").toLowerCase(),
+  }));
+}
+
 function Project({ params }) {
   return (
     <>

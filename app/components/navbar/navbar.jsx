@@ -15,6 +15,7 @@ function Navbar() {
     { name: "About Us", link: "/about_us", id: "linkAboutUs" },
     { name: "Services", link: "/services", id: "linkServices" },
     { name: "Websites", link: "/websites", id: "linkWebsites" },
+    { name: "Blog", link: "/blog", id: "linkBlog" },
     { name: "Contact Us", link: "/contact_us", id: "linkContactUs" },
   ];
 
@@ -28,15 +29,15 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top pt-3">
       <div className="container ">
-        <Link href="/">
+        <Link href="/" className="navbar-brand">
           <Image
             src="/logo.png"
-            width={130}
-            height={50}
+            width={360}
+            height={480}
             loading="eager"
             priority
             alt="logo"
-            style={{ objectFit: "contain", width: "100%", height: "auto" }}
+            style={{ objectFit: "contain", width: "100%", height: "25px" }}
           />
         </Link>
         <button

@@ -192,5 +192,40 @@
     "img_details": [],
     "linkTo": "/ourworks/bni_direct",
     "main_color": "rgba(242,108,75)"
+  },
+  {
+    "id": 7,
+    "title": "Pintarnya",
+    "type": "Front-end development",
+    "subject": "Empowering Indonesia's Workforce with Pintarnya",
+    "desc": "Pintarnya is an innovative platform dedicated to enhancing the employability and financial stability of workers in Indonesia. By providing a comprehensive suite of tools and resources, Pintarnya connects job seekers with potential employers and offers financial services tailored to their needs. Key features of Pintarnya include job matching, skills training, career development resources, and financial products such as loans and savings accounts. Since its inception, Pintarnya has been committed to leveraging technology to create a seamless and efficient user experience, empowering individuals to achieve their career and financial goals. As of 2023, Pintarnya continues to grow and adapt, meeting the evolving needs of Indonesia's dynamic workforce.",
+    "tech": [
+      "Flutter",
+      "Google Maps API",
+      "Directions API",
+      " Firebase cloud messaging (FCM)",
+      "Firebase Database",
+      "Google Analytics",
+      "QR/Bar code scanning"
+    ],
+    "client": "Pintarnya",
+    "location": "Indonesia",
+    "year": "2023-now",
+    "image": "/images/our-works/project-pintarnya.png",
+    "image_mobile": "/images/img-back/pintarnya_mobile.png",
+    "img_back": [
+      "/images/img-back/pintarnya.png",
+      "/images/img-back/pintarnya_back.png",
+      "/images/img-back/pintarnya_mobile.png"
+    ],
+    "img_details": [
+      "/images/our-works/details/pintarnya/1.png",
+      "/images/our-works/details/pintarnya/2.png",
+      "/images/our-works/details/pintarnya/3.png",
+      "/images/our-works/details/pintarnya/4.png",
+      "/images/our-works/details/pintarnya/5.png"
+    ],
+    "linkTo": "/ourworks/pintarnya",
+    "main_color": "rgba(42,131,253,255)"
   }
 ]

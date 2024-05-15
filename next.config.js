@@ -18,6 +18,16 @@ module.exports = {
         hostname: "res.cloudinary.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "demo.ursawhite.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "secure.gravatar.com",
+        pathname: "**",
+      },
     ],
   },
 };
