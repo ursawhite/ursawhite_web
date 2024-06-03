@@ -24,6 +24,7 @@ function Navbar() {
     setActiveLink(result);
   }, [pathname]);
 
+
   return (
     <nav className="navbar navbar-expand-lg fixed-top pt-3">
       <div className="container ">

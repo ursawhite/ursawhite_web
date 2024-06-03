@@ -138,7 +138,8 @@ export default function MultiLayerParallax(props) {
                     )
                   }
                   style={{
-                    borderRadius: "0px",
+                    borderRadius: 0,
+                    width: 50
                   }}
                 >
                   {"0" + item}
