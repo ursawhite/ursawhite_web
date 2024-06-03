@@ -3,7 +3,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Bg from "@/components/screen/bg";
 import SvgText from "@/components/svg/svg";
 import Banner from "./Banner";
-import Porto from "./porto";
+import Porto from "./Porto";
 import OurStrengths from "./Our-Strengths";
 import Wordpress from "./Wordpress";
 import Footer from "@/components/footer/footer";
