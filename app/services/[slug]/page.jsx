@@ -1,6 +1,6 @@
 import React from "react";
-import data from "../../../public/services.json";
-import Serv from "./page_container";
+import data from "@/public/data/services.json";
+import SlugPage from "@/components/view/services/slug-page.jsx";
 
 export function generateMetadata({ params }) {
   try {
@@ -40,7 +40,7 @@ const Services = ({ params }) => {
   const title = params.slug;
   return (
     <>
-      <Serv title={title} />
+      <SlugPage title={title} />
     </>
   );
 };

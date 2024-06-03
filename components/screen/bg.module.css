@@ -1,0 +1,36 @@
+.layer_object1 {
+  margin-left: 90%;
+  z-index: -1;
+}
+.layer_object2 {
+  margin-left: -5%;
+  margin-top: -10%;
+  z-index: -1;
+}
+.layer_object3 {
+  margin-left: 90%;
+  margin-top: 30%;
+  z-index: -1;
+}
+.layer_object4 {
+  margin-left: -8%;
+  margin-top: 30%;
+  z-index: -1;
+}
+.layer_object5 {
+  margin-left: 88%;
+  margin-top: 20%;
+  z-index: -1;
+}
+.object {
+  object-fit: contain;
+
+  filter: blur(8px);
+}
+
+.object2 {
+  object-fit: contain;
+  transform: rotate(350deg);
+  opacity: 0.3;
+  filter: blur(8px);
+}

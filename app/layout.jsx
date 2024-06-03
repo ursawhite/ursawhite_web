@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
-import NavProvider from "./components/nav_provider";
+import NavProvider from "@/components/provider/Nav-Provider";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./global.css";
 
@@ -10,10 +11,12 @@ export const metadata = {
     template: "%s | Ursawhite",
     default: "Ursawhite",
   },
-  description: "Home Page of Ursawhite",
+  description:
+    "MVPs Made Simple, Fast, Easy, Reliable, We provide — IT solutions that are stress free and easy to work with.",
   openGraph: {
     title: "Ursawhite",
-    description: "Home Page of Ursawhite ",
+    description:
+      "MVPs Made Simple, Fast, Easy, Reliable, We provide — IT solutions that are stress free and easy to work with.",
     url: "https://www.ursawhite.com/",
     siteName: "Ursawhite",
     images: [
@@ -70,6 +73,7 @@ export default function RootLayout({ children }) {
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
         as="script"
       />
+      <GoogleAnalytics gaId="G-L2S1NJ0632" />
     </html>
   );
 }

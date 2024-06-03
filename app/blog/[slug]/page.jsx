@@ -1,5 +1,5 @@
 import React from "react";
-import BlogDetails from "../../components/view/blog/BlogDetails";
+import BlogDetails from "@/components/view/blog/BlogDetails";
 
 export async function generateStaticParams() {
   const blogData = await fetch(

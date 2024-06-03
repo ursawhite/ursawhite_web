@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../../../public/sprint.json";
+import data from "@/public/data/sprint.json";
 import SprintPage from "./page_container";
 
 export function generateMetadata({ params }) {

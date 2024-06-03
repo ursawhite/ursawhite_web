@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@next/third-parties": "^14.2.3",
     "@react-spring/parallax": "^9.7.3",
     "@studio-freight/lenis": "^1.0.27",
     "bootstrap": "^5.3.3",
@@ -32,6 +33,7 @@
     "react-responsive": "^9.0.2",
     "react-spring": "^9.7.2",
     "react-type-animation": "^3.1.0",
+    "reading-time-estimator": "^1.11.0",
     "sass": "^1.68.0",
     "sharp": "^0.33.3",
     "yup": "^1.4.0"

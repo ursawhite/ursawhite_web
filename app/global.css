@@ -1,6 +1,7 @@
 :root {
   --main-color: #5b0888;
   --second-color: #c457d5;
+  --secondary-background-color: #333333;
 }
 
 .patterns {
@@ -165,7 +166,7 @@ a {
 
 .blog_post {
   padding: 10px;
-  background-color: #333333;
+  background-color: var(--secondary-background-color);
   height: auto;
   gap: 10px;
   border-radius: 10px;
@@ -326,6 +327,14 @@ a {
   border-radius: 10px;
 }
 
+.text-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @keyframes shine {
   to {
     background-position: 100% 0, /* move highlight to right */ 0 0;
@@ -348,6 +357,18 @@ a {
   background-position: 0 0;
   animation: shine 1s infinite;
   border-radius: 10px;
+}
+
+.gray-section {
+  background-color: var(--secondary-background-color);
+  border-radius: 5px;
+  display: flex;
+  height: 100%;
+}
+
+.gray-section:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {

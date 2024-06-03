@@ -1,0 +1,41 @@
+.box_sprint {
+  background: radial-gradient(
+    at center,
+    rgba(254, 253, 255, 0.3),
+    rgba(53, 57, 59, 0.3)
+  );
+  // height: 20vh;
+}
+
+.banner_sprint {
+  overflow: hidden;
+  background-image: url("../../../public/images/back.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: visible;
+  width: auto;
+  height: 100vh;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .banner_sprint {
+    background-image: none;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+  }
+}
+
+@media (max-width: 478px) {
+  .banner_sprint {
+    margin-top: 50vh;
+    margin-bottom: 30vh;
+  }
+}
+
+@media (max-width: 333px) {
+  .banner_sprint {
+    margin-top: 70vh;
+    margin-bottom: 30vh;
+  }
+}

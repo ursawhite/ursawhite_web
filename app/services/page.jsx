@@ -1,5 +1,5 @@
 import React from "react";
-import ServicesPage from "./services";
+import ServicesPage from "@/components/view/services/services";
 
 export const metadata = {
   title: "Services",
