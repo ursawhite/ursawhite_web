@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Blog from "../components/view/blog/Blog";
-import BlogPagination from "../components/view/blog/BlogPagination";
-import Footer from "../components/footer/footer";
+import Blog from "@/components/view/blog/Blog";
+import BlogPagination from "@/components/view/blog/BlogPagination";
+import Footer from "@/components/footer/footer";
 
 const Blogs = () => {
   const [isLoading, setIsLoading] = useState(true);

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "User Engagement",
+    "description": "Discover proven tactics and strategies to boost user engagement and satisfaction",
+    "list": [
+      {
+        "Effective Onboarding": "Simplify user onboarding and provide tutorials to help users get started easily.",
+        "Feedback and Personalization": "Collect user feedback, personalize their experience, and act on their suggestions.",
+        "Community Building": "Foster a user community for sharing and support to enhance engagement.",
+        "Communication": "Keep users informed through notifications and in-app messaging about updates and events.",
+        "Continuous Improvement": "Regularly analyze user analytics, conduct surveys, and optimize performance to meet user needs and expectations."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Business Understanding",
+    "desc": "Explore how a deep understanding of the business landscape drives project success in your software company.",
+    "list": [
+      {
+        "Market Research": "Align your project goals with the business goals of your company.",
+        "Customer Segmentation and Feedback": "Understand the business model of your company and how your project fits into it.",
+        "Key Performance Indicators (KPIs)": "Understand the business processes of your company and how your project fits into them.",
+        "Strategic Planning and Innovation": "Identify the business metrics that your project will impact and how it will impact them.",
+        "Continuous Monitoring and Improvement": "Identify the business risks that your project will impact and how it will impact them."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Jim",
+    "age": 40
+  }
+]

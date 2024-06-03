@@ -1,4 +1,4 @@
-import Home from "./home/home_page.jsx";
+import Home from "@/components/view/home/Home-Page";
 
 function HomePage() {
   return (

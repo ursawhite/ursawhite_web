@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-import data from "../../../public/sprint.json";
-import MaskText from "../../components/mask/mask";
+import data from "@/public/data/sprint.json";
+import MaskText from "@/components/mask/mask";
 import Image from "next/image";
-import Footer from "../../components/footer/footer";
-import styles from "./page.module.scss";
+import Footer from "@/components/footer/footer";
+import styles from "./home.module.scss";
 import { motion } from "framer-motion";
 
 const Sprint = ({ title }) => {

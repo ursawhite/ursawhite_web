@@ -1,0 +1,554 @@
+[
+  {
+    "id": 1,
+    "title": "Front-end Development",
+    "description": "Our Front-end Development services are designed to create visually appealing and user-friendly websites and web applications. We specialize in crafting responsive and interactive user interfaces that enhance your online presence. Whether you need a stunning website or a dynamic web app, our team is here to bring your ideas to life.",
+    "image": "/images/frontend.png",
+    "icon": "bi-code-slash",
+    "services": [
+      {
+        "Service": "Website Design",
+        "Description": "Front-end developers design the layout, color schemes, typography, and overall visual aesthetics of a website or web application. This includes creating wireframes and mockups to plan the user interface."
+      },
+      {
+        "Service": "Responsive Web Design",
+        "Description": "Front-end developers ensure that websites and web apps look and function well on a variety of devices and screen sizes. This involves using techniques like CSS media queries."
+      },
+      {
+        "Service": "HTML/CSS Development",
+        "Description": "Front-end developers write HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) code to structure and style web content. They ensure the content is accessible and loads quickly."
+      },
+      {
+        "Service": "JavaScript Development",
+        "Description": "JavaScript is a fundamental language for front-end development. Developers use it to create interactive features, animations, and enhance user experience."
+      },
+      {
+        "Service": "Front-End Frameworks",
+        "Description": "Front-end developers work with popular frameworks like React, Angular, or Vue.js to streamline development and create dynamic web applications. These frameworks enable the creation of single-page applications (SPAs) and real-time features."
+      },
+      {
+        "Service": "Cross-Browser Compatibility",
+        "Description": "Front-end developers ensure that websites and web apps function consistently across different web browsers, resolving compatibility issues as needed."
+      },
+      {
+        "Service": "User Interface (UI) Development",
+        "Description": "This includes the design and implementation of user interface components like buttons, forms, navigation menus, and other elements that users interact with."
+      },
+      {
+        "Service": "User Experience (UX) Design",
+        "Description": "UX design focuses on creating an intuitive and enjoyable user experience. Front-end developers work closely with UX designers to implement their design concepts effectively."
+      },
+      {
+        "Service": "Accessibility Implementation",
+        "Description": "Front-end developers make websites and web applications accessible to individuals with disabilities by following web accessibility guidelines (e.g., WCAG). This involves using semantic HTML and adding ARIA roles."
+      },
+      {
+        "Service": "Performance Optimization",
+        "Description": "Ensuring fast load times and smooth user interactions is crucial. Front-end developers optimize images, use efficient coding techniques, and minimize HTTP requests to improve website performance."
+      },
+      {
+        "Service": "Integration with Back-End",
+        "Description": "Front-end developers collaborate with back-end developers to connect the user interface with server-side functionalities, such as databases and APIs."
+      },
+      {
+        "Service": "Testing and Debugging",
+        "Description": "Testing and debugging are essential to identify and fix issues in the front-end code. Front-end developers often use tools like browser developer tools and automated testing frameworks."
+      },
+      {
+        "Service": "Version Control/Git",
+        "Description": "Knowledge of version control systems, such as Git, is essential for tracking changes, collaborating with team members, and maintaining code repositories."
+      },
+      {
+        "Service": "Continuous Integration/ Continuous Deployment (CI/ CD)",
+        "Description": "Setting up CI/CD pipelines to automate the deployment process and ensure smooth updates and releases."
+      },
+      {
+        "Service": "Mobile App Development",
+        "Description": "Front-end developers may extend their services to create mobile applications using web technologies, like React Native or Flutter."
+      },
+      {
+        "Service": "Performance Monitoring",
+        "Description": "Ongoing monitoring and analysis of website or app performance using tools like Google PageSpeed Insights, Lighthouse, or New Relic."
+      },
+      {
+        "Service": "Security Best Practices",
+        "Description": "Implementing security measures, such as data encryption, to protect against common web security threats like cross-site scripting (XSS) and cross-site request forgery (CSRF)."
+      }
+    ],
+    "closing": "Front-end development services play a critical role in delivering a seamless and visually appealing user experience. Depending on the project's complexity, it may involve collaboration with designers, back-end developers, and other stakeholders to create a compelling and functional web presence.",
+    "tech_used": [
+      {
+        "tech": "HTML (Hypertext Markup Language)",
+        "logo": "/images/logo/html.png"
+      },
+      {
+        "tech": "CSS (Cascading Style Sheets)",
+        "logo": "/images/logo/css.png"
+      },
+      {
+        "tech": "React",
+        "logo": "/images/logo/react.png"
+      },
+      {
+        "tech": "Vue.js",
+        "logo": "/images/logo/vue.png"
+      },
+      {
+        "tech": "Next.js",
+        "logo": "/images/logo/nextjs.png"
+      },
+      {
+        "tech": "React Native",
+        "logo": "/images/logo/react.png"
+      },
+      {
+        "tech": "JavaScript",
+        "logo": "/images/logo/js.png"
+      },
+      {
+        "tech": "TypeScript",
+        "logo": "/images/logo/typescript.png"
+      },
+      {
+        "tech": "Bootstrap",
+        "logo": "/images/logo/bootstrap.png"
+      },
+      {
+        "tech": "Material UI",
+        "logo": "/images/logo/materialui.png"
+      },
+      {
+        "tech": "Tailwind CSS",
+        "logo": "/images/logo/tailwind.png"
+      },
+      {
+        "tech": "CoreUI",
+        "logo": "/images/logo/coreui.png"
+      },
+      {
+        "tech": "Chakra UI",
+        "logo": "/images/logo/chakra-ui.png"
+      },
+      {
+        "tech": "Ant Design",
+        "logo": "/images/logo/ant-design.png"
+      },
+      {
+        "tech": "React Suite",
+        "logo": "/images/logo/react-suite.png"
+      },
+      {
+        "tech": "Semantic UI",
+        "logo": "/images/logo/semantic-ui.png"
+      },
+      {
+        "tech": "Mantime UI",
+        "logo": "/images/logo/mantime-ui.png"
+      },
+      {
+        "tech": "Next UI",
+        "logo": "/images/logo/next-ui.png"
+      },
+      {
+        "tech": "Storybook",
+        "logo": "/images/logo/storybook.png"
+      },
+      {
+        "tech": "Shadcn/ui",
+        "logo": "/images/logo/shadcn.png"
+      },
+      {
+        "tech": "Framer Motion",
+        "logo": "/images/logo/framer-motion.png"
+      },
+      {
+        "tech": "React Spring",
+        "logo": "/images/logo/react-spring.png"
+      },
+      {
+        "tech": "Gsap",
+        "logo": "/images/logo/gsap.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Back-end Development",
+    "description": "With our Back-end Development services, we ensure the functionality and performance of your website or web application. We build robust server-side components, databases, and APIs that power your online platform. Our expertise lies in creating scalable and secure back-end solutions that support your business operations and user experiences.",
+    "image": "/images/backend.png",
+    "icon": "bi bi-hash",
+    "services": [
+      {
+        "Service": "Server-Side Programming",
+        "Description": "Back-end developers write server-side code using languages like Python, Ruby, Node.js, or Java to handle data processing, server logic, and database interactions."
+      },
+      {
+        "Service": "Database Design and Management",
+        "Description": "Back-end developers design, implement, and manage databases. This includes schema design, optimizing queries, and ensuring data integrity."
+      },
+      {
+        "Service": "API Development",
+        "Description": "Creating application programming interfaces (APIs) to allow communication between the front-end and back-end systems, enabling data exchange and interaction."
+      },
+      {
+        "Service": "User Authentication and Authorization",
+        "Description": "Implementing user authentication methods (e.g., OAuth, JWT) and managing user roles and permissions to secure data and services."
+      },
+      {
+        "Service": "Server Security",
+        "Description": "Implementing security measures to protect against data breaches, such as encryption, input validation, and security best practices."
+      },
+      {
+        "Service": "Scalability and Performance Optimization",
+        "Description": "Ensuring that back-end systems can handle increased loads by optimizing code, using caching, load balancing, and scaling infrastructure."
+      },
+      {
+        "Service": "Data Storage Solutions",
+        "Description": "Selecting and managing data storage solutions, including relational databases (SQL) or NoSQL databases like MongoDB, based on project requirements."
+      },
+      {
+        "Service": "Middleware Development",
+        "Description": "Developing middleware components to connect different parts of the application and handle tasks like logging, caching, and routing."
+      },
+      {
+        "Service": "Microservices Architecture",
+        "Description": "Implementing microservices architecture, breaking down the application into smaller, independently deployable services that work together."
+      },
+      {
+        "Service": "Serverless Computing",
+        "Description": "Leveraging serverless platforms like AWS Lambda or Azure Functions to build and deploy backend services without managing infrastructure."
+      },
+      {
+        "Service": "Message Queues and Event-Driven Architecture",
+        "Description": "Implementing message queues and event-driven architecture for asynchronous processing, ensuring scalability and responsiveness."
+      },
+      {
+        "Service": "Integration with Front-End",
+        "Description": "Collaborating with front-end developers to ensure seamless integration between the user interface and back-end functionality."
+      },
+      {
+        "Service": "Logging and Monitoring",
+        "Description": "Implementing logging and monitoring solutions to track application performance, diagnose issues, and proactively address errors."
+      },
+      {
+        "Service": "Version Control and DevOps",
+        "Description": "Using version control systems (e.g., Git) and practicing DevOps to automate deployment, continuous integration, and continuous delivery."
+      },
+      {
+        "Service": "Compliance and Regulations",
+        "Description": "Ensuring that back-end systems comply with industry regulations and data protection laws (e.g., GDPR, HIPAA)."
+      }
+    ],
+    "closing": "These backend development services are crucial for creating robust, secure, and scalable web and mobile applications that meet the needs of users and businesses. The specific services required will depend on the project's complexity, goals, and technology stack.",
+    "tech_used": [
+      {
+        "tech": "Node.js",
+        "logo": "/images/logo/nodejs.png"
+      },
+      {
+        "tech": "Express.js",
+        "logo": "/images/logo/expressjs.png"
+      },
+      {
+        "tech": "Ruby",
+        "logo": "/images/logo/ruby.png"
+      },
+      {
+        "tech": "Java",
+        "logo": "/images/logo/java.png"
+      },
+      {
+        "tech": "PHP",
+        "logo": "/images/logo/php.png"
+      },
+      {
+        "tech": "Golang",
+        "logo": "/images/logo/golang.png"
+      },
+      {
+        "tech": "Nest.js",
+        "logo": "/images/logo/nestjs.png"
+      },
+      {
+        "tech": "Django",
+        "logo": "/images/logo/django.png"
+      },
+      {
+        "tech": "Flask",
+        "logo": "/images/logo/flask.png"
+      },
+      {
+        "tech": "Laravel",
+        "logo": "/images/logo/laravel.png"
+      },
+      {
+        "tech": "Spring Boot",
+        "logo": "/images/logo/spring-boot.png"
+      },
+      {
+        "tech": "MySQL",
+        "logo": "/images/logo/mysql.png"
+      },
+      {
+        "tech": "PostgreSQL",
+        "logo": "/images/logo/postgresql.png"
+      },
+      {
+        "tech": "MongoDB",
+        "logo": "/images/logo/mongodb.png"
+      },
+      {
+        "tech": "Redis",
+        "logo": "/images/logo/redis.png"
+      },
+      {
+        "tech": "Firebase",
+        "logo": "/images/logo/firebase.png"
+      },
+      {
+        "tech": "Docker",
+        "logo": "/images/logo/docker.png"
+      },
+      {
+        "tech": "AWS",
+        "logo": "/images/logo/aws.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Content Management System (CMS)",
+    "description": "CMS Implementation is crucial for efficient content management on your website or web app. We provide CMS Implementation services that enable you to easily create, update, and organize your digital content. Our solutions streamline content publishing, making it simple for you to maintain an up-to-date and engaging online presence.",
+    "image": "/images/cms.png",
+    "icon": "bi bi-bezier2",
+    "services": [
+      {
+        "Service": "WordPress",
+        "Description": "WordPress is one of the most popular and user-friendly CMS platforms. It's open-source, highly customizable, and has a vast ecosystem of themes and plugins. It's ideal for blogs, business websites, and e-commerce."
+      },
+      {
+        "Service": "Joomla",
+        "Description": "Joomla is a powerful open-source CMS that offers more advanced features for users who want to create complex websites. It's suitable for community sites, e-commerce, and social networking platforms."
+      },
+      {
+        "Service": "Drupal",
+        "Description": "Drupal is a highly flexible and secure open-source CMS often chosen for large and complex websites. It offers extensive customization options and is popular for government, educational, and enterprise websites."
+      },
+      {
+        "Service": "Magento",
+        "Description": "Magento is a CMS specifically designed for e-commerce. It's open-source and offers robust features for creating online stores. It's suitable for businesses with complex product catalogs and online sales."
+      },
+      {
+        "Service": "Shopify",
+        "Description": "Shopify is a hosted e-commerce platform that provides an all-in-one solution for creating online stores. It's user-friendly and comes with a range of templates and plugins for easy setup."
+      },
+      {
+        "Service": "Wix",
+        "Description": "Wix is a user-friendly, cloud-based website builder with an integrated CMS. It's ideal for small businesses and individuals looking to create visually appealing websites with ease."
+      },
+      {
+        "Service": "Squarespace",
+        "Description": "Squarespace is a popular all-in-one website builder and CMS that focuses on design and user experience. It's great for artists, photographers, and creatives who want an aesthetically pleasing online presence."
+      },
+      {
+        "Service": "Ghost",
+        "Description": "Ghost is a minimalistic CMS designed specifically for blogging. It offers a distraction-free writing environment and is ideal for bloggers who want to focus on content creation."
+      },
+      {
+        "Service": "Typo3",
+        "Description": "Typo3 is a robust open-source CMS known for its scalability and multi-language support. It's often chosen for large corporate websites and intranets."
+      },
+      {
+        "Service": "Contentful",
+        "Description": "Contentful is a headless CMS that allows users to create content and deliver it to any platform or device through an API. It's a popular choice for organizations with multiple digital touchpoints."
+      },
+      {
+        "Service": "Kentico",
+        "Description": "Kentico is an integrated marketing platform and CMS, suitable for businesses looking to combine content management with marketing automation, e-commerce, and customer experience management."
+      },
+      {
+        "Service": "Umbraco",
+        "Description": "Umbraco is an open-source CMS known for its flexibility and scalability. It's popular for building websites and web applications, especially in the .NET ecosystem."
+      },
+      {
+        "Service": "HubSpot CMS",
+        "Description": "HubSpot CMS is part of the HubSpot platform and offers integrated content management, marketing automation, and CRM features, making it a choice for inbound marketing."
+      },
+      {
+        "Service": "Adobe Experience Manager",
+        "Description": "Adobe's CMS is a comprehensive solution for managing and delivering digital content across various channels, making it suitable for enterprises with complex content requirements."
+      },
+      {
+        "Service": "Strapi",
+        "Description": "Strapi is an open-source headless CMS that gives developers and content creators more control over their content. It's known for its flexibility and customizability."
+      }
+    ],
+    "closing": "When choosing a CMS, consider your specific needs, technical expertise, scalability requirements, and the type of website or application you want to build. Each CMS has its strengths and weaknesses, so it's important to select the one that aligns with your goals.",
+    "tech_used": [
+      {
+        "tech": "WordPress",
+        "logo": "/images/logo/wordpress.png"
+      },
+      {
+        "tech": "Joomla",
+        "logo": "/images/logo/joomla.png"
+      },
+      {
+        "tech": "Drupal",
+        "logo": "/images/logo/drupal.png"
+      },
+      {
+        "tech": "Magento",
+        "logo": "/images/logo/magento.png"
+      },
+      {
+        "tech": "Shopify",
+        "logo": "/images/logo/shopify.png"
+      },
+      {
+        "tech": "Wix",
+        "logo": "/images/logo/wix.png"
+      },
+      {
+        "tech": "Squarespace",
+        "logo": "/images/logo/squarespace.png"
+      },
+      {
+        "tech": "Ghost",
+        "logo": "/images/logo/ghost.png"
+      },
+      {
+        "tech": "Typo3",
+        "logo": "/images/logo/typo3.png"
+      },
+      {
+        "tech": "Contentful",
+        "logo": "/images/logo/contentful.png"
+      },
+      {
+        "tech": "Kentico",
+        "logo": "/images/logo/kentico.png"
+      },
+      {
+        "tech": "Umbraco",
+        "logo": "/images/logo/umbraco.png"
+      },
+      {
+        "tech": "HubSpot CMS",
+        "logo": "/images/logo/hubspot.png"
+      },
+      {
+        "tech": "Adobe Experience Manager",
+        "logo": "/images/logo/adobeexperiencemanager.png"
+      },
+      {
+        "tech": "Strapi",
+        "logo": "/images/logo/strapi.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "DevOps and Maintenance",
+    "description": "Our DevOps & Maintenance services ensure the continuous operation and optimization of your web platform. We handle infrastructure management, automation, and monitoring to keep your website or web app running smoothly. Our proactive approach guarantees minimal downtime and efficient maintenance, so you can focus on your core business activities.",
+    "image": "/images/devops.png",
+    "icon": "bi bi-bar-chart-steps",
+    "services": [
+      {
+        "Service": "Continuous Integration (CI)",
+        "Description": "Automated building, testing, and integration of code changes into a shared repository multiple times a day to identify and address integration issues early in the development process."
+      },
+      {
+        "Service": "Continuous Delivery (CD)",
+        "Description": "Automated deployment of code to production or staging environments after successful CI testing to ensure that software is always in a deployable state."
+      },
+      {
+        "Service": "Infrastructure as Code (IaC)",
+        "Description": "Management and provisioning of infrastructure using code and automation tools to ensure consistency, scalability, and repeatability in infrastructure deployment."
+      },
+      {
+        "Service": "Containerization",
+        "Description": "Packaging applications and their dependencies into containers using technologies like Docker and Kubernetes for consistent deployment across different environments."
+      },
+      {
+        "Service": "Configuration Management",
+        "Description": "Automation of server and infrastructure configuration and management using tools like Puppet, Chef, and Ansible to ensure consistency and compliance."
+      },
+      {
+        "Service": "Monitoring and Logging",
+        "Description": "Implementation of monitoring and logging solutions, such as Prometheus, Grafana, and ELK Stack, to identify and address performance issues and errors in real-time."
+      },
+      {
+        "Service": "Release Management",
+        "Description": "Planning, scheduling, and coordinating of software releases to different environments, including production, while minimizing risks and ensuring a smooth deployment process."
+      },
+      {
+        "Service": "Security and Compliance",
+        "Description": "Integration of security practices and compliance checks into DevOps pipelines to identify and mitigate security vulnerabilities and maintain regulatory compliance."
+      },
+      {
+        "Service": "Backup and Recovery",
+        "Description": "Development and maintenance of backup and disaster recovery strategies to ensure data integrity and availability in case of system failures or data loss."
+      },
+      {
+        "Service": "Patch Management",
+        "Description": "Regular application of security patches and updates to software and systems to protect against known vulnerabilities and maintain system stability."
+      },
+      {
+        "Service": "Performance Optimization",
+        "Description": "Ongoing efforts to optimize system performance, including tuning applications, databases, and infrastructure for efficiency."
+      },
+      {
+        "Service": "Scalability Planning",
+        "Description": "Planning for and implementing scalable solutions as software systems grow to handle increased traffic and user loads efficiently."
+      },
+      {
+        "Service": "Incident Management",
+        "Description": "Establishment of incident response procedures and use of incident management platforms to efficiently detect, respond to, and resolve issues affecting system availability and performance."
+      },
+      {
+        "Service": "User Support and Training",
+        "Description": "Provision of support and training for end-users and internal team members to ensure the efficient operation of software and infrastructure."
+      },
+      {
+        "Service": "Documentation",
+        "Description": "Maintenance of thorough and up-to-date documentation for systems, processes, and configurations for knowledge transfer and troubleshooting."
+      },
+      {
+        "Service": "Cost Management",
+        "Description": "Monitoring and optimizing operational costs related to cloud services, infrastructure, and software licenses to prevent overspending and ensure cost-effectiveness."
+      }
+    ],
+    "closing": "These DevOps and maintenance services play a critical role in the software development and deployment lifecycle, helping organizations build, deploy, and maintain reliable and efficient software systems.",
+    "tech_used": [
+      {
+        "tech": "Git",
+        "logo": "/images/logo/git.png"
+      },
+      {
+        "tech": "Jenkins",
+        "logo": "/images/logo/jenkins.png"
+      },
+      {
+        "tech": "Travis CI",
+        "logo": "/images/logo/travis.png"
+      },
+      {
+        "tech": "CircleCI",
+        "logo": "/images/logo/circleci.png"
+      },
+      {
+        "tech": "GitLab ",
+        "logo": "/images/logo/gitlab.png"
+      },
+      {
+        "tech": "Docker",
+        "logo": "/images/logo/docker.png"
+      },
+      {
+        "tech": "Kubernetes",
+        "logo": "/images/logo/kubernetes.png"
+      }
+    ]
+  }
+]
