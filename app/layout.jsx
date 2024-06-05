@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import Script from "next/script";
 import NavProvider from "@/components/provider/Nav-Provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
-
 import "./global.css";
 
 export const metadata = {
