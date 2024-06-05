@@ -56,7 +56,6 @@ export default function RootLayout({ children }) {
           as="style"
         />
       </head>
-
       <body
         style={{
           backgroundColor: "rgba(27, 27, 29)",
