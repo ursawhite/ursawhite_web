@@ -1,15 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Card } from "react-bootstrap";
-import { useSpring, animated, config } from "react-spring";
-
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1,
-];
-const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const Wordpress = ({ wpData, isLoading }) => {
   return (
@@ -32,8 +23,6 @@ const Wordpress = ({ wpData, isLoading }) => {
           <div
             className="row m-auto d-flex justify-content-center align-items-center mb-5"
             style={{
-              // paddingLeft: "15vw",
-              // paddingRight: "15vw",
               position: "relative",
             }}
           >
@@ -67,19 +56,12 @@ const Wordpress = ({ wpData, isLoading }) => {
 };
 
 const WordpressContainer = ({ item }) => {
-  const [asd, api] = useSpring(() => ({
-    xys: [0, 0, 1],
-    config: config.default,
-  }));
   return (
     <>
-      <animated.div
+      <div
+        className="project-card"
         onClick={() => window.open(item.link)}
-        onMouseMove={({ clientX: x, clientY: y }) =>
-          api.start({ xys: calc(x, y) })
-        }
-        onMouseLeave={() => api.start({ xys: [0, 0, 1] })}
-        style={{ cursor: "pointer", transform: asd.xys.to(trans) }}
+        style={{ cursor: "pointer" }}
       >
         <Card.Img
           variant="top"
@@ -91,7 +73,11 @@ const WordpressContainer = ({ item }) => {
             {item.name}
           </Card.Title>
         </Card.Body>
-      </animated.div>
+        <div className="button p-2 rounded ">
+          <span>Learn More</span>
+          <div className="bi bi-chevron-double-right ms-2 me-2"></div>
+        </div>
+      </div>
     </>
   );
 };

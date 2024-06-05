@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import Para from "./parallax/parallaxlayer";
-import HomeMobile from "@/components/view/MobileView/home/home";
+import HomeMobile from "@/components/view/mobile-view/home/home";
 import jsonData from "@/public/data/data.json";
 
 function Section() {

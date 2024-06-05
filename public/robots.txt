@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.ursawhite.com
+
+# Sitemaps
+Sitemap: https://www.ursawhite.com/sitemap.xml

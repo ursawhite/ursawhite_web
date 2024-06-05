@@ -38,8 +38,15 @@ function OurWorks({ items, wpData, isLoading }) {
         <div className="row">
           {items.map((ourWork) => (
             <div
-              className="col-md-4 col-12 d-flex justify-content-center flex-column align-items-center text-decoration-none bg-transparent border-0 shadow-0 mb-4"
+              className="col-md-4 col-12 project-card d-flex justify-content-center flex-column align-items-center text-decoration-none bg-transparent border-0 shadow-0 mb-4"
               key={ourWork.id}
+              onClick={() =>
+                Router.push(
+                  `/our-works/${ourWork.title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`
+                )
+              }
             >
               <div className="m-2">
                 <Image
@@ -64,19 +71,6 @@ function OurWorks({ items, wpData, isLoading }) {
               <p className="text-white text-center text-ellipsis">
                 {ourWork.desc}
               </p>
-              <button
-                className="button p-2 rounded "
-                onClick={() =>
-                  Router.push(
-                    `/our-works/${ourWork.title
-                      .replace(/\s+/g, "-")
-                      .toLowerCase()}`
-                  )
-                }
-              >
-                <span>Learn More</span>
-                <div className="bi bi-chevron-double-right ms-2 me-2"></div>
-              </button>
             </div>
           ))}
         </div>

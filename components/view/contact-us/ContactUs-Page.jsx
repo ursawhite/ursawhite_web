@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import Contact_Us from "@/components/view/contact-us/Contact-Us";
-import Contact_Us_Mobile from "@/components/view/MobileView/contact-us/ContactUs-Mobile";
+import Contact_Us_Mobile from "@/components/view/mobile-view/contact-us/ContactUs-Mobile";
 
 const ContactUs = () => {
   const [isClient, setIsClient] = useState(false);

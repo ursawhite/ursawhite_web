@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import Service from "./services/services-page";
-import ServiceMobile from "@/components/view/MobileView/services/Services_Mobile";
+import ServiceMobile from "@/components/view/mobile-view/services/Services_Mobile";
 
 const ServicePage = () => {
   const [isClient, setIsClient] = useState(false);

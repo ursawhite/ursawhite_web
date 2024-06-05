@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeInAnimationVariants } from "../../../../../components/animation/animation";
+import { fadeInAnimationVariants } from "../../../../animation/animation";
 
 function OurClient() {
   const company = [

@@ -1,21 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
 import Our_Work from "@/components/view/our-works/Our-Works";
-import OurWorksMobile from "@/components/view/MobileView/our-works/OurWorksMobile";
 import jsonData from "@/public/data/data.json";
 
 const OurWorksPage = () => {
-  const [isClient, setIsClient] = useState(false);
   const [wpData, setWpData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const isDesktop = useMediaQuery({ minWidth: 992 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isNotMobile = useMediaQuery({ minWidth: 768 });
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+
   useEffect(() => {
     const apiUrl = "/api/fetchGSheets";
     try {
@@ -43,22 +34,7 @@ const OurWorksPage = () => {
         backgroundColor: "rgba(27,27,29,255)",
       }}
     >
-      {isDesktop && isClient && (
-        <Our_Work items={jsonData} wpData={wpData} isLoading={isLoading} />
-      )}
-      {isTablet && isClient && (
-        <Our_Work items={jsonData} wpData={wpData} isLoading={isLoading} />
-      )}
-      {isMobile && isClient && (
-        <OurWorksMobile
-          items={jsonData}
-          wpData={wpData}
-          isLoading={isLoading}
-        />
-      )}
-      {isNotMobile && isClient && (
-        <Our_Work items={jsonData} wpData={wpData} isLoading={isLoading} />
-      )}
+      <Our_Work items={jsonData} wpData={wpData} isLoading={isLoading} />
     </div>
   );
 };

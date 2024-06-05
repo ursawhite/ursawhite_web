@@ -12,7 +12,7 @@ const BlogPagination = ({ totalPages, currentPage, setCurrentPage }) => {
         <button
           key={page}
           onClick={() => handleMovePage(page)}
-          className={`btn ${
+          className={` ${
             page === currentPage
               ? "btn-pagination-active"
               : "btn-pagination-passive"
