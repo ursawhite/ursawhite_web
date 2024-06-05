@@ -371,6 +371,32 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
+.project-card {
+  background-color: transparent;
+  position: relative;
+  .button {
+    display: none;
+  }
+}
+
+.project-card:hover {
+  background-color: var(--secondary-background-color);
+  border-radius: 10px;
+  img {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  .button {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-color);
+    border: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .back {
     background-image: none;

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import AboutUs from "./AboutUs-Page";
-import AboutUs_Mobile from "@/components/view/MobileView/about-us/AboutUs-Mobile";
+import AboutUs_Mobile from "@/components/view/mobile-view/about-us/AboutUs-Mobile";
 
 const AboutUsPage = () => {
   const [isClient, setIsClient] = useState(false);
